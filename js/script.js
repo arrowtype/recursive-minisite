@@ -13,3 +13,8 @@ window.onscroll = function(){
         document.getElementById("phantomToolbar").classList.add("d-none");
     }
 };
+
+
+
+document.getElementById("toolbar").classList.remove("fixed");
+document.getElementById("phantomToolbar").classList.add("d-none");

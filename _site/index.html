@@ -146,7 +146,10 @@ font-variation-settings: var(--prop), var(--xprn), var(--ital), var(--crsv);
 
 Recursive is a type family that maximizes fun & utility  for code & design. It takes its initial inspiration from single-stroke casual signpainting, a style of brush writing that is highly efficient, easy to learn, stylistically flexible, and warmly energetic. The brush strokes of this style have been translated into simplified forms for use in text, primarily on screen in code editors & web browsers. It gives you a wide range of typographic possibility, making it perfect for everything from programming to mobile games to complex hierarchies in technical docs.
 
+
 ![alt text][/assets/img/test.png]
+
+![placeholder][https://carepharmaceuticals.com.au/wp-content/uploads/sites/19/2018/02/placeholder-600x400.png]
 
 
 ## Mono && Sans - `PROP`
@@ -159,8 +162,6 @@ Recursive contains two subfamilies in its **Proportion** axis (`PROP`) – Mono 
         </textarea>
     <!-- </div> -->
 </div>
-
-
     </div>
     <div class="pre-footer clearfix">
     <div class="float-left">
@@ -189,7 +190,9 @@ Want (very occassional) updates on new releases of Recursive? Sign up!</p>
 <script type="text/javascript" src="/js/script.js"></script>
 
 <script>
-    var startingHTML = document.getElementById("mdSection").innerHTML;
+    var element = document.getElementById('mdSection');
+    var textNode = element.firstChild;
+    var URI = textNode.data;
 
     var simplemde = new SimpleMDE({
 	autofocus: true,
@@ -254,34 +257,53 @@ Want (very occassional) updates on new releases of Recursive? Sign up!</p>
 	}], // Another optional usage, with a custom status bar item that counts keystrokes
 	styleSelectedText: false,
 	tabSize: 4,
-    // toolbar: false,
-    toolbar: [
-        {
-            name: "redText",
-            action: drawRedText,
-            className: "fa fa-bold", // Look for a suitable icon
-            title: "Red text (Ctrl/Cmd-Alt-R)",
-        }
-    ],
+    toolbar: false,
+    // toolbar: [
+    //     {
+    //         name: "redText",
+    //         action: drawRedText,
+    //         className: "fa fa-bold", // Look for a suitable icon
+    //         title: "Red text (Ctrl/Cmd-Alt-R)",
+    //     }
+    // ],
 	toolbarTips: false,
 });
 
 
-function drawRedText(editor) {
+// function drawRedText(editor) {
 
-var cm = editor.codemirror;
-var output = '';
-var selectedText = cm.getSelection();
-var text = selectedText || 'placeholder';
+//     var cm = editor.codemirror;
+//     var output = '';
+//     var selectedText = cm.getSelection();
+//     var text = selectedText || 'placeholder';
 
-output = '<span>!!' + text + '!!</span>';
-cm.replaceSelection(output);
+//     output = '<span>!!' + text + '!!</span>';
+//     cm.replaceSelection(output);
+
+// }
 
 
+// var simplemde = new SimpleMDE();
+simplemde.value(URI);
+
+simplemde.codemirror.on("change", function(){
+    insertImage();
+    console.log(simplemde);
+});
+
+function insertImage(){
+    let urls = document.getElementsByClassName("cm-url");
+    for (var i=0;i<urls.length;i++){
+        if (urls[i].classList.contains('cm-formatting') == false){
+            let imgElem = document.createElement("img");
+            imgElem.src = urls[i].innerHTML;
+            console.log(urls[i].parentElement);
+            urls[i].parentElement.appendChild(imgElem);
+            console.log(urls[i].parentElement);
+        };
+    }
 }
-
-
-    simplemde.value(startingHTML);
+window.scrollTo(0,0);
 </script>
 
   </body>
