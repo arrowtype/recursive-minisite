@@ -6810,15 +6810,30 @@ html {
 .bg-primary, .bg-dark {
   color: white; }
 
-b {
-  font-weight: normal;
-  color: #0050FF; }
-
 h2 {
   margin: 57px 0px 24px 0px; }
 
 .notice {
   padding: 12px 24px; }
+
+.CodeMirror {
+  border: 0px;
+  padding: 0px; }
+
+span.cm-formatting.cm-formatting-header.cm-formatting-header-2.cm-header.cm-header-2 {
+  font-size: 2.667em;
+  line-height: inherit;
+  color: #949494;
+  font-weight: normal; }
+
+.CodeMirror .CodeMirror-code .cm-header-2 {
+  font-size: 2.667em;
+  line-height: inherit; }
+
+.cm-em {
+  font-weight: normal;
+  color: #0050FF;
+  font-style: normal; }
 
 nav.navbar {
   border-top: 1px solid white;

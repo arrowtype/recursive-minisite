@@ -1,0 +1,3 @@
+## A single, flexible file. Vary nice. 
+
+Recursive is a variable font, providing a continuous range of design control across five axes: *Proportion, Expression, Weight, Italic, and Cursive*. On the web, you can use serve the full variable font, for extreme typographic flexibility & control with just a single font file. You can also serve exactly the axes you need, for all the range you need with an even smaller file size.
