@@ -35,11 +35,6 @@ html {
     margin-left:240px;
 }
 
-// .md-main{
-//     max-width:800px;
-//     padding-left:240px;
-// }
-
 .bg-primary, .bg-dark{
     color:white;
 }
@@ -57,12 +52,27 @@ h2{
     padding:0px;
 }
 
-// .CodeMirror-line:before{
-//     content: '3';
-//     display:block;
-//     position:absolute;
-//     left:20px;
-// }
+.CodeMirror-code{
+    counter-reset: line;
+}
+
+.CodeMirror pre{
+    max-width:1040px;
+    padding-left:240px;
+}
+
+.CodeMirror-line:before{
+    counter-increment: line;
+    content: counter(line);
+    display:block;
+    position:absolute;
+    left:0px;
+    color: #BDBDBD;
+    border-right:1px solid #BDBDBD;
+    width:40px;
+    padding-right:6px;
+    text-align:right;
+}
 span.cm-formatting.cm-formatting-header.cm-formatting-header-2.cm-header.cm-header-2{
     font-size: 2.667em;
     line-height: inherit;
