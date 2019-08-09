@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    {% include navigation.html %}
+    
+    <div class="container pt-intro">
+      <div class="row">
+        <div class="col-md-9">
+          <div class="row">
+            <div class="col-9">
+              <h2 class="bold">{{page.position}}</h1>
+              <p>{{page.location}}</p>
+              <a href="{{page.apply-link}}" target="_blank" class="btn btn-primary mt-3 mb-5">Apply</a>
+            </div>
+          </div>
+          {{ content }}
+        </div>
+        <!-- <div class="col-3">
+          <a href="{{page.apply-link}}" target="_blank" class="btn btn-primary">Apply</a>
+        </div> -->
+      </div>
+      <div class="row my-5">
+          <a href="{{page.apply-link}}" target="_blank" class="btn btn-primary mr-3 mb-3">Apply</a>
+          <a href="{{site.baseurl}}/careers" target="_blank" class="btn btn-secondary mb-3">Back to Careers</a>
+      </div>
+    </div>
+    {% include footer.html %}
+  </body>
+</html>

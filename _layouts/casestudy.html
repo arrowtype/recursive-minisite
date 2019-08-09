@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    {% include navigation.html %}
+    
+    <div class="container pt-intro h-100">
+        <div class="case-study-underline">
+            <img class="case-study-hero" src="{{page.hero-animation[0].image}}">
+        </div>
+    </div>
+    <div class="container-fluid bg-light py-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-md-6 col-lg-3 offset-lg-1 offset-xl-2">
+                    <h2 class="bold">Objective</h2>
+                </div>
+                <div class="col-md-6 offset-lg-2 offset-xl-0 col-lg-5">
+                    <p>{{page.objective}}</p>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-md-6 col-lg-3 offset-lg-1 offset-xl-2">
+                    <h2 class="bold">Insights</h2>
+                </div>
+                <div class="col-md-6 offset-lg-2 offset-xl-0 col-lg-5">
+                    {% for insight in page.insights %}
+                        <p class="insight py-2">{{insight}}</p>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="row mb-5">
+                <div class="col-md-6 col-lg-3 offset-lg-1 offset-xl-2">
+                    <h2 class="bold mb-3">Content</h2>
+                </div>
+                {% for gif in page.gifs %}
+                {% assign remainder = forloop.index0 | modulo: 5 %}
+                {% if forloop.first %}
+                    <div class="col-4 col-sm-3 col-md-2 col-xl-1 my-1 offset-lg-2 offset-xl-0">
+                {% else %}
+                    <div class="col-4 col-sm-3 col-md-2 col-xl-1 my-1 {% if remainder == 0%}offset-xl-5{%endif%}">
+                {%endif%}
+                        <div class="case-study-gif">
+                            <img src="{{gif}}" class="img-fluid position-absolute">
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="row">
+                <div class="col-xl-7 offset-xl-5">
+                    <div class="m-auto m-xl-0 text-center text-xl-left">
+                        <a href="{{page.file_download_path}}" class="btn btn-primary btn-full mb-3" download>Download</a>
+                        {% if page.show_video %}
+                        <a href="#" data-toggle="modal" data-target="#exampleModal" class="btn btn-primary-outlined btn-full mb-3 ml-md-2">Watch Video</a>
+                        {%endif%}
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    {{ page.vimeo_embed_code}}
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark py-5 text-center">
+        <p class="bold"><a class="back-link" href="{{site.baseurl}}/advertisers/#case-studies">Back to Case Studies</a></p>
+    </div>
+        
+        
+    {% include footer.html %}
+  </body>
+</html>

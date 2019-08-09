@@ -1,0 +1,17 @@
+# Site settings
+title: Holler
+email:
+author:
+description:
+url: https://holler.io/
+
+# Build settings
+permalink: :title/
+sass:
+  sass_dir: css
+
+collections:
+  listings:
+    output: true
+  casestudies:
+    output: true
