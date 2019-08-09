@@ -1,17 +1,11 @@
 # Site settings
-title: Holler
+title: Recursive
 email:
 author:
 description:
-url: https://holler.io/
+url: 
 
 # Build settings
 permalink: :title/
 sass:
   sass_dir: css
-
-collections:
-  listings:
-    output: true
-  casestudies:
-    output: true
