@@ -42,7 +42,8 @@
 </head>
 
   <body>
-    <a href="#">
+    <div class="fixed-nav">
+<a href="#">
   <div class="notice bg-primary clearfix">
     <div class="float-left">
     Love code ligatures? Support their development in Recursive and get type swag!
@@ -80,6 +81,7 @@
   </div>
 </nav>
 
+</div>
     <div  class="h-100">
     <div class="container-fluid bg-dark position-relative" id="hero">
     :)
@@ -87,37 +89,38 @@
         A typographic pallette for vibrant code & UI.
     </div>
 </div>
-<div class="container-fluid">
-    <div class="toolbar">
-        <div class="toolbar__item">Base Style</div>
-        <div class="toolbar__item">
-            Recursive Sans
-            <svg class="arrow" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1.41 0.589844L6 5.16984L10.59 0.589844L12 1.99984L6 7.99984L0 1.99984L1.41 0.589844Z" fill="black"/>
-            </svg>
-        </div>
-        <div class="toolbar__item">
-            Linear Regular
-            <svg class="arrow" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1.41 0.589844L6 5.16984L10.59 0.589844L12 1.99984L6 7.99984L0 1.99984L1.41 0.589844Z" fill="black"/>
-            </svg>
-        </div>
-        <div class="toolbar__item">
-            15pt
-            <svg class="arrow" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1.41 0.589844L6 5.16984L10.59 0.589844L12 1.99984L6 7.99984L0 1.99984L1.41 0.589844Z" fill="black"/>
-            </svg>
-        </div>
-        <div class="toolbar__item"><span>p</span>1  <span>x</span>0  <span>W</span>400  <span>i</span>0  <span>c</span>0</div>
-        <div class="toolbar__item">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="8" cy="8" r="7.5" fill="white" stroke="black"/>
-                <path d="M15.4836 7.5H0.516402C0.773695 3.59098 4.02588 0.5 8 0.5C11.9741 0.5 15.2263 3.59098 15.4836 7.5Z" fill="black" stroke="black"/>
-            </svg>
-        </div>
+<div id="phantomToolbar" class="d-none"></div>
+
+<div class="toolbar fixed" id="toolbar">
+    <div class="toolbar__item">Base Style</div>
+    <div class="toolbar__item">
+        Recursive Sans
+        <svg class="arrow" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.41 0.589844L6 5.16984L10.59 0.589844L12 1.99984L6 7.99984L0 1.99984L1.41 0.589844Z" fill="black"/>
+        </svg>
+    </div>
+    <div class="toolbar__item">
+        Linear Regular
+        <svg class="arrow" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.41 0.589844L6 5.16984L10.59 0.589844L12 1.99984L6 7.99984L0 1.99984L1.41 0.589844Z" fill="black"/>
+        </svg>
+    </div>
+    <div class="toolbar__item">
+        15pt
+        <svg class="arrow" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.41 0.589844L6 5.16984L10.59 0.589844L12 1.99984L6 7.99984L0 1.99984L1.41 0.589844Z" fill="black"/>
+        </svg>
+    </div>
+    <div class="toolbar__item"><span>p</span>1  <span>x</span>0  <span>W</span>400  <span>i</span>0  <span>c</span>0</div>
+    <div class="toolbar__item">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="8" cy="8" r="7.5" fill="white" stroke="black"/>
+            <path d="M15.4836 7.5H0.516402C0.773695 3.59098 4.02588 0.5 8 0.5C11.9741 0.5 15.2263 3.59098 15.4836 7.5Z" fill="black" stroke="black"/>
+        </svg>
     </div>
 </div>
-<div class="container-fluid">
+
+<div class="container-fluid" id="mdContainer">
     <!-- <div class="main"> -->
         <textarea id="mdSection">
             
@@ -125,7 +128,7 @@
 
 ## A single, flexible file. Vary nice. 
 
-Recursive is a variable font, providing a continuous range of design control across five axes: *Proportion, Expression, Weight, Italic, and Cursive*. On the web, you can use serve the full variable font, for extreme typographic flexibility & control with just a single font file. You can also serve exactly the axes you need, for all the range you need with an even smaller file size.
+Recursive is a variable font, providing a continuous range of design control across five axes: **Proportion, Expression, Weight, Italic, and Cursive**. On the web, you can use serve the full variable font, for extreme typographic flexibility &#38; control with just a single font file. You can also serve exactly the axes you need, for all the range you need with an even smaller file size.
 
 ```css
 font-size: 144px;
@@ -144,6 +147,15 @@ font-variation-settings: var(--prop), var(--xprn), var(--ital), var(--crsv);
 Recursive is a type family that maximizes fun & utility  for code & design. It takes its initial inspiration from single-stroke casual signpainting, a style of brush writing that is highly efficient, easy to learn, stylistically flexible, and warmly energetic. The brush strokes of this style have been translated into simplified forms for use in text, primarily on screen in code editors & web browsers. It gives you a wide range of typographic possibility, making it perfect for everything from programming to mobile games to complex hierarchies in technical docs.
 
 ![alt text][/assets/img/test.png]
+
+
+## Mono && Sans - `PROP`
+
+Recursive contains two subfamilies in its **Proportion** axis (`PROP`) – Mono and Sans. A simple benefit of this that both subfamilies have compatible vertical metrics to make them fit perfectly together at the same font sizes. Even better, serving them in a single variable font makes Recursive extremely performant for rich typography in websites focused on technical information, like docs and blogs.
+
+**Mono** is designed for code. It’s fixed-width: each character gets the same width as every other character, across styles, allowing syntax to have clear legibility and perfect alignment.
+
+**Sans** is designed for text & UI. It’s proportional: Characters are drawn at natural, proportional widths for comfortable readability. Normal-width characters share outlines with monospaced styles to enable even better compression.
         </textarea>
     <!-- </div> -->
 </div>
@@ -178,8 +190,7 @@ Want (very occassional) updates on new releases of Recursive? Sign up!</p>
 
 <script>
     var startingHTML = document.getElementById("mdSection").innerHTML;
-    // console.log(startingHTML);
-    // var simplemde = new SimpleMDE({ element: document.getElementById("mdSection") });
+
     var simplemde = new SimpleMDE({
 	autofocus: true,
 	autosave: {
@@ -243,11 +254,35 @@ Want (very occassional) updates on new releases of Recursive? Sign up!</p>
 	}], // Another optional usage, with a custom status bar item that counts keystrokes
 	styleSelectedText: false,
 	tabSize: 4,
-	toolbar: false,
+    // toolbar: false,
+    toolbar: [
+        {
+            name: "redText",
+            action: drawRedText,
+            className: "fa fa-bold", // Look for a suitable icon
+            title: "Red text (Ctrl/Cmd-Alt-R)",
+        }
+    ],
 	toolbarTips: false,
 });
 
+
+function drawRedText(editor) {
+
+var cm = editor.codemirror;
+var output = '';
+var selectedText = cm.getSelection();
+var text = selectedText || 'placeholder';
+
+output = '<span>!!' + text + '!!</span>';
+cm.replaceSelection(output);
+
+
+}
+
+
     simplemde.value(startingHTML);
 </script>
+
   </body>
 </html>

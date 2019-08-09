@@ -26,8 +26,7 @@ Want (very occassional) updates on new releases of Recursive? Sign up!</p>
 
 <script>
     var startingHTML = document.getElementById("mdSection").innerHTML;
-    // console.log(startingHTML);
-    // var simplemde = new SimpleMDE({ element: document.getElementById("mdSection") });
+
     var simplemde = new SimpleMDE({
 	autofocus: true,
 	autosave: {
@@ -91,9 +90,32 @@ Want (very occassional) updates on new releases of Recursive? Sign up!</p>
 	}], // Another optional usage, with a custom status bar item that counts keystrokes
 	styleSelectedText: false,
 	tabSize: 4,
-	toolbar: false,
+    // toolbar: false,
+    toolbar: [
+        {
+            name: "redText",
+            action: drawRedText,
+            className: "fa fa-bold", // Look for a suitable icon
+            title: "Red text (Ctrl/Cmd-Alt-R)",
+        }
+    ],
 	toolbarTips: false,
 });
+
+
+function drawRedText(editor) {
+
+var cm = editor.codemirror;
+var output = '';
+var selectedText = cm.getSelection();
+var text = selectedText || 'placeholder';
+
+output = '<span>!!' + text + '!!</span>';
+cm.replaceSelection(output);
+
+
+}
+
 
     simplemde.value(startingHTML);
 </script>
