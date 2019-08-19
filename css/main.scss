@@ -68,12 +68,12 @@ h2{
 }
 
 .CodeMirror-lines:before{
-    content:'';
-    height:100%;
-    display: block;
-    position: absolute;
-    border-right:1px solid #BDBDBD;
-    width:44px;
+    // content:'';
+    // height:100%;
+    // display: block;
+    // position: absolute;
+    // border-right:1px solid #BDBDBD;
+    // width:44px;
 }
 
 .CodeMirror-code{
@@ -81,8 +81,8 @@ h2{
 }
 
 .CodeMirror pre{
-    max-width:1040px;
-    padding-left:240px;
+    max-width: 800px;
+    margin: auto;
     font-family: 'RecSans', monospace; 
 }
 
@@ -101,16 +101,16 @@ h2{
 // }
 
 .CodeMirror-line:before{
-    counter-increment: line;
-    content: counter(line);
-    display:block;
-    position:absolute;
-    left:0px;
-    color: #BDBDBD;
-    // border-right:1px solid #BDBDBD;
-    width:40px;
-    padding-right:6px;
-    text-align:right;
+    // counter-increment: line;
+    // content: counter(line);
+    // display:block;
+    // position:absolute;
+    // left:0px;
+    // color: #BDBDBD;
+    // // border-right:1px solid #BDBDBD;
+    // width:40px;
+    // padding-right:6px;
+    // text-align:right;
 }
 span.cm-formatting.cm-formatting-header.cm-formatting-header-2.cm-header.cm-header-2{
     font-size: 2.667em;
@@ -180,11 +180,12 @@ nav.navbar{
     padding:30px 24px;
     bottom:0px;
     border-top:1px dashed white;
+    background-color:black;
 }
 
 .toolbar{
     border-bottom:1px solid black;
-    padding-left:240px;
+    padding-left:calc(50% - 400px);
     .toolbar__item{
         border-left:1px solid black;
         padding:8px 16px;
@@ -215,6 +216,309 @@ nav.navbar{
 .footer{
     padding:23px 33px;
 }
+
+
+#three {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  cursor:move;
+  overflow:hidden;
+}
+
+.text-label {
+  color: #fff;
+/*   margin: -5px 0 0 15px; */
+  pointer-events:none;
+  font-size:130px;
+//   font-weight:900;
+    font-family: 'RecMono', monospace;
+    font-weight:800;
+    --prop: "PROP" 0;
+    --xprn: "XPRN" 0;
+    --ital: "ital" 0;	   
+    --crsv: "CRSV" 3;
+    font-variation-settings: "PROP" 500, "XPRN" 200, "ital" 500, "CRSV" 456;
+    font-style: italic;
+    text-shadow: 10px 10px 20px black;
+}
+
+
+/// Express Yourself section
+
+#singleFile{
+    border-top:1px solid #bdbdbd;
+    color:#454545;
+
+    input[type="text"]{
+        font-size:144px;
+        font-weight:800;
+        border:0px;
+        height:300px;
+        font-weight: 800;
+        --prop: "PROP" 0;
+        --xprn: "XPRN" 0;
+        --ital: "ital" 0;
+        --crsv: "CRSV" 3;
+        font-variation-settings: "PROP" 500, "XPRN" 200, "ital" 322, "CRSV" 456;
+    }
+
+    input[type="text"]:focus{
+        outline:none;
+    }
+
+    input[type=range] {
+    -webkit-appearance: none;
+    width: 240px;
+    margin: 5.5px 0;
+    }
+    input[type=range]:focus {
+    outline: none;
+    }
+    input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 1px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    background: #bdbdbd;
+    border-radius: 0px;
+    border: 0.1px solid rgba(0, 0, 0, 0);
+    }
+    input[type=range]::-webkit-slider-thumb {
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
+    border: 0px solid rgba(0, 0, 0, 0);
+    height: 12px;
+    width: 12px;
+    border-radius: 12px;
+    background: #858585;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -5.6px;
+    }
+    input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #cacaca;
+    }
+    input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 1px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    background: #bdbdbd;
+    border-radius: 0px;
+    border: 0.1px solid rgba(0, 0, 0, 0);
+    }
+    input[type=range]::-moz-range-thumb {
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
+    border: 0px solid rgba(0, 0, 0, 0);
+    height: 12px;
+    width: 12px;
+    border-radius: 12px;
+    background: #858585;
+    cursor: pointer;
+    }
+    input[type=range]::-ms-track {
+    width: 100%;
+    height: 1px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+    }
+    input[type=range]::-ms-fill-lower {
+    background: #b0b0b0;
+    border: 0.1px solid rgba(0, 0, 0, 0);
+    border-radius: 0px;
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    }
+    input[type=range]::-ms-fill-upper {
+    background: #bdbdbd;
+    border: 0.1px solid rgba(0, 0, 0, 0);
+    border-radius: 0px;
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    }
+    input[type=range]::-ms-thumb {
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
+    border: 0px solid rgba(0, 0, 0, 0);
+    height: 12px;
+    width: 12px;
+    border-radius: 12px;
+    background: #858585;
+    cursor: pointer;
+    height: 1px;
+    }
+    input[type=range]:focus::-ms-fill-lower {
+    background: #bdbdbd;
+    }
+    input[type=range]:focus::-ms-fill-upper {
+    background: #cacaca;
+    }
+
+
+    .controls{
+        background-color: #f8f8f8;
+        width:100%;
+        font-family:'RecMono', monospace;
+        font-weight:450;
+        padding:30px;
+
+        .css{
+            width:200px;
+        }
+
+        .css, .inputs{
+            display:inline-block;
+        }
+        .inputs{
+            position: relative;
+            top: -4px;
+            margin-right:40px;
+        }
+
+        .radio{
+            border:1px solid #bdbdbd;
+            width:12px;
+            height:12px;
+            border-radius:12px;
+            display:inline-block;
+        }
+        .radio.active{
+
+            background-color:#bdbdbd;
+
+        }
+
+        ul{
+            list-style-type: none;
+        }
+
+        .property{
+            color: rgb(194, 64, 76);
+        }
+
+        .custom-prop{
+            color:rgb(31, 168, 122);
+        }
+        .value{
+            color: rgb(73, 73, 73);
+        }
+        .string{
+            color: rgb(0, 80, 255);
+        }
+        span.comment{
+            font-style:italic;
+            color:#858585;
+        }
+    }
+
+}
+
+#monoSans{
+    .container{
+        // max-width:960px;
+    }
+    #inputMono{
+        font-family: "RecMono", monospace;
+        font-size: 275.2px;
+        height:275px;
+        font-weight:800;
+    }
+
+    #inputSans{
+        font-family: "RecSans", sans-serif;
+        font-size: 275.2px;
+        height:275px;
+    }
+
+    #inputSansValues, #inputMonoValues{
+        position:absolute;
+        top:10px;
+        left:10px;
+        color:white;
+        font-family:"RecMono", monospace;
+        font-size:12px;
+    }
+    span.letterSans, span.letterMono{
+        line-height: 275px;
+        background-color:black;
+        color:white;
+        border-left:1px solid white;
+        display: inline-block;
+    }
+}
+
+#superplexed{
+    .pill{
+        width:580px;
+        height:153px;
+        border-radius:100px;
+        font-family: "RecSans";
+        font-size: 96px;
+        line-height: 96px;
+        text-align: center;
+        line-height: 153px;
+        margin-bottom:20px;
+    }
+    .pill-color{
+        background-color:$primary;
+        color:white;
+    }
+    .pill-bw{
+        color:black;
+        border:5px solid black;
+    }
+
+    .board-label{
+        font-family: "RecSans", sans-serif;
+        font-size: 48px;
+        line-height: 64px;
+        color: #000000;
+    }
+    #board{
+        background-color:$primary;
+        padding:15px 30px;
+        border-radius: 8px;
+        cursor:none;
+        position:relative;
+        left:60px;
+    }
+    ul{
+        list-style-type:none;
+        padding-inline-start: 0px;
+    }
+    li{ 
+        width:100%;
+        font-family: "RecSans", sans-serif;
+        font-size: 48px;
+        line-height: 64px;
+        font-weight:500;
+        color: rgba(255, 255, 255, 0.6);
+        --prop: "PROP" 0;
+        --xprn: "XPRN" 0;
+        --ital: "ital" 0;	   
+        --crsv: "CRSV" 3;
+        font-variation-settings: "PROP" 500, "XPRN" 200, "ital" 500, "CRSV" 456;
+    }
+    li.active, li:hover{
+        font-family: 'RecSans', sans-serif;
+        color:white;
+        font-weight:800;
+        --prop: "PROP" 0;
+        --xprn: "XPRN" 0;
+        --ital: "ital" 0;	   
+        --crsv: "CRSV" 3;
+        font-variation-settings: "PROP" 500, "XPRN" 200, "ital" 500, "CRSV" 456;
+    }
+    #boardCursor{
+        position:absolute;
+        bottom:60px;
+        left:200px;
+    }
+}
+
+
+
 
 @media (min-width: 992px){
     // 
