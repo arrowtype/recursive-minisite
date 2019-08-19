@@ -7114,6 +7114,10 @@ nav.navbar {
 #superplexed .pill-bw {
   color: black;
   border: 5px solid black; }
+#superplexed #boardArrow {
+  position: relative;
+  top: -10px;
+  left: 60px; }
 #superplexed .board-label {
   font-family: "RecSans", sans-serif;
   font-size: 48px;
@@ -7124,8 +7128,7 @@ nav.navbar {
   padding: 15px 30px;
   border-radius: 8px;
   cursor: none;
-  position: relative;
-  left: 60px; }
+  position: relative; }
 #superplexed ul {
   list-style-type: none;
   padding-inline-start: 0px; }
@@ -7154,6 +7157,49 @@ nav.navbar {
   position: absolute;
   bottom: 60px;
   left: 200px; }
+
+#weightForIt #canvas {
+  background-color: #f8f8f8;
+  width: 960px;
+  height: 472px;
+  position: relative;
+  border-bottom: 8px solid #0050FF;
+  cursor: crosshair; }
+#weightForIt .label {
+  color: #D8d8d8;
+  font-family: "RecMono", monospace;
+  font-size: 12px;
+  line-height: 14px;
+  color: #BDBDBD;
+  position: absolute;
+  transform: rotate(-90deg); }
+#weightForIt #dollars {
+  width: 100%;
+  height: 100%; }
+#weightForIt .dollar {
+  position: fixed;
+  font-family: "RecMono", monospace;
+  font-size: 96px;
+  line-height: 96px;
+  color: #0050FF;
+  --prop: "PROP" 0;
+  --xprn: "XPRN" 0;
+  --ital: "ital" 0;
+  --crsv: "CRSV" 3;
+  --wght: "wght" 300;
+  font-variation-settings: "PROP" 500, "XPRN" 200, "ital" 500, "CRSV" 456, "wght" 800; }
+#weightForIt #xAxis, #weightForIt #yAxis {
+  position: absolute;
+  top: 0px;
+  left: 0px; }
+#weightForIt #yAxis {
+  border-right: 1px solid #0050FF;
+  height: 100%;
+  width: 1px; }
+#weightForIt #xAxis {
+  height: 1px;
+  width: 100%;
+  border-top: 1px solid #e0e0e0; }
 
 /* just linking the typeface in */
 * {
