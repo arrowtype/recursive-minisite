@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <title>Recursive </title>
+  <meta property="og:title" content="Recursive ">
+  <meta property="twitter:title" content="Recursive ">
+
+  <meta name="author" content="Recursive">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://localhost:4000">
+  <meta property="twitter:url" content="http://localhost:4000">
+  <meta property="twitter:card" content="summary_large_image">
+  
+
+  
+  <meta name="description" content="Lorem ipsum dolor sit amet">
+  <meta property="twitter:description" content="Lorem ipsum dolor sit amet">
+  <meta property="og:description" content="Lorem ipsum dolor sit amet">
+  
+
+  
+  <meta property="og:image" content="">
+  <meta property="twitter:image" content="">
+  
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <!-- <link rel="stylesheet" href="http://dev.taliacotton.com/recursive/css/main.css"> -->
+  <!-- <link rel="stylesheet" href="/css/custom/aos.css" /> -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+</head>
+
+  <body>
+    <div class="container-fluid py-5" id="singleFile">
+    <input type="text" value="Experiment" id="controls-result"></input>
+    <div class="controls">
+        <ul>
+            <li id="font-size">
+                <span class="css">
+                    <span class="property">font-size</span>: <span id="fontSizeResult" contenteditable="true">144px</span>;
+                </span>
+                <span class="inputs"><input id="fontSizeSlider" min="10" max="250" step="1" value="144" type="range"></span>
+                <span class="comment d-inline-block">
+                    /* Weight: Light to Heavy. Can be defined with usual font-weight property. */
+                </span>
+            </li>
+            <li><span class="comment">/* style axes */</span></li>
+            <li id="font-weight">
+                <span class="css">
+                    <span class="property">font-weight</span>: <span class="result">400</span>;
+                </span>
+                <span class="inputs"><input id="fontWeightSlider" type="range"></span>
+            </li>
+            <li id="cust-prop">
+                <span class="css d-inline-block"><span class="custom-prop">--prop</span>: "<span class="string">PROP</span>" <span class="result">0</span>;</span>
+                <span class="inputs d-inline-block"><span class="radio active"></span> Mono <span class="radio"></span> Sans</span>
+            </li>
+            <li id="cust-xprn">
+                <span class="css"><span class="custom-prop">--xprn</span>: "<span class="string">XPRN</span>" <span class="result">0</span>;</span>
+                <span class="inputs"><input id="customPropSlider" min="10" max="250" step="1" value="144" type="range"></span>
+            </li>
+            <li id="cust-ital">
+                <span class="css"><span class="custom-prop">--ital</span>: "<span class="string">ital</span>" <span class="result">0</span>;</span>
+                <span class="inputs"><input id="customPropSlider" min="10" max="250" step="1" value="144" type="range"></span>
+            </li>
+            <li id="cust-crsv">
+                <span class="css"><span class="custom-prop">--crsv</span>: "<span class="string">CRSV</span>" <span class="result">0</span>;</span>
+                <span class="inputs d-inline-block"><span class="radio active"></span> Off <span class="radio"></span> Auto <span class="radio"></span> On</span>            
+            </li>
+            <li><span class="comment">/* use CSS custom properties */</span></li>
+            <li id="font-variation-settings"><span class="property">font-variation-settings</span>: <span class="string">var</span>(<span class="custom-prop">--prop</span>), <span class="string">var</span>(<span class="custom-prop">--xprn</span>), <span class="string">var</span>(<span class="custom-prop">--ital</span>), <span class="string">var</span>(<span class="custom-prop">--crsv</span>);</li>
+        </ul>
+
+    </div>
+</div>
+
+  </body>
+</html>

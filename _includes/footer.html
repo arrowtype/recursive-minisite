@@ -7,10 +7,41 @@
         <a class="pre-footer__next">Origins & Process →</a>
     </div>
 </div>
-<div class="footer bg-dark">
-    <h4>Coming soon to Google Fonts!</h4>
-    <p>Recursive is under active development and will soon be available through Google Fonts. 
-Want (very occassional) updates on new releases of Recursive? Sign up!</p>
+<div class="footer-top bg-dark">
+	<div class="float-left">
+    	<h4>Coming soon to Google Fonts!</h4>
+    	<p>Recursive is under active development and will soon be available through Google Fonts. Until then, you can follow the project and download the latest betas on the <a href="">Recursive project repo on GitHub.</a></p>
+	</div>
+	<div class="float-left">
+
+	</div>
+</div>
+
+<div class="footer-bottom bg-dark clearfix">
+	<div class="column float-left">
+		<img src="/assets/img/made_by_google_fonts_white.png">
+	</div>
+	<div class="column float-left">
+		Recursive Sans & Mono
+		<ul>
+			<li>Features</li>
+			<li>Origins & Process</li>
+			<li>Specimen</li>
+			<li>Download beta</li>
+		</ul>
+	</div>
+	<div class="float-left credits">
+		By Arrow Type
+		<br>Type design by Stephen Nixon
+		<br>With assistance from Katja Schimmel, Lisa Huang, Rafał Buchner & Ben Kiel, and early guidance from KABK TypeMedia faculty
+		<br>
+		<br>Website by Math Practice
+		<br>E Roon Kang, Minkyoung Kim, Talia Cotton
+	</div>
+	<div class="column float-left links">
+		<a href="#"><span>fonts.google.com</span>/specimen/Recursive</a>
+		<a href="#"><span>github.com</span>/arrowtype/recursive</a>
+	</div>
 </div>
 
 <!-- JS -->
@@ -24,7 +55,7 @@ Want (very occassional) updates on new releases of Recursive? Sign up!</p>
 <script src='https://threejs.org/build/three.min.js'></script>
 <script src='https://threejs.org/examples/js/controls/OrbitControls.js'></script>
 <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
-<script type="text/javascript" src="/js/sketch.js"></script>
+<!-- <script type="text/javascript" src="/js/sketch.js"></script> -->
 <script type="text/javascript" src="/js/script.js"></script>
 
 <script>
@@ -124,10 +155,12 @@ Want (very occassional) updates on new releases of Recursive? Sign up!</p>
 // var simplemde = new SimpleMDE();
 simplemde.value(URI);
 
-simplemde.codemirror.on("change", function(){
-    insertImage();
-    console.log(simplemde);
-});
+// console.log(simplemde);
+
+// simplemde.codemirror.on("change", function(){
+//     // insertImage();
+//     // console.log(simplemde);
+// });
 
 function insertImage(){
     let urls = document.getElementsByClassName("cm-url");
@@ -135,11 +168,30 @@ function insertImage(){
         if (urls[i].classList.contains('cm-formatting') == false){
             let imgElem = document.createElement("img");
             imgElem.src = urls[i].innerHTML;
-            console.log(urls[i].parentElement);
+            // console.log(urls[i].parentElement);
             urls[i].parentElement.appendChild(imgElem);
-            console.log(urls[i].parentElement);
+            // console.log(urls[i].parentElement);
         };
     }
 }
-window.scrollTo(0,0);
+window.onload = function(){
+	// console.log("loaded");
+	// insertImage();
+	let tags = document.getElementsByClassName("cm-string");
+	// console.log(tags);
+	let tagName;
+	for (var i=0;i<tags.length;i++){
+		if (tags[i].innerHTML.length > 1 && tags[i].parentElement.getElementsByClassName('cm-tag')[0].innerHTML == '&lt;'){
+			tagName = tags[i].parentElement.getElementsByClassName('cm-tag')[1].innerHTML
+			// console.log(tagName);
+			let elem = document.createElement(tagName);
+			elem.src = tags[i].innerHTML;
+			tags[i].parentElement.appendChild(elem);
+		}
+		// console.log(tags[i].parentElement.getElementsByClassName('cm-tag')[0].innerHTML);
+		// console.log(tags[i].parentElement.querySelector('.cm-tag:not(m-bracket)').innerHTML);
+	}
+	// console.log("loaded2");
+}
+// window.scrollTo(0,0);
 </script>

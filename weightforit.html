@@ -1,0 +1,55 @@
+---
+layout: iframe
+---
+
+<div id="weightForIt" class="container container-sm py-5">
+    <div id="canvas">
+        <div id="dollars">
+        </div>
+        <div class="label">XPRN</div>
+        <!-- <div class="label" id="xprnLabel1">0.65</div> -->
+        <!-- <div class="label" id="xprnLabel2">0.65</div> -->
+        <div id="xAxis">
+            <div class="float-left">864</div><div class="float-right">864</div>
+        </div>
+        <div id="yAxis">
+            <div>864</div><div>864</div>
+        </div>
+    </div>
+    <div class="label-bottom clearfix">
+        <div class="float-left">Weight:300</div><div class="float-right">900</div>
+    </div>
+</div>
+
+<script type="text/javascript">
+document.getElementById("canvas").onmousemove = function(e){
+    let bounds = document.getElementById("dollars").getBoundingClientRect();
+    let xPos = interpolate(e.clientX, bounds.left, bounds.right, 0, document.getElementById("dollars").clientWidth);
+    let yPos = interpolate(e.clientY, bounds.top, bounds.bottom, 0, document.getElementById("dollars").clientHeight);
+    let xAxisLabel = interpolate(e.clientX, bounds.left, bounds.right, 0, 1);
+    let yAxisLabel = interpolate(e.clientY, bounds.top, bounds.bottom, 300, 900);
+
+    document.getElementById("yAxis").style.left = xPos + "px";
+    document.getElementById("yAxis").innerHTML = "<div>"+Math.floor(yAxisLabel)+"</div><div>"+Math.floor(yAxisLabel)+"</div>";
+    document.getElementById("xAxis").style.top = yPos + "px";
+    document.getElementById("xAxis").innerHTML = '<div class="float-left">'+xAxisLabel.toFixed(2)+'</div><div class="float-right">'+xAxisLabel.toFixed(2)+'</div>';
+
+    let fontVariationSettings = "font-variation-settings: 'XPRN' " + xAxisLabel.toFixed(2);
+
+    if (enableHandler == true) {
+        if (yPos < 400 && yPos > 60 && xPos < 933 && xPos > 60 ){
+            document.getElementById("dollars").innerHTML += `<div class='dollar' style='top: ${yPos}px; left:${xPos}px; font-variation-settings: "XPRN" ${xAxisLabel.toFixed(2)}, "wght" ${Math.floor(yAxisLabel)}; font-weight:${Math.floor(yAxisLabel)}'>$</div>`;
+        }
+        enableHandler = false;
+    } 
+
+}
+
+window.setInterval(function(){
+    enableHandler = true;
+}, 100);
+
+function interpolate(value, low1, high1, low2, high2) {
+    return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
+}
+</script>

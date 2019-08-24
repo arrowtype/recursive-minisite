@@ -2,60 +2,107 @@
 layout: default
 title: Recursive
 meta-content:
-  image: /uploads/homepage.jpg
-  description: >-
-    Holler is all about enhancing your online conversation through messaging. We
-    provide content for chat to help you connect, communicate and express
-    yourself better. Learn more here.
+  image: 
+  description: Recursive is a variable font, providing a continuous range of design control across five axes, Proportion, Expression, Weight, Italic, and Cursive.
 ---
 
 <div class="container-fluid bg-dark position-relative" id="hero">
-    <div id="three"></div>
+    <!-- <div id="three"></div> -->
     <div class="hero__headline position-absolute w-100">
         A typographic pallette for vibrant code & UI.
     </div>
 </div>
 <div id="phantomToolbar" class="d-none"></div>
 
-<div class="toolbar fixed" id="toolbar">
+<div class="toolbar fixed clearfix" id="toolbar">
     <div class="toolbar__item">Base Style</div>
+    
     <div class="toolbar__item">
+        <a data-toggle="collapse" id="toolbarFontStyle" data-target="#pickFontStyle" data-text="Collapse">
         Recursive Sans
-        <svg class="arrow" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg style="pointer-events:none" class="arrow" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1.41 0.589844L6 5.16984L10.59 0.589844L12 1.99984L6 7.99984L0 1.99984L1.41 0.589844Z" fill="black"/>
         </svg>
+        </a>
+        <div class="collapse" id="pickFontStyle">
+            <ul>
+                <li id="globalApplyMono">Recursive Mono</li>
+                <li id="globalApplySans">Recursive Sans</li>
+            </ul>
+        </div>
     </div>
+    
     <div class="toolbar__item">
+        <a data-toggle="collapse" data-target="#pickExpression" data-text="Collapse">
         Linear Regular
-        <svg class="arrow" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg style="pointer-events:none" class="arrow" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1.41 0.589844L6 5.16984L10.59 0.589844L12 1.99984L6 7.99984L0 1.99984L1.41 0.589844Z" fill="black"/>
         </svg>
+        </a>
+        <div class="collapse" id="pickExpression">
+            <ul>
+                <li>Options here?</li>
+            </ul>
+        </div>
     </div>
     <div class="toolbar__item">
+        <a data-toggle="collapse" data-target="#pickFontSize" data-text="Collapse">
         15pt
-        <svg class="arrow" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg style="pointer-events:none" class="arrow" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1.41 0.589844L6 5.16984L10.59 0.589844L12 1.99984L6 7.99984L0 1.99984L1.41 0.589844Z" fill="black"/>
         </svg>
+        </a>
+        <div class="collapse" id="pickFontSize">
+            <ul>
+                <li><input id="globalFontSizeSlider" min="10" max="250" step="1" value="144" type="range"></li>
+            </ul>
+        </div>
     </div>
-    <div class="toolbar__item"><span>p</span>1  <span>x</span>0  <span>W</span>400  <span>i</span>0  <span>c</span>0</div>
     <div class="toolbar__item">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="8" cy="8" r="7.5" fill="white" stroke="black"/>
-            <path d="M15.4836 7.5H0.516402C0.773695 3.59098 4.02588 0.5 8 0.5C11.9741 0.5 15.2263 3.59098 15.4836 7.5Z" fill="black" stroke="black"/>
-        </svg>
+        <a data-toggle="collapse" data-target="#pickVariability" data-text="Collapse">
+        <span>p</span>1  <span>x</span>0  <span>W</span>400  <span>i</span>0  <span>c</span>0
+        </a>
+        <div class="collapse" id="pickVariability">
+            <ul>
+                <li><input id="globalFontSizeSlider" min="10" max="250" step="1" value="144" type="range"></li>
+            </ul>
+        </div>
+    </div>
+    <div class="toolbar__item">
+        <a id="inversePage">
+            <svg id="inverseSVG" style="pointer-events:none" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="8" cy="8" r="7.5" fill="white" stroke="black"/>
+                <path d="M15.4836 7.5H0.516402C0.773695 3.59098 4.02588 0.5 8 0.5C11.9741 0.5 15.2263 3.59098 15.4836 7.5Z" fill="black" stroke="black"/>
+            </svg>
+        </a>
     </div>
 </div>
 
+
+<!-- <p>
+  <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button>
+</p>
+<div class="row">
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample1">
+      <div class="card card-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample2">
+      <div class="card card-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+      </div>
+    </div>
+  </div>
+</div> -->
+
 <div class="container-fluid" id="mdContainer">
-    <!-- <div class="main"> -->
         <textarea id="mdSection">
             {% include mde.md %}
         </textarea>
-    <!-- </div> -->
 </div>
-
-{% include singlefile.html %}
-{% include morewithtypography.html %}
-{% include monosans.html %}
-{% include superplexed.html %}
-{% include weightforit.html %}

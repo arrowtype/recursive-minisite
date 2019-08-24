@@ -1,0 +1,91 @@
+---
+layout: iframe
+---
+<!-- 
+<style>
+
+
+    .container{
+        /* max-width:960px; */
+    }
+    #inputMono{
+        font-family: "RecMono", monospace;
+        font-size: 275.2px;
+        height:275px;
+        font-weight:800;
+    }
+
+    #inputSans{
+        font-family: "RecSans", sans-serif;
+        font-size: 275.2px;
+        height:275px;
+    }
+
+    #inputSansValues, #inputMonoValues{
+        position:absolute;
+        top:10px;
+        left:10px;
+        color:white;
+        font-family:"RecMono", monospace;
+        font-size:12px;
+    }
+    span.letterSans, span.letterMono{
+        line-height: 275px;
+        background-color:black;
+        color:white;
+        border-left:1px solid white;
+        display: inline-block;
+    }
+</style> -->
+
+<div class="container-fluid" id="monoSans">
+    <div class="container">
+        <!-- <input type="text" id="inputMono" value = "Wx#7%b">
+        <input type="text" id="inputSans" value = "Editors"> -->
+        <div class="position-relative">
+            <div id="inputMono">Wx#7%b</div>
+            <div id="inputMonoValues"></div>
+        </div>
+        <div class="position-relative">
+            <div id="inputSans">Editors</div>
+            <div id="inputSansValues"></div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javscript">
+let monoWords = ["Mumbai", "Animal", "Future", "Potato", "Spring"];
+let c="0";
+let enableHandler = true;
+
+let slide = document.getElementById('fontSizeSlider'),
+    sliderDiv = document.getElementById("fontSizeResult");
+
+slide.onchange = function() {
+    sliderDiv.innerHTML = this.value + "px";
+    document.getElementById("controls-result").style.fontSize = this.value + "px";
+}
+
+let inputSans = document.getElementById("inputSans").innerHTML;
+let inputMono = document.getElementById("inputMono").innerHTML;
+let lettersSans = inputSans.split('');
+let lettersMono = inputMono.split('');
+let lettersMaxWidth = 260;
+let lettersMinWidth = 60;
+document.getElementById("inputSans").innerHTML = '';
+document.getElementById("inputMono").innerHTML = '';
+
+for (var i=0; i<lettersSans.length; i++){
+    document.getElementById("inputSans").innerHTML += "<span class='letterSans' id='letter" + i +"'>" + lettersSans[i] + "</span>";
+    let printVal = document.getElementById("letter" + i).offsetWidth;
+    document.getElementById("inputSansValues").innerHTML += '<span class="d-inline-block" style="width: ' + printVal + 'px">' + document.getElementById("letter" + i).offsetWidth + '</span>';
+    let tint = interpolate(document.getElementById("letter" + i).offsetWidth, lettersMinWidth, lettersMaxWidth, 80,50);
+    document.getElementById("letter" + i).style.backgroundColor = "hsl(221,100%," + tint + "%)";
+} 
+
+for (var i=0; i<lettersMono.length; i++){
+    document.getElementById("inputMono").innerHTML += "<span class='letterMono' id='letterMono" + i +"'>" + lettersMono[i] + "</span>";
+    let printVal = document.getElementById("letterMono" + i).clientWidth;
+    document.getElementById("inputMonoValues").innerHTML += '<span class="d-inline-block" style="width: ' + printVal + 'px">' + document.getElementById("letterMono" + i).offsetWidth + '</span>';
+} 
+</script>

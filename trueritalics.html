@@ -30,3 +30,22 @@ layout: iframe
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+
+let grSlider = document.getElementById('grSlider'),
+    o2 = document.getElementById('grOutput'),
+    grs = document.getElementById("grsMiddle");
+
+    o2.innerHTML = grSlider.value;
+
+
+grSlider.addEventListener('input', function () {
+  o2.innerHTML = grSlider.value;
+  o2.style.left = grSlider.value*100 + "%";
+  grs.style.top = grSlider.value*100 + "%";
+  grs.style.fontVariationSettings = '"ital" '+ grSlider.value +', "XPRN" 0, "CRSV" 0;';
+//   console.log('"ital" '+ grSlider.value +', "XPRN" 0, "CRSV" 0;')
+//   grs.style.fontVariationSettings = "'XPRN' " + grSlider.value;
+}, false);
+</script>
