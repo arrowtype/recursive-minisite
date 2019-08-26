@@ -33,9 +33,6 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
   <link rel="stylesheet" href="/css/main.css">
-  <!-- <link rel="stylesheet" href="http://dev.taliacotton.com/recursive/css/main.css"> -->
-  <!-- <link rel="stylesheet" href="/css/custom/aos.css" /> -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 </head>
 
   <body>
@@ -79,9 +76,11 @@
 </nav>
 
 </div>
+     <div id="THREE"></div>
+<input type="text" id="textInput" onkeyup="changeString()"></input>
     <div  class="h-100">
     <div class="container-fluid bg-dark position-relative" id="hero">
-    <!-- <div id="three"></div> -->
+   
     <div class="hero__headline position-absolute w-100">
         A typographic pallette for vibrant code & UI.
     </div>
@@ -151,29 +150,6 @@
         </a>
     </div>
 </div>
-
-
-<!-- <p>
-  <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
-  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button>
-  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button>
-</p>
-<div class="row">
-  <div class="col">
-    <div class="collapse multi-collapse" id="multiCollapseExample1">
-      <div class="card card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="collapse multi-collapse" id="multiCollapseExample2">
-      <div class="card card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-      </div>
-    </div>
-  </div>
-</div> -->
 
 <div class="container-fluid" id="mdContainer">
         <textarea id="mdSection">
@@ -325,12 +301,12 @@ Even better, if you back one of the top tiers, you’ll receive exclusive typogr
 <script src='https://threejs.org/build/three.min.js'></script>
 <script src='https://threejs.org/examples/js/controls/OrbitControls.js'></script>
 <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
-<!-- <script type="text/javascript" src="/js/sketch.js"></script> -->
+<script type="text/javascript" src="/js/sketch.js"></script>
 <script type="text/javascript" src="/js/script.js"></script>
 
 <script>
-    var element = document.getElementById('mdSection');
-    var textNode = element.firstChild;
+    var mdElement = document.getElementById('mdSection');
+    var textNode = mdElement.firstChild;
     var URI = textNode.data;
 
     var simplemde = new SimpleMDE({

@@ -6780,6 +6780,24 @@ a.text-dark:hover, a.text-dark:focus {
   .table .thead-dark th {
     color: inherit;
     border-color: #dee2e6; } }
+#THREE {
+  width: 100%;
+  height: 935px;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  background-color: black; }
+
+.text-label {
+  color: #fff;
+  /*   margin: -5px 0 0 15px; */
+  pointer-events: none;
+  font-size: 120px; }
+
+#textInput {
+  position: fixed;
+  left: -100vw; }
+
 html, body {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -6934,6 +6952,7 @@ iframe {
   position: relative;
   width: 100vw;
   left: calc(33px - 50%);
+  height: 900px;
   border: 0px;
   overflow: visible; }
 
@@ -6996,9 +7015,6 @@ nav.navbar {
   color: red;
   text-transform: uppercase;
   font-style: italic; }
-
-#hero {
-  height: 935px; }
 
 .toolbar.fixed {
   position: fixed;
@@ -7097,7 +7113,6 @@ nav.navbar {
   /*   margin: -5px 0 0 15px; */
   pointer-events: none;
   font-size: 130px;
-  font-family: 'RecMono', monospace;
   font-weight: 800;
   --prop: "PROP" 0;
   --xprn: "XPRN" 0;

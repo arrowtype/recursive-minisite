@@ -33,9 +33,6 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
   <link rel="stylesheet" href="/css/main.css">
-  <!-- <link rel="stylesheet" href="http://dev.taliacotton.com/recursive/css/main.css"> -->
-  <!-- <link rel="stylesheet" href="/css/custom/aos.css" /> -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 </head>
 
   <body>
@@ -135,7 +132,6 @@
         </div>
     </div>
     
-<!-- <input id="ampersandSlider" type="range" min="1" max="20"> -->
 <div class="slider-group clearfix">
     <div class="slider-label d-inline-block text-right float-left">Linear<span> 0</span></div>
 
@@ -153,14 +149,10 @@
 <script type="text/javascript">
 
 let ampersandSlider = document.getElementById('ampersandSlider'),
-    // grSlider = document.getElementById('grSlider'),
     o = document.getElementById('ampersandOutput'),
-    // o2 = document.getElementById('grOutput'),
     amp = document.getElementById("ampersandMiddle");
-    // grs = document.getElementById("grsMiddle");
 
     o.innerHTML = ampersandSlider.value;
-    // o2.innerHTML = grSlider.value;
 
 // use 'change' instead to see the difference in response
 ampersandSlider.addEventListener('input', function () {

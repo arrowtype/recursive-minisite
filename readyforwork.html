@@ -98,7 +98,6 @@ layout: iframe
         </div>
     </div>
     
-<!-- <input id="ampersandSlider" type="range" min="1" max="20"> -->
 <div class="slider-group clearfix">
     <div class="slider-label d-inline-block text-right float-left">Linear<span> 0</span></div>
 
@@ -116,14 +115,10 @@ layout: iframe
 <script type="text/javascript">
 
 let ampersandSlider = document.getElementById('ampersandSlider'),
-    // grSlider = document.getElementById('grSlider'),
     o = document.getElementById('ampersandOutput'),
-    // o2 = document.getElementById('grOutput'),
     amp = document.getElementById("ampersandMiddle");
-    // grs = document.getElementById("grsMiddle");
 
     o.innerHTML = ampersandSlider.value;
-    // o2.innerHTML = grSlider.value;
 
 // use 'change' instead to see the difference in response
 ampersandSlider.addEventListener('input', function () {
