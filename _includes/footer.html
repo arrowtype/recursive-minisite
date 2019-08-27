@@ -1,3 +1,4 @@
+
 <div class="pre-footer clearfix">
     <div class="float-left">
         Inspired by signwriting, <br>
@@ -55,7 +56,7 @@
 <script src='https://threejs.org/build/three.min.js'></script>
 <script src='https://threejs.org/examples/js/controls/OrbitControls.js'></script>
 <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
-<script type="text/javascript" src="/js/sketch.js"></script>
+<!-- <script type="text/javascript" src="/js/sketch.js"></script> -->
 <script type="text/javascript" src="/js/script.js"></script>
 
 <script>
@@ -162,18 +163,18 @@ simplemde.value(URI);
 //     // console.log(simplemde);
 // });
 
-function insertImage(){
-    let urls = document.getElementsByClassName("cm-url");
-    for (var i=0;i<urls.length;i++){
-        if (urls[i].classList.contains('cm-formatting') == false){
-            let imgElem = document.createElement("img");
-            imgElem.src = urls[i].innerHTML;
-            // console.log(urls[i].parentElement);
-            urls[i].parentElement.appendChild(imgElem);
-            // console.log(urls[i].parentElement);
-        };
-    }
-}
+// function insertImage(){
+//     let urls = document.getElementsByClassName("cm-url");
+//     for (var i=0;i<urls.length;i++){
+//         if (urls[i].classList.contains('cm-formatting') == false){
+//             let imgElem = document.createElement("img");
+//             imgElem.src = urls[i].innerHTML;
+//             // console.log(urls[i].parentElement);
+//             urls[i].parentElement.appendChild(imgElem);
+//             // console.log(urls[i].parentElement);
+//         };
+//     }
+// }
 window.onload = function(){
 	// console.log("loaded");
 	// insertImage();
@@ -184,6 +185,7 @@ window.onload = function(){
 		if (tags[i].innerHTML.length > 1 && tags[i].parentElement.getElementsByClassName('cm-tag')[0].innerHTML == '&lt;'){
 			tagName = tags[i].parentElement.getElementsByClassName('cm-tag')[1].innerHTML
 			// console.log(tagName);
+			tags[i].parentElement.style.color = "#cccccc";
 			let elem = document.createElement(tagName);
 			elem.src = tags[i].innerHTML;
 			tags[i].parentElement.appendChild(elem);
@@ -192,6 +194,15 @@ window.onload = function(){
 		// console.log(tags[i].parentElement.querySelector('.cm-tag:not(m-bracket)').innerHTML);
 	}
 	// console.log("loaded2");
+	console.log("working");
+	setTimeout(function(){
+	for (var i=0;i<document.getElementsByTagName("iframe").length;i++){
+		console.log("hello world")
+        console.log(document.getElementsByTagName("iframe")[i].contentWindow.document.body.offsetHeight);
+		console.log(document.getElementsByTagName('iframe')[i].contentWindow.document.body.scrollHeight);
+		document.getElementsByTagName('iframe')[i].style.height = document.getElementsByTagName("iframe")[i].contentWindow.document.body.offsetHeight + 'px';
+    }
+	}, 1000);
 }
 // window.scrollTo(0,0);
 </script>

@@ -83,9 +83,6 @@ const collapse = (selector, cmd) => {
 }
 
 
-
-
-
 window.onscroll = function(){
     let scrollObject = {};
         scrollObject = {
@@ -104,6 +101,14 @@ window.onscroll = function(){
 
 window.onload = function start() {
     switchLetters();
+
+    for (var i=0;i<document.getElementsByTagName("iframe").length;i++){
+            console.log(document.getElementsByTagName("iframe")[i].contentWindow.document.body.offsetHeight);
+    }
+}
+
+window.onload = function(){
+    
 }
 
 function switchLetters() {
