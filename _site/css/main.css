@@ -6809,9 +6809,6 @@ html, body {
   font-size: 15px;
   line-height: 24px; }
 
-body * {
-  overflow: hidden; }
-
 body.inverse {
   background-color: black;
   color: white; }
