@@ -87,7 +87,7 @@
 </div>
 <div id="phantomToolbar" class="d-none"></div>
 
-<div class="toolbar fixed clearfix" id="toolbar">
+<div class="toolbar clearfix" id="toolbar">
     <select class="toolbar__item" id="chooseInstance">
         
         <option data-prop="0" data-xprn="1" data-ital="0.5" data-slnt="0" data-wght="900">Mono Casual Black</option>
@@ -233,12 +233,16 @@
         </div>
     </div>
     <div class="toolbar__item">
-        <a data-toggle="collapse" data-target="#pickVariability" data-text="Collapse">
-        <span>PROP </span><span id="globalProp">1</span><span>   XPRN </span><span id="globalXprn">0</span><span>   wght </span><span id="globalWght">400</span><span>   ital </span><span id="globalItal">0</span><span>   slnt </span><span id="globalCrsv">0</span>
+        <a data-toggle="collapse" data-target="#pickVariability" data-text="Collapse" id="collapseSettings">
+            <span>PROP </span><span id="globalProp">1</span><span>   XPRN </span><span id="globalXprn">0</span><span>   wght </span><span id="globalWght">400</span><span>   ital </span><span id="globalItal">0</span><span>   slnt </span><span id="globalCrsv">0</span>
         </a>
-        <div class="collapse" id="pickVariability">
+        <div class="collapse show" id="pickVariability">
             <ul>
-                <li><input id="globalFontSizeSlider" min="10" max="250" step="1" value="144" type="range"></li>
+                <li><span class="collapse__label">PROP</span> <span class="inputs d-inline-block"><span class="collapse__label"><span class="radio active radio-prop" id="globalRadioMono"></span> Mono</span> <span class="collapse__label"><span class="radio radio-prop" id="globalRadioSans"></span> Sans</span></span></li>
+                <li><span class="collapse__label">XPRN</span><input id="globalXprnSlider" min="0" max="1" value="0" step="0.01" type="range"></li>
+                <li><span class="collapse__label">wght</span><input id="globalWghtSlider" min="300" max="900" value="400" step="1" type="range"></li>
+                <li><span class="collapse__label">ital</span> <span class="inputs d-inline-block"><span class="collapse__label"><span class="radio active radio-ital" id="globalItalOff"></span> Off</span> <span class="collapse__label"><span class="radio radio-ital" id="globalItalAuto"></span> Auto</span> <span class="collapse__label"><span class="radio radio-ital" id="globalItalOn"></span> On</span></span></li>
+                <li><span class="collapse__label">slnt</span><input id="globalSlntSlider" min="0" max="1" value="0.5" step="0.01" type="range"></li>
             </ul>
         </div>
     </div>
