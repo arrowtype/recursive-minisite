@@ -78,6 +78,11 @@ body.mono{
 #globalApplySans{color:grey;}
 #globalApplyMono{color:black;}
 
+#globalProp, #globalWght, #globalXprn, #globalItal, #globalCrsv{
+    color:black;
+    margin-right:10px;
+}
+
 html {
     scroll-behavior: smooth;
   }
@@ -346,15 +351,39 @@ nav.navbar{
     border-bottom:1px solid black;
     padding-left:calc(50% - 390px);
     height:41px;
+    .toolbar__item:focus{
+        outline-offset:0px;
+    }
+    // svg#selectArrow {
+    //     position: absolute;
+    //     z-index: 100000;
+    //     top: 15px;
+    //     /* left: 121px; */
+    // }
+    select.toolbar__item{
+        background-image:url(/assets/img/arrow-down.svg);
+        background-position: right 14px center;
+        background-repeat:no-repeat;
+        background-size:12px 8px;
+    }
     .toolbar__item{
         outline-style: solid;
         outline-color: black;
-        outline-width:1px;
-        padding:8px 16px;
-        float:left;
-        cursor:pointer;
-        position:relative;
-        background-color:white;
+        outline-width: 1px;
+        padding: 8px 16px;
+        float: left;
+        cursor: pointer;
+        position: relative;
+        background-color: white;
+        border-radius: 0px;
+        height: 39px;
+        border: 0px;
+        -webkit-appearance:none;
+        -moz-appearance:none;
+        appearance:none;
+        /* margin-right: 50px; */
+        /* outline: none; */
+        // top: -1px;
         span{
             color:#858585;
         }
@@ -378,6 +407,9 @@ nav.navbar{
             border: 1px solid black;
             border-top: 0px;
         }
+    }
+    select.toolbar__item{
+        padding-right:50px;
     }
     .arrow{
         margin-left:14px;

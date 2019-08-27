@@ -17,36 +17,11 @@ meta-content:
 <div id="phantomToolbar" class="d-none"></div>
 
 <div class="toolbar fixed clearfix" id="toolbar">
-    <div class="toolbar__item">Base Style</div>
-    
-    <div class="toolbar__item">
-        <a data-toggle="collapse" id="toolbarFontStyle" data-target="#pickFontStyle" data-text="Collapse">
-        Recursive Sans
-        <svg style="pointer-events:none" class="arrow" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1.41 0.589844L6 5.16984L10.59 0.589844L12 1.99984L6 7.99984L0 1.99984L1.41 0.589844Z" fill="black"/>
-        </svg>
-        </a>
-        <div class="collapse" id="pickFontStyle">
-            <ul>
-                <li id="globalApplyMono">Recursive Mono</li>
-                <li id="globalApplySans">Recursive Sans</li>
-            </ul>
-        </div>
-    </div>
-    
-    <div class="toolbar__item">
-        <a data-toggle="collapse" data-target="#pickExpression" data-text="Collapse">
-        Linear Regular
-        <svg style="pointer-events:none" class="arrow" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1.41 0.589844L6 5.16984L10.59 0.589844L12 1.99984L6 7.99984L0 1.99984L1.41 0.589844Z" fill="black"/>
-        </svg>
-        </a>
-        <div class="collapse" id="pickExpression">
-            <ul>
-                <li>Options here?</li>
-            </ul>
-        </div>
-    </div>
+    <select class="toolbar__item" id="chooseInstance">
+        {% for instance in site.data.instances %}
+        <option data-prop="{{ instance.PROP }}" data-xprn="{{ instance.XPRN }}" data-ital="{{ instance.ital }}" data-slnt="{{ instance.slnt }}" data-wght="{{ instance.wght }}">{{ instance.name }}</option>
+        {% endfor %}
+    </select>
     <div class="toolbar__item">
         <a data-toggle="collapse" data-target="#pickFontSize" data-text="Collapse">
         15pt
@@ -62,7 +37,7 @@ meta-content:
     </div>
     <div class="toolbar__item">
         <a data-toggle="collapse" data-target="#pickVariability" data-text="Collapse">
-        <span>p</span>1  <span>x</span>0  <span>W</span>400  <span>i</span>0  <span>c</span>0
+        <span>PROP </span><span id="globalProp">1</span><span>   XPRN </span><span id="globalXprn">0</span><span>   wght </span><span id="globalWght">400</span><span>   ital </span><span id="globalItal">0</span><span>   slnt </span><span id="globalCrsv">0</span>
         </a>
         <div class="collapse" id="pickVariability">
             <ul>

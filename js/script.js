@@ -14,14 +14,14 @@ document.getElementById("inversePage").onmousedown = function(){
     document.getElementsByTagName("body")[0].classList.toggle("inverse");
 }
 
-document.getElementById("globalApplyMono").onmousedown = function(){
-    document.getElementsByTagName("body")[0].classList.toggle("mono");
-}
+// document.getElementById("globalApplyMono").onmousedown = function(){
+//     document.getElementsByTagName("body")[0].classList.toggle("mono");
+// }
 
-document.getElementById("globalApplySans").onmousedown = function(){
-    console.log(document.getElementsByTagName("body")[0]);
-    document.getElementsByTagName("body")[0].classList.toggle("mono");
-}
+// document.getElementById("globalApplySans").onmousedown = function(){
+//     console.log(document.getElementsByTagName("body")[0]);
+//     document.getElementsByTagName("body")[0].classList.toggle("mono");
+// }
 
 // let ampersandSlider = document.getElementById('ampersandSlider'),
 //     grSlider = document.getElementById('grSlider'),
@@ -68,6 +68,14 @@ window.addEventListener('click', (ev) => {
     collapse(selector, 'toggle');
   }
 }, false);
+
+document.getElementById("chooseInstance").onchange = function(){   
+   document.getElementById("globalProp").innerHTML = this.selectedOptions[0].getAttribute('data-prop');
+   document.getElementById("globalWght").innerHTML = this.selectedOptions[0].getAttribute('data-wght');
+   document.getElementById("globalXprn").innerHTML = this.selectedOptions[0].getAttribute('data-xprn');
+   document.getElementById("globalItal").innerHTML = this.selectedOptions[0].getAttribute('data-ital');
+   document.getElementById("globalCrsv").innerHTML = this.selectedOptions[0].getAttribute('data-slnt');
+};
 
 
 const fnmap = {
