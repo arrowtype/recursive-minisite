@@ -36,47 +36,90 @@
 </head>
 
   <body>
-    <div class="container-fluid module" id="monoSans">
+    <div class="container-fluid container-sm module" id="monoSans">
     <div class="container">
         <div class="position-relative">
-            <div id="inputMono">Wx#7%b</div>
+            <!-- <div id="inputMono">Wx#7%b</div> -->
+            <div id="inputMonoSpans">Wx#7%b</div>
             <div id="inputMonoValues"></div>
+            <input type="text" id="inputMono" value="Wx#7%b"></input>
+            
+            
         </div>
         <div class="position-relative">
-            <div id="inputSans">Editors</div>
+            <!-- <div id="inputSans">Editors</div> -->
+            <div id="inputSansSpans"></div>
             <div id="inputSansValues"></div>
+            <input type="text" id="inputSans" value="Editors"></input>
         </div>
     </div>
 </div>
 
 <script type="text/javascript">
-let monoWords = ["Mumbai", "Animal", "Future", "Potato", "Spring"];
+let words = ["8W!k&ãf@", "Reader", "Write", "Editor", "Modify"];
 let c="0";
 let enableHandler = true;
 
-let inputSans = document.getElementById("inputSans").innerHTML;
-let inputMono = document.getElementById("inputMono").innerHTML;
+window.setInterval(function(){
+  document.getElementById("inputMono").value = words[c];
+  measureLetters(document.getElementById("inputMono"), document.getElementById("inputMonoSpans"))
+}, 2200);
+
+setTimeout(function(){
+    window.setInterval(function(){
+    document.getElementById("inputSans").value = words[c];
+    measureLetters(document.getElementById("inputSans"), document.getElementById("inputSansSpans"))
+    if (c<words.length-1){c++}else{c=0}
+    }, 2200);
+},600)
+
+// let inputSans = document.getElementById("inputSans").innerHTML;
+// let inputMono = document.getElementById("inputMono").innerHTML;
+let inputSans = document.getElementById("inputSans").value;
+let inputMono = document.getElementById("inputMono").value;
 let lettersSans = inputSans.split('');
 let lettersMono = inputMono.split('');
 let lettersMaxWidth = 260;
 let lettersMinWidth = 60;
-console.log(lettersSans);
-document.getElementById("inputSans").innerHTML = '';
-document.getElementById("inputMono").innerHTML = '';
+document.getElementById("inputSansSpans").innerHTML = '';
+document.getElementById("inputMonoSpans").innerHTML = '';
 
-for (var i=0; i<lettersSans.length; i++){
-    document.getElementById("inputSans").innerHTML += "<span class='letterSans' id='letter" + i +"'>" + lettersSans[i] + "</span>";
+// for (var i=0; i<lettersSans.length; i++){
+//     document.getElementById("inputSansSpans").innerHTML += "<span class='letterSans' id='letter" + i +"'>" + lettersSans[i] + "</span>";
+//     let printVal = document.getElementById("letter" + i).offsetWidth;
+//     document.getElementById("inputSansValues").innerHTML += '<span class="d-inline-block" style="width: ' + printVal + 'px">' + document.getElementById("letter" + i).offsetWidth + '</span>';
+//     let tint = interpolate(document.getElementById("letter" + i).offsetWidth, lettersMinWidth, lettersMaxWidth, 80,50);
+//     document.getElementById("letter" + i).style.backgroundColor = "hsl(221,100%," + tint + "%)";
+//     document.getElementById("letter" + i).style.color = "hsl(221,100%," + tint + "%)";
+// } 
+
+for (var i=0; i<lettersMono.length; i++){
+    document.getElementById("inputMonoSpans").innerHTML += "<span class='letterMono' id='letterMono" + i +"'>" + lettersMono[i] + "</span>";
+    let printVal = document.getElementById("letterMono" + i).clientWidth;
+    document.getElementById("inputMonoValues").innerHTML += '<span class="d-inline-block" style="width: ' + printVal + 'px">' + document.getElementById("letterMono" + i).offsetWidth + '</span>';
+} 
+
+function measureLetters(inputElem, outputElem){
+    outputElem.innerHTML = '';
+    let inputSans = inputElem.value;
+    let lettersSans = inputSans.split('');
+    for (var i=0; i<lettersSans.length; i++){
+    outputElem.innerHTML += "<span class='letterSans' id='letter" + i +"'>" + lettersSans[i] + "</span>";
     let printVal = document.getElementById("letter" + i).offsetWidth;
     document.getElementById("inputSansValues").innerHTML += '<span class="d-inline-block" style="width: ' + printVal + 'px">' + document.getElementById("letter" + i).offsetWidth + '</span>';
     let tint = interpolate(document.getElementById("letter" + i).offsetWidth, lettersMinWidth, lettersMaxWidth, 80,50);
     document.getElementById("letter" + i).style.backgroundColor = "hsl(221,100%," + tint + "%)";
+    document.getElementById("letter" + i).style.color = "hsl(221,100%," + tint + "%)";
 } 
+}
 
-for (var i=0; i<lettersMono.length; i++){
-    document.getElementById("inputMono").innerHTML += "<span class='letterMono' id='letterMono" + i +"'>" + lettersMono[i] + "</span>";
-    let printVal = document.getElementById("letterMono" + i).clientWidth;
-    document.getElementById("inputMonoValues").innerHTML += '<span class="d-inline-block" style="width: ' + printVal + 'px">' + document.getElementById("letterMono" + i).offsetWidth + '</span>';
-} 
+document.getElementById("inputSans").onkeyup = function(){
+    measureLetters(document.getElementById("inputSans"), document.getElementById("inputSansSpans"))
+}
+
+measureLetters(document.getElementById("inputSans"), document.getElementById("inputSansSpans"))
+
+
 function interpolate(value, low1, high1, low2, high2) {
     return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
 }

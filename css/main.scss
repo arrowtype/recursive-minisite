@@ -205,24 +205,20 @@ h2{
     // background-color:#f2f2f2;
     // z-index:-1
 }
-span span.cm-comment.cm-header.cm-header-2:not(.cm-formatting){
-    border-radius:5px;
+span span.cm-comment:not(.cm-formatting){
+    border-radius:5px !important;
     border:1px solid #dadada;
-    background-color:#f2f2f2;
-    padding: 0px 20px;
-    position: relative;
-    left: -84px;
+    background-color:#f2f2f2 !important;
+    padding: 0px 5px;
     z-index:-1;
 }
-span span.cm-comment.cm-header.cm-header-2:not(.cm-formatting) + span span.cm-comment.cm-header.cm-header-2{
-    position:relative;
-    color:red;
+.cm-formatting.cm-comment{
+    display:none;
 }
-span.cm-comment.cm-header.cm-header-2{
+span.cm-comment{
     color:#7e7e7e;
-    font-weight:400;
-    font-variation-settings: "prop" 400;
-    
+    font-weight:400 !important;
+    font-variation-settings: "prop" 400 !important;
 }
 
 .CodeMirror-line:before{
@@ -635,17 +631,40 @@ nav.navbar{
     .container{
         // max-width:960px;
     }
-    #inputMono{
-        font-family: "RecMono", monospace;
+    #inputMono, #inputMonoSpans{
+        font-family: "Recursive", monospace;
         font-size: 275.2px;
         height:275px;
         font-weight:800;
+        background-color:transparent;
+        border:0px;
+        padding:0px;
+        color:white;
+        font-variation-settings: "wght" 800, "PROP" 0;
     }
 
-    #inputSans{
-        font-family: "RecSans", sans-serif;
+
+    #inputSans, #inputSansSpans{
+        font-family: "Recursive", sans-serif;
         font-size: 275.2px;
         height:275px;
+        background-color:transparent;
+        border:0px;
+        padding:0px;
+        font-variation-settings: "wght" 800, "PROP" 1;
+        color:white;
+    }
+
+
+    #inputMonoSpans, #inputSansSpans{
+        position:absolute;
+        bottom:0px;
+        left:0px;
+        z-index:-1;
+        font-size: 275.2px;
+        height:275px;
+        font-weight:800;
+        line-height: 275px;
     }
 
     #inputSansValues, #inputMonoValues{
@@ -659,7 +678,7 @@ nav.navbar{
     span.letterSans, span.letterMono{
         line-height: 275px;
         background-color:black;
-        color:white;
+        color:black;
         border-left:1px solid white;
         display: inline-block;
     }
