@@ -15,18 +15,10 @@ layout: iframe
     </div>
 </div>
 
-<script type="text/javscript">
+<script type="text/javascript">
 let monoWords = ["Mumbai", "Animal", "Future", "Potato", "Spring"];
 let c="0";
 let enableHandler = true;
-
-let slide = document.getElementById('fontSizeSlider'),
-    sliderDiv = document.getElementById("fontSizeResult");
-
-slide.onchange = function() {
-    sliderDiv.innerHTML = this.value + "px";
-    document.getElementById("controls-result").style.fontSize = this.value + "px";
-}
 
 let inputSans = document.getElementById("inputSans").innerHTML;
 let inputMono = document.getElementById("inputMono").innerHTML;
@@ -34,6 +26,7 @@ let lettersSans = inputSans.split('');
 let lettersMono = inputMono.split('');
 let lettersMaxWidth = 260;
 let lettersMinWidth = 60;
+console.log(lettersSans);
 document.getElementById("inputSans").innerHTML = '';
 document.getElementById("inputMono").innerHTML = '';
 
@@ -50,4 +43,7 @@ for (var i=0; i<lettersMono.length; i++){
     let printVal = document.getElementById("letterMono" + i).clientWidth;
     document.getElementById("inputMonoValues").innerHTML += '<span class="d-inline-block" style="width: ' + printVal + 'px">' + document.getElementById("letterMono" + i).offsetWidth + '</span>';
 } 
+function interpolate(value, low1, high1, low2, high2) {
+    return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
+}
 </script>
