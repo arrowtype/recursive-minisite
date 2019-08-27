@@ -43,11 +43,23 @@ document.getElementById("collapseSettings").onclick = function(){
 //         document.getElementById("controls-result").style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop;
 //     document.getElementById("fontWeightResult").innerHTML = document.getElementById('fontWeightSlider').value;
 // })
-// document.getElementById('xprnSlider').addEventListener('input', function(){
-//     xprn = document.getElementById('xprnSlider').value;
-//         document.getElementById("controls-result").style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop;
-//     document.getElementById("xprnResult").innerHTML = document.getElementById('xprnSlider').value;
-// })
+
+let wght = 400;
+let prop = 0;
+let xprn = 0.5;
+let slnt = 0;
+let crsv = 0;
+
+document.getElementById('globalXprnSlider').addEventListener('input', function(){
+    xprn = document.getElementById('globalXprnSlider').value;
+    document.getElementsByClassName("CodeMirror-lines")[0].style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop;
+    document.getElementById("globalXprn").innerHTML = document.getElementById('xprnSlider').value;
+})
+document.getElementById('globalWghtSlider').addEventListener('input', function(){
+    wght = document.getElementById('globalWghtSlider').value;
+    document.getElementsByClassName("CodeMirror-lines")[0].style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop;
+    document.getElementById("globalWght").innerHTML = document.getElementById('wghtSlider').value;
+})
 // document.getElementById('slntSlider').addEventListener('input', function(){
 //     slnt = document.getElementById('slntSlider').value;
 //         document.getElementById("controls-result").style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop;
