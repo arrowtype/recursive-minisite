@@ -7046,10 +7046,11 @@ nav.navbar {
 
 .toolbar.fixed {
   position: fixed;
-  top: 104px;
+  top: 103px;
   z-index: 200;
   width: 100%;
-  background-color: white; }
+  background-color: white;
+  height: 40px; }
 
 .hero__headline {
   font-size: 40px;
