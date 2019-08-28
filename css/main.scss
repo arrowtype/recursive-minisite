@@ -41,28 +41,28 @@ body *{
 }
 
 body.inverse{
-    background-color:black;
-    color:white;
-    .toolbar.fixed, .toolbar .toolbar__item{
-        background-color:black;
-        color:white;
-    }
-    .toolbar{
-        border-bottom:1px solid white;
-        border-top:1px solid white;
-    }
-    .toolbar .toolbar__item{
-        outline-color:white;
-        padding: 7px 16px 8px 16px;
-    }
-    .toolbar .toolbar__item .collapse{
-        background-color:black;
-        border:1px solid white;
-        border-top:0px;
-    }
-    .toolbar .toolbar__item svg:not(#inverseSVG) path{
-        fill:white;
-    }
+    // background-color:black;
+    // color:white;
+    // .toolbar.fixed, .toolbar .toolbar__item{
+    //     background-color:black;
+    //     color:white;
+    // }
+    // .toolbar{
+    //     border-bottom:1px solid white;
+    //     border-top:1px solid white;
+    // }
+    // .toolbar .toolbar__item{
+    //     outline-color:white;
+    //     padding: 7px 16px 8px 16px;
+    // }
+    // .toolbar .toolbar__item .collapse{
+    //     background-color:black;
+    //     border:1px solid white;
+    //     border-top:0px;
+    // }
+    // .toolbar .toolbar__item svg:not(#inverseSVG) path{
+    //     fill:white;
+    // }
     #inverseSVG{
         -webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
         filter: invert(100%);
@@ -98,6 +98,11 @@ html {
 .container.container-sm {
     max-width: 900px;
     overflow:visible;
+}
+
+.container-overflow{
+    width: 1200px;
+    padding-left: 0px;
 }
  
 .main{
@@ -523,6 +528,21 @@ nav.navbar{
         margin-left:14px;
     }
 }
+div#pickVariability {
+    left: -1px;
+}
+.toolbar:not(.fixed) .toolbar__item .collapse {
+    min-width: calc(100% + 1px);
+    position: absolute;
+    z-index: 2;
+    background-color: white;
+    left: -2px;
+    top: 40px;
+    padding: 0px 16px 8px;
+    border: 1px solid black;
+    border-top: 0px;
+    color: black;
+}
 .pre-footer{
     border-top:1px solid black;
     font-size: 32px;
@@ -615,6 +635,8 @@ nav.navbar{
         --ital: "ital" 0;
         --crsv: "CRSV" 3;
         font-variation-settings: "PROP" 0, "XPRN" 1, "ital" 0, "CRSV" 0, "wght" 800;
+        text-align:center;
+        width:100%;
     }
 
     input[type="text"]:focus{
@@ -769,28 +791,36 @@ nav.navbar{
     .container{
         // max-width:960px;
     }
+    #cursor-auto{
+        position:absolute;
+        pointer-events: none;
+        top:0px;
+        left:0px;
+    }
     #inputMono, #inputMonoSpans{
         font-family: "Recursive", monospace;
         font-size: 275.2px;
-        height:275px;
+        height:300px;
         font-weight:800;
         background-color:transparent;
         border:0px;
         padding:0px;
         color:white;
         font-variation-settings: "wght" 800, "PROP" 0;
+        cursor:none;
     }
 
 
     #inputSans, #inputSansSpans{
         font-family: "Recursive", sans-serif;
         font-size: 275.2px;
-        height:275px;
+        height:300px;
         background-color:transparent;
         border:0px;
         padding:0px;
         font-variation-settings: "wght" 800, "PROP" 1;
         color:white;
+        cursor:none;
     }
 
 
@@ -800,9 +830,9 @@ nav.navbar{
         left:0px;
         z-index:-1;
         font-size: 275.2px;
-        height:275px;
+        height:300px;
         font-weight:800;
-        line-height: 275px;
+        line-height: 300px;
     }
 
     #inputSansValues, #inputMonoValues{
@@ -814,11 +844,14 @@ nav.navbar{
         font-size:12px;
     }
     span.letterSans, span.letterMono{
-        line-height: 275px;
+        line-height: 300px;
         background-color:black;
         color:black;
         border-left:1px solid white;
         display: inline-block;
+    }
+    #inputMono:focus, #inputSans:focus{
+        outline:none;
     }
 }
 
