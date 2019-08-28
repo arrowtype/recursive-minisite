@@ -8079,6 +8079,38 @@ ul.casual .rw {
 .rw {
   font-variation-settings: "wght" var(--wght), "PROP" var(--prop), "ital" var(--ital), "slnt" var(--slnt), "XPRN" var(--xprn); }
 
+.navbar-toggler {
+  position: absolute;
+  right: 20px;
+  top: 12px; }
+
+.hideOnMobile {
+  display: block; }
+
+@media (max-width: 991.98px) {
+  .navbar-brand {
+    margin: 0px;
+    width: 100%;
+    border-right: 0px; }
+
+  .navbar-nav {
+    padding-left: 24px; }
+
+  .toolbar__item:last-child, .toolbar__item:nth-child(2) {
+    display: none; }
+
+  .toolbar__item {
+    width: 100%; }
+
+  .hero__headline {
+    font-size: 28px;
+    line-height: 32px; }
+
+  .hideOnMobile {
+    display: none; }
+
+  pre.CodeMirror-line {
+    padding: 0px 20px; } }
 /* just linking the typeface in */
 @font-face {
   font-family: 'Recursive';

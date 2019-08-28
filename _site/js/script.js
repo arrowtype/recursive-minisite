@@ -13,6 +13,10 @@ document.getElementById("collapseSettings").onclick = function(){
     document.getElementById("pickVariability").classList.toggle("show");
 };
 
+document.getElementById("navbarToggler").onclick = function(){
+    document.getElementById("navbarTogglerDemo03").classList.toggle("hideOnMobile");
+}
+
 window.addEventListener('click', (ev) => {
   const elm = ev.target;
   if (triggers.includes(elm)) {
@@ -39,18 +43,6 @@ document.getElementById("chooseInstance").onchange = function(){
     document.getElementById('globalSlntSlider').value = slnt;
     document.getElementsByClassName("CodeMirror-lines")[0].style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
 };
-
-
-// document.getElementById('fontSizeSlider').addEventListener('input', function(){
-//     document.getElementById("controls-result").style.fontSize = document.getElementById('fontSizeSlider').value + 'px';
-//     document.getElementById("fontSizeResult").innerHTML = document.getElementById('fontSizeSlider').value + 'px';
-// })
-
-// document.getElementById('fontWeightSlider').addEventListener('input', function(){
-//     wght = document.getElementById('fontWeightSlider').value;
-//         document.getElementById("controls-result").style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop;
-//     document.getElementById("fontWeightResult").innerHTML = document.getElementById('fontWeightSlider').value;
-// })
 
 let wght = 400;
 let prop = 0;
