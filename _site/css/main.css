@@ -7672,7 +7672,7 @@ body {
 
 .languages-list {
   background-color: #f8f8f8;
-  font-family: 'RecSans', sans-serif;
+  font-family: 'Recursive';
   font-size: 12px;
   line-height: 20px;
   color: #858585;
@@ -7923,7 +7923,7 @@ body {
     color: #e0e0e0;
     text-align: center;
     padding-top: 28px;
-    font-family: 'RecMono', monospace;
+    font-family: 'Recursive';
     position: relative; }
   .grid span.complete {
     color: #0050FF; }
