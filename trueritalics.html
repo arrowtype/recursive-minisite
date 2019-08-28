@@ -44,15 +44,21 @@ grSlider.addEventListener('input', function () {
   o2.innerHTML = grSlider.value;
   o2.style.left = grSlider.value*100 + "%";
 
-  
   let variable = interpolate(grSlider.value,0,1,0,-15);
-  console.log(variable);
     grs.style.top = grSlider.value*100 + "%";
-    // grs.style.fontVariationSettings = '"slnt" '+ variable +', "XPRN" 0, "ital" 1;';
-    grs.style.fontVariationSettings = "'wght' 800, 'slnt' " + variable;
+    console.log(document.querySelector('#grsMiddle span.crsv-0'));
+    console.log('"ital" 0, "XPRN" 0, "PROP" 0, "slnt" ' + variable + ', "wght" 800;');
+    document.querySelector('#grsMiddle span.crsv-0').style.fontVariationSettings = '"ital" 0, "XPRN" 0, "PROP" 0, "slnt" ' + variable + ', "wght" 800;';
+    document.querySelector('#grsMiddle span.crsv-1').style.fontVariationSettings = '"ital" 0.5, "XPRN" 0, "PROP" 0, "slnt" ' + variable + ', "wght" 800;';
+    document.querySelector('#grsMiddle span.crsv-2').style.fontVariationSettings = '"ital" 1, "XPRN" 0, "PROP" 0, "slnt" ' + variable + ', "wght" 800;';
+
+
 }, false);
 
 function interpolate(value, low1, high1, low2, high2) {
     return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
 }
+
+
+
 </script>

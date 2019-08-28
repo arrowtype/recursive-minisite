@@ -78,7 +78,7 @@ body.mono{
 #globalApplySans{color:grey;}
 #globalApplyMono{color:black;}
 
-#globalProp, #globalWght, #globalXprn, #globalItal, #globalCrsv{
+#globalProp, #globalWght, #globalXprn, #globalItal, #globalSlnt{
     color:black;
     margin-right:10px;
 }
@@ -271,6 +271,8 @@ h2{
 .CodeMirror-lines{
     padding: 0px calc(50% - 400px);
     overflow:visible !important;
+    font-family: 'Recursive'; 
+    font-variation-settings:'PROP' 1, 'wght' 400, 'XPRN' 0;
     > div{
         overflow:visible !important;    
     }
@@ -294,7 +296,7 @@ h2{
 .CodeMirror pre{
     // max-width: 800px;
     // margin: auto;
-    font-family: 'RecSans', monospace; 
+
 }
 
 .CodeMirror .CodeMirror-line .cm-comment{
@@ -507,7 +509,7 @@ nav.navbar{
             position: absolute;
             /* z-index: -1; */
             background-color: white;
-            left: -1px;
+            left: -2px;
             padding: 8px 16px;
             border: 1px solid black;
             border-top: 0px;
@@ -1297,21 +1299,18 @@ body {
         font-size:175px;
         line-height:100px;
         font-family: 'Recursive', monospace;
-        // font-weight: 800;
-        span{
-            margin-right:20px;
-        }
+        span{margin-right:20px;}
     }
     .grs-bottom{
         top:100%;
-        .crsv-0{ font-variation-settings: "ital" 1, "XPRN" 0, "CRSV" 0, "prop" 0, 'slnt' -15, 'wght' 800; }
-        .crsv-1{ font-variation-settings: "ital" 1, "XPRN" 0, "CRSV" 1, "prop" 0, 'slnt' -15, 'wght' 800; }
-        .crsv-2{ font-variation-settings: "ital" 1, "XPRN" 0, "CRSV" 2, "prop" 0, 'slnt' -15, 'wght' 800; }
+        .crsv-0{ font-variation-settings: "ital" 0, "XPRN" 0, "CRSV" 0, "PROP" 0, 'slnt' -15, 'wght' 800; }
+        .crsv-1{ font-variation-settings: "ital" 0.5, "XPRN" 0, "CRSV" 1, "PROP" 0, 'slnt' -15, 'wght' 800; }
+        .crsv-2{ font-variation-settings: "ital" 1, "XPRN" 0, "CRSV" 2, "PROP" 0, 'slnt' -15, 'wght' 800; }
     }
     .grs-top{
-        .crsv-0{ font-variation-settings: "ital" 0, "XPRN" 0, "CRSV" 0, "prop" 0, 'slnt' 0, 'wght' 800; }
-        .crsv-1{ font-variation-settings: "ital" 0, "XPRN" 0, "CRSV" 1, "prop" 0, 'slnt' 0, 'wght' 800; }
-        .crsv-2{ font-variation-settings: "ital" 0, "XPRN" 0, "CRSV" 2, "prop" 0, 'slnt' 0, 'wght' 800; }
+        .crsv-0{ font-variation-settings: "ital" 0, "XPRN" 0, "CRSV" 0, "PROP" 0, 'slnt' 0, 'wght' 800; }
+        .crsv-1{ font-variation-settings: "ital" 0.5, "XPRN" 0, "CRSV" 1, "PROP" 0, 'slnt' 0, 'wght' 800; }
+        .crsv-2{ font-variation-settings: "ital" 1, "XPRN" 0, "CRSV" 2, "PROP" 0, 'slnt' 0, 'wght' 800; }
     }
     #grsMiddle{
         color: $primary;
@@ -1760,7 +1759,7 @@ ul.casual .rw{--xprn: 1}
   font-family: 'Recursive';
   font-weight: 300 900;  
   /* woff2 font as base64 string */
-  src: url("/assets/fonts/recursive-prop_xprn_wght_slnt_ital--v1_015.woff2");
+  src: url("/assets/fonts/recursive-prop_xprn_weight_slnt_ital--2019_08_26.woff2");
 }
 
 @font-face {

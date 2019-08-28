@@ -9,10 +9,12 @@ document.getElementById("globalFontSizeSlider").oninput = function(){
 
 const triggers = Array.from(document.querySelectorAll('[data-toggle="collapse"]'));
 
+document.getElementById("collapseSettings").onclick = function(){
+    document.getElementById("pickVariability").classList.toggle("show");
+};
+
 window.addEventListener('click', (ev) => {
   const elm = ev.target;
-
-    console.log(triggers);
   if (triggers.includes(elm)) {
     const selector = elm.getAttribute('data-target');
     collapse(selector, 'toggle');
@@ -20,17 +22,23 @@ window.addEventListener('click', (ev) => {
 }, false);
 
 document.getElementById("chooseInstance").onchange = function(){   
-   document.getElementById("globalProp").innerHTML = this.selectedOptions[0].getAttribute('data-prop');
-   document.getElementById("globalWght").innerHTML = this.selectedOptions[0].getAttribute('data-wght');
-   document.getElementById("globalXprn").innerHTML = this.selectedOptions[0].getAttribute('data-xprn');
-   document.getElementById("globalItal").innerHTML = this.selectedOptions[0].getAttribute('data-ital');
-   document.getElementById("globalCrsv").innerHTML = this.selectedOptions[0].getAttribute('data-slnt');
+    let wght = this.selectedOptions[0].getAttribute('data-wght');
+    let prop = this.selectedOptions[0].getAttribute('data-prop');
+    let xprn = this.selectedOptions[0].getAttribute('data-xprn');
+    let slnt = this.selectedOptions[0].getAttribute('data-ital');
+    let ital = this.selectedOptions[0].getAttribute('data-slnt');
+    document.getElementById("globalProp").innerHTML = prop;
+    document.getElementById("globalWght").innerHTML = wght;
+    document.getElementById("globalXprn").innerHTML = xprn;
+    document.getElementById("globalItal").innerHTML = ital;
+    document.getElementById("globalSlnt").innerHTML = slnt;
+    // document.getElementById('globalSlntSlider').value = prop;
+    document.getElementById('globalWghtSlider').value = wght;
+    document.getElementById('globalXprnSlider').value = xprn;
+    // document.getElementById('globalSlntSlider').value = ital;
+    document.getElementById('globalSlntSlider').value = slnt;
+    document.getElementsByClassName("CodeMirror-lines")[0].style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
 };
-
-document.getElementById("collapseSettings").onclick = function(){
-    document.getElementById("pickVariability").classList.toggle("show");
-};
-
 
 
 // document.getElementById('fontSizeSlider').addEventListener('input', function(){
@@ -48,53 +56,58 @@ let wght = 400;
 let prop = 0;
 let xprn = 0.5;
 let slnt = 0;
-let crsv = 0;
+let ital = 0;
 
 document.getElementById('globalXprnSlider').addEventListener('input', function(){
     xprn = document.getElementById('globalXprnSlider').value;
-    document.getElementsByClassName("CodeMirror-lines")[0].style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop;
-    document.getElementById("globalXprn").innerHTML = document.getElementById('xprnSlider').value;
+    document.getElementsByClassName("CodeMirror-lines")[0].style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
+    document.getElementById("globalXprn").innerHTML = xprn;
 })
 document.getElementById('globalWghtSlider').addEventListener('input', function(){
     wght = document.getElementById('globalWghtSlider').value;
-    document.getElementsByClassName("CodeMirror-lines")[0].style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop;
-    document.getElementById("globalWght").innerHTML = document.getElementById('wghtSlider').value;
+    document.getElementsByClassName("CodeMirror-lines")[0].style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
+    document.getElementById("globalWght").innerHTML = wght;
 })
-// document.getElementById('slntSlider').addEventListener('input', function(){
-//     slnt = document.getElementById('slntSlider').value;
-//         document.getElementById("controls-result").style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop;
-//     document.getElementById("slntResult").innerHTML = document.getElementById('slntSlider').value;
-// })
-// document.getElementById("radioSans").onclick = function(){
-//     prop = 1;
-//     document.querySelector(".radio-prop.active").classList.remove("active");
-//     this.classList.add("active");
-//     document.getElementById("controls-result").style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
-// }
-// document.getElementById("radioMono").onclick = function(){
-//     prop = 0;
-//     document.querySelector(".radio-prop.active").classList.remove("active");
-//     this.classList.add("active");
-//     document.getElementById("controls-result").style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
-// }
-// document.getElementById("italOff").onclick = function(){
-//     ital = 0;
-//     document.querySelector(".radio-ital.active").classList.remove("active");
-//     this.classList.add("active");
-//     document.getElementById("controls-result").style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
-// }
-// document.getElementById("italAuto").onclick = function(){
-//     ital = 0.5;
-//     document.querySelector(".radio-ital.active").classList.remove("active");
-//     this.classList.add("active");
-//     document.getElementById("controls-result").style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
-// }
-// document.getElementById("italOn").onclick = function(){
-//     ital = 1;
-//     document.querySelector(".radio-ital.active").classList.remove("active");
-//     this.classList.add("active");
-//     document.getElementById("controls-result").style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
-// }
+document.getElementById('globalSlntSlider').addEventListener('input', function(){
+    slnt = document.getElementById('globalSlntSlider').value;
+    document.getElementsByClassName("CodeMirror-lines")[0].style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
+    document.getElementById("globalSlnt").innerHTML = slnt;
+})
+document.getElementById("globalRadioSans").onclick = function(){
+    prop = 1;
+    document.querySelector(".radio-prop.active").classList.remove("active");
+    this.classList.add("active");
+    document.getElementsByClassName("CodeMirror-lines")[0].style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
+    document.getElementById("globalProp").innerHTML = prop;
+}
+document.getElementById("globalRadioMono").onclick = function(){
+    prop = 0;
+    document.querySelector(".radio-prop.active").classList.remove("active");
+    this.classList.add("active");
+    document.getElementsByClassName("CodeMirror-lines")[0].style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
+    document.getElementById("globalProp").innerHTML = prop;
+}
+document.getElementById("globalItalOff").onclick = function(){
+    ital = 0;
+    document.querySelector(".radio-ital.active").classList.remove("active");
+    this.classList.add("active");
+    document.getElementsByClassName("CodeMirror-lines")[0].style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
+    document.getElementById("globalItal").innerHTML = ital;
+}
+document.getElementById("globalItalAuto").onclick = function(){
+    ital = 0.5;
+    document.querySelector(".radio-ital.active").classList.remove("active");
+    this.classList.add("active");
+    document.getElementsByClassName("CodeMirror-lines")[0].style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
+    document.getElementById("globalItal").innerHTML = ital;
+}
+document.getElementById("globalItalOn").onclick = function(){
+    ital = 1;
+    document.querySelector(".radio-ital.active").classList.remove("active");
+    this.classList.add("active");
+    document.getElementsByClassName("CodeMirror-lines")[0].style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
+    document.getElementById("globalItal").innerHTML = ital;
+}
 
 
 
