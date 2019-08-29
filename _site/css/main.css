@@ -7404,6 +7404,8 @@ div#pickVariability {
       font-style: italic;
       color: #858585; }
 
+#monoSans .container {
+  overflow: hidden !important; }
 #monoSans #cursor-auto {
   position: absolute;
   pointer-events: none;

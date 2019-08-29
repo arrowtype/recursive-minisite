@@ -45,14 +45,14 @@
         <div class="position-relative">
             <div id="inputMonoSpans">Wx#7%b</div>
             <div id="inputMonoValues"></div>
-            <input type="text" id="inputMono" value="Wx#7%b"></input>
+            <input type="text" id="inputMono" value="Wx#7%b"maxlength="8" ></input>
             
             
         </div>
         <div class="position-relative">
             <div id="inputSansSpans"></div>
             <div id="inputSansValues"></div>
-            <input type="text" id="inputSans" value="Wx#7%b"></input>
+            <input type="text" id="inputSans" value="Wx#7%b"maxlength="8" ></input>
         </div>
     </div>
     <div id="cursor-auto">
@@ -108,9 +108,11 @@ function measureLetters(inputElem, outputElem){
     for (var i=0; i<lettersSans.length; i++){
         outputElem.innerHTML += "<span class='letterSans' id='letter" + i +"'>" + lettersSans[i] + "</span>";
         let printVal = document.getElementById("letter" + i).offsetWidth;
-        let letterUnicode = lettersSans[i].codePointAt();
-        console.log(lettersSans[i]);
-        console.log(widthsDict[letterUnicode]);
+        letterUnicode = lettersSans[i].codePointAt();
+        // console.log(lettersSans[i], letterUnicode, widthsDict, widthsDict[letterUnicode][0]);
+        // console.log(lettersSans[i]);
+        // console.log(widthsDict[106]);
+        // console.log(widthsDict);
         // document.getElementById("inputSansValues").innerHTML += `<span class="d-inline-block" style="width:${printVal}px">${widthsDict[letterUnicode][0]}</span>`;
         document.getElementById("inputMonoSpans").innerHTML += "<span class='letterMono' id='letterMono" + i +"'>" + lettersSans[i] + "</span>";
         let tint = interpolate(document.getElementById("letter" + i).offsetWidth, lettersMinWidth, lettersMaxWidth, 80,50);

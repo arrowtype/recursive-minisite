@@ -814,6 +814,7 @@ div#pickVariability {
 #monoSans{
     .container{
         // max-width:960px;
+        overflow:hidden !important;
     }
     #cursor-auto{
         position:absolute;
