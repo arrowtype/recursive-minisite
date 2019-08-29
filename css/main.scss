@@ -96,7 +96,7 @@ html {
 }
 
 .container.container-sm {
-    max-width: 900px;
+    width: 900px;
     overflow:visible;
 }
 
@@ -1812,7 +1812,11 @@ pre.CodeMirror-line {
 #verticalBar{
     display:none;
 }
-
+#hero{
+    min-height: calc(90vw + 200px);
+    display: block;
+    padding-top: 100px;
+}
 
 }
 

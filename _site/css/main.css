@@ -6842,7 +6842,7 @@ html {
   padding: 0px; }
 
 .container.container-sm {
-  max-width: 900px;
+  width: 900px;
   overflow: visible; }
 
 .container-overflow {
@@ -8234,7 +8234,12 @@ ul.casual .rw {
     left: 0px; }
 
   #verticalBar {
-    display: none; } }
+    display: none; }
+
+  #hero {
+    min-height: calc(90vw + 200px);
+    display: block;
+    padding-top: 100px; } }
 @media (max-width: 767.98px) {
   #hero .temp-hero .indent {
     position: relative;
