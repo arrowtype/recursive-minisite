@@ -111,7 +111,7 @@ function measureLetters(inputElem, outputElem){
         let letterUnicode = lettersSans[i].codePointAt();
         console.log(lettersSans[i]);
         console.log(widthsDict[letterUnicode]);
-        document.getElementById("inputSansValues").innerHTML += `<span class="d-inline-block" style="width:${printVal}px">${widthsDict[letterUnicode][0]}</span>`;
+        // document.getElementById("inputSansValues").innerHTML += `<span class="d-inline-block" style="width:${printVal}px">${widthsDict[letterUnicode][0]}</span>`;
         document.getElementById("inputMonoSpans").innerHTML += "<span class='letterMono' id='letterMono" + i +"'>" + lettersSans[i] + "</span>";
         let tint = interpolate(document.getElementById("letter" + i).offsetWidth, lettersMinWidth, lettersMaxWidth, 80,50);
         document.getElementById("letter" + i).style.backgroundColor = "hsl(221,100%," + tint + "%)";
