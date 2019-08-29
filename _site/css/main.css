@@ -7135,7 +7135,8 @@ nav.navbar {
   min-height: 935px;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  cursor: crosshair; }
   #hero .temp-hero {
     padding: 20px;
     width: 100%;
@@ -7150,9 +7151,20 @@ nav.navbar {
     color: #858585;
     position: absolute;
     top: 630px; }
+    #hero .temp-hero-controls li {
+      font-variation-settings: "wght" 400; }
     #hero .temp-hero-controls li.active {
       color: white;
       font-variation-settings: "wght" 700; }
+    #hero .temp-hero-controls .label {
+      width: 120px;
+      display: inline-block; }
+  #hero #verticalBar {
+    height: 100%;
+    width: 1.6px;
+    background-color: white;
+    position: absolute;
+    left: 100px; }
 
 .toolbar.fixed {
   position: fixed;

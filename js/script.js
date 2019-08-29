@@ -25,6 +25,13 @@ window.addEventListener('click', (ev) => {
   }
 }, false);
 
+document.getElementById("hero").onmousemove = function(e){
+    document.getElementById('verticalBar').style.left = e.clientX + 'px';
+    let heroWeight = interpolate(e.clientX, 0, window.innerWidth, 300, 900);
+    document.getElementById("temp-hero").style.fontVariationSettings = "'wght' " + heroWeight;
+    document.getElementById("weightVal").innerHTML = Math.floor(heroWeight);
+}
+
 document.getElementById("chooseInstance").onchange = function(){   
     let wght = this.selectedOptions[0].getAttribute('data-wght');
     let prop = this.selectedOptions[0].getAttribute('data-prop');
