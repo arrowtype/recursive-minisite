@@ -1,6 +1,6 @@
-document.getElementById("inversePage").onmousedown = function(){
-    document.getElementsByTagName("body")[0].classList.toggle("inverse");
-}
+// document.getElementById("inversePage").onmousedown = function(){
+//     document.getElementsByTagName("body")[0].classList.toggle("inverse");
+// }
 
 document.getElementById("globalFontSizeSlider").oninput = function(){
     document.getElementsByClassName("CodeMirror-lines")[0].style.fontSize = document.getElementById("globalFontSizeSlider").value + "px"
