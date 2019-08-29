@@ -7126,6 +7126,34 @@ nav.navbar {
   font-family: "Recursive";
   font-variation-settings: 'PROP' 1, 'wght' 600; }
 
+#hero {
+  font-family: 'Recursive';
+  font-variation-settings: 'PROP' 1, 'wght' 400;
+  font-size: 150px;
+  line-height: 150px;
+  color: white;
+  min-height: 935px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  #hero .temp-hero {
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto; }
+    #hero .temp-hero .indent {
+      position: relative;
+      left: 25%; }
+  #hero .temp-hero-controls {
+    font-size: 15px;
+    line-height: 24px;
+    color: #858585;
+    position: absolute;
+    top: 630px; }
+    #hero .temp-hero-controls li.active {
+      color: white;
+      font-variation-settings: "wght" 700; }
+
 .toolbar.fixed {
   position: fixed;
   top: 57px;
@@ -8155,6 +8183,13 @@ ul.casual .rw {
 .hideOnMobile {
   display: block; }
 
+@media (max-width: 1075px) {
+  #hero .temp-hero {
+    font-size: 12.5vw !important;
+    line-height: 12.5vw !important; }
+
+  .temp-hero-controls {
+    top: 60% !important; } }
 @media (max-width: 991.98px) {
   .navbar-brand {
     margin: 0px;
@@ -8179,7 +8214,6 @@ ul.casual .rw {
 
   pre.CodeMirror-line {
     padding: 0px 20px; } }
-/* just linking the typeface in */
 @font-face {
   font-family: 'Recursive';
   font-weight: 300 900;
