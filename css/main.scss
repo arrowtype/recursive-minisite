@@ -1800,11 +1800,17 @@ ul.casual .rw{--xprn: 1}
     display:none;
 }
 pre.CodeMirror-line {
-    padding: 0px 20px;
+    padding: 0px 20px 0px 60px;
 }
 
 .CodeMirror-line:before {
     left: 0px;
+}
+.CodeMirror .CodeMirror-code .cm-header-2, .CodeMirror .CodeMirror-code .cm-header-3 {
+    left: 0px;
+}
+#verticalBar{
+    display:none;
 }
 
 
