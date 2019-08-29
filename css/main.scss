@@ -1097,12 +1097,31 @@ body {
             font-weight:300;
         }
     }
+    .slider {
+        cursor: url(/assets/img/grab1.svg); /* fallback if grab cursor is unsupported */
+        cursor: url(/assets/img/grab1.svg);
+        cursor: url(/assets/img/grab1.svg);
+        cursor: url(/assets/img/grab1.svg);
+    }
+    #grabCursor{
+        position:absolute;
+        left:-100000px;
+        pointer-events:none;
+        z-index:10000;
+    }
+
+    /* (Optional) Apply a "closed-hand" cursor during drag operation. */
+    // .slider::-webkit-slider-thumb:active {
+    //     cursor: url(/assets/img/grab2.svg);
+    //     cursor: url(/assets/img/grab2.svg);
+    //     cursor: url(/assets/img/grab2.svg);
+    // }
     .ampersands{
         font-size:482px;
         color:#D8D8D8;
         font-weight:800;
         line-height:350px;
-        font-family:'RecSans', sans-serif;
+        font-family:'Recursive', sans-serif;
         width:100%;        
         height:350px;
         position:relative;
@@ -1130,7 +1149,43 @@ body {
         transform:translateX(-50%);
         left:50%;
         transition: color 100ms;
+        cursor:none;
     }
+    #middleAmpersandSlider {
+    -webkit-appearance: none;
+    width: 800px;
+    height: 400px;
+    background: transparent;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    position:absolute;
+    top:45px;
+    z-index:10;
+    cursor:none;
+    }
+
+    #middleAmpersandSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 289px;
+    height: 350px;
+    background: transparent;
+    cursor:none;
+    }
+
+    #middleAmpersandSlider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: transparent;
+    cursor:none;
+    }
+    .slidecontainer {
+    width: 100%;
+    }
+
+    
     .bg-left{
         top: -42px;
         transform: translateX(-50%);
@@ -1420,7 +1475,7 @@ body {
         position:relative;
 
         .text{
-            font-family: 'RecMono', monospace;
+            font-family: 'Recursive', monospace;
             font-variation-settings: 'XPRN' 0;
             font-size: 12px;
             line-height: 16px;
@@ -1444,7 +1499,6 @@ body {
             background-color:#266AFF;
             color:white;
             font-weight:800 !important;
-
         }
         li:first-child{
             border-radius:8px 8px 0px 0px;
@@ -1456,7 +1510,19 @@ body {
             border-bottom: 1px solid #80a7ff;
             border-top: 1px solid #80a7ff;
         }
-        
+    }
+    .bad{
+        li{
+            background-color:#333333;
+            color: white;
+        }
+        li:hover, li.active{
+            background-color:#525252;
+        }
+        li:nth-child(2){
+            border-bottom: 1px solid #999999;
+            border-top: 1px solid #999999;
+        }
     }
 
 }
