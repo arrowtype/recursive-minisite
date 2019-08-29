@@ -8239,7 +8239,12 @@ ul.casual .rw {
   #hero {
     min-height: calc(90vw + 200px);
     display: block;
-    padding-top: 100px; } }
+    padding-top: 100px; }
+
+  nav.navbar .nav-github-link {
+    margin: 10px 0px;
+    display: inline-block;
+    position: static; } }
 @media (max-width: 767.98px) {
   #hero .temp-hero .indent {
     position: relative;
