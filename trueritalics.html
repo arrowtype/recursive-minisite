@@ -8,10 +8,10 @@ layout: iframe
 
         <div class="slidecontainer">
             <input type="range" min="0.00" max="1.00" value="0.50" step="0.01" class="slider" id="grSlider">
-            <output id="grOutput" class="text-right"></output>
+            <output id="grOutput" class="text-right">7.5</output>
         </div>
 
-        <div class="slider-label"><span>1</span><br>Slanted</div>
+        <div class="slider-label"><span>15</span><br>Slanted</div>
     </div>
     <div class="grs float-left">
         <div class="grs-top">
@@ -21,7 +21,7 @@ layout: iframe
             <span class="crsv-0">gr</span><span class="crsv-1">gr</span><span class="crsv-2">gr</span>
         </div>
         <div id="grsMiddle">
-            <span class="crsv-0">gr</span><span class="crsv-1">gr</span><span class="crsv-2">gr</span>
+            <span class="crsv-0" id="crsv0">gr</span><span class="crsv-1" id="crsv1">gr</span><span class="crsv-2" id="crsv2">gr</span>
             <div class="labels">
                 <span>ital: 0 (off)</span>
                 <span>ital: 0.5 (auto)</span>
@@ -36,23 +36,26 @@ layout: iframe
 let grSlider = document.getElementById('grSlider'),
     o2 = document.getElementById('grOutput'),
     grs = document.getElementById("grsMiddle");
-
     o2.innerHTML = grSlider.value;
+
+document.getElementById('crsv0').style.fontVariationSettings = "'ital' 0, 'wght' 800, 'slnt' 7.5";
+    document.getElementById('crsv1').style.fontVariationSettings = "'ital' 0.5, 'wght' 800, 'slnt' 7.5";
+    document.getElementById('crsv2').style.fontVariationSettings = "'ital' 1, 'wght' 800, 'slnt' 7.5";
 
 
 grSlider.addEventListener('input', function () {
-  o2.innerHTML = grSlider.value;
+  
   o2.style.left = grSlider.value*100 + "%";
 
-  let variable = interpolate(grSlider.value,0,1,0,-15);
+    let variable = interpolate(grSlider.value,0,1,0,-15);
+    o2.innerHTML = Math.floor(variable);
     grs.style.top = grSlider.value*100 + "%";
-    console.log(document.querySelector('#grsMiddle span.crsv-0'));
-    console.log('"ital" 0, "XPRN" 0, "PROP" 0, "slnt" ' + variable + ', "wght" 800;');
-    document.querySelector('#grsMiddle span.crsv-0').style.fontVariationSettings = '"ital" 0, "XPRN" 0, "PROP" 0, "slnt" ' + variable + ', "wght" 800;';
-    document.querySelector('#grsMiddle span.crsv-1').style.fontVariationSettings = '"ital" 0.5, "XPRN" 0, "PROP" 0, "slnt" ' + variable + ', "wght" 800;';
-    document.querySelector('#grsMiddle span.crsv-2').style.fontVariationSettings = '"ital" 1, "XPRN" 0, "PROP" 0, "slnt" ' + variable + ', "wght" 800;';
+    let newStyle = '"ital" 0, "XPRN" 0, "PROP" 0, "slnt" ' + variable + ', "wght" 800';
+    document.getElementById('crsv0').style.fontVariationSettings = "'ital' 0, 'wght' 800, 'slnt' " + variable;
+    document.getElementById('crsv1').style.fontVariationSettings = "'ital' 0.5, 'wght' 800, 'slnt' " + variable;
+    document.getElementById('crsv2').style.fontVariationSettings = "'ital' 1, 'wght' 800, 'slnt' " + variable;
 
-
+    // document.getElementById('crsv2').style.fontVariationSettings = "'XPRN' " + ampersandSlider.value;
 }, false);
 
 function interpolate(value, low1, high1, low2, high2) {
