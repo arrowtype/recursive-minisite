@@ -449,9 +449,6 @@ nav.navbar{
 }
 
 #hero{
-    // height:calc(100vh - 104px);
-    // height:100vh;
-    // height:935px;
     font-family: 'Recursive';
     font-variation-settings:'PROP' 1, 'wght' 400;
     font-size: 150px;
@@ -1810,8 +1807,16 @@ pre.CodeMirror-line {
 }
 
 @media (max-width: 767.98px) {   
-
-    //
+    #hero .temp-hero{
+        .indent{
+            position:relative;
+            left:0px;
+        }
+        .temp-hero-controls{
+            bottom:20px;
+            top:inherit !important;
+        }
+    }
  }
 
 // Extra small devices (portrait phones, less than 576px)
