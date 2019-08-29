@@ -8225,7 +8225,10 @@ ul.casual .rw {
     display: none; }
 
   pre.CodeMirror-line {
-    padding: 0px 20px; } }
+    padding: 0px 20px; }
+
+  .CodeMirror-line:before {
+    left: 0px; } }
 @media (max-width: 767.98px) {
   #hero .temp-hero .indent {
     position: relative;

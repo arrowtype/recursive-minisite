@@ -1803,6 +1803,10 @@ pre.CodeMirror-line {
     padding: 0px 20px;
 }
 
+.CodeMirror-line:before {
+    left: 0px;
+}
+
 
 }
 
