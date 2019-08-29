@@ -419,6 +419,17 @@ nav.navbar{
     .nav-link{
         margin-right:30px;
     }
+    .nav-github-link{
+        font-family: 'Recursive';
+        font-variation-settings: 'XPRN' .9, 'PROP' 1, 'wght' 800, 'slnt' -10;
+        svg{
+            margin-left:10px;
+        }
+        text-align:left;
+        position:absolute;
+        right:20px;
+        top:15px;
+    }
 }
 
 .navbar-brand{
@@ -433,6 +444,8 @@ nav.navbar{
     color:red;
     text-transform:uppercase;
     font-style:italic;
+    font-family:"Recursive";
+    font-variation-settings: 'PROP' 1, 'wght' 600;
 }
 
 #hero{
@@ -443,7 +456,7 @@ nav.navbar{
 
 .toolbar.fixed{
     position:fixed;
-    top:103px;
+    top:57px;
     z-index:200;
     width:100%;
     background-color:white;

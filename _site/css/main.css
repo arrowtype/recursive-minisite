@@ -7102,6 +7102,15 @@ nav.navbar {
     color: white; }
   nav.navbar .nav-link {
     margin-right: 30px; }
+  nav.navbar .nav-github-link {
+    font-family: 'Recursive';
+    font-variation-settings: 'XPRN' .9, 'PROP' 1, 'wght' 800, 'slnt' -10;
+    text-align: left;
+    position: absolute;
+    right: 20px;
+    top: 15px; }
+    nav.navbar .nav-github-link svg {
+      margin-left: 10px; }
 
 .navbar-brand {
   padding: 16px 24px;
@@ -7113,11 +7122,13 @@ nav.navbar {
 .beta {
   color: red;
   text-transform: uppercase;
-  font-style: italic; }
+  font-style: italic;
+  font-family: "Recursive";
+  font-variation-settings: 'PROP' 1, 'wght' 600; }
 
 .toolbar.fixed {
   position: fixed;
-  top: 103px;
+  top: 57px;
   z-index: 200;
   width: 100%;
   background-color: white;
