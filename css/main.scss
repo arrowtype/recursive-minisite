@@ -979,17 +979,16 @@ div#pickVariability {
         // --crsv: "CRSV" 3;
         // --wght: "wght" 300;
         // font-variation-settings: "PROP" 500, "XPRN" 200, "ital" 500, "CRSV" 456, "wght" 800;
-        opacity:0;
+        color:#f8f8f8;
     }
-    .dollar:nth-last-child(9) {opacity:0.1;} 
-    .dollar:nth-last-child(8) {opacity:0.2;} 
-    .dollar:nth-last-child(7) {opacity:0.3;} 
-    .dollar:nth-last-child(6) {opacity:0.4;} 
-    .dollar:nth-last-child(5) {opacity:0.5;} 
-    .dollar:nth-last-child(4) {opacity:0.6;} 
-    .dollar:nth-last-child(3) {opacity:0.7;} 
-    .dollar:nth-last-child(2) {opacity:0.8;} 
-    .dollar:nth-last-child(1) {opacity:0.9;} 
+    .dollar:nth-last-child(8) {color:#DFE7F9} 
+    .dollar:nth-last-child(7) {color:#C6D6F9} 
+    .dollar:nth-last-child(6) {color:#AEC6FA} 
+    .dollar:nth-last-child(5) {color:#95B5FB} 
+    .dollar:nth-last-child(4) {color:#6393FB} 
+    .dollar:nth-last-child(3) {color:#4A82FD} 
+    .dollar:nth-last-child(2) {color:#3271Fe} 
+    .dollar:nth-last-child(1) {color:#1961Fe} 
     #xAxis, #yAxis{
         position:absolute;
         top:0px;

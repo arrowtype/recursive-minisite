@@ -7533,25 +7533,23 @@ div#pickVariability {
     line-height: 96px;
     color: #0050FF;
     transform: translateX(-50%) translateY(-50%);
-    opacity: 0; }
-  #weightForIt .dollar:nth-last-child(9) {
-    opacity: 0.1; }
+    color: #f8f8f8; }
   #weightForIt .dollar:nth-last-child(8) {
-    opacity: 0.2; }
+    color: #DFE7F9; }
   #weightForIt .dollar:nth-last-child(7) {
-    opacity: 0.3; }
+    color: #C6D6F9; }
   #weightForIt .dollar:nth-last-child(6) {
-    opacity: 0.4; }
+    color: #AEC6FA; }
   #weightForIt .dollar:nth-last-child(5) {
-    opacity: 0.5; }
+    color: #95B5FB; }
   #weightForIt .dollar:nth-last-child(4) {
-    opacity: 0.6; }
+    color: #6393FB; }
   #weightForIt .dollar:nth-last-child(3) {
-    opacity: 0.7; }
+    color: #4A82FD; }
   #weightForIt .dollar:nth-last-child(2) {
-    opacity: 0.8; }
+    color: #3271Fe; }
   #weightForIt .dollar:nth-last-child(1) {
-    opacity: 0.9; }
+    color: #1961Fe; }
   #weightForIt #xAxis, #weightForIt #yAxis {
     position: absolute;
     top: 0px;

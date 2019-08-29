@@ -7,8 +7,6 @@ layout: iframe
         <div id="dollars">
         </div>
         <div class="label">XPRN</div>
-        <!-- <div class="label" id="xprnLabel1">0.65</div> -->
-        <!-- <div class="label" id="xprnLabel2">0.65</div> -->
         <div id="xAxis">
             <div class="float-left">864</div><div class="float-right">864</div>
         </div>
@@ -22,12 +20,31 @@ layout: iframe
 </div>
 
 <script type="text/javascript">
+const body = document.querySelector('body');
+let lastX = 0,
+    lastY = 0,
+    i = 0;
+
 document.getElementById("canvas").onmousemove = function(e){
+    let {
+        offsetX: x,
+        offsetY: y
+    } = e;
+
+    if (this != e.target) {
+        x = x + e.target.offsetLeft;
+        y = y + e.target.offsetTop;
+    }
+    // defines a variable that offsets when the next word will be printed, so that it's not a word for every pixel of hover movement
+    if (body.classList.contains('touch-input')) {
+        var offset = 0;
+    } else {
+        var offset = 42;
+    }
+
     let bounds = document.getElementById("dollars").getBoundingClientRect();
     let newX = interpolate(e.clientX, bounds.left, bounds.right, 0, bounds.width);
     let newY = interpolate(e.clientY, bounds.top, bounds.bottom, 0, bounds.height);
-    
-    
     let xPos = interpolate(e.clientX, bounds.left, bounds.right, 0, document.getElementById("dollars").clientWidth);
     let yPos = interpolate(e.clientY, bounds.top, bounds.bottom, 0, document.getElementById("dollars").clientHeight);
     let yAxisLabel = interpolate(newY, bounds.top, bounds.bottom, 0, 1);
@@ -37,20 +54,17 @@ document.getElementById("canvas").onmousemove = function(e){
     document.getElementById("xAxis").style.top = yPos + "px";
     document.getElementById("xAxis").innerHTML = '<div class="float-left">'+yAxisLabel.toFixed(2)+'</div><div class="float-right">'+yAxisLabel.toFixed(2)+'</div>';
 
-    if (enableHandler == true) {
+    if ((x > (lastX + offset)) || (x < (lastX - offset)) || (y > (lastY + offset)) || (y < (lastY - offset))) {
         if (yPos < 400 && yPos > 60 && xPos < 933 && xPos > 60 ){
-            document.getElementById("dollars").innerHTML += `<div class='dollar' style='top: ${newY}px; left:${xPos}px; font-variation-settings: "XPRN" ${yAxisLabel.toFixed(2)}, "wght" ${Math.floor(newX)}'>$</div>`;
+        document.getElementById("dollars").innerHTML += `<div class='dollar' style='top: ${newY}px; left:${xPos}px; font-variation-settings: "XPRN" ${yAxisLabel.toFixed(2)}, "wght" ${Math.floor(newX)}'>$</div>`;
+        [lastX, lastY] = [x, y];
         }
-        enableHandler = false;
-    } 
-
+    }
 }
 
-window.setInterval(function(){
-    enableHandler = true;
-}, 100);
 
 function interpolate(value, low1, high1, low2, high2) {
     return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
 }
 </script>
+   
