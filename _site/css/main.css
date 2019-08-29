@@ -8211,7 +8211,7 @@ ul.casual .rw {
   .navbar-nav {
     padding-left: 24px; }
 
-  .toolbar__item:last-child, .toolbar__item:nth-child(2) {
+  .toolbar__item:nth-child(2) {
     display: none; }
 
   .toolbar__item {
@@ -8244,7 +8244,21 @@ ul.casual .rw {
   nav.navbar .nav-github-link {
     margin: 10px 0px;
     display: inline-block;
-    position: static; } }
+    position: static; }
+
+  iframe {
+    -moz-transform: scale(0.25, 0.25);
+    -webkit-transform: scale(0.25, 0.25);
+    -o-transform: scale(0.25, 0.25);
+    -ms-transform: scale(0.25, 0.25);
+    transform: scale(0.5, 0.5);
+    -moz-transform-origin: top left;
+    -webkit-transform-origin: top left;
+    -o-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+    width: 200vw;
+    display: none; } }
 @media (max-width: 767.98px) {
   #hero .temp-hero .indent {
     position: relative;
