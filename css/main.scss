@@ -581,6 +581,10 @@ div#pickVariability {
     }
     .credits{
         max-width:560px;
+        font-size:13px;
+        a{
+            color:white;
+        }
     }
 }
 
@@ -627,7 +631,7 @@ div#pickVariability {
         font-size:230px;
         font-weight:800;
         border:0px;
-        height:300px;
+        height:375px;
         font-weight: 800;
         font-family:'Recursive';
         --prop: "PROP" 0;
@@ -736,6 +740,7 @@ div#pickVariability {
         font-family:'RecMono', monospace;
         font-weight:450;
         padding:30px;
+        
 
         .css{
             width:200px;
@@ -764,6 +769,8 @@ div#pickVariability {
 
         ul{
             list-style-type: none;
+            position: relative;
+            left: 180px;
         }
 
         .property{
@@ -778,6 +785,10 @@ div#pickVariability {
         }
         .string{
             color: rgb(0, 80, 255);
+        }
+        span.comment:not(.not-aligned){
+            position: absolute;
+            left: 500px;
         }
         span.comment{
             font-style:italic;
@@ -795,7 +806,7 @@ div#pickVariability {
         position:absolute;
         pointer-events: none;
         top:0px;
-        left:0px;
+        left:-1000vw;
     }
     #inputMono, #inputMonoSpans{
         font-family: "Recursive", monospace;

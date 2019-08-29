@@ -7230,7 +7230,10 @@ div#pickVariability {
   .footer-bottom .column {
     width: 240px; }
   .footer-bottom .credits {
-    max-width: 560px; }
+    max-width: 560px;
+    font-size: 13px; }
+    .footer-bottom .credits a {
+      color: white; }
 
 #three {
   width: 100%;
@@ -7264,7 +7267,7 @@ div#pickVariability {
     font-size: 230px;
     font-weight: 800;
     border: 0px;
-    height: 300px;
+    height: 375px;
     font-weight: 800;
     font-family: 'Recursive';
     --prop: "PROP" 0;
@@ -7372,7 +7375,9 @@ div#pickVariability {
     #singleFile .controls .radio.active {
       background-color: #bdbdbd; }
     #singleFile .controls ul {
-      list-style-type: none; }
+      list-style-type: none;
+      position: relative;
+      left: 180px; }
     #singleFile .controls .property {
       color: #c2404c; }
     #singleFile .controls .custom-prop {
@@ -7381,6 +7386,9 @@ div#pickVariability {
       color: #494949; }
     #singleFile .controls .string {
       color: #0050ff; }
+    #singleFile .controls span.comment:not(.not-aligned) {
+      position: absolute;
+      left: 500px; }
     #singleFile .controls span.comment {
       font-style: italic;
       color: #858585; }
@@ -7389,7 +7397,7 @@ div#pickVariability {
   position: absolute;
   pointer-events: none;
   top: 0px;
-  left: 0px; }
+  left: -1000vw; }
 #monoSans #inputMono, #monoSans #inputMonoSpans {
   font-family: "Recursive", monospace;
   font-size: 275.2px;
