@@ -36,8 +36,8 @@ document.getElementById("chooseInstance").onchange = function(){
     let wght = this.selectedOptions[0].getAttribute('data-wght');
     let prop = this.selectedOptions[0].getAttribute('data-prop');
     let xprn = this.selectedOptions[0].getAttribute('data-xprn');
-    let slnt = this.selectedOptions[0].getAttribute('data-ital');
-    let ital = this.selectedOptions[0].getAttribute('data-slnt');
+    let slnt = this.selectedOptions[0].getAttribute('data-slnt');
+    let ital = this.selectedOptions[0].getAttribute('data-ital');
     document.getElementById("globalProp").innerHTML = prop;
     document.getElementById("globalWght").innerHTML = wght;
     document.getElementById("globalXprn").innerHTML = xprn;
@@ -55,7 +55,7 @@ let wght = 400;
 let prop = 0;
 let xprn = 0.5;
 let slnt = 0;
-let ital = 0;
+let ital = 0.5;
 
 document.getElementById('globalXprnSlider').addEventListener('input', function(){
     xprn = document.getElementById('globalXprnSlider').value;
