@@ -40,7 +40,7 @@ body {
     font-size: 16vw;
     font-weight: 800;
     border: 0px;
-    height: 375px;
+    min-height: 50vh;
     font-weight: 800;
     font-family: "Recursive";
     --prop: "PROP" 0;
@@ -50,11 +50,11 @@ body {
     font-variation-settings: "PROP" 0, "XPRN" 0, "slnt" 0, "ital" 0, "wght" 800;
     text-align: left;
     width: 100%;
-    padding: calc(var(--padding-unit) *2);
+    padding: calc(var(--padding-unit) * 2 * 0.9);
     display: grid; }
     @media (max-width: 500px) {
       #singleFile input[type="text"] {
-        padding: var(--padding-unit); } }
+        padding: calc(var(--padding-unit) * 0.9); } }
   #singleFile input[type="text"]:focus {
     outline: none; }
   #singleFile input[type="range"] {
@@ -196,7 +196,8 @@ body {
 .footer {
   background: black;
   color: white;
-  padding: var(--padding-unit); }
+  padding: var(--padding-unit);
+  padding-bottom: 4rem; }
   .footer .central-column {
     display: grid; }
     @media (min-width: 800px) {
@@ -207,11 +208,12 @@ body {
       padding: calc(var(--padding-unit) *2); }
       .footer .description {
         grid-column: 2/3; } }
-  .footer h1, .footer h1 a {
+  .footer h1, .footer h4 {
     font-size: 1rem;
+    margin: 1rem 0; }
+  .footer h1, .footer h1 a {
     font-variation-settings: "XPRN" 0, "wght" 800, "slnt" 0, "ital" 0; }
   .footer h4 {
-    font-size: 1rem;
     font-variation-settings: "XPRN" 1, "wght" 800, "slnt" 0, "ital" 0; }
   .footer .credits {
     max-width: 40ch; }
@@ -219,6 +221,8 @@ body {
       color: white; }
   .footer .description {
     color: var(--offwhite-2); }
+  .footer .credits h1, .footer .description h4 {
+    margin-top: 0; }
   .footer a {
     color: var(--accent-on-dark);
     font-variation-settings: "XPRN" 0, "wght" 450, "slnt" 0, "ital" 0;
