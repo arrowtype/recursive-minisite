@@ -51,7 +51,9 @@ body {
     text-align: left;
     width: 100%;
     padding: calc(var(--padding-unit) * 2 * 0.9);
+    padding-right: 0;
     margin: 0;
+    border-radius: 0;
     display: grid; }
     @media (max-width: 500px) {
       #singleFile input[type="text"] {
