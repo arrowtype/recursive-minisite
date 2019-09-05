@@ -69,6 +69,7 @@ body {
         text-align: left;
         width: 100%;
         padding: calc(var(--padding-unit) * 2 * 0.9);
+        margin: 0; // safari
         display: grid;
         
         @media (max-width: 500px) {
@@ -104,7 +105,7 @@ body {
         border: 0px solid rgba(0, 0, 0, 0);
         height: 12px;
         width: 12px;
-        border-radius: 12px;
+        border-radius: 999px;
         background: #858585;
         cursor: pointer;
         -webkit-appearance: none;
@@ -127,10 +128,11 @@ body {
         border: 0px solid rgba(0, 0, 0, 0);
         height: 12px;
         width: 12px;
-        border-radius: 12px;
+        border-radius: 999px;
         background: #858585;
         cursor: pointer;
     }
+   
     input[type="range"]::-ms-track {
         width: 100%;
         height: 1px;
@@ -156,10 +158,41 @@ body {
         border: 0px solid rgba(0, 0, 0, 0);
         height: 12px;
         width: 12px;
-        border-radius: 12px;
+        border-radius: 999px;
         background: #858585;
         cursor: pointer;
         height: 1px;
+    }
+
+    @media (max-width: 500px) {
+
+        // input[type="range"] {
+        //     margin: 5.5px 0;
+        // }
+        input[type="range"]::-webkit-slider-thumb {
+            height: 20px;
+            width: 20px;
+            // border-radius: 999px;
+            box-sizing: content-box;
+            position: relative;
+            top: -4px;
+        }
+        input[type="range"]::-moz-range-thumb {
+            height: 20px;
+            width: 20px;
+            // border-radius: 999px;
+            box-sizing: content-box;
+            position: relative;
+            top: -4px;
+        }
+        input[type="range"]::-ms-thumb {
+            height: 20px;
+            width: 20px;
+            // border-radius: 999px;
+            box-sizing: content-box;
+            position: relative;
+            top: -4px;
+        }
     }
     input[type="range"]:focus::-ms-fill-lower {
         background: #bdbdbd;
@@ -199,6 +232,8 @@ body {
             @media (max-width: 500px) {
                 width: 100%;
                 max-width: none;
+                top: -0.25rem;
+                position: relative;
             }
         }
 
@@ -206,9 +241,16 @@ body {
             border: 1px solid #bdbdbd;
             width: 12px;
             height: 12px;
-            border-radius: 12px;
+            border-radius: 999px;
             display: inline-block;
             cursor: pointer;
+
+            @media (max-width: 500px) { 
+                width: 20px;
+                height: 20px;
+                position: relative;
+                top: 6px;
+            }
         }
         .radio.active {
             background-color: #bdbdbd;
@@ -223,7 +265,7 @@ body {
         li {
             display: block;
             @media (max-width:500px) {
-                margin: 0.25rem 0;
+                margin: 1rem 0;
                 display: grid;
                 grid-template-columns: 45% 55%;
             }   
@@ -247,8 +289,7 @@ body {
             // left: 500px;
         }
         span.comment {
-            font-style: italic;
-            font-variation-settings: "slnt" -9, "ital" 1;
+            font-variation-settings: "slnt" -12, "ital" 1;
             color: #858585;
 
             @media (max-width:1150px) {

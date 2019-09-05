@@ -51,6 +51,7 @@ body {
     text-align: left;
     width: 100%;
     padding: calc(var(--padding-unit) * 2 * 0.9);
+    margin: 0;
     display: grid; }
     @media (max-width: 500px) {
       #singleFile input[type="text"] {
@@ -78,7 +79,7 @@ body {
     border: 0px solid rgba(0, 0, 0, 0);
     height: 12px;
     width: 12px;
-    border-radius: 12px;
+    border-radius: 999px;
     background: #858585;
     cursor: pointer;
     -webkit-appearance: none;
@@ -98,7 +99,7 @@ body {
     border: 0px solid rgba(0, 0, 0, 0);
     height: 12px;
     width: 12px;
-    border-radius: 12px;
+    border-radius: 999px;
     background: #858585;
     cursor: pointer; }
   #singleFile input[type="range"]::-ms-track {
@@ -123,10 +124,29 @@ body {
     border: 0px solid rgba(0, 0, 0, 0);
     height: 12px;
     width: 12px;
-    border-radius: 12px;
+    border-radius: 999px;
     background: #858585;
     cursor: pointer;
     height: 1px; }
+  @media (max-width: 500px) {
+    #singleFile input[type="range"]::-webkit-slider-thumb {
+      height: 20px;
+      width: 20px;
+      box-sizing: content-box;
+      position: relative;
+      top: -4px; }
+    #singleFile input[type="range"]::-moz-range-thumb {
+      height: 20px;
+      width: 20px;
+      box-sizing: content-box;
+      position: relative;
+      top: -4px; }
+    #singleFile input[type="range"]::-ms-thumb {
+      height: 20px;
+      width: 20px;
+      box-sizing: content-box;
+      position: relative;
+      top: -4px; } }
   #singleFile input[type="range"]:focus::-ms-fill-lower {
     background: #bdbdbd; }
   #singleFile input[type="range"]:focus::-ms-fill-upper {
@@ -156,14 +176,22 @@ body {
       @media (max-width: 500px) {
         #singleFile .controls .inputs {
           width: 100%;
-          max-width: none; } }
+          max-width: none;
+          top: -0.25rem;
+          position: relative; } }
     #singleFile .controls .radio {
       border: 1px solid #bdbdbd;
       width: 12px;
       height: 12px;
-      border-radius: 12px;
+      border-radius: 999px;
       display: inline-block;
       cursor: pointer; }
+      @media (max-width: 500px) {
+        #singleFile .controls .radio {
+          width: 20px;
+          height: 20px;
+          position: relative;
+          top: 6px; } }
     #singleFile .controls .radio.active {
       background-color: #bdbdbd; }
     #singleFile .controls ul {
@@ -174,7 +202,7 @@ body {
       display: block; }
       @media (max-width: 500px) {
         #singleFile .controls li {
-          margin: 0.25rem 0;
+          margin: 1rem 0;
           display: grid;
           grid-template-columns: 45% 55%; } }
     #singleFile .controls .property {
@@ -186,8 +214,7 @@ body {
     #singleFile .controls .string {
       color: #0050ff; }
     #singleFile .controls span.comment {
-      font-style: italic;
-      font-variation-settings: "slnt" -9, "ital" 1;
+      font-variation-settings: "slnt" -12, "ital" 1;
       color: #858585; }
       @media (max-width: 1150px) {
         #singleFile .controls span.comment {
