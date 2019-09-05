@@ -151,6 +151,9 @@ body {
     #singleFile .controls span.comment {
       font-style: italic;
       color: #858585; }
+      @media (max-width: 600px) {
+        #singleFile .controls span.comment {
+          display: none; } }
 
 .footer {
   background: black;

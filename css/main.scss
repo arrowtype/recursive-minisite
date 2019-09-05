@@ -203,6 +203,10 @@ body {
         span.comment {
             font-style: italic;
             color: #858585;
+
+            @media (max-width:600px) {
+                display: none;
+            }
         }
     }
 }
