@@ -45,15 +45,18 @@
     <div class="controls">
 
             <ul>
+                <li><span class="comment not-aligned">/* Recursive Mono & Sans: a typographic palette for code & design. */</span></li>
+                <li><span class="comment not-aligned">&nbsp;</span></li>
                 <li id="font-size">
                     <span class="css">
                         <span class="property">font-size</span>: <span id="fontSizeResult"
-                            contenteditable="true">16vw</span>;
+                            contenteditable="true">16.00vw</span>;
                     </span>
-                    <span class="inputs"><input id="fontSizeSlider" min="1" max="32" step="1" value="16"
+                    <span class="inputs"><input id="fontSizeSlider" min="0.25" max="24" step="0.01" value="16"
                             type="range"></span>
                 </li>
-                <li><span class="comment not-aligned">/* style axes */</span></li>
+                <li><span class="comment not-aligned">&nbsp;</span></li>
+                <li><span class="comment not-aligned">/* set variation axis values */</span></li>
                 <li id="font-weight">
                     <span class="css">
                         <span class="property">font-weight</span>: <span id="fontWeightResult" class="result"
@@ -103,7 +106,8 @@
                         /* Italic: always roman, auto, or always italic */
                     </span>
                 </li>
-                <li><span class="comment not-aligned">/* use CSS custom properties */</span></li>
+                <li><span class="comment not-aligned">&nbsp;</span></li>
+                <li><span class="comment not-aligned">/* apply axis values with CSS custom properties */</span></li>
                 <li id="font-variation-settings"><span class="property">font-variation-settings</span>: <span
                         class="string">var</span>(<span class="custom-prop">--prop</span>), <span
                         class="string">var</span>(<span class="custom-prop">--xprn</span>), <span

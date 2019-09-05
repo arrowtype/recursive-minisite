@@ -150,6 +150,7 @@ body {
       left: 500px; }
     #singleFile .controls span.comment {
       font-style: italic;
+      font-variation-settings: "slnt" -9, "ital" 1;
       color: #858585; }
       @media (max-width: 600px) {
         #singleFile .controls span.comment {
