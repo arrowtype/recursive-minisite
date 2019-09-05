@@ -244,13 +244,21 @@ body {
         font-variation-settings: "XPRN" 1, "wght" 800, "slnt" 0, "ital" 0;
     }
 
+    .credits {
+        max-width: 40ch;
+        a {
+            color: white;
+            // text-decoration: underline;
+        }
+    }
+
     .description {
         color: var(--offwhite-2);
     }
 
     a {
         color: var(--accent-on-dark);
-        text-decoration: none;
+        // text-decoration: none;
         font-variation-settings: "XPRN" 0, "wght" 450, "slnt" 0, "ital" 0;
         transition: 0.25s;
 

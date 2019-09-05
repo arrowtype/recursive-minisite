@@ -176,11 +176,14 @@ body {
         grid-column: 2/3; } }
   .footer h4 {
     font-variation-settings: "XPRN" 1, "wght" 800, "slnt" 0, "ital" 0; }
+  .footer .credits {
+    max-width: 40ch; }
+    .footer .credits a {
+      color: white; }
   .footer .description {
     color: var(--offwhite-2); }
   .footer a {
     color: var(--accent-on-dark);
-    text-decoration: none;
     font-variation-settings: "XPRN" 0, "wght" 450, "slnt" 0, "ital" 0;
     transition: 0.25s; }
     .footer a:hover {
