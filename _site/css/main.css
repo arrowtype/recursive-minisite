@@ -1,6 +1,7 @@
 :root {
   --padding-unit: 1rem;
   --offwhite-1: hsla(0, 0%, 95%, 1);
+  --offwhite-2: hsla(0, 0%, 85%, 1);
   --accent: hsl(221, 100%, 50%);
   --accent-on-dark: hsla(211, 100%, 65%, 1); }
 
@@ -159,14 +160,24 @@ body {
 .footer {
   background: black;
   color: white;
-  padding: calc(var(--padding-unit) *2); }
+  padding: calc(var(--padding-unit) *2);
+  display: grid; }
+  @media (min-width: 800px) {
+    .footer {
+      grid-template-columns: 1fr 1fr; }
+      .footer .description {
+        grid-column: 2/3; } }
+  .footer h4 {
+    font-variation-settings: "XPRN" 1, "wght" 800, "slnt" 0, "ital" 0; }
+  .footer .description {
+    color: var(--offwhite-2); }
   .footer a {
     color: var(--accent-on-dark);
     text-decoration: none;
-    font-variation-settings: "slnt" 0, "ital" 0; }
+    font-variation-settings: "XPRN" 0, "wght" 450, "slnt" 0, "ital" 0;
+    transition: 0.25s; }
     .footer a:hover {
-      transition: 0.25s;
-      font-variation-settings: "slnt" -15, "ital" 0; }
+      font-variation-settings: "XPRN" 1, "wght" 800, "slnt" -15, "ital" 0; }
   .footer p {
     max-width: 60ch; }
 
