@@ -1,3 +1,9 @@
+:root {
+  --padding-unit: 1rem;
+  --offwhite-1: hsla(0, 0%, 95%, 1);
+  --accent: hsl(221, 100%, 50%);
+  --accent-on-dark: hsla(211, 100%, 65%, 1); }
+
 * {
   box-sizing: border-box; }
 
@@ -8,9 +14,6 @@ html {
 
 body {
   margin: 0; }
-
-:root {
-  --padding-unit: 1rem; }
 
 #singleFile {
   color: #454545; }
@@ -105,7 +108,7 @@ body {
   #singleFile input[type="range"]:focus::-ms-fill-upper {
     background: #cacaca; }
   #singleFile .controls {
-    background-color: #f8f8f8;
+    background-color: var(--offwhite-1);
     width: 100%;
     font-family: "Recursive", monospace;
     font-weight: 450;
@@ -154,7 +157,12 @@ body {
   color: white;
   padding: calc(var(--padding-unit) *2); }
   .footer a {
-    color: white; }
+    color: var(--accent-on-dark);
+    text-decoration: none;
+    font-variation-settings: "slnt" 0, "ital" 0; }
+    .footer a:hover {
+      transition: 0.25s;
+      font-variation-settings: "slnt" -15, "ital" 0; }
   .footer p {
     max-width: 60ch; }
 
