@@ -132,7 +132,8 @@ body {
     #singleFile .controls .inputs {
       position: relative;
       top: -4px;
-      width: 196px; }
+      width: 40vw;
+      max-width: 196px; }
     #singleFile .controls .radio {
       border: 1px solid #bdbdbd;
       width: 12px;

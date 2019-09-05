@@ -171,8 +171,8 @@ body {
         .inputs {
             position: relative;
             top: -4px;
-            // margin-right: 40px;
-            width: 196px;
+            width: 40vw;
+            max-width: 196px;
         }
 
         .radio {
