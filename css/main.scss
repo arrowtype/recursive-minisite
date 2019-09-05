@@ -409,7 +409,7 @@ span.cm-formatting.cm-formatting-header.cm-formatting-header-3.cm-header.cm-head
 }
 
 nav.navbar{
-    border-top:1px solid white;
+    // border-top:1px solid white;
     border-bottom:1px solid white;
     background-color:black;
     z-index:200;
@@ -534,23 +534,26 @@ nav.navbar{
         background-size:12px 8px;
     }
     .toolbar__item{
-        outline-style: solid;
-        outline-color: black;
-        outline-width: 1px;
         padding: 8px 16px;
         float: left;
         cursor: pointer;
         position: relative;
         background-color: white;
         border-radius: 0px;
-        height: 39px;
+        // height: 39px;
         border: 0px;
         -webkit-appearance:none;
         -moz-appearance:none;
         appearance:none;
+        border: 1px solid black;
+        border-width: 0 0 0 1px;
         /* margin-right: 50px; */
         /* outline: none; */
         // top: -1px;
+
+        &:last-child {
+            border-width: 0 1px 0 1px;
+        }
         span{
             color:#858585;
         }
@@ -565,14 +568,14 @@ nav.navbar{
             }
         }
         .collapse{
-            min-width: calc(100% + 1px);
+            min-width: calc(100% + 2px);
             position: absolute;
             /* z-index: -1; */
             background-color: white;
-            left: -2px;
+            left: -1px;
             padding: 8px 16px;
             border: 1px solid black;
-            border-top: 0px;
+            // border-top: 0px;
             color:black;
         }
     }
@@ -587,15 +590,15 @@ div#pickVariability {
     left: -1px;
 }
 .toolbar:not(.fixed) .toolbar__item .collapse {
-    min-width: calc(100% + 1px);
+    min-width: calc(100% + 2px);
     position: absolute;
     z-index: 2;
     background-color: white;
-    left: -2px;
+    left: -1px;
     top: 40px;
     padding: 0px 16px 8px;
     border: 1px solid black;
-    border-top: 0px;
+    // border-top: 0px;
     color: black;
 }
 .pre-footer{
@@ -1599,10 +1602,7 @@ body {
     span{
         width:69px;
         height:71px;
-        outline-color:#e0e0e0;
         background-color:white;
-        outline-width: 1px;
-        outline-style:solid;
         display:block;
         float:left;
         font-size:40px;
@@ -1612,6 +1612,8 @@ body {
         padding-top:28px;
         font-family:'Recursive';
         position:relative;
+        border: solid #e0e0e0;
+        border-width: 0 1px 1px 0;
     }
     span.complete{
         color:$primary;
