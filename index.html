@@ -8,95 +8,133 @@ description: Recursive is a variable font, providing a continuous range of desig
 
 
 
-<div class="container-fluid bg-dark position-relative" id="hero">
+<div class="container-fluid" id="singleFile">
+    <input type="text" value="Recursive" id="controls-result"></input>
+    <div class="controls">
 
-    <!-- <div class="hero__headline position-absolute w-100">
-        A typographic palette for vibrant code & UI.
-    </div> -->
-    <div class="temp-hero" id="temp-hero">
-        A typographic<br>palette for<br><span class="indent">vibrant<br>code & UI.</span>
-        <div class="temp-hero-controls">
             <ul>
-                <li><span class="label">Proportion</span>0</li>
-                <li><span class="label">Expression</span>0</li>
-                <li class="active"><span class="label">Weight</span><span id="weightVal">400</span></li>
-                <li><span class="label">Slant</span>0</li>
-                <li><span class="label">Italic</span>0</li>
-            </ul>
-        </div>
-    </div>
-    <div id="verticalBar"></div>
-</div>
-<div id="phantomToolbar" class="d-none"></div>
-
-<div class="toolbar clearfix" id="toolbar">
-    <select class="toolbar__item" id="chooseInstance">
-        {% for instance in site.data.instances %}
-        <option data-prop="{{ instance.PROP }}" data-xprn="{{ instance.XPRN }}" data-ital="{{ instance.ital }}"
-            data-slnt="{{ instance.slnt }}" data-wght="{{ instance.wght }}">{{ instance.name }}</option>
-        {% endfor %}
-    </select>
-    <div class="toolbar__item">
-        <a data-toggle="collapse" data-target="#pickFontSize" data-text="Collapse">
-            15pt
-            <svg style="pointer-events:none" class="arrow" width="12" height="8" viewBox="0 0 12 8" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path d="M1.41 0.589844L6 5.16984L10.59 0.589844L12 1.99984L6 7.99984L0 1.99984L1.41 0.589844Z"
-                    fill="black" />
-            </svg>
-        </a>
-        <div class="collapse" id="pickFontSize">
-            <ul>
-                <li><input id="globalFontSizeSlider" min="6" max="60" step="1" value="15" type="range"></li>
-            </ul>
-        </div>
-    </div>
-    <div class="toolbar__item">
-        <a data-toggle="collapse" data-target="#pickVariability" data-text="Collapse" id="collapseSettings">
-            <span>PROP </span><span id="globalProp">1</span>
-            <span> XPRN </span><span id="globalXprn">0</span>
-            <span> wght </span><span id="globalWght">400</span>
-            <span> slnt </span><span id="globalSlnt">0</span>
-            <span> ital </span><span id="globalItal">0.5</span>
-        </a>
-        <div class="collapse" id="pickVariability">
-            <ul>
-                <li><span class="collapse__label">PROP</span> <span class="inputs d-inline-block"><span
-                            class="collapse__label"><span class="radio radio-prop" id="globalRadioMono"></span>
-                            Mono</span> <span class="collapse__label"><span class="radio radio-prop active"
-                                id="globalRadioSans"></span> Sans</span></span></li>
-                <li><span class="collapse__label">XPRN</span><input id="globalXprnSlider" min="0" max="1" value="0"
-                        step="0.01" type="range"></li>
-                <li><span class="collapse__label">wght</span><input id="globalWghtSlider" min="300" max="900"
-                        value="400" step="1" type="range"></li>
-                <li><span class="collapse__label">slnt</span><input id="globalSlntSlider" min="-15" max="0" value="0"
-                        step="0.01" type="range"></li>
-                <li>
-                    <span class="collapse__label">ital</span>
-                    <span class="inputs d-inline-block">
-                        <span class="collapse__label">
-                            <span class="radio radio-ital" id="globalItalOff"></span>
-                            Off</span>
-                        <span class="collapse__label"><span class="radio active radio-ital" id="globalItalAuto"></span>
-                            Auto</span>
-                        <span class="collapse__label">
-                            <span class="radio radio-ital" id="globalItalOn"></span> On</span></span>
+                <li id="font-size">
+                    <span class="css">
+                        <span class="property">font-size</span>: <span id="fontSizeResult"
+                            contenteditable="true">16vw</span>;
+                    </span>
+                    <span class="inputs"><input id="fontSizeSlider" min="1" max="32" step="1" value="16"
+                            type="range"></span>
                 </li>
+                <li><span class="comment not-aligned">/* style axes */</span></li>
+                <li id="font-weight">
+                    <span class="css">
+                        <span class="property">font-weight</span>: <span id="fontWeightResult" class="result"
+                            contenteditable="true">800</span>;
+                    </span>
+                    <span class="inputs"><input id="fontWeightSlider" min="300" max="900" value="800"
+                            type="range"></span>
+                    <span class="comment d-inline-block">
+                        /* Weight: Light to Heavy */
+                    </span>
+                </li>
+                <li id="cust-prop">
+                    <span class="css d-inline-block"><span class="custom-prop">--prop</span>: "<span
+                            class="string">PROP</span>" <span class="result" contenteditable="true">0</span>;</span>
+                    <span class="inputs d-inline-block"><span class="radio active radio-prop" id="radioMono"></span>
+                        Mono <span class="radio radio-prop" id="radioSans"></span> Sans</span>
+                    <span class="comment d-inline-block">
+                        /* Proportion: fixed-width or natural-width letters */
+                    </span>
+                </li>
+                <li id="cust-xprn">
+                    <span class="css d-inline-block"><span class="custom-prop">--xprn</span>: "<span
+                            class="string">XPRN</span>" <span id="xprnResult" class="result"
+                            contenteditable="true">0</span>;</span>
+                    <span class="inputs"><input id="xprnSlider" min="0" max="1" value="0" step="0.01"
+                            type="range"></span>
+                    <span class="comment d-inline-block">
+                        /* Expression: Linear to Casual */
+                    </span>
+                </li>
+                <li id="cust-ital">
+                    <span class="css"><span class="custom-prop">--slnt</span>: "<span class="string">slnt</span>" <span
+                            id="slntResult" class="result" contenteditable="true">0</span>;</span>
+                    <span class="inputs"><input id="slntSlider" min="-15" max="0" step=".1" value="0"
+                            type="range"></span>
+                    <span class="comment d-inline-block">
+                        /* Slant: 0 to -15 degrees */
+                    </span>
+                </li>
+                <li id="cust-ital">
+                    <span class="css"><span class="custom-prop">--ital</span>: "<span class="string">ital</span>" <span
+                            class="result" contenteditable="true">0.5</span>;</span>
+                    <span class="inputs d-inline-block"><span class="radio radio-ital" id="italOff"></span> Off <span
+                            class="radio active radio-ital" id="italAuto"></span> Auto <span class="radio radio-ital"
+                            id="italOn"></span> On</span>
+                    <span class="comment d-inline-block">
+                        /* Italic: always roman, auto, or always italic */
+                    </span>
+                </li>
+                <li><span class="comment not-aligned">/* use CSS custom properties */</span></li>
+                <li id="font-variation-settings"><span class="property">font-variation-settings</span>: <span
+                        class="string">var</span>(<span class="custom-prop">--prop</span>), <span
+                        class="string">var</span>(<span class="custom-prop">--xprn</span>), <span
+                        class="string">var</span>(<span class="custom-prop">--slnt</span>), <span
+                        class="string">var</span>(<span class="custom-prop">--ital</span>);</li>
             </ul>
-        </div>
     </div>
-    <!-- <div class="toolbar__item">
-        <a id="inversePage">
-            <svg id="inverseSVG" style="pointer-events:none" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="8" cy="8" r="7.5" fill="white" stroke="black"/>
-                <path d="M15.4836 7.5H0.516402C0.773695 3.59098 4.02588 0.5 8 0.5C11.9741 0.5 15.2263 3.59098 15.4836 7.5Z" fill="black" stroke="black"/>
-            </svg>
-        </a>
-    </div> -->
 </div>
 
-<div class="container-fluid" id="mdContainer">
-    <textarea id="mdSection">
-            {% include mde.md %}
-        </textarea>
-</div>
+<script type="text/javascript">
+    let wght = 800;
+    let prop = 0;
+    let xprn = 0;
+    let slnt = 0;
+    let ital = 0.5;
+    document.getElementById('fontSizeSlider').addEventListener('input', function () {
+        document.getElementById("controls-result").style.fontSize = document.getElementById('fontSizeSlider').value + 'vw';
+        document.getElementById("fontSizeResult").innerHTML = document.getElementById('fontSizeSlider').value + 'vw';
+    })
+
+    document.getElementById('fontWeightSlider').addEventListener('input', function () {
+        wght = document.getElementById('fontWeightSlider').value;
+        document.getElementById("controls-result").style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
+        document.getElementById("fontWeightResult").innerHTML = document.getElementById('fontWeightSlider').value;
+    })
+    document.getElementById('xprnSlider').addEventListener('input', function () {
+        xprn = document.getElementById('xprnSlider').value;
+        document.getElementById("controls-result").style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
+        document.getElementById("xprnResult").innerHTML = document.getElementById('xprnSlider').value;
+    })
+    document.getElementById('slntSlider').addEventListener('input', function () {
+        slnt = document.getElementById('slntSlider').value;
+        document.getElementById("controls-result").style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
+        document.getElementById("slntResult").innerHTML = document.getElementById('slntSlider').value;
+    })
+    document.getElementById("radioSans").onclick = function () {
+        prop = 1;
+        document.querySelector(".radio-prop.active").classList.remove("active");
+        this.classList.add("active");
+        document.getElementById("controls-result").style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
+    }
+    document.getElementById("radioMono").onclick = function () {
+        prop = 0;
+        document.querySelector(".radio-prop.active").classList.remove("active");
+        this.classList.add("active");
+        document.getElementById("controls-result").style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
+    }
+    document.getElementById("italOff").onclick = function () {
+        ital = 0;
+        document.querySelector(".radio-ital.active").classList.remove("active");
+        this.classList.add("active");
+        document.getElementById("controls-result").style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
+    }
+    document.getElementById("italAuto").onclick = function () {
+        ital = 0.5;
+        document.querySelector(".radio-ital.active").classList.remove("active");
+        this.classList.add("active");
+        document.getElementById("controls-result").style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
+    }
+    document.getElementById("italOn").onclick = function () {
+        ital = 1;
+        document.querySelector(".radio-ital.active").classList.remove("active");
+        this.classList.add("active");
+        document.getElementById("controls-result").style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
+    }
+</script>
