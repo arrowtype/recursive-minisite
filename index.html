@@ -25,34 +25,36 @@ description: Recursive is a variable font, providing a continuous range of desig
                 </li>
                 <li><span class="comment not-aligned">&nbsp;</span></li>
                 <li><span class="comment not-aligned">/* set variation axis values */</span></li>
-                <li id="font-weight">
-                    <span class="css">
-                        <span class="property">font-weight</span>: <span id="fontWeightResult" class="result"
-                            contenteditable="true">800</span>;
-                    </span>
-                    <span class="inputs"><input id="fontWeightSlider" min="300" max="900" value="800"
-                            type="range"></span>
-                    <span class="comment d-inline-block">
-                        /* Weight: Light to Heavy */
-                    </span>
-                </li>
                 <li id="cust-prop">
                     <span class="css d-inline-block"><span class="custom-prop">--prop</span>: "<span
-                            class="string">PROP</span>" <span class="result" contenteditable="true">0</span>;</span>
+                    class="string">PROP</span>" <span class="result" contenteditable="true">0</span>;</span>
                     <span class="inputs d-inline-block"><span class="radio active radio-prop" id="radioMono"></span>
-                        Mono <span class="radio radio-prop" id="radioSans"></span> Sans</span>
+                    Mono <span class="radio radio-prop" id="radioSans"></span> Sans</span>
                     <span class="comment d-inline-block">
-                        /* Proportion: fixed-width or natural-width letters */
+                        /* Proportion: Mono (fixed-width) or Sans (natural-width) */
                     </span>
                 </li>
                 <li id="cust-xprn">
                     <span class="css d-inline-block"><span class="custom-prop">--xprn</span>: "<span
-                            class="string">XPRN</span>" <span id="xprnResult" class="result"
-                            contenteditable="true">0</span>;</span>
+                    class="string">XPRN</span>" <span id="xprnResult" class="result"
+                    contenteditable="true">0</span>;</span>
                     <span class="inputs"><input id="xprnSlider" min="0" max="1" value="0" step="0.01"
+                        type="range"></span>
+                        <span class="comment d-inline-block">
+                            /* Expression: Linear to Casual */
+                        </span>
+                    </li>
+                <li id="font-weight">
+                    <span class="css">
+                        <!-- <span class="property">font-weight</span>: <span id="fontWeightResult" class="result"
+                            contenteditable="true">800</span>; -->
+                        <span class="css d-inline-block"><span class="custom-prop">--wght</span>: "<span
+                            class="string">wght</span>" <span class="result" contenteditable="true">800</span>;</span>
+                    </span>
+                    <span class="inputs"><input id="fontWeightSlider" min="300" max="900" value="800"
                             type="range"></span>
                     <span class="comment d-inline-block">
-                        /* Expression: Linear to Casual */
+                        /* Weight: Light to Black – also set with `font-weight` */
                     </span>
                 </li>
                 <li id="cust-ital">
@@ -77,10 +79,11 @@ description: Recursive is a variable font, providing a continuous range of desig
                 <li><span class="comment not-aligned">&nbsp;</span></li>
                 <li><span class="comment not-aligned">/* apply axis values with CSS custom properties */</span></li>
                 <li id="font-variation-settings"><span class="property">font-variation-settings</span>: <span
-                        class="string">var</span>(<span class="custom-prop">--prop</span>), <span
-                        class="string">var</span>(<span class="custom-prop">--xprn</span>), <span
-                        class="string">var</span>(<span class="custom-prop">--slnt</span>), <span
-                        class="string">var</span>(<span class="custom-prop">--ital</span>);</li>
+                    class="string">var</span>(<span class="custom-prop">--prop</span>), <span
+                    class="string">var</span>(<span class="custom-prop">--xprn</span>), <span
+                    class="string">var</span>(<span class="custom-prop">--wght</span>), <span
+                    class="string">var</span>(<span class="custom-prop">--slnt</span>), <span
+                    class="string">var</span>(<span class="custom-prop">--ital</span>);</li>
             </ul>
     </div>
 </div>
