@@ -24,6 +24,13 @@ body {
 .central-column {
   max-width: 1024px;
   margin: 0 auto; }
+  @media (max-width: 500px) {
+    .central-column {
+      margin: 0; } }
+
+@media (max-width: 500px) {
+  .hidden--sm {
+    display: none !important; } }
 
 #singleFile {
   color: #454545; }
@@ -48,7 +55,9 @@ body {
   #singleFile input[type="range"] {
     -webkit-appearance: none;
     width: 100%;
-    margin: 5.5px 0; }
+    margin: 5.5px 0;
+    position: relative;
+    top: -0.25rem; }
   #singleFile input[type="range"]:focus {
     outline: none; }
   #singleFile input[type="range"]::-webkit-slider-runnable-track {
@@ -124,16 +133,25 @@ body {
     font-weight: 450;
     padding: calc(var(--padding-unit) *2);
     display: grid; }
+    @media (max-width: 500px) {
+      #singleFile .controls {
+        padding: var(--padding-unit); } }
     #singleFile .controls .css {
       width: 200px; }
+      @media (max-width: 500px) {
+        #singleFile .controls .css {
+          width: 124px; } }
     #singleFile .controls .css,
     #singleFile .controls .inputs {
       display: inline-block; }
     #singleFile .controls .inputs {
-      position: relative;
-      top: -4px;
+      width: 100%;
       width: 40vw;
       max-width: 196px; }
+      @media (max-width: 500px) {
+        #singleFile .controls .inputs {
+          width: 100%;
+          max-width: none; } }
     #singleFile .controls .radio {
       border: 1px solid #bdbdbd;
       width: 12px;
@@ -148,6 +166,10 @@ body {
       padding: 0; }
     #singleFile .controls li {
       display: block; }
+      @media (max-width: 500px) {
+        #singleFile .controls li {
+          display: grid;
+          grid-template-columns: 45% 55%; } }
     #singleFile .controls .property {
       color: #c2404c; }
     #singleFile .controls .custom-prop {
@@ -167,14 +189,19 @@ body {
 .footer {
   background: black;
   color: white;
-  padding: calc(var(--padding-unit) *2);
+  padding: var(--padding-unit);
   display: grid; }
   @media (min-width: 800px) {
     .footer {
-      grid-template-columns: 1fr 1fr; }
+      grid-template-columns: 1fr 1fr;
+      padding: calc(var(--padding-unit) *2); }
       .footer .description {
         grid-column: 2/3; } }
+  .footer h1, .footer h1 a {
+    font-size: 1rem;
+    font-variation-settings: "XPRN" 0, "wght" 800, "slnt" 0, "ital" 0; }
   .footer h4 {
+    font-size: 1rem;
     font-variation-settings: "XPRN" 1, "wght" 800, "slnt" 0, "ital" 0; }
   .footer .credits {
     max-width: 40ch; }

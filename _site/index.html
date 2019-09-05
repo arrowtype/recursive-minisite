@@ -45,12 +45,12 @@
     <div class="controls">
 
             <ul class="central-column">
-                <li><span class="comment not-aligned">/* Recursive Mono & Sans: a typographic palette for code & design. */</span></li>
+                <li><span class="comment not-aligned">/* A typographic palette for code & design. */</span></li>
                 <li><span class="comment not-aligned">&nbsp;</span></li>
                 <li id="font-size">
                     <span class="css">
                         <span class="property">font-size</span>: <span id="fontSizeResult"
-                            contenteditable="true">16vw</span>;
+                            contenteditable="true">16vw</span><span class="hidden--sm">;</span>
                     </span>
                     <span class="inputs"><input id="fontSizeSlider" min="0.5" max="24" step="0.01" value="16"
                             type="range"></span>
@@ -58,8 +58,8 @@
                 <li><span class="comment not-aligned">&nbsp;</span></li>
                 <li><span class="comment not-aligned">/* set variation axis values */</span></li>
                 <li id="cust-prop">
-                    <span class="css d-inline-block"><span class="custom-prop">--prop</span>: "<span
-                    class="string">PROP</span>" <span class="result" contenteditable="true">0</span>;</span>
+                    <span class="css d-inline-block"><span class="custom-prop hidden--sm">--prop</span><span class="hidden--sm">: </span>"<span
+                    class="string">PROP</span>" <span class="result" contenteditable="true">0</span><span class="hidden--sm">;</span></span>
                     <span class="inputs d-inline-block"><span class="radio active radio-prop" id="radioMono"></span>
                     Mono <span class="radio radio-prop" id="radioSans"></span> Sans</span>
                     <span class="comment d-inline-block">
@@ -67,9 +67,9 @@
                     </span>
                 </li>
                 <li id="cust-xprn">
-                    <span class="css d-inline-block"><span class="custom-prop">--xprn</span>: "<span
+                    <span class="css d-inline-block"><span class="custom-prop hidden--sm">--xprn</span><span class="hidden--sm">: </span>"<span
                     class="string">XPRN</span>" <span id="xprnResult" class="result"
-                    contenteditable="true">0</span>;</span>
+                    contenteditable="true">0</span><span class="hidden--sm">;</span></span>
                     <span class="inputs"><input id="xprnSlider" min="0" max="1" value="0" step="0.01"
                         type="range"></span>
                         <span class="comment d-inline-block">
@@ -78,10 +78,8 @@
                     </li>
                 <li id="font-weight">
                     <span class="css">
-                        <!-- <span class="property">font-weight</span>: <span id="fontWeightResult" class="result"
-                            contenteditable="true">800</span>; -->
-                        <span class="css d-inline-block"><span class="custom-prop">--wght</span>: "<span
-                            class="string">wght</span>" <span class="result" contenteditable="true">800</span>;</span>
+                        <span class="css d-inline-block"><span class="custom-prop hidden--sm">--wght</span><span class="hidden--sm">: </span>"<span
+                            class="string">wght</span>" <span class="result" contenteditable="true">800</span><span class="hidden--sm">;</span></span>
                     </span>
                     <span class="inputs"><input id="fontWeightSlider" min="300" max="900" value="800"
                             type="range"></span>
@@ -90,8 +88,8 @@
                     </span>
                 </li>
                 <li id="cust-ital">
-                    <span class="css"><span class="custom-prop">--slnt</span>: "<span class="string">slnt</span>" <span
-                            id="slntResult" class="result" contenteditable="true">0</span>;</span>
+                    <span class="css"><span class="custom-prop hidden--sm">--slnt</span><span class="hidden--sm">: </span>"<span class="string">slnt</span>" <span
+                            id="slntResult" class="result" contenteditable="true">0</span><span class="hidden--sm">;</span></span>
                     <span class="inputs"><input id="slntSlider" min="-15" max="0" step=".1" value="0"
                             type="range"></span>
                     <span class="comment d-inline-block">
@@ -99,8 +97,8 @@
                     </span>
                 </li>
                 <li id="cust-ital">
-                    <span class="css"><span class="custom-prop">--ital</span>: "<span class="string">ital</span>" <span
-                            class="result" contenteditable="true">0.5</span>;</span>
+                    <span class="css"><span class="custom-prop hidden--sm">--ital</span><span class="hidden--sm">: </span>"<span class="string">ital</span>" <span
+                            class="result" contenteditable="true">0.5</span><span class="hidden--sm">;</span></span>
                     <span class="inputs d-inline-block"><span class="radio radio-ital" id="italOff"></span> Off <span
                             class="radio active radio-ital" id="italAuto"></span> Auto <span class="radio radio-ital"
                             id="italOn"></span> On</span>
@@ -110,7 +108,7 @@
                 </li>
                 <li><span class="comment not-aligned">&nbsp;</span></li>
                 <li><span class="comment not-aligned">/* apply axis values with CSS custom properties */</span></li>
-                <li id="font-variation-settings"><span class="property">font-variation-settings</span>: <span
+                <li id="font-variation-settings" class="hidden--sm"><span class="property">font-variation-settings</span>: <span
                     class="string">var</span>(<span class="custom-prop">--prop</span>), <span
                     class="string">var</span>(<span class="custom-prop">--xprn</span>), <span
                     class="string">var</span>(<span class="custom-prop">--wght</span>), <span
@@ -181,7 +179,7 @@
 	<!-- <div class="central-column"> -->
 	<div class="credits">
 		
-		<p>Project by <a href="https://arrowtype.com" target="_blank">Arrow Type</a></p>
+		<h1>Recursive Mono/Sans, by <a href="https://arrowtype.com" target="_blank">Arrow Type</a></h1>
 		<p>With contributions from <a href="http://www.katjaschimmel.de/" target="_blank">Katja Schimmel</a>, <a
 				href="https://www.polyform.studio/en" target="_blank">Lisa Huang</a>, & <a
 				href="https://github.com/rafalbuchner/" target="_blank">Rafał Buchner</a>. Early guidance from <a

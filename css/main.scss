@@ -3,7 +3,6 @@
 
 :root {
     --padding-unit: 1rem;
-
     // colors
     --offwhite-1: hsla(0, 0%, 95%, 1);
     --offwhite-2: hsla(0, 0%, 85%, 1);
@@ -35,6 +34,15 @@ body {
 .central-column {
     max-width: 1024px;
     margin: 0 auto;
+    @media (max-width: 500px) {
+        margin: 0;
+    }
+}
+
+.hidden--sm {
+    @media (max-width: 500px) {
+        display: none !important;
+    }
 }
 
 /// Express Yourself section
@@ -70,6 +78,8 @@ body {
         -webkit-appearance: none;
         width: 100%;
         margin: 5.5px 0;
+        position: relative;
+        top: -0.25rem;
     }
     input[type="range"]:focus {
         outline: none;
@@ -159,9 +169,16 @@ body {
         font-weight: 450;
         padding: calc(var(--padding-unit) *2);
         display: grid;
+        
+        @media (max-width: 500px) {
+            padding: var(--padding-unit);
+        }
 
         .css {
             width: 200px;
+            @media (max-width: 500px) {
+                width: 124px;
+            }
         }
 
         .css,
@@ -169,10 +186,13 @@ body {
             display: inline-block;
         }
         .inputs {
-            position: relative;
-            top: -4px;
+            width: 100%;
             width: 40vw;
             max-width: 196px;
+            @media (max-width: 500px) {
+                width: 100%;
+                max-width: none;
+            }
         }
 
         .radio {
@@ -194,6 +214,10 @@ body {
 
         li {
             display: block;
+            @media (max-width:500px) {
+                display: grid;
+                grid-template-columns: 45% 55%;
+            }   
         }
 
         .property {
@@ -228,11 +252,12 @@ body {
 .footer {
     background: black;
     color: white;
-    padding: calc(var(--padding-unit) *2);
+    padding: var(--padding-unit);
     display: grid;
-
+    
     @media (min-width: 800px) {
         grid-template-columns: 1fr 1fr;
+        padding: calc(var(--padding-unit) *2);
         
         .description {
             grid-column: 2/3;
@@ -240,7 +265,13 @@ body {
     }
 
 
+    h1, h1 a{
+        font-size: 1rem;
+        font-variation-settings: "XPRN" 0, "wght" 800, "slnt" 0, "ital" 0;
+    }
+    
     h4 {
+        font-size: 1rem;
         font-variation-settings: "XPRN" 1, "wght" 800, "slnt" 0, "ital" 0;
     }
 
