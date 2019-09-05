@@ -57,7 +57,8 @@ body {
     display: grid; }
     @media (max-width: 500px) {
       #singleFile input[type="text"] {
-        padding: calc(var(--padding-unit) * 0.9); } }
+        padding: calc(var(--padding-unit) * 0.9);
+        padding-right: 0; } }
   #singleFile input[type="text"]:focus {
     outline: none; }
   #singleFile input[type="range"] {

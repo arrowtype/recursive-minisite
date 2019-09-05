@@ -76,6 +76,7 @@ body {
         
         @media (max-width: 500px) {
             padding: calc(var(--padding-unit) * 0.9);
+            padding-right: 0; // safari
         }
     }
 
