@@ -164,10 +164,7 @@ body {
       #singleFile .controls {
         padding: var(--padding-unit); } }
     #singleFile .controls .css {
-      width: 200px; }
-      @media (max-width: 500px) {
-        #singleFile .controls .css {
-          width: 124px; } }
+      width: 196px; }
     #singleFile .controls .css,
     #singleFile .controls .inputs {
       display: inline-block; }
