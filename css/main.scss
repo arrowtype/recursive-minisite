@@ -15,7 +15,7 @@
 }
 
 html {
-    font-family: 'Recursive', sans-serif;
+    font-family: 'recursive-subset','Recursive', sans-serif;
     line-height: 1.75;
     background: black;
     font-size: 12px;
@@ -60,7 +60,7 @@ body {
         border: 0px;
         min-height: 50vh;
         font-weight: 800;
-        font-family: "Recursive";
+        font-family: 'recursive-subset','Recursive', sans-serif;
         --prop: "PROP" 0;
         --xprn: "XPRN" 0;
         --slnt: "slnt" 0;
@@ -370,6 +370,11 @@ body {
 @font-face {
     font-family: "Recursive";
     font-weight: 300 900;
-    /* woff2 font as base64 string */
-    src: url("/assets/fonts/recursive-prop_xprn_weight_slnt_ital--2019_08_26.woff2");
+    src: url("/assets/fonts/recursive-prop_xprn_weight_slnt_ital--2019_09_05.woff2");
+}
+
+@font-face {
+    font-family: "recursive-subset";
+    font-weight: 300 900;
+    src: url("/assets/fonts/recursive-prop_xprn_weight_slnt_ital--2019_09_05--subset-0020_007F.woff2");
 }
