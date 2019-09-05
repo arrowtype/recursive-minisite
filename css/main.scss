@@ -17,13 +17,24 @@
 
 html {
     font-family: 'Recursive', sans-serif;
-    line-height: 1.5;
+    line-height: 1.75;
     background: black;
+    font-size: 12px;
+
+    @media (min-width: 600px) {
+        font-size: 14px;
+        line-height: 1.5;
+    }
 }
 
 body {
     margin:0;
 
+}
+
+.central-column {
+    max-width: 1024px;
+    margin: 0 auto;
 }
 
 /// Express Yourself section
@@ -57,7 +68,7 @@ body {
 
     input[type="range"] {
         -webkit-appearance: none;
-        width: 240px;
+        width: 100%;
         margin: 5.5px 0;
     }
     input[type="range"]:focus {
@@ -160,7 +171,8 @@ body {
         .inputs {
             position: relative;
             top: -4px;
-            margin-right: 40px;
+            // margin-right: 40px;
+            width: 196px;
         }
 
         .radio {
@@ -198,8 +210,8 @@ body {
             color: rgb(0, 80, 255);
         }
         span.comment:not(.not-aligned) {
-            position: absolute;
-            left: 500px;
+            // position: absolute;
+            // left: 500px;
         }
         span.comment {
             font-style: italic;

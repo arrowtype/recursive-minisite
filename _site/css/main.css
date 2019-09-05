@@ -10,11 +10,20 @@
 
 html {
   font-family: 'Recursive', sans-serif;
-  line-height: 1.5;
-  background: black; }
+  line-height: 1.75;
+  background: black;
+  font-size: 12px; }
+  @media (min-width: 600px) {
+    html {
+      font-size: 14px;
+      line-height: 1.5; } }
 
 body {
   margin: 0; }
+
+.central-column {
+  max-width: 1024px;
+  margin: 0 auto; }
 
 #singleFile {
   color: #454545; }
@@ -38,7 +47,7 @@ body {
     outline: none; }
   #singleFile input[type="range"] {
     -webkit-appearance: none;
-    width: 240px;
+    width: 100%;
     margin: 5.5px 0; }
   #singleFile input[type="range"]:focus {
     outline: none; }
@@ -123,7 +132,7 @@ body {
     #singleFile .controls .inputs {
       position: relative;
       top: -4px;
-      margin-right: 40px; }
+      width: 196px; }
     #singleFile .controls .radio {
       border: 1px solid #bdbdbd;
       width: 12px;
@@ -146,9 +155,6 @@ body {
       color: #494949; }
     #singleFile .controls .string {
       color: #0050ff; }
-    #singleFile .controls span.comment:not(.not-aligned) {
-      position: absolute;
-      left: 500px; }
     #singleFile .controls span.comment {
       font-style: italic;
       font-variation-settings: "slnt" -9, "ital" 1;
