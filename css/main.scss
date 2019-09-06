@@ -50,13 +50,13 @@ body {
 #singleFile {
     color: #454545;
 
-    * {
-        overflow: visible !important;
-    }
-
-    input[type="text"] {
+    // input[type="text"] 
+    #controls-result {
+        background: white;
+        color: black;
         font-size: 16vw;
         font-weight: 800;
+        line-height: 1.125;
         border: 0px;
         min-height: 50vh;
         font-weight: 800;
@@ -73,6 +73,10 @@ body {
         margin: 0; // safari
         border-radius: 0; // safari
         display: grid;
+        align-content: center;
+        overflow-x: auto;
+        max-width: 100vw;
+
         
         @media (max-width: 500px) {
             padding: calc(var(--padding-unit) * 0.9);
