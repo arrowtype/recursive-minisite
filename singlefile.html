@@ -31,8 +31,8 @@ layout: iframe
                 </span>
             </li>
             <li id="cust-xprn">
-                <span class="css d-inline-block"><span class="custom-prop">--xprn</span>: "<span class="string">XPRN</span>" <span id="xprnResult" class="result" contenteditable="true">0.5</span>;</span>
-                <span class="inputs"><input id="xprnSlider" min="0" max="1" value="0.5" step="0.01" type="range"></span>
+                <span class="css d-inline-block"><span class="custom-prop">--xprn</span>: "<span class="string">XPRN</span>" <span id="xprnResult" class="result" contenteditable="true">0</span>;</span>
+                <span class="inputs"><input id="xprnSlider" min="0" max="1" value="0" step="0.01" type="range"></span>
                 <span class="comment d-inline-block">
                     /* Expression: Linear to Casual */
                 </span>
@@ -41,14 +41,14 @@ layout: iframe
                 <span class="css"><span class="custom-prop">--slnt</span>: "<span class="string">slnt</span>" <span id="slntResult" class="result" contenteditable="true">0</span>;</span>
                 <span class="inputs"><input id="slntSlider" min="-15" max="0" step=".1" value="0" type="range"></span>
                 <span class="comment d-inline-block">
-                    /* Slant: always roman, auto, or always italic */
+                    /* Slant: 0 to -15 degrees */
                 </span>
             </li>
             <li id="cust-crsv">
                 <span class="css"><span class="custom-prop">--ital</span>: "<span class="string">ital</span>" <span class="result" contenteditable="true">0</span>;</span>
                 <span class="inputs d-inline-block"><span class="radio active radio-ital" id="italOff"></span> Off <span class="radio radio-ital" id="italAuto"></span> Auto <span class="radio radio-ital" id="italOn"></span> On</span>            
                 <span class="comment d-inline-block">
-                    /* Italic: Light to Heavy. */
+                    /* Italic: always roman, auto, or always italic */
                 </span>
             </li>
             <li><span class="comment not-aligned">/* use CSS custom properties */</span></li>
@@ -61,10 +61,9 @@ layout: iframe
 <script type="text/javascript">
 let wght = 800;
 let prop = 0;
-let xprn = 0.5;
+let xprn = 0;
 let slnt = 0;
-let crsv = 0;
-let ital = 0;
+let ital = 0.5;
 document.getElementById('fontSizeSlider').addEventListener('input', function(){
     document.getElementById("controls-result").style.fontSize = document.getElementById('fontSizeSlider').value + 'px';
     document.getElementById("fontSizeResult").innerHTML = document.getElementById('fontSizeSlider').value + 'px';

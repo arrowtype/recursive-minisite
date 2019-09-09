@@ -7358,9 +7358,9 @@ div#pickVariability {
     font-family: 'Recursive';
     --prop: "PROP" 0;
     --xprn: "XPRN" 0;
-    --ital: "ital" 0;
-    --crsv: "CRSV" 3;
-    font-variation-settings: "PROP" 0, "XPRN" 1, "ital" 0, "CRSV" 0, "wght" 800;
+    --slnt: "slnt" 0;
+    --ital: "ital" 0.5;
+    font-variation-settings: "PROP" 0, "XPRN" 0, "slnt" 0, "ital" 0, "wght" 800;
     text-align: center;
     width: 100%; }
   #singleFile input[type="text"]:focus {
