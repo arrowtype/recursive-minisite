@@ -1,9 +1,9 @@
 # Site settings
 title: Recursive
-email:
-author:
-description:
-url: 
+email: info@arrowtype.com
+author: Arrow Type
+description: Recursive is a variable font for code & UI
+url: https://recursive.design
 
 # Build settings
 permalink: :title/
