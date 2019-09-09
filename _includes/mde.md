@@ -77,12 +77,3 @@ As a variable font, Recursive gives you fine-grained control over each one of it
 To meet the needs of global communication, Recursive supports a wide range of Latin-based languages, as well as Vietnamese. It also comes with an extended range of currencies.
 
 <iframe src=/languages></iframe>
-
-### Back this project on Kickstarter
-
-Work is ongoing to make Recursive the best font for code & UI. 
-Want to see more code ligatures in Recursive? We need your help!
-
-Back the project on Kickstarter, and your contribution will be **doubled** by Google Fonts. This will help finance the creation of an extended set of code ligatures, allowing Recursive to provide fuller ligature support to more programming languages.
-
-Even better, if you back one of the top tiers, you’ll receive exclusive typographic swag to show your support for open-source software – and your good taste in type.
