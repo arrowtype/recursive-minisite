@@ -96,7 +96,7 @@ html {
 }
 
 .container.container-sm {
-    max-width: 900px;
+    width: 900px;
     overflow:visible;
 }
 
@@ -462,7 +462,7 @@ nav.navbar{
     .temp-hero{
         padding:20px;
         width: 100%;
-        max-width: 1200px;
+        max-width: 1300px;
         margin: auto;
         .indent{
             position:relative;
@@ -1785,7 +1785,7 @@ ul.casual .rw{--xprn: 1}
 .navbar-nav{
     padding-left: 24px;
 }
-.toolbar__item:last-child, .toolbar__item:nth-child(2){
+.toolbar__item:nth-child(2){
     display:none;
 }
 .toolbar__item{
@@ -1800,9 +1800,42 @@ ul.casual .rw{--xprn: 1}
     display:none;
 }
 pre.CodeMirror-line {
-    padding: 0px 20px;
+    padding: 0px 20px 0px 60px;
 }
 
+.CodeMirror-line:before {
+    left: 0px;
+}
+.CodeMirror .CodeMirror-code .cm-header-2, .CodeMirror .CodeMirror-code .cm-header-3 {
+    left: 0px;
+}
+#verticalBar{
+    display:none;
+}
+#hero{
+    min-height: calc(90vw + 200px);
+    display: block;
+    padding-top: 100px;
+}
+nav.navbar .nav-github-link {
+    margin: 10px 0px;
+    display: inline-block;
+    position:static;
+}
+iframe {
+    -moz-transform: scale(0.25, 0.25);
+    -webkit-transform: scale(0.25, 0.25);
+    -o-transform: scale(0.25, 0.25);
+    -ms-transform: scale(0.25, 0.25);
+    transform: scale(0.5, 0.5);
+    -moz-transform-origin: top left;
+    -webkit-transform-origin: top left;
+    -o-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+    width: 200vw;
+    display:none;
+}
 
 }
 
