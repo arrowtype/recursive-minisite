@@ -136,7 +136,7 @@
   ital: 1
   slnt: -15
   wght: 400
-- name: Mono Linear Ligh
+- name: Mono Linear Light
   PROP: 0
   XPRN: 0
   ital: 0.5
@@ -358,6 +358,7 @@
   ital: 0.5
   slnt: 0
   wght: 400
+  selected: true
 - name: Sans Linear SemiBold
   PROP: 1
   XPRN: 0

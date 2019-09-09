@@ -5,13 +5,13 @@ layout: iframe
 <div id="robustLayouts" class="module container container-sm py-5 clearfix">
     <div class="bad" id="bad">
         <ul class="d-inline-block">
-            <li>Menu Item</li>
-            <li class="active">Item Two</li>
-            <li>Another Thing</li>
+            <li id="item1Bad">Menu Item</li>
+            <li class="active" id="item2Bad">Item Two</li>
+            <li id="item3Bad">Another Thing</li>
         </ul>
         <div class="text">
             font-family: <span>sans-serif</span>;
-            <br>transition:  <span>0s</span>;
+            <!-- <br>transition:  <span>0s</span>; -->
         </div>
         <div id="cursorBad">
             <svg width="60" height="64" viewBox="0 0 60 64" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -37,13 +37,13 @@ layout: iframe
     </div>
     <div class="good">
         <ul class="d-inline-block" id="good">
-        <li>Menu Item</li>
-        <li class="active">Item Two</li>
-        <li>Another Thing</li>
+        <li id="item1Good">Menu Item</li>
+        <li class="active" id="item2Good">Item Two</li>
+        <li id="item3Good">Another Thing</li>
         </ul>
         <div class="text">
             font-family: <span>Recursive</span>;
-            <br>transition: <span>0.25s</span>;
+            <!-- <br>transition: <span>0.25s</span>; -->
         </div>
         <div id="cursorGood">
             <svg width="60" height="64" viewBox="0 0 60 64" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -71,21 +71,58 @@ layout: iframe
 
 <script>
 function customCursor(boundsDiv,cursorDiv,extraSpace){
-    boundsDiv.onmousemove = function(e){
-        boundsDiv.getElementsByTagName("li")[1].classList.remove("active");
-        let bounds = boundsDiv.getBoundingClientRect();
-        let mouseX = interpolate(e.clientX, bounds.left, bounds.right, 0, boundsDiv.clientWidth);
-        let mouseY = interpolate(e.clientY, bounds.top, bounds.bottom, 0, boundsDiv.clientHeight);
-        if (mouseY < boundsDiv.clientHeight - extraSpace){
-            cursorDiv.style.top = mouseY + 5 + "px";
-        }
-        if (mouseX < boundsDiv.clientWidth - extraSpace){
-            cursorDiv.style.left = mouseX + 5 + "px";
-        }
+    boundsDiv.onmouseenter = function(e){
+        document.getElementById("good").getElementsByTagName("li")[1].classList.remove("active");
+        document.getElementById("bad").getElementsByTagName("li")[1].classList.remove("active");
+        document.getElementById("cursorGood").style.display = "none";
+        document.getElementById("cursorBad").style.display = "none";
+    }
+    boundsDiv.onmouseleave = function(e){
+        document.getElementById("good").getElementsByTagName("li")[1].classList.add("active");
+        document.getElementById("bad").getElementsByTagName("li")[1].classList.add("active");
+        document.getElementById("cursorGood").style.display = "block";
+        document.getElementById("cursorBad").style.display = "block";
     }
 }
 customCursor(document.getElementById("good"), document.getElementById("cursorGood"), 50);
 customCursor(document.getElementById("bad"), document.getElementById("cursorBad"), 100);
+
+document.getElementById("item1Good").onmouseenter = function(){
+    document.getElementById("item1Bad").classList.add("active");
+}
+document.getElementById("item1Bad").onmouseenter = function(){
+    document.getElementById("item1Good").classList.add("active");
+}
+document.getElementById("item1Good").onmouseleave = function(){
+    document.getElementById("item1Bad").classList.remove("active");
+}
+document.getElementById("item1Bad").onmouseleave = function(){
+    document.getElementById("item1Good").classList.remove("active");
+}
+document.getElementById("item2Good").onmouseenter = function(){
+    document.getElementById("item2Bad").classList.add("active");
+}
+document.getElementById("item2Bad").onmouseenter = function(){
+    document.getElementById("item2Good").classList.add("active");
+}
+document.getElementById("item2Good").onmouseleave = function(){
+    document.getElementById("item2Bad").classList.remove("active");
+}
+document.getElementById("item2Bad").onmouseleave = function(){
+    document.getElementById("item2Good").classList.remove("active");
+}
+document.getElementById("item3Good").onmouseenter = function(){
+    document.getElementById("item3Bad").classList.add("active");
+}
+document.getElementById("item3Bad").onmouseenter = function(){
+    document.getElementById("item3Good").classList.add("active");
+}
+document.getElementById("item3Good").onmouseleave = function(){
+    document.getElementById("item3Bad").classList.remove("active");
+}
+document.getElementById("item3Bad").onmouseleave = function(){
+    document.getElementById("item3Good").classList.remove("active");
+}
 
 
 function interpolate(value, low1, high1, low2, high2) {

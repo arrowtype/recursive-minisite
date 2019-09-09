@@ -148,10 +148,10 @@
     <div class="slider-label d-inline-block float-left"><span>1 </span>Casual</div>
 </div>
 
-<div id="grabCursor">
+<!-- <div id="grabCursor">
     <img id="grab2" class="d-none" src="/assets/img/grab2.svg">
     <img id="grab1" src="/assets/img/grab1.svg">
-</div>
+</div> -->
 
 </div>
 
@@ -180,23 +180,23 @@ ampersandSlider.addEventListener('input', function () {
   }
 }, false);
 
-ampSlider.onmousemove = function(e){
-    document.getElementById("grabCursor").style.top = e.clientY - 30 + "px";
-    document.getElementById("grabCursor").style.left = e.clientX - 30 + "px";
-}
-ampSlider.onmousedown = function(){
-    dragging = true;
-    document.getElementById("grab1").classList.add("d-none");
-    document.getElementById("grab2").classList.remove("d-none");
-}
-ampSlider.onmouseup = function(){
-    dragging = false;
-    document.getElementById("grab1").classList.remove("d-none");
-    document.getElementById("grab2").classList.add("d-none");
-}
-ampSlider.onmouseout = function(e){
-    document.getElementById("grabCursor").style.left = "-1000000px";
-}
+// ampSlider.onmousemove = function(e){
+//     document.getElementById("grabCursor").style.top = e.clientY - 30 + "px";
+//     document.getElementById("grabCursor").style.left = e.clientX - 30 + "px";
+// }
+// ampSlider.onmousedown = function(){
+//     dragging = true;
+//     document.getElementById("grab1").classList.add("d-none");
+//     document.getElementById("grab2").classList.remove("d-none");
+// }
+// ampSlider.onmouseup = function(){
+//     dragging = false;
+//     document.getElementById("grab1").classList.remove("d-none");
+//     document.getElementById("grab2").classList.add("d-none");
+// }
+// ampSlider.onmouseout = function(e){
+//     document.getElementById("grabCursor").style.left = "-1000000px";
+// }
 ampSlider.addEventListener('input', function () {
     ampersandSlider.value = this.value;
   o.innerHTML = ampersandSlider.value;

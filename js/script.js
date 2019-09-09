@@ -1,16 +1,21 @@
-// document.getElementById("inversePage").onmousedown = function(){
-//     document.getElementsByTagName("body")[0].classList.toggle("inverse");
-// }
+document.getElementById("inversePage").onmousedown = function(){
+    document.getElementsByTagName("body")[0].classList.toggle("inverse");
+}
 
 document.getElementById("globalFontSizeSlider").oninput = function(){
-    document.getElementsByClassName("CodeMirror-lines")[0].style.fontSize = document.getElementById("globalFontSizeSlider").value + "px"
-    document.getElementsByClassName("CodeMirror-lines")[0].style.lineHeight = document.getElementById("globalFontSizeSlider").value * 1.3 + "px";
+    document.getElementsByTagName("html")[0].style.fontSize = document.getElementById("globalFontSizeSlider").value + "px"
+    document.getElementsByTagName("html")[0].style.lineHeight = document.getElementById("globalFontSizeSlider").value * 1.3 + "px";
+    document.getElementById("changeFontSize").innerHTML = document.getElementById("globalFontSizeSlider").value;
 }
 
 const triggers = Array.from(document.querySelectorAll('[data-toggle="collapse"]'));
 
 document.getElementById("collapseSettings").onclick = function(){
     document.getElementById("pickVariability").classList.toggle("show");
+    if (document.getElementById("pickFontSize").classList.contains("show")){
+        document.getElementById("pickFontSize").classList.toggle("show");
+    }
+    
 };
 
 document.getElementById("navbarToggler").onclick = function(){

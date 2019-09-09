@@ -155,7 +155,7 @@
         
         <option data-prop="0" data-xprn="0" data-ital="1" data-slnt="-15" data-wght="400">Mono Linear Italic</option>
         
-        <option data-prop="0" data-xprn="0" data-ital="0.5" data-slnt="0" data-wght="300">Mono Linear Ligh</option>
+        <option data-prop="0" data-xprn="0" data-ital="0.5" data-slnt="0" data-wght="300">Mono Linear Light</option>
         
         <option data-prop="0" data-xprn="0" data-ital="1" data-slnt="-15" data-wght="300">Mono Linear Light Italic</option>
         
@@ -227,7 +227,7 @@
         
         <option data-prop="1" data-xprn="0" data-ital="1" data-slnt="-15" data-wght="500">Sans Linear Medium Italic</option>
         
-        <option data-prop="1" data-xprn="0" data-ital="0.5" data-slnt="0" data-wght="400">Sans Linear Regular</option>
+        <option  selected="selected" data-prop="1" data-xprn="0" data-ital="0.5" data-slnt="0" data-wght="400">Sans Linear Regular</option>
         
         <option data-prop="1" data-xprn="0" data-ital="0.5" data-slnt="0" data-wght="600">Sans Linear SemiBold</option>
         
@@ -240,7 +240,7 @@
     </select>
     <div class="toolbar__item">
         <a data-toggle="collapse" data-target="#pickFontSize" data-text="Collapse">
-        15pt
+        <span id="changeFontSize">15</span>pt
         <svg style="pointer-events:none" class="arrow" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1.41 0.589844L6 5.16984L10.59 0.589844L12 1.99984L6 7.99984L0 1.99984L1.41 0.589844Z" fill="black"/>
         </svg>
@@ -253,7 +253,7 @@
     </div>
     <div class="toolbar__item">
         <a data-toggle="collapse" data-target="#pickVariability" data-text="Collapse" id="collapseSettings">
-            <span>PROP </span><span id="globalProp">1</span><span>   XPRN </span><span id="globalXprn">0</span><span>   wght </span><span id="globalWght">400</span><span>   ital </span><span id="globalItal">0</span><span>   slnt </span><span id="globalSlnt">0</span>
+            <span class="grey">PROP </span><span id="globalProp">1</span><span class="grey">   XPRN </span><span id="globalXprn">0</span><span class="grey">   wght </span><span id="globalWght">400</span><span class="grey">   ital </span><span id="globalItal">0</span><span class="grey">   slnt </span><span id="globalSlnt">0</span>
         </a>
         <div class="collapse" id="pickVariability">
             <ul>
@@ -265,20 +265,19 @@
             </ul>
         </div>
     </div>
-    <!-- <div class="toolbar__item">
+    <div class="toolbar__item">
         <a id="inversePage">
             <svg id="inverseSVG" style="pointer-events:none" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="8" cy="8" r="7.5" fill="white" stroke="black"/>
                 <path d="M15.4836 7.5H0.516402C0.773695 3.59098 4.02588 0.5 8 0.5C11.9741 0.5 15.2263 3.59098 15.4836 7.5Z" fill="black" stroke="black"/>
             </svg>
         </a>
-    </div> -->
+    </div>
 </div>
 
 <div class="container-fluid" id="mdContainer">
     <textarea id="mdSection">
         
-
 
 ## A single, flexible file. Vary nice. 
 
@@ -451,9 +450,7 @@ To meet the needs of global communication, Recursive supports a wide range of La
     var simplemde = new SimpleMDE({
 	autofocus: true,
 	autosave: {
-		enabled: true,
-		uniqueId: "MyUniqueID",
-		delay: 1000,
+		enabled: false
 	},
 	blockStyles: {
 		bold: "__",
