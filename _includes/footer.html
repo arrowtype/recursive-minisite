@@ -8,13 +8,14 @@
         <!-- <a class="pre-footer__next">Origins & Process →</a> -->
     </div>
 </div>
-<div class="footer-top bg-dark">
+<div class="footer-top clearfix bg-dark">
 	<div class="float-left">
     	<h4>Coming soon to Google Fonts!</h4>
-    	<p>Recursive is under active development and will soon be available through Google Fonts. Until then, you can follow the project and download the latest betas on the <a href="">Recursive project repo on GitHub.</a></p>
+    	<p>Recursive is under active development and will soon be available through Google Fonts. Until then, you can follow the project and download the latest betas on the <a href="https://github.com/arrowtype/recursive" target="_blank">Recursive project repo on GitHub.</a></p>
 	</div>
 	<div class="float-left">
-
+		Want updates on Recursive?
+		<h4>Sign up for the <a href="">Arrow Type newsletter!</a></h4>
 	</div>
 </div>
 
@@ -51,12 +52,12 @@
 
 	</div>
 	<div class="column float-left">
-		Recursive Sans & Mono
+		<b>Recursive Sans & Mono</b>
 		<ul>
-			<li>Features</li>
+			<li><a href="#toolbar">Features</a></li>
 			<!-- <li>Origins & Process</li> -->
 			<!-- <li>Specimen</li> -->
-			<li>Download beta</li>
+			<li><a href="https://github.com/arrowtype/recursive/releases">Download beta</a></li>
 		</ul>
 	</div>
 	<div class="float-left credits">
@@ -69,7 +70,8 @@
 	</div>
 	<div class="column float-left links">
 		<!-- <a href="#"><span>fonts.google.com</span>/specimen/Recursive</a> -->
-		<a href="#"><span>github.com</span>/arrowtype/recursive</a>
+		<a href="#"><span><b>fonts.google.com</b></span>/specimen/Recursive</a>
+		<a href="#"><span><b>github.com</b></span>/arrowtype/recursive</a>
 	</div>
 </div>
 
@@ -78,12 +80,14 @@
 <!-- <script src='https://threejs.org/build/three.min.js'></script> -->
 <!-- <script src='https://threejs.org/examples/js/controls/OrbitControls.js'></script> -->
 <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
 <script type="text/javascript" src="/js/script.js"></script>
 
 <script>
     var mdElement = document.getElementById('mdSection');
     var textNode = mdElement.firstChild;
     var URI = textNode.data;
+	let loaded = false;
 
     var simplemde = new SimpleMDE({
 	autofocus: true,
@@ -98,13 +102,13 @@
 	forceSync: true,
 	hideIcons: ["guide", "heading"],
 	indentWithTabs: false,
-	initialValue: "Hello world!",
-	insertTexts: {
-		horizontalRule: ["", "\n\n-----\n\n"],
-		image: ["![](http://", ")"],
-		link: ["[", "](http://)"],
-		table: ["", "\n\n| Column 1 | Column 2 | Column 3 |\n| -------- | -------- | -------- |\n| Text     | Text      | Text     |\n\n"],
-	},
+	initialValue: URI,
+	// insertTexts: {
+	// 	horizontalRule: ["", "\n\n-----\n\n"],
+	// 	image: ["![](http://", ")"],
+	// 	link: ["[", "](http://)"],
+	// 	table: ["", "\n\n| Column 1 | Column 2 | Column 3 |\n| -------- | -------- | -------- |\n| Text     | Text      | Text     |\n\n"],
+	// },
 	lineWrapping: true,
 	parsingConfig: {
 		allowAtxHeaderWithoutSpace: true,
@@ -122,7 +126,7 @@
 
 		return "Loading...";
 	},
-	promptURLs: true,
+	promptURLs: false,
 	renderingConfig: {
 		singleLineBreaks: false,
 		codeSyntaxHighlighting: true,
@@ -151,31 +155,49 @@
 });
 
 simplemde.value(URI);
+// simplemde.setCursor({line: 1, ch: 5});
+pos = simplemde.codemirror.getCursor();
+simplemde.codemirror.setSelection(pos, pos);
+simplemde.codemirror.replaceSelection("\n \n## A single, flexible file. Vary nice.");
 
-window.onload = function(){
+// window.onload = function(){
+	if (loaded == false){
+		console.log(loaded);
+		simplemde.codemirror.on("update", function(){
+			// simplemde.codemirror.refresh();
+			let tags = document.getElementsByClassName("cm-string");
+			let tagName;
+			for (var i=0;i<tags.length;i++){
+				if (tags[i].innerHTML.length > 1 && tags[i].parentElement.getElementsByClassName('cm-tag')[0].innerHTML == '&lt;'){
+					tagName = tags[i].parentElement.getElementsByClassName('cm-tag')[1].innerHTML
+					// console.log(tagName);
+					tags[i].parentElement.style.color = "#cccccc";
+					let elem = document.createElement(tagName);
+					elem.src = tags[i].innerHTML;
+					tags[i].parentElement.appendChild(elem);
+				}
+				// console.log(tags[i].parentElement.getElementsByClassName('cm-tag')[0].innerHTML);
+				// console.log(tags[i].parentElement.querySelector('.cm-tag:not(m-bracket)').innerHTML);
+			}
+			// document.getElementsByTagName("body")[0].style.overflow = "hidden";
+			// setTimeout(function(){
+			// for (var i=0;i<document.getElementsByTagName("iframe").length;i++){
+			// 	document.getElementsByTagName('iframe')[i].style.height = document.getElementsByTagName("iframe")[i].contentWindow.document.body.offsetHeight + 'px';
+			// }
+			document.getElementsByTagName("body")[0].style.overflow = "auto";
+			// document.getElementsByTagName("body")[0].style.maxHeight = "none";
+			for (var i=0;i<document.getElementsByTagName("iframe").length;i++){
+				document.getElementsByTagName('iframe')[i].onload = function(){
+					this.style.height = this.contentWindow.document.body.offsetHeight + 'px';
+				}
+			}
+			
+			// }, 1000);
+		});
+		loaded = true;
+	}
 
-	let tags = document.getElementsByClassName("cm-string");
-	let tagName;
-	for (var i=0;i<tags.length;i++){
-		if (tags[i].innerHTML.length > 1 && tags[i].parentElement.getElementsByClassName('cm-tag')[0].innerHTML == '&lt;'){
-			tagName = tags[i].parentElement.getElementsByClassName('cm-tag')[1].innerHTML
-			// console.log(tagName);
-			tags[i].parentElement.style.color = "#cccccc";
-			let elem = document.createElement(tagName);
-			elem.src = tags[i].innerHTML;
-			tags[i].parentElement.appendChild(elem);
-		}
-		// console.log(tags[i].parentElement.getElementsByClassName('cm-tag')[0].innerHTML);
-		// console.log(tags[i].parentElement.querySelector('.cm-tag:not(m-bracket)').innerHTML);
-	}
-	document.getElementsByTagName("body")[0].style.overflow = "hidden";
-	setTimeout(function(){
-	for (var i=0;i<document.getElementsByTagName("iframe").length;i++){
-		document.getElementsByTagName('iframe')[i].style.height = document.getElementsByTagName("iframe")[i].contentWindow.document.body.offsetHeight + 'px';
-	}
-	document.getElementsByTagName("body")[0].style.overflow = "auto";
-	document.getElementsByTagName("body")[0].style.maxHeight = "none";
-	}, 1000);
-}
+
+
 // window.scrollTo(0,0);
 </script>

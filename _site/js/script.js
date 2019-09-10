@@ -1,5 +1,12 @@
+const triggers = Array.from(document.querySelectorAll('[data-toggle="collapse"]'));
+
+var typed = new Typed(".element", options);
+
 document.getElementById("inversePage").onmousedown = function(){
     document.getElementsByTagName("body")[0].classList.toggle("inverse");
+    for (const mod of document.getElementsByClassName("module")){
+        mod.classList.toggle("inverse");
+    }
 }
 
 document.getElementById("globalFontSizeSlider").oninput = function(){
@@ -8,15 +15,29 @@ document.getElementById("globalFontSizeSlider").oninput = function(){
     document.getElementById("changeFontSize").innerHTML = document.getElementById("globalFontSizeSlider").value;
 }
 
-const triggers = Array.from(document.querySelectorAll('[data-toggle="collapse"]'));
-
 document.getElementById("collapseSettings").onclick = function(){
     document.getElementById("pickVariability").classList.toggle("show");
     if (document.getElementById("pickFontSize").classList.contains("show")){
         document.getElementById("pickFontSize").classList.toggle("show");
     }
-    
 };
+
+// if (document.getElementById("pickVariability").classList.contains("show")){
+//     document.onclick = function(){
+//         console.log("hello");
+        
+//         document.getElementById("pickVariability").classList.toggle("show");
+//     }
+// }
+
+document.onclick = function(e){
+        if(e.target.id == 'pickVariability'){
+            // #do nothing
+        } else if (document.getElementById("pickVariability").classList.contains("show") || e.target.id == "collapseSettings"){
+         	document.getElementById("pickVariability").classList.toggle("show");
+        }
+    };
+
 
 document.getElementById("navbarToggler").onclick = function(){
     document.getElementById("navbarTogglerDemo03").classList.toggle("hideOnMobile");
@@ -30,12 +51,12 @@ window.addEventListener('click', (ev) => {
   }
 }, false);
 
-document.getElementById("hero").onmousemove = function(e){
-    document.getElementById('verticalBar').style.left = e.clientX + 'px';
-    let heroWeight = interpolate(e.clientX, 0, window.innerWidth, 300, 900);
-    document.getElementById("temp-hero").style.fontVariationSettings = "'wght' " + heroWeight;
-    document.getElementById("weightVal").innerHTML = Math.floor(heroWeight);
-}
+// document.getElementById("hero").onmousemove = function(e){
+//     document.getElementById('verticalBar').style.left = e.clientX + 'px';
+//     let heroWeight = interpolate(e.clientX, 0, window.innerWidth, 300, 900);
+//     document.getElementById("temp-hero").style.fontVariationSettings = "'wght' " + heroWeight;
+//     document.getElementById("weightVal").innerHTML = Math.floor(heroWeight);
+// }
 
 document.getElementById("chooseInstance").onchange = function(){   
     let wght = this.selectedOptions[0].getAttribute('data-wght');
@@ -48,12 +69,17 @@ document.getElementById("chooseInstance").onchange = function(){
     document.getElementById("globalXprn").innerHTML = xprn;
     document.getElementById("globalItal").innerHTML = ital;
     document.getElementById("globalSlnt").innerHTML = slnt;
-    // document.getElementById('globalSlntSlider').value = prop;
     document.getElementById('globalWghtSlider').value = wght;
     document.getElementById('globalXprnSlider').value = xprn;
-    // document.getElementById('globalSlntSlider').value = ital;
     document.getElementById('globalSlntSlider').value = slnt;
     document.getElementsByClassName("CodeMirror-lines")[0].style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
+    for (const itals of document.getElementsByClassName("cm-em")){
+        itals.style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
+    }
+    for (const heads of document.getElementsByClassName("cm-header")){
+        heads.style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
+    }
+    
 };
 
 let wght = 400;
@@ -65,17 +91,35 @@ let ital = 0.5;
 document.getElementById('globalXprnSlider').addEventListener('input', function(){
     xprn = document.getElementById('globalXprnSlider').value;
     document.getElementsByClassName("CodeMirror-lines")[0].style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
+    for (const itals of document.getElementsByClassName("cm-em")){
+        itals.style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
+    }
+    for (const heads of document.getElementsByClassName("cm-header")){
+        heads.style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
+    }
     document.getElementById("globalXprn").innerHTML = xprn;
 })
 document.getElementById('globalWghtSlider').addEventListener('input', function(){
     wght = document.getElementById('globalWghtSlider').value;
     document.getElementsByClassName("CodeMirror-lines")[0].style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
     document.getElementById("globalWght").innerHTML = wght;
+    for (const itals of document.getElementsByClassName("cm-em")){
+        itals.style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
+    }
+    for (const heads of document.getElementsByClassName("cm-header")){
+        heads.style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
+    }
 })
 document.getElementById('globalSlntSlider').addEventListener('input', function(){
     slnt = document.getElementById('globalSlntSlider').value;
     document.getElementsByClassName("CodeMirror-lines")[0].style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
     document.getElementById("globalSlnt").innerHTML = slnt;
+    for (const itals of document.getElementsByClassName("cm-em")){
+        itals.style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
+    }
+    for (const heads of document.getElementsByClassName("cm-header")){
+        heads.style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
+    }
 })
 document.getElementById("globalRadioSans").onclick = function(){
     prop = 1;
@@ -83,6 +127,12 @@ document.getElementById("globalRadioSans").onclick = function(){
     this.classList.add("active");
     document.getElementsByClassName("CodeMirror-lines")[0].style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
     document.getElementById("globalProp").innerHTML = prop;
+    for (const itals of document.getElementsByClassName("cm-em")){
+        itals.style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
+    }
+    for (const heads of document.getElementsByClassName("cm-header")){
+        heads.style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
+    }
 }
 document.getElementById("globalRadioMono").onclick = function(){
     prop = 0;
@@ -90,6 +140,12 @@ document.getElementById("globalRadioMono").onclick = function(){
     this.classList.add("active");
     document.getElementsByClassName("CodeMirror-lines")[0].style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
     document.getElementById("globalProp").innerHTML = prop;
+    for (const itals of document.getElementsByClassName("cm-em")){
+        itals.style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
+    }
+    for (const heads of document.getElementsByClassName("cm-header")){
+        heads.style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
+    }
 }
 document.getElementById("globalItalOff").onclick = function(){
     ital = 0;
@@ -97,6 +153,12 @@ document.getElementById("globalItalOff").onclick = function(){
     this.classList.add("active");
     document.getElementsByClassName("CodeMirror-lines")[0].style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
     document.getElementById("globalItal").innerHTML = ital;
+    for (const itals of document.getElementsByClassName("cm-em")){
+        itals.style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
+    }
+    for (const heads of document.getElementsByClassName("cm-header")){
+        heads.style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
+    }
 }
 document.getElementById("globalItalAuto").onclick = function(){
     ital = 0.5;
@@ -104,6 +166,12 @@ document.getElementById("globalItalAuto").onclick = function(){
     this.classList.add("active");
     document.getElementsByClassName("CodeMirror-lines")[0].style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
     document.getElementById("globalItal").innerHTML = ital;
+    for (const itals of document.getElementsByClassName("cm-em")){
+        itals.style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
+    }
+    for (const heads of document.getElementsByClassName("cm-header")){
+        heads.style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
+    }
 }
 document.getElementById("globalItalOn").onclick = function(){
     ital = 1;
@@ -111,6 +179,12 @@ document.getElementById("globalItalOn").onclick = function(){
     this.classList.add("active");
     document.getElementsByClassName("CodeMirror-lines")[0].style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
     document.getElementById("globalItal").innerHTML = ital;
+    for (const itals of document.getElementsByClassName("cm-em")){
+        itals.style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
+    }
+    for (const heads of document.getElementsByClassName("cm-header")){
+        heads.style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
+    }
 }
 
 
@@ -150,20 +224,20 @@ window.onscroll = function(){
     }
 };
 
-window.onload = function start() {
-    switchLetters();
+// window.onload = function start() {
+//     switchLetters();
 
-    for (var i=0;i<document.getElementsByTagName("iframe").length;i++){
-            console.log(document.getElementsByTagName("iframe")[i].contentWindow.document.body.offsetHeight);
-    }
-}
+//     for (var i=0;i<document.getElementsByTagName("iframe").length;i++){
+//             // console.log(document.getElementsByTagName("iframe")[i].contentWindow.document.body.offsetHeight);
+//     }
+// }
 
-function switchLetters() {
-    window.setInterval(function () {
-        separateLettersMono(monoWords[c]);
-        if (c<monoWords.length-1){c++} else {c=0;};
-    }, 3000); // repeat forever, polling every 3 seconds
-}
+// function switchLetters() {
+//     window.setInterval(function () {
+//         separateLettersMono(monoWords[c]);
+//         if (c<monoWords.length-1){c++} else {c=0;};
+//     }, 3000); // repeat forever, polling every 3 seconds
+// }
 
 document.getElementById("toolbar").classList.remove("fixed");
 document.getElementById("phantomToolbar").classList.add("d-none");

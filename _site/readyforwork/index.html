@@ -180,37 +180,20 @@ ampersandSlider.addEventListener('input', function () {
   }
 }, false);
 
-// ampSlider.onmousemove = function(e){
-//     document.getElementById("grabCursor").style.top = e.clientY - 30 + "px";
-//     document.getElementById("grabCursor").style.left = e.clientX - 30 + "px";
-// }
-// ampSlider.onmousedown = function(){
-//     dragging = true;
-//     document.getElementById("grab1").classList.add("d-none");
-//     document.getElementById("grab2").classList.remove("d-none");
-// }
-// ampSlider.onmouseup = function(){
-//     dragging = false;
-//     document.getElementById("grab1").classList.remove("d-none");
-//     document.getElementById("grab2").classList.add("d-none");
-// }
-// ampSlider.onmouseout = function(e){
-//     document.getElementById("grabCursor").style.left = "-1000000px";
-// }
 ampSlider.addEventListener('input', function () {
     ampersandSlider.value = this.value;
-  o.innerHTML = ampersandSlider.value;
-  o.style.left = ampersandSlider.value*100 + "%";
-  amp.style.left = ampersandSlider.value*100 + "%";
-  amp.style.fontVariationSettings = "'XPRN' " + ampersandSlider.value;
-  if (ampersandSlider.value == 0){
-    document.getElementById("readyForWork").classList.add("linear");
-  } else if (ampersandSlider.value == 1){
-    document.getElementById("readyForWork").classList.toggle("casual");
-  } else {
-    document.getElementById("readyForWork").classList.remove("casual");
-    document.getElementById("readyForWork").classList.remove("linear");
-  }
+    o.innerHTML = ampersandSlider.value;
+    o.style.left = ampersandSlider.value*100 + "%";
+    amp.style.left = ampersandSlider.value*100 + "%";
+    amp.style.fontVariationSettings = "'XPRN' " + ampersandSlider.value;
+    if (ampersandSlider.value == 0){
+        document.getElementById("readyForWork").classList.add("linear");
+    } else if (ampersandSlider.value == 1){
+        document.getElementById("readyForWork").classList.toggle("casual");
+    } else {
+        document.getElementById("readyForWork").classList.remove("casual");
+        document.getElementById("readyForWork").classList.remove("linear");
+    }
 }, false);
     
 

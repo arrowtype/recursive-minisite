@@ -82,27 +82,12 @@
 </nav>
 
 </div>
-     <!-- <div id="THREE"></div> -->
-<input type="text" id="textInput" onkeyup="changeString()"></input>
+  <input type="text" id="textInput" onkeyup="changeString()"></input>
     <div  class="h-100">
     <div class="container-fluid bg-dark position-relative" id="hero">
-
     <!-- <div class="hero__headline position-absolute w-100">
         A typographic palette for vibrant code & UI.
     </div> -->
-    <div class="temp-hero" id="temp-hero">
-        A typographic<br>palette for<br><span class="indent">vibrant<br>code & UI.</span>
-        <div class="temp-hero-controls">
-            <ul>
-                <li><span class="label">Proportion</span>0</li>
-                <li><span class="label">Expression</span>0</li>
-                <li class="active"><span class="label">Weight</span><span id="weightVal">400</span></li>
-                <li><span class="label">Slant</span>0</li>
-                <li><span class="label">Italic</span>0</li>
-            </ul>
-        </div>
-    </div>
-    <div id="verticalBar"></div>
 </div>
 <div id="phantomToolbar" class="d-none"></div>
 
@@ -251,21 +236,39 @@
             </ul>
         </div>
     </div>
-    <div class="toolbar__item">
+    <div class="toolbar__item settings">
         <a data-toggle="collapse" data-target="#pickVariability" data-text="Collapse" id="collapseSettings">
-            <span class="grey">PROP </span><span id="globalProp">1</span><span class="grey">   XPRN </span><span id="globalXprn">0</span><span class="grey">   wght </span><span id="globalWght">400</span><span class="grey">   ital </span><span id="globalItal">0</span><span class="grey">   slnt </span><span id="globalSlnt">0</span>
+            <span class="grey">PROP </span>
+                <span id="globalProp">1</span>
+                <span class="grey">   XPRN </span>
+                <span id="globalXprn">0</span>
+                <span class="grey">   wght </span>
+                <span id="globalWght">400</span>
+                <span class="grey">   ital </span>
+                <span id="globalItal">0</span>
+                <span class="grey">   slnt </span>
+                <span id="globalSlnt">0</span>
         </a>
         <div class="collapse" id="pickVariability">
             <ul>
-                <li><span class="collapse__label">PROP</span> <span class="inputs d-inline-block"><span
-                            class="collapse__label"><span class="radio radio-prop" id="globalRadioMono"></span>
-                            Mono</span> <span class="collapse__label"><span class="radio radio-prop active"
-                                id="globalRadioSans"></span> Sans</span></span></li>
-                <li><span class="collapse__label">XPRN</span><input id="globalXprnSlider" min="0" max="1" value="0"
+                <li>
+                    <span class="collapse__label">PROP</span> 
+                    <span class="inputs d-inline-block">
+                        <span class="collapse__label">
+                            <span class="radio radio-prop" id="globalRadioMono"></span>
+                            Mono
+                        </span> 
+                        <span class="collapse__label">
+                            <span class="radio radio-prop active" id="globalRadioSans"></span> 
+                            Sans
+                        </span>
+                    </span>
+                </li>
+                <li><span class="collapse__label">XPRN</span><input id="globalXprnSlider" min="0.00" max="1.00" value="0.00"
                         step="0.01" type="range"></li>
                 <li><span class="collapse__label">wght</span><input id="globalWghtSlider" min="300" max="900"
                         value="400" step="1" type="range"></li>
-                <li><span class="collapse__label">slnt</span><input id="globalSlntSlider" min="-15" max="0" value="0"
+                <li><span class="collapse__label">slnt</span><input id="globalSlntSlider" min="-15.00" max="00.00" value="00.00"
                         step="0.01" type="range"></li>
                 <li>
                     <span class="collapse__label">ital</span>
@@ -294,8 +297,6 @@
 <div class="container-fluid" id="mdContainer">
     <textarea id="mdSection">
         
-
-## A single, flexible file. Vary nice. 
 
 Recursive is a variable font, providing a continuous range of design control across five axes: *Proportion, Expression, Weight, Italic, and Cursive*. On the web, you can use serve the full variable font, for extreme typographic flexibility &#38; control with just a single font file. You can also serve exactly the axes you need, for all the range you need with an even smaller file size.
 
@@ -371,7 +372,6 @@ As a variable font, Recursive gives you fine-grained control over each one of it
 To meet the needs of global communication, Recursive supports a wide range of Latin-based languages, as well as Vietnamese. It also comes with an extended range of currencies.
 
 <iframe src=/languages></iframe>
-
     </textarea>
 </div>
 
@@ -386,13 +386,14 @@ To meet the needs of global communication, Recursive supports a wide range of La
         <!-- <a class="pre-footer__next">Origins & Process →</a> -->
     </div>
 </div>
-<div class="footer-top bg-dark">
+<div class="footer-top clearfix bg-dark">
 	<div class="float-left">
     	<h4>Coming soon to Google Fonts!</h4>
-    	<p>Recursive is under active development and will soon be available through Google Fonts. Until then, you can follow the project and download the latest betas on the <a href="">Recursive project repo on GitHub.</a></p>
+    	<p>Recursive is under active development and will soon be available through Google Fonts. Until then, you can follow the project and download the latest betas on the <a href="https://github.com/arrowtype/recursive" target="_blank">Recursive project repo on GitHub.</a></p>
 	</div>
 	<div class="float-left">
-
+		Want updates on Recursive?
+		<h4>Sign up for the <a href="">Arrow Type newsletter!</a></h4>
 	</div>
 </div>
 
@@ -429,12 +430,12 @@ To meet the needs of global communication, Recursive supports a wide range of La
 
 	</div>
 	<div class="column float-left">
-		Recursive Sans & Mono
+		<b>Recursive Sans & Mono</b>
 		<ul>
-			<li>Features</li>
+			<li><a href="#toolbar">Features</a></li>
 			<!-- <li>Origins & Process</li> -->
 			<!-- <li>Specimen</li> -->
-			<li>Download beta</li>
+			<li><a href="https://github.com/arrowtype/recursive/releases">Download beta</a></li>
 		</ul>
 	</div>
 	<div class="float-left credits">
@@ -447,7 +448,8 @@ To meet the needs of global communication, Recursive supports a wide range of La
 	</div>
 	<div class="column float-left links">
 		<!-- <a href="#"><span>fonts.google.com</span>/specimen/Recursive</a> -->
-		<a href="#"><span>github.com</span>/arrowtype/recursive</a>
+		<a href="#"><span><b>fonts.google.com</b></span>/specimen/Recursive</a>
+		<a href="#"><span><b>github.com</b></span>/arrowtype/recursive</a>
 	</div>
 </div>
 
@@ -456,12 +458,14 @@ To meet the needs of global communication, Recursive supports a wide range of La
 <!-- <script src='https://threejs.org/build/three.min.js'></script> -->
 <!-- <script src='https://threejs.org/examples/js/controls/OrbitControls.js'></script> -->
 <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
 <script type="text/javascript" src="/js/script.js"></script>
 
 <script>
     var mdElement = document.getElementById('mdSection');
     var textNode = mdElement.firstChild;
     var URI = textNode.data;
+	let loaded = false;
 
     var simplemde = new SimpleMDE({
 	autofocus: true,
@@ -476,13 +480,13 @@ To meet the needs of global communication, Recursive supports a wide range of La
 	forceSync: true,
 	hideIcons: ["guide", "heading"],
 	indentWithTabs: false,
-	initialValue: "Hello world!",
-	insertTexts: {
-		horizontalRule: ["", "\n\n-----\n\n"],
-		image: ["![](http://", ")"],
-		link: ["[", "](http://)"],
-		table: ["", "\n\n| Column 1 | Column 2 | Column 3 |\n| -------- | -------- | -------- |\n| Text     | Text      | Text     |\n\n"],
-	},
+	initialValue: URI,
+	// insertTexts: {
+	// 	horizontalRule: ["", "\n\n-----\n\n"],
+	// 	image: ["![](http://", ")"],
+	// 	link: ["[", "](http://)"],
+	// 	table: ["", "\n\n| Column 1 | Column 2 | Column 3 |\n| -------- | -------- | -------- |\n| Text     | Text      | Text     |\n\n"],
+	// },
 	lineWrapping: true,
 	parsingConfig: {
 		allowAtxHeaderWithoutSpace: true,
@@ -500,7 +504,7 @@ To meet the needs of global communication, Recursive supports a wide range of La
 
 		return "Loading...";
 	},
-	promptURLs: true,
+	promptURLs: false,
 	renderingConfig: {
 		singleLineBreaks: false,
 		codeSyntaxHighlighting: true,
@@ -529,32 +533,50 @@ To meet the needs of global communication, Recursive supports a wide range of La
 });
 
 simplemde.value(URI);
+// simplemde.setCursor({line: 1, ch: 5});
+pos = simplemde.codemirror.getCursor();
+simplemde.codemirror.setSelection(pos, pos);
+simplemde.codemirror.replaceSelection("\n \n## A single, flexible file. Vary nice.");
 
-window.onload = function(){
+// window.onload = function(){
+	if (loaded == false){
+		console.log(loaded);
+		simplemde.codemirror.on("update", function(){
+			// simplemde.codemirror.refresh();
+			let tags = document.getElementsByClassName("cm-string");
+			let tagName;
+			for (var i=0;i<tags.length;i++){
+				if (tags[i].innerHTML.length > 1 && tags[i].parentElement.getElementsByClassName('cm-tag')[0].innerHTML == '&lt;'){
+					tagName = tags[i].parentElement.getElementsByClassName('cm-tag')[1].innerHTML
+					// console.log(tagName);
+					tags[i].parentElement.style.color = "#cccccc";
+					let elem = document.createElement(tagName);
+					elem.src = tags[i].innerHTML;
+					tags[i].parentElement.appendChild(elem);
+				}
+				// console.log(tags[i].parentElement.getElementsByClassName('cm-tag')[0].innerHTML);
+				// console.log(tags[i].parentElement.querySelector('.cm-tag:not(m-bracket)').innerHTML);
+			}
+			// document.getElementsByTagName("body")[0].style.overflow = "hidden";
+			// setTimeout(function(){
+			// for (var i=0;i<document.getElementsByTagName("iframe").length;i++){
+			// 	document.getElementsByTagName('iframe')[i].style.height = document.getElementsByTagName("iframe")[i].contentWindow.document.body.offsetHeight + 'px';
+			// }
+			document.getElementsByTagName("body")[0].style.overflow = "auto";
+			// document.getElementsByTagName("body")[0].style.maxHeight = "none";
+			for (var i=0;i<document.getElementsByTagName("iframe").length;i++){
+				document.getElementsByTagName('iframe')[i].onload = function(){
+					this.style.height = this.contentWindow.document.body.offsetHeight + 'px';
+				}
+			}
+			
+			// }, 1000);
+		});
+		loaded = true;
+	}
 
-	let tags = document.getElementsByClassName("cm-string");
-	let tagName;
-	for (var i=0;i<tags.length;i++){
-		if (tags[i].innerHTML.length > 1 && tags[i].parentElement.getElementsByClassName('cm-tag')[0].innerHTML == '&lt;'){
-			tagName = tags[i].parentElement.getElementsByClassName('cm-tag')[1].innerHTML
-			// console.log(tagName);
-			tags[i].parentElement.style.color = "#cccccc";
-			let elem = document.createElement(tagName);
-			elem.src = tags[i].innerHTML;
-			tags[i].parentElement.appendChild(elem);
-		}
-		// console.log(tags[i].parentElement.getElementsByClassName('cm-tag')[0].innerHTML);
-		// console.log(tags[i].parentElement.querySelector('.cm-tag:not(m-bracket)').innerHTML);
-	}
-	document.getElementsByTagName("body")[0].style.overflow = "hidden";
-	setTimeout(function(){
-	for (var i=0;i<document.getElementsByTagName("iframe").length;i++){
-		document.getElementsByTagName('iframe')[i].style.height = document.getElementsByTagName("iframe")[i].contentWindow.document.body.offsetHeight + 'px';
-	}
-	document.getElementsByTagName("body")[0].style.overflow = "auto";
-	document.getElementsByTagName("body")[0].style.maxHeight = "none";
-	}, 1000);
-}
+
+
 // window.scrollTo(0,0);
 </script>
 
