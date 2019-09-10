@@ -208,7 +208,6 @@ viewer.container = document.getElementById('THREE');
 viewer.onReady();
 window.addEventListener('resize', function() {
   viewer.onResize();
-  // console.log(viewer.camera)
 }, false);
 
 }
@@ -231,10 +230,9 @@ let moveListener = () => { moved = true }
 element.onmousemove = moveListener;
 let upListener = () => {
     if (moved) {
-        console.log('moved');
-        
+        // moved
     } else {
-        console.log('not moved');
+        // not moved
         document.getElementById("textInput").focus();
     }
 }
@@ -251,6 +249,14 @@ function changeString(){
   str = document.getElementById("textInput").value;
   // document.getElementsByTagName("canvas")[0].parentNode.removeChild(document.getElementsByTagName("canvas")[0]);
   document.getElementById("THREE").innerHTML = '';
-  console.log(str);
   cubify(str);
+}
+
+document.getElementById("textInput").oninput = function(){
+  let key = document.getElementById("textInput").value;
+  document.getElementById("textInput").value = '';
+  let str = key + key + key + key + key + key + key + key + key;
+  console.log(str);
+  console.log(key*9);
+  document.getElementById("textInput").value = str;
 }

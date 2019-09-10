@@ -77,10 +77,11 @@
 
 <!-- JS -->
 
-<!-- <script src='https://threejs.org/build/three.min.js'></script> -->
-<!-- <script src='https://threejs.org/examples/js/controls/OrbitControls.js'></script> -->
+<script src='https://threejs.org/build/three.min.js'></script>
+<script src='https://threejs.org/examples/js/controls/OrbitControls.js'></script>
 <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+<script type="text/javascript" src="/js/sketch.js"></script>
 <script type="text/javascript" src="/js/script.js"></script>
 
 <script>
@@ -161,41 +162,41 @@ simplemde.codemirror.setSelection(pos, pos);
 simplemde.codemirror.replaceSelection("\n \n## A single, flexible file. Vary nice.");
 
 // window.onload = function(){
-	if (loaded == false){
-		console.log(loaded);
 		simplemde.codemirror.on("update", function(){
-			// simplemde.codemirror.refresh();
-			let tags = document.getElementsByClassName("cm-string");
-			let tagName;
-			for (var i=0;i<tags.length;i++){
-				if (tags[i].innerHTML.length > 1 && tags[i].parentElement.getElementsByClassName('cm-tag')[0].innerHTML == '&lt;'){
-					tagName = tags[i].parentElement.getElementsByClassName('cm-tag')[1].innerHTML
-					// console.log(tagName);
-					tags[i].parentElement.style.color = "#cccccc";
-					let elem = document.createElement(tagName);
-					elem.src = tags[i].innerHTML;
-					tags[i].parentElement.appendChild(elem);
+			if (loaded == false){
+				// simplemde.codemirror.refresh();
+				let tags = document.getElementsByClassName("cm-string");
+				let tagName;
+				for (var i=0;i<tags.length;i++){
+					if (tags[i].innerHTML.length > 1 && tags[i].parentElement.getElementsByClassName('cm-tag')[0].innerHTML == '&lt;'){
+						tagName = tags[i].parentElement.getElementsByClassName('cm-tag')[1].innerHTML
+						// console.log(tagName);
+						tags[i].parentElement.style.color = "#cccccc";
+						let elem = document.createElement(tagName);
+						elem.src = tags[i].innerHTML;
+						tags[i].parentElement.appendChild(elem);
+					}
+					// console.log(tags[i].parentElement.getElementsByClassName('cm-tag')[0].innerHTML);
+					// console.log(tags[i].parentElement.querySelector('.cm-tag:not(m-bracket)').innerHTML);
 				}
-				// console.log(tags[i].parentElement.getElementsByClassName('cm-tag')[0].innerHTML);
-				// console.log(tags[i].parentElement.querySelector('.cm-tag:not(m-bracket)').innerHTML);
-			}
-			// document.getElementsByTagName("body")[0].style.overflow = "hidden";
-			// setTimeout(function(){
-			// for (var i=0;i<document.getElementsByTagName("iframe").length;i++){
-			// 	document.getElementsByTagName('iframe')[i].style.height = document.getElementsByTagName("iframe")[i].contentWindow.document.body.offsetHeight + 'px';
-			// }
-			document.getElementsByTagName("body")[0].style.overflow = "auto";
-			// document.getElementsByTagName("body")[0].style.maxHeight = "none";
-			for (var i=0;i<document.getElementsByTagName("iframe").length;i++){
-				document.getElementsByTagName('iframe')[i].onload = function(){
-					this.style.height = this.contentWindow.document.body.offsetHeight + 'px';
+				// document.getElementsByTagName("body")[0].style.overflow = "hidden";
+				// setTimeout(function(){
+				// for (var i=0;i<document.getElementsByTagName("iframe").length;i++){
+				// 	document.getElementsByTagName('iframe')[i].style.height = document.getElementsByTagName("iframe")[i].contentWindow.document.body.offsetHeight + 'px';
+				// }
+				document.getElementsByTagName("body")[0].style.overflow = "auto";
+				// document.getElementsByTagName("body")[0].style.maxHeight = "none";
+				for (var i=0;i<document.getElementsByTagName("iframe").length;i++){
+					document.getElementsByTagName('iframe')[i].onload = function(){
+						this.style.height = this.contentWindow.document.body.offsetHeight + 'px';
+					}
 				}
 			}
-			
+			loaded = true;
 			// }, 1000);
 		});
-		loaded = true;
-	}
+		
+	
 
 
 

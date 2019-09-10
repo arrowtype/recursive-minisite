@@ -1,7 +1,5 @@
 const triggers = Array.from(document.querySelectorAll('[data-toggle="collapse"]'));
 
-var typed = new Typed(".element", options);
-
 document.getElementById("inversePage").onmousedown = function(){
     document.getElementsByTagName("body")[0].classList.toggle("inverse");
     for (const mod of document.getElementsByClassName("module")){
