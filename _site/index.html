@@ -106,10 +106,18 @@
                 <li id="cust-ital">
                     <div class="ccs-row">
                         <span class="css"><span class="custom-prop hidden--sm">--ital</span><span class="hidden--sm">: </span>"<span class="string">ital</span>" <span
-                                class="result" contenteditable="true">0.5</span><span class="hidden--sm">;</span></span>
-                        <span class="inputs d-inline-block"><span class="radio radio-ital" id="italOff"></span> Off <span
-                                class="radio active radio-ital" id="italAuto"></span> Auto <span class="radio radio-ital"
-                                id="italOn"></span> On</span>
+                        id="italResult" class="result" contenteditable="true">0.5</span><span class="hidden--sm">;</span></span>
+
+                        <fieldset id="tester--ital-axis">
+                            <input type="radio" name="ital-selection" id="ital-off" value="0">
+                            <label for="ital-off">off</label>
+
+                            <input type="radio" name="ital-selection" id="ital-auto" value="0.5" checked>
+                            <label for="ital-auto">auto</label>
+
+                            <input type="radio" name="ital-selection" id="ital-on" value="1">
+                            <label for="ital-on">on</label>
+                        </fieldset>
                         <span class="comment d-inline-block">
                             /* Italic: always roman, auto, or always italic */
                         </span>
@@ -165,24 +173,44 @@
         this.classList.add("active");
         document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght}, 'XPRN' ${xprn}, 'slnt' ${slnt}, 'PROP' ${prop}, 'ital' ${ital}`
     }
-    document.getElementById("italOff").onclick = function () {
+
+    italAxis = document.getElementById("tester--ital-axis").elements['ital-selection']
+    
+    console.log(italAxis)
+    console.log(italAxis.value)
+    document.getElementById("ital-off").onchange = function () {
         ital = 0;
-        document.querySelector(".radio-ital.active").classList.remove("active");
-        this.classList.add("active");
+        document.getElementById("italResult").innerHTML = document.getElementById('ital-off').value;
         document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght}, 'XPRN' ${xprn}, 'slnt' ${slnt}, 'PROP' ${prop}, 'ital' ${ital}`
     }
-    document.getElementById("italAuto").onclick = function () {
+    document.getElementById("ital-auto").onchange = function () {
         ital = 0.5;
-        document.querySelector(".radio-ital.active").classList.remove("active");
-        this.classList.add("active");
+        document.getElementById("italResult").innerHTML = document.getElementById('ital-auto').value;
         document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght}, 'XPRN' ${xprn}, 'slnt' ${slnt}, 'PROP' ${prop}, 'ital' ${ital}`
     }
-    document.getElementById("italOn").onclick = function () {
+    document.getElementById("ital-on").onchange = function () {
         ital = 1;
-        document.querySelector(".radio-ital.active").classList.remove("active");
-        this.classList.add("active");
+        document.getElementById("italResult").innerHTML = document.getElementById('ital-on').value;
         document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght}, 'XPRN' ${xprn}, 'slnt' ${slnt}, 'PROP' ${prop}, 'ital' ${ital}`
     }
+    // document.getElementById("italOff").onclick = function () {
+    //     ital = 0;
+    //     document.querySelector(".radio-ital.active").classList.remove("active");
+    //     this.classList.add("active");
+    //     document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght}, 'XPRN' ${xprn}, 'slnt' ${slnt}, 'PROP' ${prop}, 'ital' ${ital}`
+    // }
+    // document.getElementById("italAuto").onclick = function () {
+    //     ital = 0.5;
+    //     document.querySelector(".radio-ital.active").classList.remove("active");
+    //     this.classList.add("active");
+    //     document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght}, 'XPRN' ${xprn}, 'slnt' ${slnt}, 'PROP' ${prop}, 'ital' ${ital}`
+    // }
+    // document.getElementById("italOn").onclick = function () {
+    //     ital = 1;
+    //     document.querySelector(".radio-ital.active").classList.remove("active");
+    //     this.classList.add("active");
+    //     document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght}, 'XPRN' ${xprn}, 'slnt' ${slnt}, 'PROP' ${prop}, 'ital' ${ital}`
+    // }
 </script>
     <div class="footer">
 	<div class="central-column">

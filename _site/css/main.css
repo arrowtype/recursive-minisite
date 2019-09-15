@@ -165,6 +165,10 @@ body {
     background: #bdbdbd; }
   #singleFile input[type="range"]:focus::-ms-fill-upper {
     background: #cacaca; }
+  #singleFile fieldset {
+    border: none; }
+  #singleFile input[type="radio"] {
+    margin: 0; }
   #singleFile .controls {
     background-color: var(--offwhite-1);
     width: 100%;

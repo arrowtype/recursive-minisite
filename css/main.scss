@@ -186,9 +186,6 @@ body {
 
     @media (max-width: 500px) {
 
-        // input[type="range"] {
-        //     margin: 5.5px 0;
-        // }
         input[type="range"]::-webkit-slider-thumb {
             height: 20px;
             width: 20px;
@@ -221,6 +218,14 @@ body {
         background: #cacaca;
     }
 
+    fieldset {
+        border: none;
+    }
+
+    input[type="radio"] {
+        margin: 0;
+    }
+
     .controls {
         background-color: var(--offwhite-1);
         width: 100%;
@@ -233,6 +238,8 @@ body {
             
             padding: var(--padding-unit);
         }
+
+        
 
         .css {
             // width: 196px;
