@@ -166,7 +166,8 @@ body {
   #singleFile input[type="range"]:focus::-ms-fill-upper {
     background: #cacaca; }
   #singleFile fieldset {
-    border: none; }
+    border: none;
+    padding: 0; }
   #singleFile input[type="radio"] {
     margin: 0; }
   #singleFile .controls {
