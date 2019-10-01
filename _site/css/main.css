@@ -52,11 +52,11 @@ body {
     min-height: 50vh;
     font-weight: 800;
     font-family: 'recursive-subset','Recursive', sans-serif;
-    --prop: "PROP" 0;
+    --mono: "MONO" 0;
     --xprn: "XPRN" 0;
     --slnt: "slnt" 0;
     --ital: "ital" 0.5;
-    font-variation-settings: "PROP" 0, "XPRN" 0, "slnt" 0, "ital" 0, "wght" 800;
+    font-variation-settings: "MONO" 0, "XPRN" 0, "slnt" 0, "ital" 0, "wght" 800;
     text-align: left;
     width: 100%;
     padding: calc(var(--padding-unit) * 2 * 0.9);
@@ -176,7 +176,9 @@ body {
     font-family: "Recursive", monospace;
     font-weight: 450;
     padding: calc(var(--padding-unit) *2);
-    display: grid; }
+    display: grid;
+    --mono: 1;
+    font-variation-settings: "MONO" var(--mono); }
     @media (max-width: 500px) {
       #singleFile .controls {
         padding: var(--padding-unit); } }
@@ -226,7 +228,7 @@ body {
     #singleFile .controls .string {
       color: #0050ff; }
     #singleFile .controls span.comment {
-      font-variation-settings: "slnt" -12, "ital" 1;
+      font-variation-settings: "MONO" 1, "slnt" -12, "ital" 1;
       color: #858585; }
       @media (max-width: 1150px) {
         #singleFile .controls span.comment {
@@ -274,8 +276,8 @@ body {
 @font-face {
   font-family: "Recursive";
   font-weight: 300 900;
-  src: url("/assets/fonts/recursive-prop_xprn_weight_slnt_ital--2019_09_05.woff2"); }
+  src: url("/assets/fonts/rec-mono_xprn_wght_slnt_ital--2019_09_30.woff2"); }
 @font-face {
   font-family: "recursive-subset";
   font-weight: 300 900;
-  src: url("/assets/fonts/recursive-prop_xprn_weight_slnt_ital--2019_09_05--subset-0020_007F.woff2"); }
+  src: url("/assets/fonts/rec-mono_xprn_wght_slnt_ital--2019_09_30--subset-0020_007F.woff2"); }

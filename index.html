@@ -27,12 +27,12 @@ description: Recursive is a variable font, providing a continuous range of desig
                 <li><span class="comment not-aligned">/* set variation axis values */</span></li>
                 <li id="cust-prop">
                     <div class="ccs-row">
-                        <span class="css d-inline-block"><span class="custom-prop hidden--sm">--prop</span><span class="hidden--sm">: </span>"<span
-                        class="string">PROP</span>" 
-                         <span class="result" id="propResult" contenteditable="true">0</span><span class="hidden--sm">;</span></span>
-                        <span class="inputs"><input id="propSlider" min="0" max="1" value="0" step="0.01" type="range"></span>
+                        <span class="css d-inline-block"><span class="custom-prop hidden--sm">--mono</span><span class="hidden--sm">: </span>"<span
+                        class="string">MONO</span>" 
+                         <span class="result" id="monoResult" contenteditable="true">0</span><span class="hidden--sm">;</span></span>
+                        <span class="inputs"><input id="monoSlider" min="0" max="1" value="0" step="0.01" type="range"></span>
                         <span class="comment d-inline-block">
-                            /* Proportion: Mono (fixed-width) or Sans (natural-width) */
+                            /* Monospace: Sans (natural-width) or Mono (fixed-width) */
                         </span>
                     </div>
                 </li>
@@ -94,7 +94,7 @@ description: Recursive is a variable font, providing a continuous range of desig
                 <li><span class="comment not-aligned">&nbsp;</span></li>
                 <li><span class="comment not-aligned">/* apply axis values with CSS custom properties */</span></li>
                 <li id="font-variation-settings" class="hidden--sm"><span class="property">font-variation-settings</span>: <span
-                    class="string">var</span>(<span class="custom-prop">--prop</span>), <span
+                    class="string">var</span>(<span class="custom-prop">--mono</span>), <span
                     class="string">var</span>(<span class="custom-prop">--xprn</span>), <span
                     class="string">var</span>(<span class="custom-prop">--wght</span>), <span
                     class="string">var</span>(<span class="custom-prop">--slnt</span>), <span
@@ -114,38 +114,38 @@ description: Recursive is a variable font, providing a continuous range of desig
         document.getElementById("fontSizeResult").innerHTML = document.getElementById('fontSizeSlider').value + 'vw';
     })
 
-    document.getElementById('propSlider').addEventListener('input', function () {
-        prop = document.getElementById('propSlider').value;
-        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght}, 'XPRN' ${xprn}, 'slnt' ${slnt}, 'PROP' ${prop}, 'ital' ${ital}`
-        document.getElementById("propResult").innerHTML = document.getElementById('propSlider').value;
+    document.getElementById('monoSlider').addEventListener('input', function () {
+        prop = document.getElementById('monoSlider').value;
+        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght}, 'XPRN' ${xprn}, 'slnt' ${slnt}, 'MONO' ${prop}, 'ital' ${ital}`
+        document.getElementById("monoResult").innerHTML = document.getElementById('monoSlider').value;
     })
 
     document.getElementById('wghtSlider').addEventListener('input', function () {
         wght = document.getElementById('wghtSlider').value;
-        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght}, 'XPRN' ${xprn}, 'slnt' ${slnt}, 'PROP' ${prop}, 'ital' ${ital}`
+        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght}, 'XPRN' ${xprn}, 'slnt' ${slnt}, 'MONO' ${prop}, 'ital' ${ital}`
         document.getElementById("wghtResult").innerHTML = document.getElementById('wghtSlider').value;
     })
     document.getElementById('xprnSlider').addEventListener('input', function () {
         xprn = document.getElementById('xprnSlider').value;
-        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght}, 'XPRN' ${xprn}, 'slnt' ${slnt}, 'PROP' ${prop}, 'ital' ${ital}`
+        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght}, 'XPRN' ${xprn}, 'slnt' ${slnt}, 'MONO' ${prop}, 'ital' ${ital}`
         document.getElementById("xprnResult").innerHTML = document.getElementById('xprnSlider').value;
     })
     document.getElementById('slntSlider').addEventListener('input', function () {
         slnt = document.getElementById('slntSlider').value;
-        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght}, 'XPRN' ${xprn}, 'slnt' ${slnt}, 'PROP' ${prop}, 'ital' ${ital}`
+        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght}, 'XPRN' ${xprn}, 'slnt' ${slnt}, 'MONO' ${prop}, 'ital' ${ital}`
         document.getElementById("slntResult").innerHTML = document.getElementById('slntSlider').value;
     })
     // document.getElementById("radioSans").onclick = function () {
     //     prop = 1;
     //     document.querySelector(".radio-prop.active").classList.remove("active");
     //     this.classList.add("active");
-    //     document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght}, 'XPRN' ${xprn}, 'slnt' ${slnt}, 'PROP' ${prop}, 'ital' ${ital}`
+    //     document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght}, 'XPRN' ${xprn}, 'slnt' ${slnt}, 'MONO' ${prop}, 'ital' ${ital}`
     // }
     // document.getElementById("radioMono").onclick = function () {
     //     prop = 0;
     //     document.querySelector(".radio-prop.active").classList.remove("active");
     //     this.classList.add("active");
-    //     document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght}, 'XPRN' ${xprn}, 'slnt' ${slnt}, 'PROP' ${prop}, 'ital' ${ital}`
+    //     document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght}, 'XPRN' ${xprn}, 'slnt' ${slnt}, 'MONO' ${prop}, 'ital' ${ital}`
     // }
 
     italAxis = document.getElementById("tester--ital-axis").elements['ital-selection']
@@ -155,34 +155,34 @@ description: Recursive is a variable font, providing a continuous range of desig
     document.getElementById("ital-off").onchange = function () {
         ital = 0;
         document.getElementById("italResult").innerHTML = document.getElementById('ital-off').value;
-        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght}, 'XPRN' ${xprn}, 'slnt' ${slnt}, 'PROP' ${prop}, 'ital' ${ital}`
+        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght}, 'XPRN' ${xprn}, 'slnt' ${slnt}, 'MONO' ${prop}, 'ital' ${ital}`
     }
     document.getElementById("ital-auto").onchange = function () {
         ital = 0.5;
         document.getElementById("italResult").innerHTML = document.getElementById('ital-auto').value;
-        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght}, 'XPRN' ${xprn}, 'slnt' ${slnt}, 'PROP' ${prop}, 'ital' ${ital}`
+        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght}, 'XPRN' ${xprn}, 'slnt' ${slnt}, 'MONO' ${prop}, 'ital' ${ital}`
     }
     document.getElementById("ital-on").onchange = function () {
         ital = 1;
         document.getElementById("italResult").innerHTML = document.getElementById('ital-on').value;
-        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght}, 'XPRN' ${xprn}, 'slnt' ${slnt}, 'PROP' ${prop}, 'ital' ${ital}`
+        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght}, 'XPRN' ${xprn}, 'slnt' ${slnt}, 'MONO' ${prop}, 'ital' ${ital}`
     }
     // document.getElementById("italOff").onclick = function () {
     //     ital = 0;
     //     document.querySelector(".radio-ital.active").classList.remove("active");
     //     this.classList.add("active");
-    //     document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght}, 'XPRN' ${xprn}, 'slnt' ${slnt}, 'PROP' ${prop}, 'ital' ${ital}`
+    //     document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght}, 'XPRN' ${xprn}, 'slnt' ${slnt}, 'MONO' ${prop}, 'ital' ${ital}`
     // }
     // document.getElementById("italAuto").onclick = function () {
     //     ital = 0.5;
     //     document.querySelector(".radio-ital.active").classList.remove("active");
     //     this.classList.add("active");
-    //     document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght}, 'XPRN' ${xprn}, 'slnt' ${slnt}, 'PROP' ${prop}, 'ital' ${ital}`
+    //     document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght}, 'XPRN' ${xprn}, 'slnt' ${slnt}, 'MONO' ${prop}, 'ital' ${ital}`
     // }
     // document.getElementById("italOn").onclick = function () {
     //     ital = 1;
     //     document.querySelector(".radio-ital.active").classList.remove("active");
     //     this.classList.add("active");
-    //     document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght}, 'XPRN' ${xprn}, 'slnt' ${slnt}, 'PROP' ${prop}, 'ital' ${ital}`
+    //     document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght}, 'XPRN' ${xprn}, 'slnt' ${slnt}, 'MONO' ${prop}, 'ital' ${ital}`
     // }
 </script>
