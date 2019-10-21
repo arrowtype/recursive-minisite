@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<style>html{visibility: hidden;opacity:0;}</style>
+  		{% include head.html %}
+
+  	</head>
+	<body>
+		{% include navigation.html %}
+	<input type="text" id="textInput" onkeyup="changeString()"></input>
+	<div class="container-fluid bg-dark position-relative" id="hero">
+    <div id="THREE">
+      <div class="lines">
+        <div id="line1">
+          <div class="label"><span>Weight</span></div>
+        </div>
+        
+        <div id="line2">
+          <span class="label">Expression</span>
+        </div>
+        <div id="line3">
+          <div class="label"><span>Slant</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="hero__headline">
+        A typographic palette for vibrant code & UI
+    </div>
+</div>
+<div id="phantomToolbar" class="d-none"></div>
+
+<div class="toolbar clearfix" id="toolbar">
+    <select class="toolbar__item" id="chooseInstance">
+        {% for instance in site.data.instances %}
+        <option {% if instance.selected%} selected="selected" {% endif %}data-prop="{{ instance.PROP }}" data-xprn="{{ instance.XPRN }}" data-ital="{{ instance.ital }}" data-slnt="{{ instance.slnt }}" data-wght="{{ instance.wght }}">{{ instance.name }}</option>
+        {% endfor %}
+    </select>
+    <div class="toolbar__item" id="collapseSize">
+        <a data-toggle="collapse" data-target="#pickFontSize" data-text="Collapse">
+        <span id="changeFontSize">15</span>pt
+        <svg style="pointer-events:none" class="arrow" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.41 0.589844L6 5.16984L10.59 0.589844L12 1.99984L6 7.99984L0 1.99984L1.41 0.589844Z" fill="black"/>
+        </svg>
+        </a>
+        <div class="collapse" id="pickFontSize">
+            <ul>
+                <li><input id="globalFontSizeSlider" min="6" max="60" step="1" value="15" type="range"></li>
+            </ul>
+        </div>
+    </div>
+    <div class="toolbar__item settings d-none d-md-block" id="collapseSettings">
+        <a data-toggle="collapse" data-target="#pickVariability" data-text="Collapse">
+            <span class="grey">MONO </span>
+                <span id="globalProp">1.00</span>
+                <span class="grey">   XPRN </span>
+                <span id="globalXprn">0.00</span>
+                <span class="grey">   wght </span>
+                <span id="globalWght">400</span>
+                <span class="grey">   ital </span>
+                <span id="globalItal">0</span>
+                <span class="grey">   slnt </span>
+                <span id="globalSlnt">0.00</span>
+        </a>
+        <div class="collapse" id="pickVariability">
+            <ul>
+                <li><span class="collapse__label">MONO</span><span class="inputs d-inline-block"><input id="globalPropSlider" min="0.00" max="1.00" value="1.00"
+                        step="0.01" type="range"></span></li>
+                <li><span class="collapse__label">XPRN</span><input id="globalXprnSlider" min="0.00" max="1.00" value="0.00"
+                        step="0.01" type="range"></li>
+                <li><span class="collapse__label">wght</span><input id="globalWghtSlider" min="300" max="900"
+                        value="400" step="1" type="range"></li>
+                <li><span class="collapse__label">slnt</span><input id="globalSlntSlider" min="-15.00" max="00.00" value="00.00"
+                        step="0.01" type="range"></li>
+                <li>
+                    <span class="collapse__label">ital</span>
+                    <span class="inputs d-inline-block">
+                        <span class="collapse__label">
+                            <span class="radio radio-ital" id="globalItalOff"></span>
+                            Off</span>
+                        <span class="collapse__label"><span class="radio active radio-ital" id="globalItalAuto"></span>
+                            Auto</span>
+                        <span class="collapse__label">
+                            <span class="radio radio-ital" id="globalItalOn"></span> On</span></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="toolbar__item d-none d-md-block">
+        <a id="inversePage">
+            <svg id="inverseSVG" style="pointer-events:none" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="8" cy="8" r="7.5" fill="white" stroke="black"/>
+                <path d="M15.4836 7.5H0.516402C0.773695 3.59098 4.02588 0.5 8 0.5C11.9741 0.5 15.2263 3.59098 15.4836 7.5Z" fill="black" stroke="black"/>
+            </svg>
+        </a>
+    </div>
+</div>
+
+	<div class="container-fluid d-none d-md-block" id="mdContainer">
+		<textarea class="mdSection">{% include sections/section-1_Highly-Customizable.md %}</textarea>
+		<iframe data-src="/singlefile" class="yall-loaded" src="/singlefile"></iframe>
+		<textarea class="mdSection">{% include sections/section-2_Extraordinarily.md %}</textarea>
+		<iframe data-src="/singlefile" class="yall-loaded" src="/morewithtypography"></iframe>
+		<textarea class="mdSection">{% include sections/section-3_Sans-Mono.md %}</textarea>
+		<iframe data-src="/singlefile" class="yall-loaded" src="/monosans"></iframe>
+		<textarea class="mdSection">{% include sections/section-4_Made-for.md %}</textarea>
+		<iframe data-src="/singlefile" class="yall-loaded" src="/robustlayouts"></iframe>
+		<textarea class="mdSection">{% include sections/section-5_Ready.md %}</textarea>
+		<iframe data-src="/singlefile" class="yall-loaded" src="/readyforwork"></iframe>
+		<textarea class="mdSection">{% include sections/section-6_Light-to-Heavy.md %}</textarea>
+		<iframe data-src="/singlefile" class="yall-loaded" src="/weightforit"></iframe>
+		<textarea class="mdSection">{% include sections/section-7_Slant-Ital.md %}</textarea>
+		<iframe data-src="/singlefile" class="yall-loaded" src="/trueritalics"></iframe>
+		<textarea class="mdSection">{% include sections/section-8_Powerful.md %}</textarea>
+		<iframe data-src="/singlefile" class="yall-loaded" src="/powerfulbutsimple"></iframe>
+		<textarea class="mdSection">{% include sections/section-9_Languages.md %}</textarea>
+		<iframe data-src="/singlefile" class="yall-loaded" src="/languages"></iframe>
+	</div>
+  <!-- For purge css to work it needs to see some of the codemirror classes -->
+  <!-- <span class="cm-formatting cm-formatting-header cm-formatting-header-2 cm-header cm-header-2 CodeMirror cm-s-paper CodeMirror-wrap CodeMirror-scroll CodeMirror-sizer CodeMirror-lines"></span>
+	<div class="CodeMirror-code"><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span cm-text="">&#8203;</span></span></pre><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-formatting cm-formatting-header cm-formatting-header-2 cm-header cm-header-2"></span><span class="cm-header cm-header-2"></span></span></pre></div>
+  <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-formatting cm-formatting-header cm-formatting-header-2 cm-formatting-header-1 cm-formatting-header-3 cm-formatting-header-4 cm-formatting-header-5 cm-formatting-header-6 cm-header cm-header-2"></span><span class="cm-header cm-header-2"></span><span class="cm-formatting cm-formatting-code cm-comment cm-header cm-header-2"></span><span class="cm-comment cm-header cm-header-2"></span><span class="cm-formatting cm-formatting-code cm-comment cm-header cm-header-2 cm-header-3 cm-header-1 cm-header-4 cm-header-5 cm-header-6"></span></span></pre> -->
+
+
+  <div class="mobile-version d-md-none">
+		{{ content }}
+	</div>
+		{% include footer.html %}
+
+<!-- Three JS -->
+<script src='https://threejs.org/build/three.min.js'></script>
+<script src='https://threejs.org/examples/js/controls/OrbitControls.js'></script>
+
+<!-- Markdown -->
+<script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+
+<!-- Yall JS for lazy loading -->
+<script src="/js/yall.min.js"></script>
+<script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
+
+<script type="text/javascript" src="/js/fontfaceonload.js"></script>
+<!-- Custom -->
+<script type="text/javascript" src="/js/sketch.js"></script>
+<script type="text/javascript" src="/js/script.js"></script>
+
+<script>
+
+	let loaded = false;
+	let simplemdes = [];
+  let c = 0;
+
+	for (let textarea of document.querySelectorAll('textarea')){
+        if (c == 0){ bool = true;} else { bool = false};
+		    simplemdes.push ( new SimpleMDE({
+				autofocus: bool,
+				autorefresh: true,
+				autosave: {
+					enabled: false
+				},
+				blockStyles: {
+					bold: "__",
+					italic: "_"
+				},
+				element: textarea,
+				forceSync: true,
+				hideIcons: ["guide", "heading"],
+				indentWithTabs: false,
+				lineWrapping: true,
+				parsingConfig: {
+					allowAtxHeaderWithoutSpace: true,
+					strikethrough: false,
+					underscoresBreakWords: true,
+				},
+				placeholder: "",
+				promptURLs: false,
+				renderingConfig: {
+					singleLineBreaks: true,
+					codeSyntaxHighlighting: true,
+				},
+				spellChecker: false,
+				status: false,
+				styleSelectedText: false,
+				tabSize: 4,
+				toolbar: false,
+				toolbarTips: false,
+			}));
+  
+    c++;
+		 
+	};
+	for (let i = 0; i<simplemdes.length; i++){
+    if (i == 0){
+      simplemdes[i].codemirror.setCursor({line: 1, ch: 45}); 
+    } simplemdes[i].render();
+	}
+
+	for (var i=0;i<document.getElementsByTagName("iframe").length;i++){
+		document.getElementsByTagName('iframe')[i].onload = function(){
+			this.style.height = this.contentWindow.document.body.offsetHeight + 50 + 'px';
+		}
+	}
+
+  function getAbsoluteHeight(el) {
+    // Get the DOM Node if you pass in a string
+    el = (typeof el === 'string') ? document.querySelector(el) : el; 
+
+    var styles = window.getComputedStyle(el);
+    var margin = parseFloat(styles['marginTop']) +
+                parseFloat(styles['marginBottom']);
+
+    return Math.ceil(el.offsetHeight + margin);
+  }
+
+</script>
+
+<!-- Fade in loading -->
+<!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script> -->
+
+
+  </body>
+</html>
