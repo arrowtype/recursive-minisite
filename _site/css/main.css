@@ -7073,7 +7073,7 @@ ul {
     height: 100%; }
 
 .fixed-nav {
-  position: fixed;
+  position: absolute;
   top: -200px;
   left: 0px;
   z-index: 2;
@@ -7107,6 +7107,9 @@ h2 {
 
 .CodeMirror-scroll, .CodeMirror {
   min-height: auto; }
+
+#mdContainer .CodeMirror:nth-child(2) .CodeMirror-sizer {
+  margin-top: 50px; }
 
 .CodeMirror {
   padding-bottom: 50px; }
@@ -7331,7 +7334,7 @@ nav.navbar {
 
 .toolbar.fixed {
   position: fixed;
-  top: 56px;
+  top: -1px;
   z-index: 200;
   width: 100%;
   background-color: white;
@@ -7468,6 +7471,8 @@ div#pickVariability, #pickFontSize {
   .footer-top a {
     color: white;
     text-decoration: underline; }
+  .footer-top p {
+    margin-bottom: 0px; }
 
 .footer-bottom {
   padding: 26px 33px;
@@ -7586,13 +7591,6 @@ div#pickVariability, #pickFontSize {
   mix-blend-mode: lighten;
   font-weight: 800;
   font-variation-settings: "PROP" 500, "XPRN" 200, "ital" 500, "CRSV" 456; }
-  .text-label span:not(.loaded) {
-    -webkit-animation: fadein 1s;
-    -moz-animation: fadein 1s;
-    -ms-animation: fadein 1s;
-    -o-animation: fadein 1s;
-    animation: fadein 1s;
-    animation-fill-mode: forwards; }
 
 @keyframes fadein {
   from {
@@ -7789,7 +7787,16 @@ div#pickVariability, #pickFontSize {
   padding: 0px;
   font-variation-settings: "wght" 800, "PROP" 1;
   color: white;
-  cursor: url(/assets/img/cursor-auto.svg), auto; }
+  cursor: url(/assets/img/cursor-auto.svg), auto;
+  border-top: 1px solid white; }
+#monoSans .letterSans:last-child {
+  animation: blink-182 1s steps(5, start) infinite; }
+@keyframes blink-182 {
+  to {
+    visibility: hidden; } }
+@-webkit-keyframes blink-182 {
+  to {
+    visibility: hidden; } }
 #monoSans #inputMonoSpans, #monoSans #inputSansSpans {
   position: absolute;
   bottom: 0px;
@@ -8054,7 +8061,7 @@ body {
     border-radius: 2px;
     text-align: center;
     transform: translateX(-50%);
-    left: 50%;
+    left: 30%;
     font-family: "Recursive";
     font-variation-settings: 'PROP' 0; }
   #readyForWork .slider-label {
@@ -8101,7 +8108,7 @@ body {
     font-variation-settings: 'XPRN' 0.5;
     color: #0050FF;
     transform: translateX(-50%);
-    left: 50%;
+    left: 30%;
     transition: color 100ms;
     cursor: none; }
   #readyForWork #middleAmpersandSlider {
@@ -8259,7 +8266,7 @@ body {
   border-radius: 2px;
   text-align: center;
   transform: translateX(-50%);
-  left: 50%;
+  left: 30%;
   font-family: "Recursive";
   font-variation-settings: 'PROP' 0;
   line-height: 16px; }

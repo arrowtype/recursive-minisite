@@ -406,18 +406,21 @@ element.removeEventListener('mouseup', upListener)
 
 function changeString(){
   str = document.getElementById("textInput").value;
+  noLerp = true;
+  document.getElementById("THREE").classList.remove("blink");
+  document.getElementById("textInput").value = '';
   for (let letterElement of document.querySelectorAll('.text-label span')){
       letterElement.innerHTML = str;
   }
 }
 
-document.getElementById("textInput").onkeydown = function(e){
-  noLerp = true;
-  document.getElementById("THREE").classList.remove("blink");
-  document.getElementById("textInput").value = '';
-  // let str = e.key;
-  // document.getElementById("textInput").value = str;
-}
+// document.getElementById("textInput").onkeydown = function(e){
+//   noLerp = true;
+//   document.getElementById("THREE").classList.remove("blink");
+//   document.getElementById("textInput").value = '';
+//   // let str = e.key;
+//   // document.getElementById("textInput").value = str;
+// }
 
 function lerp(start, end, t) {
     return start * (1 - t) + end * t

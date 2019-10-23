@@ -403,7 +403,7 @@ ul{
 }
 
 .fixed-nav{
-    position:fixed;
+    position:absolute;
     top:-200px;
     left:0px;
     z-index:2;
@@ -444,6 +444,10 @@ h2{
 }
 .CodeMirror-scroll, .CodeMirror{
     min-height:auto;
+}
+
+#mdContainer .CodeMirror:nth-child(2) .CodeMirror-sizer{
+    margin-top: 50px;
 }
 
 .CodeMirror{
@@ -719,7 +723,7 @@ nav.navbar{
 
 .toolbar.fixed{
     position:fixed;
-    top:56px;
+    top:-1px;
     z-index:200;
     width:100%;
     background-color:white;
@@ -889,6 +893,9 @@ div#pickVariability, #pickFontSize {
         color:white;
         text-decoration:underline;
     }
+    p{
+        margin-bottom:0px;
+    }
 }
 .footer-bottom{
     padding:26px 33px;
@@ -1042,12 +1049,12 @@ $randomNumber: random(2);
 
     span:not(.loaded){     
         // opacity:0;
-    -webkit-animation: fadein 1s; 
-       -moz-animation: fadein 1s; 
-        -ms-animation: fadein 1s; 
-         -o-animation: fadein 1s; 
-            animation: fadein 1s;
-            animation-fill-mode:forwards;
+    // -webkit-animation: fadein 1s; 
+    //    -moz-animation: fadein 1s; 
+    //     -ms-animation: fadein 1s; 
+    //      -o-animation: fadein 1s; 
+    //         animation: fadein 1s;
+    //         animation-fill-mode:forwards;
             // animation-delay: $randomNumber + s;
             // -webkit-animation-delay: $randomNumber + s;
             // -ms-animation-delay: $randomNumber + s;
@@ -1314,6 +1321,22 @@ $randomNumber: random(2);
         font-variation-settings: "wght" 800, "PROP" 1;
         color:white;
         cursor:url(/assets/img/cursor-auto.svg), auto;
+        border-top: 1px solid white;
+    }
+
+    .letterSans:last-child{
+        animation:blink-182 1s steps(5, start) infinite;
+    }
+
+    @keyframes blink-182 {
+    to {
+        visibility: hidden;
+    }
+    }
+    @-webkit-keyframes blink-182 {
+    to {
+        visibility: hidden;
+    }
     }
 
 
@@ -1656,7 +1679,7 @@ body {
         border-radius:2px;
         text-align:center;
         transform:translateX(-50%);
-        left:50%;
+        left:30%;
         font-family:"Recursive";
         font-variation-settings: 'PROP' 0;
     }
@@ -1725,7 +1748,7 @@ body {
         font-variation-settings: 'XPRN' 0.5;
         color: $primary;
         transform:translateX(-50%);
-        left:50%;
+        left:30%;
         transition: color 100ms;
         cursor:none;
     }
@@ -1915,7 +1938,7 @@ body {
         border-radius:2px;
         text-align:center;
         transform:translateX(-50%);
-        left:50%;
+        left:30%;
         font-family:"Recursive";
         font-variation-settings: 'PROP' 0;
         line-height:16px;

@@ -34,14 +34,14 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/purge-result/main.css">
+  <!-- <link rel="stylesheet" href="/css/purge-result/main.css"> -->
   <style>
     html {
       visibility: visible;
       opacity: 1;
     }
   </style>
-  <!-- <link rel="stylesheet" href="/css/main.css"> -->
+  <link rel="stylesheet" href="/css/main.css">
 
   	</head>
 	<body>
@@ -59,7 +59,7 @@
 
 
 <nav class="navbar navbar-expand-md p-0">
-  <a class="navbar-brand" href="http://localhost:4000">
+  <a class="navbar-brand" href="/">
     Recursive Sans & Mono
     <a class="navbar-toggler" id="navbarToggler" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
       <svg class="d-md-none" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -73,7 +73,7 @@
   </a>
   <div class="collapse navbar-collapse show hideOnMobile" id="navbarTogglerDemo03">
       <ul class="navbar-nav">
-          <li><a class="nav-link" href="#toolbar">Features</a></li>
+          <li><a class="nav-link" href="/#toolbar">Features</a></li>
           <!-- <li><a class="nav-link" href="#">Origin & Process</a></li> -->
           <!-- <li><a class="nav-link" href="#">Specimen</a></li> -->
           <li><a class="nav-link" target="_blank" href="https://github.com/arrowtype/recursive/releases">Download <span class="beta">Beta</span></a></li>
@@ -87,7 +87,7 @@
 </nav>
 
 </div>
-	<input type="text" id="textInput" onkeyup="changeString()"></input>
+	<input type="text" id="textInput" oninput="changeString()"></input>
 	<div class="container-fluid bg-dark position-relative" id="hero">
     <div id="THREE">
       <div class="lines">
@@ -302,9 +302,7 @@
 </div>
 
 	<div class="container-fluid d-none d-md-block" id="mdContainer">
-		<textarea class="mdSection">
-
-## A highly customizable new variable font.
+		<textarea class="mdSection">## A highly customizable new variable font.
 
 Built to maximize versatility, control, and performance, Recursive is a five-axis variable font. This enables you to choose from a wide range of predefined styles, or dial in exactly what you want for each of its axes: *Proportion, Monospace, Weight, Slant, and Italic*. Taking full advantage of variable font technology, Recursive offers an unprecedented level of flexibility, all from a single font file.</textarea>
 		<iframe data-src="/singlefile" class="yall-loaded" src="/singlefile"></iframe>
@@ -394,9 +392,16 @@ To meet the needs of global communication, Recursive supports a wide range of La
     grid-template-columns: 196px 196px auto;
     column-gap: 1rem; }
     @media (max-width: 500px) {
+      #singleFile .ccs-row:first-child .inputs #fontSizeSlider {
+          width: 80%;
+          margin-left: 20%;
+          /* float: right; */
+      }
       #singleFile .ccs-row {
-        grid-template-columns: calc(50vw - var(--padding-unit)) calc(50vw - var(--padding-unit));
-        column-gap: 0; } }
+        grid-template-columns: calc(35vw - var(--padding-unit)) calc(65vw - var(--padding-unit));
+        column-gap: 0; } 
+    }
+    
   #singleFile #controls-result {
     background: white;
     color: black;
@@ -408,7 +413,7 @@ To meet the needs of global communication, Recursive supports a wide range of La
     font-weight: 800;
     font-family: 'Recursive', sans-serif;
     font-variation-settings: "MONO" 0, "XPRN" 0, "slnt" 0, "ital" 0, "wght" 800;
-    text-align: left;
+    text-align: center;
     width: 100%;
     padding: calc(var(--padding-unit) * 2 * 0.9);
     padding-right: 0;
@@ -606,7 +611,7 @@ To meet the needs of global communication, Recursive supports a wide range of La
                     </div>
                     </div>
                 </li>
-                <li class="hidden--sm"><span class="comment not-aligned">&nbsp;</span></li>
+                <!-- <li class="hidden--sm"><span class="comment not-aligned">&nbsp;</span></li> -->
                 <li class="hidden--sm"><span class="comment not-aligned">/* set variation axis values */</span></li>
                 <li id="cust-prop">
                     <div class="ccs-row">
@@ -682,7 +687,7 @@ To meet the needs of global communication, Recursive supports a wide range of La
         if (window.innerWidth > 767.98){
           document.getElementById("controls-result").style.fontSize = document.getElementById('fontSizeSlider').value + 'vw';
         } else {
-          document.getElementById("controls-result").style.fontSize = document.getElementById('fontSizeSlider').value * 16 + 44 + 'px';
+          document.getElementById("controls-result").style.fontSize = document.getElementById('fontSizeSlider').value * 9 + 60 + 'px';
         }
         document.getElementById("fontSizeResult").innerHTML = document.getElementById('fontSizeSlider').value + 'vw';
         document.getElementById("fontSizeResultSm").innerHTML = Math.floor(document.getElementById('fontSizeSlider').value * 16 + 44) + 'px';
@@ -811,7 +816,7 @@ To meet the needs of global communication, Recursive supports a wide range of La
 
 <p><em>Linear</em> (<code class="highlighter-rouge">XPRN 0</code>) styles have subtly-flattened edges and simple, open forms. This optimizes readability and enables enhanced focus in dense information, such as long-form text and complex code.</p>
 
-<p><em>Casual</em> (<code class="highlighter-rouge">XPRN  1</code>) echoes the soft &amp; curvy brush strokes of casual signpainting, but simplifies these forms for a striking and inviting tone. This makes it ideal for web headlines, code snippets, and command line interfaces.</p>
+<p><em>Casual</em> (<code class="highlighter-rouge">XPRN 1</code>) echoes the soft &amp; curvy brush strokes of casual signpainting, but simplifies these forms for a striking and inviting tone. This makes it ideal for web headlines, code snippets, and command line interfaces.</p>
 
 <div class="scroll-on-sm my-4" id="readyForWorkSm">
     <div class="numbers">
@@ -7328,7 +7333,9 @@ To meet the needs of global communication, Recursive supports a wide range of La
         designed for screens.
     </div>
     <div>
+		
         <a href="/process" class="pre-footer__next">Origins & Process →</a>
+		
     </div>
 </div>
 <div class="footer-top bg-dark">
@@ -7469,7 +7476,7 @@ Google and the Google Fonts logo are registered trademarks or service marks of G
 	};
 	for (let i = 0; i<simplemdes.length; i++){
     if (i == 0){
-      simplemdes[i].codemirror.setCursor({line: 1, ch: 45}); 
+      simplemdes[i].codemirror.setCursor({line: 0, ch: 45}); 
     } simplemdes[i].render();
 	}
 

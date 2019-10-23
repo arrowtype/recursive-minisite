@@ -18,9 +18,16 @@
     grid-template-columns: 196px 196px auto;
     column-gap: 1rem; }
     @media (max-width: 500px) {
+      #singleFile .ccs-row:first-child .inputs #fontSizeSlider {
+          width: 80%;
+          margin-left: 20%;
+          /* float: right; */
+      }
       #singleFile .ccs-row {
-        grid-template-columns: calc(50vw - var(--padding-unit)) calc(50vw - var(--padding-unit));
-        column-gap: 0; } }
+        grid-template-columns: calc(35vw - var(--padding-unit)) calc(65vw - var(--padding-unit));
+        column-gap: 0; } 
+    }
+    
   #singleFile #controls-result {
     background: white;
     color: black;
@@ -32,7 +39,7 @@
     font-weight: 800;
     font-family: 'Recursive', sans-serif;
     font-variation-settings: "MONO" 0, "XPRN" 0, "slnt" 0, "ital" 0, "wght" 800;
-    text-align: left;
+    text-align: center;
     width: 100%;
     padding: calc(var(--padding-unit) * 2 * 0.9);
     padding-right: 0;
@@ -230,7 +237,7 @@
                     </div>
                     </div>
                 </li>
-                <li class="hidden--sm"><span class="comment not-aligned">&nbsp;</span></li>
+                <!-- <li class="hidden--sm"><span class="comment not-aligned">&nbsp;</span></li> -->
                 <li class="hidden--sm"><span class="comment not-aligned">/* set variation axis values */</span></li>
                 <li id="cust-prop">
                     <div class="ccs-row">
@@ -306,7 +313,7 @@
         if (window.innerWidth > 767.98){
           document.getElementById("controls-result").style.fontSize = document.getElementById('fontSizeSlider').value + 'vw';
         } else {
-          document.getElementById("controls-result").style.fontSize = document.getElementById('fontSizeSlider').value * 16 + 44 + 'px';
+          document.getElementById("controls-result").style.fontSize = document.getElementById('fontSizeSlider').value * 9 + 60 + 'px';
         }
         document.getElementById("fontSizeResult").innerHTML = document.getElementById('fontSizeSlider').value + 'vw';
         document.getElementById("fontSizeResultSm").innerHTML = Math.floor(document.getElementById('fontSizeSlider').value * 16 + 44) + 'px';

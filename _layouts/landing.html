@@ -7,7 +7,7 @@
   	</head>
 	<body>
 		{% include navigation.html %}
-	<input type="text" id="textInput" onkeyup="changeString()"></input>
+	<input type="text" id="textInput" oninput="changeString()"></input>
 	<div class="container-fluid bg-dark position-relative" id="hero">
     <div id="THREE">
       <div class="lines">
@@ -189,7 +189,7 @@
 	};
 	for (let i = 0; i<simplemdes.length; i++){
     if (i == 0){
-      simplemdes[i].codemirror.setCursor({line: 1, ch: 45}); 
+      simplemdes[i].codemirror.setCursor({line: 0, ch: 45}); 
     } simplemdes[i].render();
 	}
 

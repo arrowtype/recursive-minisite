@@ -103,17 +103,12 @@ layout: iframe
     <div class="slider-label d-inline-block text-right float-left">Linear<span> 0</span></div>
 
     <div class="slidecontainer float-left">
-        <input type="range" min="0.00" max="1.00" value="0.50" step="0.01" class="slider" id="ampersandSlider">
+        <input type="range" min="0.00" max="1.00" value="0.30" step="0.01" class="slider" id="ampersandSlider">
         <output id="ampersandOutput"></output>
     </div>
 
     <div class="slider-label d-inline-block float-left"><span>1 </span>Casual</div>
 </div>
-
-<!-- <div id="grabCursor">
-    <img id="grab2" class="d-none" src="/assets/img/grab2.svg">
-    <img id="grab1" src="/assets/img/grab1.svg">
-</div> -->
 
 </div>
 
@@ -127,20 +122,20 @@ let ampersandSlider = document.getElementById('ampersandSlider'),
 
     o.innerHTML = ampersandSlider.value;
 
-ampersandSlider.addEventListener('input', function () {
-  o.innerHTML = ampersandSlider.value;
-  o.style.left = ampersandSlider.value*100 + "%";
-  amp.style.left = ampersandSlider.value*100 + "%";
-  amp.style.fontVariationSettings = "'XPRN' " + ampersandSlider.value;
-  if (ampersandSlider.value == 0){
-    document.getElementById("readyForWork").classList.add("linear");
-  } else if (ampersandSlider.value == 1){
-    document.getElementById("readyForWork").classList.toggle("casual");
-  } else {
-    document.getElementById("readyForWork").classList.remove("casual");
-    document.getElementById("readyForWork").classList.remove("linear");
-  }
-}, false);
+    ampersandSlider.addEventListener('input', function () {
+        o.innerHTML = ampersandSlider.value;
+        o.style.left = ampersandSlider.value*100 + "%";
+        amp.style.left = ampersandSlider.value*100 + "%";
+        amp.style.fontVariationSettings = "'XPRN' " + ampersandSlider.value;
+        if (ampersandSlider.value == 0){
+            document.getElementById("readyForWork").classList.add("linear");
+        } else if (ampersandSlider.value == 1){
+            document.getElementById("readyForWork").classList.toggle("casual");
+        } else {
+            document.getElementById("readyForWork").classList.remove("casual");
+            document.getElementById("readyForWork").classList.remove("linear");
+        }
+    }, false);
 
 ampSlider.addEventListener('input', function () {
     ampersandSlider.value = this.value;

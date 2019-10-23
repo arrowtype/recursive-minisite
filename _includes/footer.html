@@ -5,7 +5,11 @@
         designed for screens.
     </div>
     <div>
+		{% if page.layout == 'landing' %}
         <a href="/process" class="pre-footer__next">Origins & Process →</a>
+		{% else %}
+		<a href="/" class="pre-footer__next">Features →</a>
+		{% endif %}
     </div>
 </div>
 <div class="footer-top bg-dark">
