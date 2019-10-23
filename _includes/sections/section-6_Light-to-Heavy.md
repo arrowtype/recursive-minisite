@@ -1,0 +1,3 @@
+## Light to Heavy. And everything in between. `wght`
+
+Recursive comes in a wide range of weights, from Light (`300`) to a super-heavy Black (`900`). You can choose from its seven predefined weights, or set a custom value through its *Weight* (`wght`) axis. And because Recursive maintains consistent letterforms along the entire *Weight* axis, it allows for smooth animations between any of its different weights.

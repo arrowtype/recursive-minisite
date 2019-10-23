@@ -1,46 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+  
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-  <title>Recursive </title>
-  <meta property="og:title" content="Recursive ">
-  <meta property="twitter:title" content="Recursive ">
+  <title>Recursive Sans & Mono</title>
+  <meta property="og:title" content="Recursive Sans & Mono">
+  <meta property="twitter:title" content="Recursive Sans & Mono">
 
   <meta name="author" content="Recursive">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="http://localhost:4000">
-  <meta property="twitter:url" content="http://localhost:4000">
+  <meta property="og:url" content="http://recursive.design">
+  <meta property="twitter:url" content="http://recursive.design">
   <meta property="twitter:card" content="summary_large_image">
   
 
-  
-  <meta name="description" content="Lorem ipsum dolor sit amet">
-  <meta property="twitter:description" content="Lorem ipsum dolor sit amet">
-  <meta property="og:description" content="Lorem ipsum dolor sit amet">
-  
-
-  
-  <meta property="og:image" content="">
-  <meta property="twitter:image" content="">
-  
+  <meta name="description" content="A highly customizable variable font for design, code, and UI.">
+  <meta property="twitter:description" content="A highly customizable variable font for design, code, and UI.">
+  <meta property="og:description" content="A highly customizable variable font for design, code, and UI.">
+  <meta property="og:image" content="https://recursive-minisite.netlify.com/assets/img/og-img.png">
+  <meta property="twitter:image" content="https://recursive-minisite.netlify.com/assets/img/og-img.png">
 
   <link rel="icon" type="image/png" href="/assets/favicon/favicon-32x32.png" sizes="32x32" />
   <link rel="icon" type="image/png" href="/assets/favicon/favicon-16x16.png" sizes="16x16" />
 
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
-  <link rel="stylesheet" href="/css/main.css">
-</head>
-
-  <body>
-    <div id="readyForWork" class="module container container-sm py-5">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/purge-result/main.css">
+  <style>
+    html {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+  <!-- <link rel="stylesheet" href="/css/main.css"> -->
+  </head>
+  <body class="module-body">
+    <div id="readyForWork" class="module container container-sm">
     <input id="middleAmpersandSlider" type="range"  min="0.00" max="1.00" value="0.50" step="0.01" >
     <div class="ampersands">
         
@@ -148,10 +151,10 @@
     <div class="slider-label d-inline-block float-left"><span>1 </span>Casual</div>
 </div>
 
-<div id="grabCursor">
+<!-- <div id="grabCursor">
     <img id="grab2" class="d-none" src="/assets/img/grab2.svg">
     <img id="grab1" src="/assets/img/grab1.svg">
-</div>
+</div> -->
 
 </div>
 
@@ -180,37 +183,20 @@ ampersandSlider.addEventListener('input', function () {
   }
 }, false);
 
-ampSlider.onmousemove = function(e){
-    document.getElementById("grabCursor").style.top = e.clientY - 30 + "px";
-    document.getElementById("grabCursor").style.left = e.clientX - 30 + "px";
-}
-ampSlider.onmousedown = function(){
-    dragging = true;
-    document.getElementById("grab1").classList.add("d-none");
-    document.getElementById("grab2").classList.remove("d-none");
-}
-ampSlider.onmouseup = function(){
-    dragging = false;
-    document.getElementById("grab1").classList.remove("d-none");
-    document.getElementById("grab2").classList.add("d-none");
-}
-ampSlider.onmouseout = function(e){
-    document.getElementById("grabCursor").style.left = "-1000000px";
-}
 ampSlider.addEventListener('input', function () {
     ampersandSlider.value = this.value;
-  o.innerHTML = ampersandSlider.value;
-  o.style.left = ampersandSlider.value*100 + "%";
-  amp.style.left = ampersandSlider.value*100 + "%";
-  amp.style.fontVariationSettings = "'XPRN' " + ampersandSlider.value;
-  if (ampersandSlider.value == 0){
-    document.getElementById("readyForWork").classList.add("linear");
-  } else if (ampersandSlider.value == 1){
-    document.getElementById("readyForWork").classList.toggle("casual");
-  } else {
-    document.getElementById("readyForWork").classList.remove("casual");
-    document.getElementById("readyForWork").classList.remove("linear");
-  }
+    o.innerHTML = ampersandSlider.value;
+    o.style.left = ampersandSlider.value*100 + "%";
+    amp.style.left = ampersandSlider.value*100 + "%";
+    amp.style.fontVariationSettings = "'XPRN' " + ampersandSlider.value;
+    if (ampersandSlider.value == 0){
+        document.getElementById("readyForWork").classList.add("linear");
+    } else if (ampersandSlider.value == 1){
+        document.getElementById("readyForWork").classList.toggle("casual");
+    } else {
+        document.getElementById("readyForWork").classList.remove("casual");
+        document.getElementById("readyForWork").classList.remove("linear");
+    }
 }, false);
     
 

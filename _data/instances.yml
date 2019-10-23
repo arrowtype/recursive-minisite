@@ -1,15 +1,51 @@
-- name: Mono Casual Black
+- name: Mono Casual Light
   PROP: 0
   XPRN: 1
   ital: 0.5
   slnt: 0
-  wght: 900
-- name: Mono Casual Black Italic
+  wght: 300
+- name: Mono Casual Light Italic
   PROP: 0
   XPRN: 1
   ital: 1
   slnt: -15
-  wght: 900
+  wght: 300
+- name: Mono Casual Regular
+  PROP: 0
+  XPRN: 1
+  ital: 0.5
+  slnt: 0
+  wght: 400
+- name: Mono Casual Italic
+  PROP: 0
+  XPRN: 1
+  ital: 1
+  slnt: -15
+  wght: 400
+- name: Mono Casual Medium
+  PROP: 0
+  XPRN: 1
+  ital: 0.5
+  slnt: 0
+  wght: 500
+- name: Mono Casual Medium Italic
+  PROP: 0
+  XPRN: 1
+  ital: 1
+  slnt: -15
+  wght: 500
+- name: Mono Casual SemiBold
+  PROP: 0
+  XPRN: 1
+  ital: 0.5
+  slnt: 0
+  wght: 600
+- name: Mono Casual SemiBold Italic
+  PROP: 0
+  XPRN: 1
+  ital: 1
+  slnt: -15
+  wght: 600
 - name: Mono Casual Bold
   PROP: 0
   XPRN: 1
@@ -34,54 +70,6 @@
   ital: 1
   slnt: -15
   wght: 800
-- name: Mono Casual Italic
-  PROP: 0
-  XPRN: 1
-  ital: 1
-  slnt: -15
-  wght: 400
-- name: Mono Casual Light
-  PROP: 0
-  XPRN: 1
-  ital: 0.5
-  slnt: 0
-  wght: 300
-- name: Mono Casual Light Italic
-  PROP: 0
-  XPRN: 1
-  ital: 1
-  slnt: -15
-  wght: 300
-- name: Mono Casual Medium
-  PROP: 0
-  XPRN: 1
-  ital: 0.5
-  slnt: 0
-  wght: 500
-- name: Mono Casual Medium Italic
-  PROP: 0
-  XPRN: 1
-  ital: 1
-  slnt: -15
-  wght: 500
-- name: Mono Casual Regular
-  PROP: 0
-  XPRN: 1
-  ital: 0.5
-  slnt: 0
-  wght: 400
-- name: Mono Casual SemiBold
-  PROP: 0
-  XPRN: 1
-  ital: 0.5
-  slnt: 0
-  wght: 600
-- name: Mono Casual SemiBold Italic
-  PROP: 0
-  XPRN: 1
-  ital: 1
-  slnt: -15
-  wght: 600
 - name: Mono Casual UltraBold
   PROP: 0
   XPRN: 1
@@ -94,18 +82,66 @@
   ital: 1
   slnt: -15
   wght: 850
-- name: Mono Linear Black
+- name: Mono Casual Black
+  PROP: 0
+  XPRN: 1
+  ital: 0.5
+  slnt: 0
+  wght: 900
+- name: Mono Casual Black Italic
+  PROP: 0
+  XPRN: 1
+  ital: 1
+  slnt: -15
+  wght: 900
+- name: Mono Linear Light
   PROP: 0
   XPRN: 0
   ital: 0.5
   slnt: 0
-  wght: 900
-- name: Mono Linear Black Italic
+  wght: 300
+- name: Mono Linear Light Italic
   PROP: 0
   XPRN: 0
   ital: 1
   slnt: -15
-  wght: 900
+  wght: 300
+- name: Mono Linear Regular
+  PROP: 0
+  XPRN: 0
+  ital: 0.5
+  slnt: 0
+  wght: 400
+- name: Mono Linear Italic
+  PROP: 0
+  XPRN: 0
+  ital: 1
+  slnt: -15
+  wght: 400
+- name: Mono Linear Medium
+  PROP: 0
+  XPRN: 0
+  ital: 0.5
+  slnt: 0
+  wght: 500
+- name: Mono Linear Medium Italic
+  PROP: 0
+  XPRN: 0
+  ital: 1
+  slnt: -15
+  wght: 500
+- name: Mono Linear SemiBold
+  PROP: 0
+  XPRN: 0
+  ital: 0.5
+  slnt: 0
+  wght: 600
+- name: Mono Linear SemiBold Italic
+  PROP: 0
+  XPRN: 0
+  ital: 1
+  slnt: -15
+  wght: 600
 - name: Mono Linear Bold
   PROP: 0
   XPRN: 0
@@ -130,54 +166,6 @@
   ital: 1
   slnt: -15
   wght: 800
-- name: Mono Linear Italic
-  PROP: 0
-  XPRN: 0
-  ital: 1
-  slnt: -15
-  wght: 400
-- name: Mono Linear Ligh
-  PROP: 0
-  XPRN: 0
-  ital: 0.5
-  slnt: 0
-  wght: 300
-- name: Mono Linear Light Italic
-  PROP: 0
-  XPRN: 0
-  ital: 1
-  slnt: -15
-  wght: 300
-- name: Mono Linear Medium
-  PROP: 0
-  XPRN: 0
-  ital: 0.5
-  slnt: 0
-  wght: 500
-- name: Mono Linear Medium Italic
-  PROP: 0
-  XPRN: 0
-  ital: 1
-  slnt: -15
-  wght: 500
-- name: Mono Linear Regular
-  PROP: 0
-  XPRN: 0
-  ital: 0.5
-  slnt: 0
-  wght: 400
-- name: Mono Linear SemiBold
-  PROP: 0
-  XPRN: 0
-  ital: 0.5
-  slnt: 0
-  wght: 600
-- name: Mono Linear SemiBold Italic
-  PROP: 0
-  XPRN: 0
-  ital: 1
-  slnt: -15
-  wght: 600
 - name: Mono Linear UltraBold
   PROP: 0
   XPRN: 0
@@ -190,18 +178,66 @@
   ital: 1
   slnt: -15
   wght: 850
-- name: Sans Casual Black
+- name: Mono Linear Black
+  PROP: 0
+  XPRN: 0
+  ital: 0.5
+  slnt: 0
+  wght: 900
+- name: Mono Linear Black Italic
+  PROP: 0
+  XPRN: 0
+  ital: 1
+  slnt: -15
+  wght: 900
+- name: Sans Casual Light
   PROP: 1
   XPRN: 1
   ital: 0.5
   slnt: 0
-  wght: 900
-- name: Sans Casual Black Italic
+  wght: 300
+- name: Sans Casual Light Italic
   PROP: 1
   XPRN: 1
   ital: 1
   slnt: -15
-  wght: 900
+  wght: 300
+- name: Sans Casual Regular
+  PROP: 1
+  XPRN: 1
+  ital: 0.5
+  slnt: 0
+  wght: 400
+- name: Sans Casual Italic
+  PROP: 1
+  XPRN: 1
+  ital: 1
+  slnt: -15
+  wght: 400
+- name: Sans Casual Medium
+  PROP: 1
+  XPRN: 1
+  ital: 0.5
+  slnt: 0
+  wght: 500
+- name: Sans Casual Medium Italic
+  PROP: 1
+  XPRN: 1
+  ital: 1
+  slnt: -15
+  wght: 500
+- name: Sans Casual SemiBold
+  PROP: 1
+  XPRN: 1
+  ital: 0.5
+  slnt: 0
+  wght: 600
+- name: Sans Casual SemiBold Italic
+  PROP: 1
+  XPRN: 1
+  ital: 1
+  slnt: -15
+  wght: 600
 - name: Sans Casual Bold
   PROP: 1
   XPRN: 1
@@ -226,54 +262,6 @@
   ital: 1
   slnt: -15
   wght: 800
-- name: Sans Casual Italic
-  PROP: 1
-  XPRN: 1
-  ital: 1
-  slnt: -15
-  wght: 400
-- name: Sans Casual Light
-  PROP: 1
-  XPRN: 1
-  ital: 0.5
-  slnt: 0
-  wght: 300
-- name: Sans Casual Light Italic
-  PROP: 1
-  XPRN: 1
-  ital: 1
-  slnt: -15
-  wght: 300
-- name: Sans Casual Medium
-  PROP: 1
-  XPRN: 1
-  ital: 0.5
-  slnt: 0
-  wght: 500
-- name: Sans Casual Medium Italic
-  PROP: 1
-  XPRN: 1
-  ital: 1
-  slnt: -15
-  wght: 500
-- name: Sans Casual Regular
-  PROP: 1
-  XPRN: 1
-  ital: 0.5
-  slnt: 0
-  wght: 400
-- name: Sans Casual SemiBold
-  PROP: 1
-  XPRN: 1
-  ital: 0.5
-  slnt: 0
-  wght: 600
-- name: Sans Casual SemiBold Italic
-  PROP: 1
-  XPRN: 1
-  ital: 1
-  slnt: -15
-  wght: 600
 - name: Sans Casual UltraBold
   PROP: 1
   XPRN: 1
@@ -286,24 +274,73 @@
   ital: 1
   slnt: -15
   wght: 850
-- name: Sans Linear Black
+- name: Sans Casual Black
+  PROP: 1
+  XPRN: 1
+  ital: 0.5
+  slnt: 0
+  wght: 900
+- name: Sans Casual Black Italic
+  PROP: 1
+  XPRN: 1
+  ital: 1
+  slnt: -15
+  wght: 900
+- name: Sans Linear Light
   PROP: 1
   XPRN: 0
   ital: 0.5
   slnt: 0
-  wght: 900
-- name: Sans Linear Black Italic
+  wght: 300
+- name: Sans Linear Light Italic
   PROP: 1
   XPRN: 0
   ital: 1
   slnt: -15
-  wght: 900
+  wght: 300
+- name: Sans Linear Regular
+  PROP: 1
+  XPRN: 0
+  ital: 0.5
+  slnt: 0
+  wght: 400
+- name: Sans Linear Italic
+  PROP: 1
+  XPRN: 0
+  ital: 1
+  slnt: -15
+  wght: 400
+- name: Sans Linear Medium
+  PROP: 1
+  XPRN: 0
+  ital: 0.5
+  slnt: 0
+  wght: 500
+- name: Sans Linear Medium Italic
+  PROP: 1
+  XPRN: 0
+  ital: 1
+  slnt: -15
+  wght: 500
+- name: Sans Linear SemiBold
+  PROP: 1
+  XPRN: 0
+  ital: 0.5
+  slnt: 0
+  wght: 600
+- name: Sans Linear SemiBold Italic
+  PROP: 1
+  XPRN: 0
+  ital: 1
+  slnt: -15
+  wght: 600
 - name: Sans Linear Bold
   PROP: 1
   XPRN: 0
   ital: 0.5
   slnt: 0
   wght: 700
+  selected: true
 - name: Sans Linear Bold Italic
   PROP: 1
   XPRN: 0
@@ -322,54 +359,6 @@
   ital: 1
   slnt: -15
   wght: 800
-- name: Sans Linear Italic
-  PROP: 1
-  XPRN: 0
-  ital: 1
-  slnt: -15
-  wght: 400
-- name: Sans Linear Light
-  PROP: 1
-  XPRN: 0
-  ital: 0.5
-  slnt: 0
-  wght: 300
-- name: Sans Linear Light Italic
-  PROP: 1
-  XPRN: 0
-  ital: 1
-  slnt: -15
-  wght: 300
-- name: Sans Linear Medium
-  PROP: 1
-  XPRN: 0
-  ital: 0.5
-  slnt: 0
-  wght: 500
-- name: Sans Linear Medium Italic
-  PROP: 1
-  XPRN: 0
-  ital: 1
-  slnt: -15
-  wght: 500
-- name: Sans Linear Regular
-  PROP: 1
-  XPRN: 0
-  ital: 0.5
-  slnt: 0
-  wght: 400
-- name: Sans Linear SemiBold
-  PROP: 1
-  XPRN: 0
-  ital: 0.5
-  slnt: 0
-  wght: 600
-- name: Sans Linear SemiBold Italic
-  PROP: 1
-  XPRN: 0
-  ital: 1
-  slnt: -15
-  wght: 600
 - name: Sans Linear UltraBold
   PROP: 1
   XPRN: 0
@@ -382,3 +371,15 @@
   ital: 1
   slnt: -15
   wght: 850
+- name: Sans Linear Black
+  PROP: 1
+  XPRN: 0
+  ital: 0.5
+  slnt: 0
+  wght: 900
+- name: Sans Linear Black Italic
+  PROP: 1
+  XPRN: 0
+  ital: 1
+  slnt: -15
+  wght: 900

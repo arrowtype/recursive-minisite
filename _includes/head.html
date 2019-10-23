@@ -1,45 +1,40 @@
-<head>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-  <title>Recursive {% if page.title %}| {{ page.title}}{% endif %}</title>
-  <meta property="og:title" content="Recursive {% if page.title %}| {{ page.title}}{% endif %}">
-  <meta property="twitter:title" content="Recursive {% if page.title %}| {{ page.title}}{% endif %}">
+  <title>{{ site.data.globals.title}}</title>
+  <meta property="og:title" content="{{ site.data.globals.title}}">
+  <meta property="twitter:title" content="{{ site.data.globals.title}}">
 
   <meta name="author" content="{{ site.data.globals.author}}">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="{{ site.url }}">
-  <meta property="twitter:url" content="{{ site.url }}">
+  <meta property="og:url" content="{{ site.data.globals.url }}">
+  <meta property="twitter:url" content="{{ site.data.globals.url }}">
   <meta property="twitter:card" content="summary_large_image">
   
 
-  {% if page.description %}
-  <meta name="description" content="{{ page.description}}">
-  <meta property="twitter:description" content="{{ page.description}}">
-  <meta property="og:description" content="{{ page.description}}">
-  {% else %}
   <meta name="description" content="{{ site.data.globals.description}}">
   <meta property="twitter:description" content="{{ site.data.globals.description}}">
   <meta property="og:description" content="{{ site.data.globals.description}}">
-  {% endif %}
-
-  {% if page.metaImage %}
-  <meta property="og:image" content="{{ page.image }}">
-  <meta property="twitter:image" content="{{ page.image }}">
-  {% else %}
   <meta property="og:image" content="{{ site.data.globals.image }}">
   <meta property="twitter:image" content="{{ site.data.globals.image }}">
-  {% endif %}
 
   <link rel="icon" type="image/png" href="/assets/favicon/favicon-32x32.png" sizes="32x32" />
   <link rel="icon" type="image/png" href="/assets/favicon/favicon-16x16.png" sizes="16x16" />
 
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
-  <link rel="stylesheet" href="/css/main.css">
-</head>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/purge-result/main.css">
+  <style>
+    html {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+  <!-- <link rel="stylesheet" href="/css/main.css"> -->
