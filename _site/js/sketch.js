@@ -64,11 +64,16 @@ const viewer = {
     this.scene = new THREE.Scene();
     this.renderer = new THREE.WebGLRenderer();
     this.renderer.setPixelRatio(window.devicePixelRatio);
-    this.renderer.setSize(originalInnerWidth, ((originalInnerHeight - 200) - 200));
+    this.renderer.setSize(originalInnerWidth, originalInnerHeight);
 
     this.container.appendChild(this.renderer.domElement);
 
-    this.camera = new THREE.OrthographicCamera( originalInnerWidth / - 50, originalInnerWidth / 50, (originalInnerHeight - 200) / 50, (originalInnerHeight - 200) / -50, - 500, 0);
+    this.camera = new THREE.OrthographicCamera( originalInnerWidth / - 50, 
+                                                originalInnerWidth / 50, 
+                                                (originalInnerHeight - 200) / 50, 
+                                                (originalInnerHeight - 200) / -50, 
+                                                -500, 
+                                                0);
     this.camera.position.x = 500;
     this.camera.position.y = 500;
     this.camera.position.z = 750;
@@ -212,9 +217,9 @@ const viewer = {
         mouseMoved = 0;
       }
       if (!noLerp){
-        _this.camera.position.x = lerp(_this.camera.position.x, 750, 0.06);
-        _this.camera.position.y = lerp(_this.camera.position.y, 750, 0.06);
-        _this.camera.position.z = lerp(_this.camera.position.z, 750, 0.06);
+        _this.camera.position.x = lerp(_this.camera.position.x, 750, 0.3);
+        _this.camera.position.y = lerp(_this.camera.position.y, 750, 0.3);
+        _this.camera.position.z = lerp(_this.camera.position.z, 750, 0.3);
       }
 
       posX = _this.camera.position.x;
@@ -321,12 +326,12 @@ viewer.container = document.getElementById('THREE');
 setTimeout(function(){  
   viewer.onReady();
   document.getElementsByClassName("lines")[0].style.opacity = "1";
-}, 3000);
+}, 2000);
 
 setTimeout(function(){ 
   noLerp = true;
   document.getElementById('THREE').style.pointerEvents = 'auto';
-}, 6000);
+}, 4000);
 
 // viewer.animate();
 // viewer.container.onmousemove = function(){
@@ -378,6 +383,7 @@ let downListener = () => {
   document.getElementsByClassName("lines")[0].style.opacity = "0";
 }
 element.onmousedown = downListener;
+element.ontouchstart = downListener;
 let moveListener = () => { moved = true }
 element.onmousemove = moveListener;
 let upListener = () => {
@@ -406,18 +412,21 @@ element.removeEventListener('mouseup', upListener)
 
 function changeString(){
   str = document.getElementById("textInput").value;
+  noLerp = true;
+  document.getElementById("THREE").classList.remove("blink");
+  document.getElementById("textInput").value = '';
   for (let letterElement of document.querySelectorAll('.text-label span')){
       letterElement.innerHTML = str;
   }
 }
 
-document.getElementById("textInput").onkeydown = function(e){
-  noLerp = true;
-  document.getElementById("THREE").classList.remove("blink");
-  document.getElementById("textInput").value = '';
-  // let str = e.key;
-  // document.getElementById("textInput").value = str;
-}
+// document.getElementById("textInput").onkeydown = function(e){
+//   noLerp = true;
+//   document.getElementById("THREE").classList.remove("blink");
+//   document.getElementById("textInput").value = '';
+//   // let str = e.key;
+//   // document.getElementById("textInput").value = str;
+// }
 
 function lerp(start, end, t) {
     return start * (1 - t) + end * t
