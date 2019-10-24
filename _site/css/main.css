@@ -7516,15 +7516,16 @@ div#pickVariability, #pickFontSize {
   position: absolute;
   overflow: hidden;
   transform: translateX(-50%);
-  left: 50vw; }
+  left: 50vw;
+  top: 0px; }
 
 #line1 {
   position: absolute;
-  width: 150%;
+  width: 66%;
   top: 50%;
-  left: -25%;
-  transform-origin: center;
-  transform: rotate(-30deg);
+  left: 50%;
+  transform-origin: 0%;
+  transform: rotate(150deg);
   border-bottom: 1px solid #ff0000; }
   #line1 .label {
     color: #ff0000;
@@ -7533,13 +7534,13 @@ div#pickVariability, #pickFontSize {
     bottom: -50px;
     right: calc(100px + 10%); }
     #line1 .label span {
-      transform: rotate(30deg);
+      transform: rotate(-150deg);
       display: inline-block; }
 
 #line2 {
   position: absolute;
   left: 50%;
-  height: 100%;
+  height: 50%;
   border-left: 1px solid #00ff00; }
   #line2 .label {
     color: #00ff00;
@@ -7547,21 +7548,12 @@ div#pickVariability, #pickFontSize {
 
 #line3 {
   position: absolute;
-  width: 150%;
+  width: 66%;
   top: 50%;
-  left: -25%;
-  transform-origin: center;
+  left: 50%;
+  transform-origin: 0%;
   transform: rotate(30deg);
   border-bottom: 1px solid #0000ff; }
-  #line3 .label {
-    color: #0000ff;
-    text-align: center;
-    display: inline-block;
-    bottom: -50px;
-    right: calc(100px + 10%); }
-    #line3 .label span {
-      transform: rotate(-30deg);
-      display: inline-block; }
 
 .lines {
   width: 100%;
@@ -7571,11 +7563,26 @@ div#pickVariability, #pickFontSize {
   top: -10px;
   pointer-events: none;
   opacity: 0;
-  transition: opacity 500ms ease; }
+  transition: opacity 500ms ease;
+  overflow: visible; }
   .lines .label {
     font-size: 14px;
     font-variation-settings: 'PROP' 1, 'wght' 400;
-    position: absolute; }
+    position: absolute;
+    line-height: 14px; }
+  .lines .line1-label {
+    color: #0000ff;
+    bottom: 200px;
+    right: 40px; }
+  .lines .line2-label {
+    color: #00ff00;
+    top: 20px;
+    left: calc(50% + 20px);
+    z-index: 1; }
+  .lines .line3-label {
+    color: #ff0000;
+    bottom: 200px;
+    left: 20px; }
 
 .lines.loaded {
   opacity: 1; }
@@ -8780,8 +8787,8 @@ ul.casual .rw {
     padding-top: 0px;
     line-height: 15vw; }
   #languagesSm .grid .detail {
-    width: 36.9vw;
-    height: 45vw;
+    width: calc(36.9vw + 1px);
+    height: calc(45vw - 1px);
     font-size: 100px;
     line-height: 100px;
     background-color: #0050FF;
@@ -8825,12 +8832,22 @@ ul.casual .rw {
     position: relative; }
 
 @media (max-width: 767.98px) {
+  #hero {
+    height: 85vh; }
+
+  #THREE {
+    top: -25px;
+    left: -13px;
+    transform: translate(0); }
+
   .pre-footer {
     font-size: 26px;
     line-height: 32px;
     padding: 16px 20px;
     min-height: auto;
-    margin-top: -1px; }
+    margin-top: -2px;
+    z-index: 1;
+    position: relative; }
 
   .pre-footer div:first-child, .footer-top div:first-child, .pre-footer div:nth-child(2) {
     width: 100%; }
@@ -9020,11 +9037,11 @@ span.cm-comment.cm-header.cm-header-2 {
   5% {
     background-color: #266Aff;
     color: white;
-    font-variation-settings: 'wght' 800, 'PROP' 0, 'slnt' -15, 'XPRN' 1; }
+    font-variation-settings: 'wght' 800, 'PROP' 0, 'slnt' 0, 'XPRN' 1; }
   20% {
     background-color: #266Aff;
     color: white;
-    font-variation-settings: 'wght' 800, 'PROP' 0, 'slnt' -15, 'XPRN' 1; }
+    font-variation-settings: 'wght' 800, 'PROP' 0, 'slnt' 0, 'XPRN' 1; }
   25% {
     background-color: #0050FF;
     font-weight: 460;

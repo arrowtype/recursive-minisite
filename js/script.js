@@ -206,7 +206,7 @@ window.onscroll = function(){
 
     let navHeight = 137;
 
-    let moduleWghtVal = Math.floor(interpolate(document.getElementById("weightForItSm").getBoundingClientRect().top, navHeight + 50, window.innerHeight - 60, 900, 100));
+    let moduleWghtVal = Math.floor(interpolate(document.getElementById("weightForItSm").getBoundingClientRect().top, navHeight + 120, window.innerHeight - 200, 900, 100));
     if (moduleWghtVal >= 100 && moduleWghtVal <= 900){ document.getElementById("weightForIt__wghtVal").innerHTML = moduleWghtVal; }
     document.getElementById("weightForIt__xprn0").style.fontVariationSettings = "'XPRN' 0, 'wght' " + moduleWghtVal;
     document.getElementById("weightForIt__xprn25").style.fontVariationSettings = "'XPRN' 0.25, 'wght' " + moduleWghtVal;
@@ -214,13 +214,13 @@ window.onscroll = function(){
     document.getElementById("weightForIt__xprn75").style.fontVariationSettings = "'XPRN' 0.75, 'wght' " + moduleWghtVal;
     document.getElementById("weightForIt__xprn1").style.fontVariationSettings = "'XPRN' 1, 'wght' " + moduleWghtVal;
 
-    let moduleItalVal = interpolate(document.getElementById("truerItalicsSm").getBoundingClientRect().top, navHeight + 50, window.innerHeight - 60, -15, 0).toFixed(2);
+    let moduleItalVal = interpolate(document.getElementById("truerItalicsSm").getBoundingClientRect().top, navHeight + 120, window.innerHeight - 200, -15, 0).toFixed(2);
     if (moduleItalVal >= -15 && moduleItalVal <= 0){ document.getElementById("truerItalics__italVal").innerHTML = moduleItalVal; }
     document.getElementById("truerItalics__crsv0").style.fontVariationSettings = "'ital' 0, 'wght' 700, 'slnt' " + moduleItalVal;
     document.getElementById("truerItalics__crsv1").style.fontVariationSettings = "'ital' 0.5, 'wght' 700, 'slnt' " + moduleItalVal;
     document.getElementById("truerItalics__crsv2").style.fontVariationSettings = "'ital' 1, 'wght' 700, 'slnt' " + moduleItalVal;
 
-    let moduleXprnVal = interpolate(document.getElementById("readyForWorkSm").getBoundingClientRect().top, navHeight + 70, window.innerHeight - 100, 1, 0).toFixed(2);
+    let moduleXprnVal = interpolate(document.getElementById("readyForWorkSm").getBoundingClientRect().top, navHeight + 120, window.innerHeight - 200, 1, 0).toFixed(2);
     if (moduleXprnVal >= 0 && moduleXprnVal <= 1){ document.getElementById("readyForWork__xprnVal").innerHTML = moduleXprnVal; }
     document.getElementById("readyForWork__amp").style.fontVariationSettings = "'wght' 800, 'XPRN' " + moduleXprnVal;
     if (moduleXprnVal > 0.5){
