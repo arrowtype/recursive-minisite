@@ -351,7 +351,7 @@
 
     <script type="text/javascript">
     let wght2 = 800;
-    let prop2 = 0;
+    let mono2 = 0;
     let xprn2 = 0;
     let slnt2 = 0;
     let ital2 = 0.5;
@@ -366,24 +366,24 @@
     })
 
     document.getElementById('monoSlider').addEventListener('input', function () {
-        prop2 = document.getElementById('monoSlider').value;
-        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght2}, 'XPRN' ${xprn2}, 'slnt' ${slnt2}, 'PROP' ${prop2}, 'ital' ${ital2}`
+        mono2 = document.getElementById('monoSlider').value;
+        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght2}, 'XPRN' ${xprn2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'ital' ${ital2}`
         document.getElementById("monoResult").innerHTML = document.getElementById('monoSlider').value;
     })
 
     document.getElementById('wghtSlider').addEventListener('input', function () {
         wght2 = document.getElementById('wghtSlider').value;
-        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght2}, 'XPRN' ${xprn2}, 'slnt' ${slnt2}, 'PROP' ${prop2}, 'ital' ${ital2}`
+        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght2}, 'XPRN' ${xprn2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'ital' ${ital2}`
         document.getElementById("wghtResult").innerHTML = document.getElementById('wghtSlider').value;
     })
     document.getElementById('xprnSlider').addEventListener('input', function () {
         xprn2 = document.getElementById('xprnSlider').value;
-        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght2}, 'XPRN' ${xprn2}, 'slnt' ${slnt2}, 'PROP' ${prop2}, 'ital' ${ital2}`
+        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght2}, 'XPRN' ${xprn2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'ital' ${ital2}`
         document.getElementById("xprnResult").innerHTML = document.getElementById('xprnSlider').value;
     })
     document.getElementById('slntSlider').addEventListener('input', function () {
         slnt2 = document.getElementById('slntSlider').value;
-        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght2}, 'XPRN' ${xprn2}, 'slnt' ${slnt2}, 'PROP' ${prop2}, 'ital' ${ital2}`
+        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght2}, 'XPRN' ${xprn2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'ital' ${ital2}`
         document.getElementById("slntResult").innerHTML = document.getElementById('slntSlider').value;
     })
 
@@ -392,17 +392,17 @@
     document.getElementById("ital-off").onchange = function () {
         ital2 = 0;
         document.getElementById("italResult").innerHTML = document.getElementById('ital-off').value;
-        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght2}, 'XPRN' ${xprn2}, 'slnt' ${slnt2}, 'PROP' ${prop2}, 'ital' ${ital2}`
+        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght2}, 'XPRN' ${xprn2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'ital' ${ital2}`
     }
     document.getElementById("ital-auto").onchange = function () {
         ital2 = 0.5;
         document.getElementById("italResult").innerHTML = document.getElementById('ital-auto').value;
-        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght2}, 'XPRN' ${xprn2}, 'slnt' ${slnt2}, 'PROP' ${prop2}, 'ital' ${ital2}`
+        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght2}, 'XPRN' ${xprn2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'ital' ${ital2}`
     }
     document.getElementById("ital-on").onchange = function () {
         ital2 = 1;
         document.getElementById("italResult").innerHTML = document.getElementById('ital-on').value;
-        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght2}, 'XPRN' ${xprn2}, 'slnt' ${slnt2}, 'PROP' ${prop2}, 'ital' ${ital2}`
+        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght2}, 'XPRN' ${xprn2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'ital' ${ital2}`
     }
 </script>
 </div>

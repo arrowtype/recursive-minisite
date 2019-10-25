@@ -57,13 +57,13 @@
     </div>
     <div class="grs float-left">
         <div class="grs-top">
-            <span class="crsv-0">gr</span><span class="crsv-1">gr</span><span class="crsv-2">gr</span>
+            <span class="ital-0">gr</span><span class="ital-1">gr</span><span class="ital-2">gr</span>
         </div>
         <div class="grs-bottom">
-            <span class="crsv-0">gr</span><span class="crsv-1">gr</span><span class="crsv-2">gr</span>
+            <span class="ital-0">gr</span><span class="ital-1">gr</span><span class="ital-2">gr</span>
         </div>
         <div id="grsMiddle">
-            <span class="crsv-0" id="crsv0">gr</span><span class="crsv-1" id="crsv1">gr</span><span class="crsv-2" id="crsv2">gr</span>
+            <span class="ital-0" id="ital0">gr</span><span class="ital-1" id="ital1">gr</span><span class="ital-2" id="ital2">gr</span>
             <div class="labels">
                 <span>ital: 0 (off)</span>
                 <span>ital: 0.5 (auto)</span>
@@ -82,9 +82,9 @@
 
                 o2.innerHTML = grSlider.value;
 
-            document.getElementById('crsv0').style.fontVariationSettings = "'ital' 0, 'wght' 800, 'slnt' 7.5";
-                document.getElementById('crsv1').style.fontVariationSettings = "'ital' 0.5, 'wght' 800, 'slnt' 7.5";
-                document.getElementById('crsv2').style.fontVariationSettings = "'ital' 1, 'wght' 800, 'slnt' 7.5";
+            document.getElementById('ital0').style.fontVariationSettings = "'MONO' 1, 'ital' 0, 'wght' 800, 'slnt' 7.5";
+                document.getElementById('ital1').style.fontVariationSettings = "'MONO' 1, 'ital' 0.5, 'wght' 800, 'slnt' 7.5";
+                document.getElementById('ital2').style.fontVariationSettings = "'MONO' 1, 'ital' 1, 'wght' 800, 'slnt' 7.5";
 
 
             grSlider.addEventListener('input', function () {
@@ -93,12 +93,12 @@
                 let variable = interpolate(grSlider.value,0,1,0,-15);
                 o2.innerHTML = Math.floor(variable);
                 grs.style.top = grSlider.value*100 + "%";
-                let newStyle = '"ital" 0, "XPRN" 0, "PROP" 0, "slnt" ' + variable + ', "wght" 800';
-                document.getElementById('crsv0').style.fontVariationSettings = "'ital' 0, 'wght' 800, 'slnt' " + variable;
-                document.getElementById('crsv1').style.fontVariationSettings = "'ital' 0.5, 'wght' 800, 'slnt' " + variable;
-                document.getElementById('crsv2').style.fontVariationSettings = "'ital' 1, 'wght' 800, 'slnt' " + variable;
+                let newStyle = '"ital" 0, "XPRN" 0, "MONO" 1, "slnt" ' + variable + ', "wght" 800';
+                document.getElementById('ital0').style.fontVariationSettings = "'MONO' 1, 'ital' 0, 'wght' 800, 'slnt' " + variable;
+                document.getElementById('ital1').style.fontVariationSettings = "'MONO' 1, 'ital' 0.5, 'wght' 800, 'slnt' " + variable;
+                document.getElementById('ital2').style.fontVariationSettings = "'MONO' 1, 'ital' 1, 'wght' 800, 'slnt' " + variable;
 
-                // document.getElementById('crsv2').style.fontVariationSettings = "'XPRN' " + ampersandSlider.value;
+                // document.getElementById('ital2').style.fontVariationSettings = "'XPRN' " + ampersandSlider.value;
             }, false);
 
             controller.addEventListener('input', function () {
@@ -107,10 +107,10 @@
                 let variable = interpolate(grSlider.value,0,1,0,-15);
                 o2.innerHTML = Math.floor(variable);
                 grs.style.top = grSlider.value*100 + "%";
-                let newStyle = '"ital" 0, "XPRN" 0, "PROP" 0, "slnt" ' + variable + ', "wght" 800';
-                document.getElementById('crsv0').style.fontVariationSettings = "'ital' 0, 'wght' 800, 'slnt' " + variable;
-                document.getElementById('crsv1').style.fontVariationSettings = "'ital' 0.5, 'wght' 800, 'slnt' " + variable;
-                document.getElementById('crsv2').style.fontVariationSettings = "'ital' 1, 'wght' 800, 'slnt' " + variable;
+                let newStyle = '"ital" 0, "XPRN" 0, "MONO" 1, "slnt" ' + variable + ', "wght" 800';
+                document.getElementById('ital0').style.fontVariationSettings = "'MONO' 1, 'ital' 0, 'wght' 800, 'slnt' " + variable;
+                document.getElementById('ital1').style.fontVariationSettings = "'MONO' 1, 'ital' 0.5, 'wght' 800, 'slnt' " + variable;
+                document.getElementById('ital2').style.fontVariationSettings = "'MONO' 1, 'ital' 1, 'wght' 800, 'slnt' " + variable;
             }, false);
 
             function interpolate(value, low1, high1, low2, high2) {

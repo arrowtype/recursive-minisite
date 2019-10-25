@@ -20,7 +20,7 @@ Recursive is crafted with adaptability and diversity in mind, offering a complet
 ![alt text](/assets/img/og-img.png "Logo Title Text 1")
 
 
-## Sans & Mono – Two families in one. `PROP`
+## Sans & Mono – Two families in one. `MONO`
 
 The typeface comes in two practical and highly readable subfamilies, Sans and Mono. Thanks to its *Monospace* axis (`MONO`) both of these subfamilies can be used in a single font file. You can even select custom instances that are semi-proportional or semi-monospaced. 
 

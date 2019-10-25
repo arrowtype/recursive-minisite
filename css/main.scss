@@ -151,7 +151,7 @@ body.inverse {
     .toolbar{
         border-bottom: 1px solid white;
         border-top: 1px solid white;
-        #globalProp,#globalXprn,#globalWght,#globalItal,#globalSlnt{
+        #globalMono,#globalXprn,#globalWght,#globalItal,#globalSlnt{
             color:white;
         } 
     }
@@ -233,7 +233,7 @@ body.inverse {
 #globalApplySans{color:grey;}
 #globalApplyMono{color:black;}
 
-#globalProp, #globalWght, #globalXprn, #globalItal, #globalSlnt{
+#globalMono, #globalWght, #globalXprn, #globalItal, #globalSlnt{
     color:black;
     margin-right:7px;
 }
@@ -437,7 +437,7 @@ h2{
     padding: 0px calc(50% - 400px);
     overflow: hidden;
     font-family: 'Recursive' !important; 
-    font-variation-settings:'PROP' 1, 'wght' 400, 'XPRN' 0;
+    font-variation-settings:'MONO' 0, 'wght' 400, 'XPRN' 0;
     > div{
         overflow:visible !important;    
     }
@@ -528,7 +528,7 @@ span.cm-comment{
     background-color:white;
     text-align:right;
     // font-family:Recursive;
-    font-variation-settings: "PROP" 1, "XPRN" 0, "wght" 400, "ital" 0, "slnt" 0 !important;
+    font-variation-settings: "MONO" 1, "XPRN" 0, "wght" 400, "ital" 0, "slnt" 0 !important;
     font-size:15px !important;
 }
 
@@ -582,7 +582,7 @@ span.cm-formatting.cm-formatting-header.cm-formatting-header-6.cm-header.cm-head
     font-family: 'Recursive', sans-serif;
     font-weight:800;
     position: relative;
-    font-variation-settings: "PROP" 1, "XPRN" 200;
+    font-variation-settings: "MONO" 0, "XPRN" 1;
 }
 .CodeMirror .CodeMirror-code .cm-header-6{
     font-size: 1.5rem;
@@ -625,7 +625,7 @@ span.cm-formatting.cm-formatting-header.cm-formatting-header-2.cm-header.cm-head
     font-weight:normal;
     color:$primary;
     font-style:italic;
-    font-variation-settings: "ital" 1;
+    font-variation-settings: "ital" 1, "slnt" -9;
 }
 .cm-strong{
     color:$primary;
@@ -644,7 +644,7 @@ nav.navbar{
     }
     .nav-github-link{
         font-family: 'Recursive';
-        font-variation-settings: 'XPRN' .9, 'PROP' 1, 'wght' 800, 'slnt' -10;
+        font-variation-settings: 'XPRN' .9, 'MONO' 0, 'wght' 800, 'slnt' -10;
         svg{
             margin-left:10px;
         }
@@ -669,12 +669,12 @@ nav.navbar{
     text-transform:uppercase;
     font-style:italic;
     font-family:"Recursive";
-    font-variation-settings: 'PROP' 1, 'wght' 600;
+    font-variation-settings: 'MONO' 0, 'wght' 600;
 }
 
 #hero{
     // font-family: 'Recursive';
-    font-variation-settings:'PROP' 1, 'wght' 400;
+    font-variation-settings:'MONO' 0, 'wght' 400;
     font-size: 150px;
     line-height: 150px;
     color:white;
@@ -852,7 +852,7 @@ div#pickVariability, #pickFontSize {
     min-height:160px;
     background-color:white;
     color:black;
-    font-variation-settings: 'PROP' 1, 'XPRN' 0.6, 'slnt' -10, 'wght' 500;
+    font-variation-settings: 'MONO' 0, 'XPRN' 0.6, 'slnt' -10, 'wght' 500;
     div:nth-child(2){
         width:30%;
     }
@@ -864,7 +864,7 @@ div#pickVariability, #pickFontSize {
     text-align: right;
     display:block;
     color: $primary !important;
-    font-variation-settings: 'wght' 830, 'PROP' 1, 'slnt' 0, 'XPRN' 1;
+    font-variation-settings: 'wght' 830, 'MONO' 0, 'slnt' 0, 'XPRN' 1;
 }
 
 .pre-footer, .footer-top{
@@ -1016,7 +1016,7 @@ div#pickVariability, #pickFontSize {
     overflow: visible;
     .label{
         font-size:14px;
-        font-variation-settings: 'PROP' 1, 'wght' 400;
+        font-variation-settings: 'MONO' 0, 'wght' 400;
         position:absolute;
         line-height: 14px;
     }
@@ -1053,7 +1053,7 @@ $randomNumber: random(2);
   line-height:60px;
   mix-blend-mode: lighten;
     font-weight:800;
-    font-variation-settings: "PROP" 500, "XPRN" 200, "ital" 500, "CRSV" 456;
+    font-variation-settings: "MONO" 1, "XPRN" 1,;
 
     span:not(.loaded){     
         // opacity:0;
@@ -1128,11 +1128,11 @@ $randomNumber: random(2);
         height:375px;
         font-weight: 800;
         font-family:'Recursive';
-        --prop: "PROP" 0;
+        --prop: "MONO" 1;
         --xprn: "XPRN" 0;
         --slnt: "slnt" 0;
         --ital: "ital" 0.5;
-        font-variation-settings: "PROP" 0, "XPRN" 0, "slnt" 0, "ital" 0, "wght" 800;
+        font-variation-settings: "MONO" 1, "XPRN" 0, "slnt" 0, "ital" 0, "wght" 800;
         text-align:center;
         width:100%;
     }
@@ -1314,7 +1314,7 @@ $randomNumber: random(2);
         border:0px;
         padding:0px;
         color:white;
-        font-variation-settings: "wght" 800, "PROP" 0;
+        font-variation-settings: "wght" 800, "MONO" 1;
         cursor:url(/assets/img/cursor-auto.svg), auto;
     }
 
@@ -1326,7 +1326,7 @@ $randomNumber: random(2);
         background-color:transparent;
         border:0px;
         padding:0px;
-        font-variation-settings: "wght" 800, "PROP" 1;
+        font-variation-settings: "wght" 800, "MONO" 0;
         color:white;
         cursor:url(/assets/img/cursor-auto.svg), auto;
         border-top: 1px solid white;
@@ -1366,7 +1366,7 @@ $randomNumber: random(2);
         // left:10px;
         color:white;
         font-family:"Recursive";
-        font-variation-settings: 'PROP' 0;
+        font-variation-settings: 'MONO' 1;
         font-size:12px;
         white-space: nowrap;
         span{
@@ -1440,17 +1440,13 @@ $randomNumber: random(2);
         line-height: 64px;
         font-weight:500;
         color: rgba(255, 255, 255, 0.6);
-        --prop: "PROP" 0;
-        --xprn: "XPRN" 0;
-        --ital: "ital" 0;	   
-        --crsv: "CRSV" 3;
-        font-variation-settings: "PROP" 500, "XPRN" 200, "ital" 500, "CRSV" 456;
+        font-variation-settings: "MONO" 1, "XPRN" 1;
     }
     li.active, li:hover{
         // font-family: 'Recursive', sans-serif;
         color:white;
         font-weight:800;
-        font-variation-settings: "PROP" 1, "XPRN" 200, "ital" 500, "CRSV" 456;
+        font-variation-settings: "MONO" 1, "XPRN" 1;
     }
     #boardCursor{
         position:absolute;
@@ -1535,7 +1531,7 @@ $randomNumber: random(2);
     }
     .label{
         // font-family:"Recursive";
-        font-variation-settings: 'PROP' 0;
+        font-variation-settings: 'MONO' 1;
         font-size: 12px;
         line-height: 14px;
         color: #BDBDBD;
@@ -1547,7 +1543,7 @@ $randomNumber: random(2);
     .label-bottom{
         color:$primary;
         // font-family:"Recursive";
-        font-variation-settings: 'PROP' 0, 'wght' 400;
+        font-variation-settings: 'MONO' 1, 'wght' 400;
         font-size: 12px;
         font-weight:900;
         line-height: 14px;
@@ -1567,12 +1563,12 @@ $randomNumber: random(2);
 
         // font-weight:800;
         transform: translateX(-50%) translateY(-50%);
-        // --prop: "PROP" 0;
+        // --prop: "MONO" 1;
         // --xprn: "XPRN" 0;
         // --ital: "ital" 0;	   
-        // --crsv: "CRSV" 3;
+        // --ital: "CRSV" 3;
         // --wght: "wght" 300;
-        // font-variation-settings: "PROP" 500, "XPRN" 200, "ital" 500, "CRSV" 456, "wght" 800;
+        // font-variation-settings: "MONO" 500, "XPRN" 200, "ital" 500, "CRSV" 456, "wght" 800;
         color:#f8f8f8;
     }
     .dollar:nth-last-child(8) {color:#DFE7F9} 
@@ -1588,7 +1584,7 @@ $randomNumber: random(2);
         top:0px;
         left:0px;
         font-family:"Recursive";
-        font-variation-settings: 'PROP' 0;
+        font-variation-settings: 'MONO' 1;
         font-size: 12px;
         line-height: 14px;
         text-align: right;
@@ -1636,6 +1632,7 @@ body {
 
 #readyForWork{
     padding-top: 16px;
+    font-variation-settings: 'MONO' 1;
 
     .slidecontainer {
         width: calc(100% - 300px);
@@ -1689,13 +1686,13 @@ body {
         transform:translateX(-50%);
         left:30%;
         font-family:"Recursive";
-        font-variation-settings: 'PROP' 0;
+        font-variation-settings: 'MONO' 1;
     }
     .slider-label{
         width:150px;
         padding:3px 20px;
         font-family:"Recursive";
-        font-variation-settings: 'PROP' 0;
+        font-variation-settings: 'MONO' 1;
         color:#858585;
         font-weight:600;
         font-size:12px;
@@ -1948,14 +1945,14 @@ body {
         transform:translateX(-50%);
         left:30%;
         font-family:"Recursive";
-        font-variation-settings: 'PROP' 0;
+        font-variation-settings: 'MONO' 1;
         line-height:16px;
     }
     .slider-label{
         width:150px;
         padding:3px 20px;
         font-family:"Recursive";
-        font-variation-settings: 'PROP' 0;
+        font-variation-settings: 'MONO' 1;
         font-size:12px;
         color:#858585;
         font-weight:600;
@@ -1980,7 +1977,7 @@ div#truerItalics {
     .slider-label{
         width:auto;
         padding:20px 3px;
-        font-variation-settings: "ital" 0, "XPRN" 0, "CRSV" 0, "prop" 0, 'slnt' 0, 'wght' 600;
+        font-variation-settings: "ital" 0, "XPRN" 0, "MONO" 1, 'slnt' 0, 'wght' 600;
     }
     .slider-group{
         width:60px;
@@ -1988,7 +1985,7 @@ div#truerItalics {
     output{
         transform:translateX(-50%) rotate(-90deg);
         font-family:"Recursive";
-        font-variation-settings: 'PROP' 0;
+        font-variation-settings: 'MONO' 1;
         top:43px;
     }
     #grsController {
@@ -2030,7 +2027,7 @@ div#truerItalics {
         width:calc(100% - 260px);
         height:260px;
         margin-left:40px;
-        font-variation-settings: 'wght' 800; 
+        font-variation-settings: 'MONO' 1, 'wght' 800; 
     }
     .grs-top, .grs-bottom, #grsMiddle{
         color:#d9d9d9;
@@ -2042,18 +2039,19 @@ div#truerItalics {
     }
     .grs-bottom{
         top:100%;
-        .crsv-0{ font-variation-settings: "ital" 0, "XPRN" 0, "CRSV" 0, "PROP" 0, 'slnt' -15, 'wght' 800; }
-        .crsv-1{ font-variation-settings: "ital" 0.5, "XPRN" 0, "CRSV" 1, "PROP" 0, 'slnt' -15, 'wght' 800; }
-        .crsv-2{ font-variation-settings: "ital" 1, "XPRN" 0, "CRSV" 2, "PROP" 0, 'slnt' -15, 'wght' 800; }
+        .ital-0{ font-variation-settings: "ital" 0, "XPRN" 0, "MONO" 1, 'slnt' -15, 'wght' 800; }
+        .ital-1{ font-variation-settings: "ital" 0.5, "XPRN" 0, "MONO" 1, 'slnt' -15, 'wght' 800; }
+        .ital-2{ font-variation-settings: "ital" 1, "XPRN" 0, "MONO" 1, 'slnt' -15, 'wght' 800; }
     }
     .grs-top{
-        .crsv-0{ font-variation-settings: "ital" 0, "XPRN" 0, "CRSV" 0, "PROP" 0, 'slnt' 0, 'wght' 800; }
-        .crsv-1{ font-variation-settings: "ital" 0.5, "XPRN" 0, "CRSV" 1, "PROP" 0, 'slnt' 0, 'wght' 800; }
-        .crsv-2{ font-variation-settings: "ital" 1, "XPRN" 0, "CRSV" 2, "PROP" 0, 'slnt' 0, 'wght' 800; }
+        .ital-0{ font-variation-settings: "ital" 0, "XPRN" 0, "MONO" 1, 'slnt' 0, 'wght' 800; }
+        .ital-1{ font-variation-settings: "ital" 0.5, "XPRN" 0, "MONO" 1, 'slnt' 0, 'wght' 800; }
+        .ital-2{ font-variation-settings: "ital" 1, "XPRN" 0, "MONO" 1, 'slnt' 0, 'wght' 800; }
     }
     #grsMiddle{
         color: $primary;
         top:50%;
+        font-variation-settings: 'MONO' 1, 'wght' 800; 
     }
     .labels{
         font-size:12px;
@@ -2062,22 +2060,22 @@ div#truerItalics {
         left:115px;
         position:absolute;
         width: fit-content;
-        font-variation-settings: "ital" 0, "XPRN" 0, "CRSV" 0, "prop" 0, 'slnt' 0, 'wght' 600;
+        font-variation-settings: "ital" 0, "XPRN" 0, "MONO" 1, 'slnt' 0, 'wght' 600;
         span:not(:last-child){
             margin-right:125px !important;
         }
 
         
     }
-    // .crsv-0{
+    // .ital-0{
     //     font-family:'RecMono', monospace;
     //     font-weight:800;
     //     font-variation-settings: "ital" 1, "XPRN" 0, "CRSV" 0;
     // }
-    // .crsv-1{
+    // .ital-1{
     //     font-variation-settings: 'ital' 1, 'XPRN' 0, 'CRSV' 1;
     // }
-    // .crsv-2{
+    // .ital-2{
     //     font-variation-settings: 'ital' 1, 'XPRN' 0, 'CRSV' 2;
     // }
 }
@@ -2291,12 +2289,12 @@ ul:first-child{
 }
 ul.sans .rw{
     font-family: 'Recursive', sans-serif;
-    --prop: 1;
+    --mono: 0;
 }
 
 ul.mono .rw{
     font-family: 'Recursive', monospace;
-    --prop: 0;
+    --mono: 1;
 }
 ul .rw{
     --ital: 0;
@@ -2347,7 +2345,7 @@ ul.casual .rw{--xprn: 1}
 .rw:nth-child(8){--wght: 850}
 .rw:nth-child(9){--wght: 900}
 
-.rw{font-variation-settings:'wght' var(--wght), 'PROP' var(--prop), 'ital' var(--ital), 'slnt' var(--slnt), 'XPRN' var(--xprn)}
+.rw{font-variation-settings:'wght' var(--wght), 'MONO' var(--prop), 'ital' var(--ital), 'slnt' var(--slnt), 'XPRN' var(--xprn)}
 
 .navbar-toggler{
     position: absolute;
@@ -2795,7 +2793,7 @@ pre.CodeMirror-line {
     code{
         color:#7e7e7e;
         font-family: 'Recursive', 'Courier New', Courier, monospace;
-        font-variation-settings: 'wght' 400, 'PROP' 0;
+        font-variation-settings: 'wght' 400, 'MONO' 1;
     }
 
  }
@@ -2839,7 +2837,7 @@ pre.CodeMirror-line {
         position: absolute;
         left: 52%;
         top: 10px;
-        font-variation-settings: 'PROP' 1;
+        font-variation-settings: 'MONO' 0;
     }
     .numbers svg{
         z-index: 1;
@@ -2870,27 +2868,27 @@ pre.CodeMirror-line {
       0%{
           background-color:$primary;
           font-weight: 460;
-          font-variation-settings: 'wght' 400, 'PROP' 0, 'slnt' 0, 'XPRN' 0;
+          font-variation-settings: 'wght' 400, 'MONO' 1, 'slnt' 0, 'XPRN' 0;
       }
       5%{
         background-color:#266Aff;
         color:white;
-        font-variation-settings: 'wght' 800, 'PROP' 0, 'slnt' 0, 'XPRN' 1;
+        font-variation-settings: 'wght' 800, 'MONO' 1, 'slnt' 0, 'XPRN' 1;
       }
       20%{
         background-color:#266Aff;
         color:white;
-        font-variation-settings: 'wght' 800, 'PROP' 0, 'slnt' 0, 'XPRN' 1;
+        font-variation-settings: 'wght' 800, 'MONO' 1, 'slnt' 0, 'XPRN' 1;
       }
       25%{
           background-color:$primary;
           font-weight: 460;
-        font-variation-settings: 'wght' 400, 'PROP' 0, 'slnt' 0, 'XPRN' 0;
+        font-variation-settings: 'wght' 400, 'MONO' 1, 'slnt' 0, 'XPRN' 0;
       }
       100%{
           background-color:$primary;
           font-weight: 460;
-        font-variation-settings: 'wght' 400, 'PROP' 0, 'slnt' 0, 'XPRN' 0;
+        font-variation-settings: 'wght' 400, 'MONO' 1, 'slnt' 0, 'XPRN' 0;
       }
   }
   @keyframes activateBad{
@@ -2978,5 +2976,5 @@ textarea {
   font-family: 'Recursive';
   font-weight: 300 900;  
   /* woff2 font as base64 string */
-  src: url("/assets/fonts/recursive-prop_xprn_weight_slnt_ital--2019_08_26.woff2");
+  src: url("/assets/fonts/rec-mono_xprn_wght_slnt_ital--2019_09_30.woff2");
 }
