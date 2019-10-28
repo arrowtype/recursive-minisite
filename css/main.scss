@@ -2275,6 +2275,11 @@ div#truerItalics {
 
 .powerful-labels-left{
     margin-right:30px;
+    
+    @media (max-width: 600px) {
+        margin-right:12px;
+    }
+
 }
 .powerful-container{
     width:1000px;
@@ -2346,7 +2351,7 @@ ul.casual .rw{--xprn: 1}
 .rw:nth-child(8){--wght: 850}
 .rw:nth-child(9){--wght: 900}
 
-.rw{font-variation-settings:'wght' var(--wght), 'MONO' var(--prop), 'ital' var(--ital), 'slnt' var(--slnt), 'XPRN' var(--xprn)}
+.rw{font-variation-settings:'wght' var(--wght), 'MONO' var(--mono), 'ital' var(--ital), 'slnt' var(--slnt), 'XPRN' var(--xprn);}
 
 .navbar-toggler{
     position: absolute;

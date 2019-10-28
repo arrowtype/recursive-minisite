@@ -8526,6 +8526,9 @@ div#truerItalics {
 
 .powerful-labels-left {
   margin-right: 30px; }
+  @media (max-width: 600px) {
+    .powerful-labels-left {
+      margin-right: 12px; } }
 
 .powerful-container {
   width: 1000px; }
@@ -8604,7 +8607,7 @@ ul.casual .rw {
   --wght: 900; }
 
 .rw {
-  font-variation-settings: "wght" var(--wght), "MONO" var(--prop), "ital" var(--ital), "slnt" var(--slnt), "XPRN" var(--xprn); }
+  font-variation-settings: "wght" var(--wght), "MONO" var(--mono), "ital" var(--ital), "slnt" var(--slnt), "XPRN" var(--xprn); }
 
 .navbar-toggler {
   position: absolute;
