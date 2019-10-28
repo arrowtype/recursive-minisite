@@ -503,7 +503,7 @@ h2{
 span span.cm-comment:not(.cm-formatting), code{
     border-radius:5px !important;
     border:1px solid #dadada;
-    background-color:#f2f2f2 !important;
+    background-color:#f6f6f6 !important;
     padding: 0px 5px;
     z-index:-1;
 }
@@ -511,7 +511,8 @@ span span.cm-comment:not(.cm-formatting), code{
     display:none;
 }
 span.cm-comment{
-    color:#7e7e7e;
+    color: #000;
+    // color:#7e7e7e;
     font-weight:400 !important;
     font-variation-settings: "prop" 400 !important;
 }
