@@ -1,6 +1,6 @@
 const triggers = Array.from(document.querySelectorAll('[data-toggle="collapse"]'));
 let wght = 400;
-let mono = 1;
+let mono = 0;
 let xprn = 0.0;
 let slnt = 0;
 let ital = 0.5;
