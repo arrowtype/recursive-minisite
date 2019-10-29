@@ -32,15 +32,15 @@ let fontVarSet = [prop, wght, xprn, slnt, ital];
     //     }
     // }, false);
 
-window.onload = function() {
+// window.onload = function() {
     // document.getElementsByTagName("body")[0].classList.add("preload");
     setTimeout(function(){ 
     document.getElementsByTagName("body")[0].classList.add("loaded");
-    }, 100);
+    }, 300);
     // setTimeout(function(){ 
     // document.getElementById("THREE").style.opacity = "1";
     // }, 1200);
-}
+// }
 
 // for (const detail of document.getElementsByClassName("detail")){
 //     detail.onclick = function(){

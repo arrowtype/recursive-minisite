@@ -326,12 +326,12 @@ viewer.container = document.getElementById('THREE');
 setTimeout(function(){  
   viewer.onReady();
   document.getElementsByClassName("lines")[0].style.opacity = "1";
-}, 2000);
+}, 1000);
 
 setTimeout(function(){ 
   noLerp = true;
   document.getElementById('THREE').style.pointerEvents = 'auto';
-}, 4000);
+}, 1000);
 
 // viewer.animate();
 // viewer.container.onmousemove = function(){
