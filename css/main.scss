@@ -102,6 +102,9 @@ body.inverse {
     #monoSans, #monoSans *, body.inverse .CodeMirror .CodeMirror-code .cm-header-2{
         background-color:transparent;
     }
+    #monoSans span.letterMono{
+        background-color: #333333;
+    }
     #readyForWork.linear #ampersandMiddle, #readyForWork.casual #ampersandMiddle {
         color:white !important;
     }
@@ -1109,7 +1112,7 @@ $randomNumber: random(2);
 
 
 .d-none-2{
-    transition: color 400ms; 
+    transition: color 550ms; 
     color:rgb(20,20,20) !important;
 }
 // canvas{display:none;}

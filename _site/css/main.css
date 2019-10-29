@@ -6848,6 +6848,8 @@ body.inverse {
     color: black; }
   body.inverse #monoSans, body.inverse #monoSans *, body.inverse body.inverse .CodeMirror .CodeMirror-code .cm-header-2 {
     background-color: transparent; }
+  body.inverse #monoSans span.letterMono {
+    background-color: #333333; }
   body.inverse #readyForWork.linear #ampersandMiddle, body.inverse #readyForWork.casual #ampersandMiddle {
     color: white !important; }
   body.inverse #readyForWork .ampersand-left, body.inverse #readyForWork .ampersand-right {
@@ -7629,7 +7631,7 @@ div#pickVariability, #pickFontSize {
   to {
     opacity: 1; } }
 .d-none-2 {
-  transition: color 400ms;
+  transition: color 550ms;
   color: #141414 !important; }
 
 #singleFile {
