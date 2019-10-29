@@ -7629,6 +7629,7 @@ div#pickVariability, #pickFontSize {
   to {
     opacity: 1; } }
 .d-none-2 {
+  transition: color 400ms;
   color: #141414 !important; }
 
 #singleFile {

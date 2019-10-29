@@ -263,7 +263,6 @@ const viewer = {
       this.textlabels[i].updatePosition();
     }
     let _this = this;
-    console.log(bottomFade);
     for (const letter of document.getElementsByClassName("text-label")){
         if  (letter.firstElementChild.classList.contains("sideA") && !aFade ||
             letter.firstElementChild.classList.contains("sideB") && !bFade ||
@@ -271,7 +270,7 @@ const viewer = {
             letter.firstElementChild.classList.contains("sideD") && !dFade ||
             letter.firstElementChild.classList.contains("top") && !topFade ||
             letter.firstElementChild.classList.contains("bottom") && !bottomFade)
-            { letter.firstElementChild.classList.remove("d-none-2"); } 
+            { letter.firstElementChild.classList.remove("d-none-2");} 
         else{ letter.firstElementChild.classList.add("d-none-2"); }
     }
 

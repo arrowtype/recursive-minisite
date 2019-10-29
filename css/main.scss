@@ -1055,7 +1055,8 @@ $randomNumber: random(2);
     font-weight:800;
     font-variation-settings: "PROP" 500, "XPRN" 200, "ital" 500, "CRSV" 456;
 
-    span:not(.loaded){     
+    span:not(.loaded){  
+        // transition: color 300ms;   
         // opacity:0;
     // -webkit-animation: fadein 1s; 
     //    -moz-animation: fadein 1s; 
@@ -1107,7 +1108,10 @@ $randomNumber: random(2);
 }
 
 
-.d-none-2{color:rgb(20,20,20) !important;}
+.d-none-2{
+    transition: color 400ms; 
+    color:rgb(20,20,20) !important;
+}
 // canvas{display:none;}
 
 
