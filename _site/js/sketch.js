@@ -263,20 +263,21 @@ const viewer = {
       this.textlabels[i].updatePosition();
     }
     let _this = this;
+    console.log(bottomFade);
     for (const letter of document.getElementsByClassName("text-label")){
-        if  (letter.firstElementChild.classList.contains("sideA") && a ||
-            letter.firstElementChild.classList.contains("sideB") && b ||
-            letter.firstElementChild.classList.contains("sideC") && c ||
-            letter.firstElementChild.classList.contains("sideD") && d ||
-            letter.firstElementChild.classList.contains("top") && top ||
-            letter.firstElementChild.classList.contains("bottom") && bottom)
+        if  (letter.firstElementChild.classList.contains("sideA") && !aFade ||
+            letter.firstElementChild.classList.contains("sideB") && !bFade ||
+            letter.firstElementChild.classList.contains("sideC") && !cFade ||
+            letter.firstElementChild.classList.contains("sideD") && !dFade ||
+            letter.firstElementChild.classList.contains("top") && !topFade ||
+            letter.firstElementChild.classList.contains("bottom") && !bottomFade)
             { letter.firstElementChild.classList.remove("d-none-2"); } 
         else{ letter.firstElementChild.classList.add("d-none-2"); }
     }
 
-    function render() {
-        _this.renderer.render(this.scene, this.camera);
-    }
+    // function render() {
+    //     _this.renderer.render(this.scene, this.camera);
+    // }
 
     this.renderer.render(this.scene, this.camera);
     // console.log(this.camera.position);
