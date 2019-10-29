@@ -157,7 +157,7 @@ const viewer = {
 
         var text = this._createTextLabel();
         let letterClass= "d-none-2";
-        text.element.style.fontVariationSettings = "'wght'" + vertices[i].wght + ", 'XPRN'" + vertices[i].xprn + ", 'slnt'" + vertices[i].slnt;
+        text.element.style.fontVariationSettings = "'wght'" + vertices[i].wght + ", 'XPRN'" + vertices[i].xprn + ", 'slnt'" + vertices[i].slnt + ", 'ital' 0";
        
         Number.prototype.between  = function (a, b, inclusive) {
             var min = Math.min.apply(Math, [a,b]),
