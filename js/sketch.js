@@ -331,7 +331,7 @@ setTimeout(function(){
 setTimeout(function(){ 
   noLerp = true;
   document.getElementById('THREE').style.pointerEvents = 'auto';
-}, 1000);
+}, 4000);
 
 // viewer.animate();
 // viewer.container.onmousemove = function(){
