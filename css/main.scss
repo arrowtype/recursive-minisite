@@ -87,6 +87,10 @@ body.module-body{
     }
 }
 
+// select{
+//     font-family: sans-serif;
+// }
+
 body.inverse {
     background-color: black;
     *:not(.cm-em):not(.beta):not(.rw), #singleFile #controls-result, #singleFile #controls-result-sm, #robustLayouts .bad .text span, #robustLayouts .good .text span{
@@ -1134,11 +1138,6 @@ $randomNumber: random(2);
         border:0px;
         height:375px;
         font-weight: 800;
-        font-family:'Recursive';
-        --prop: "PROP" 0;
-        --xprn: "XPRN" 0;
-        --slnt: "slnt" 0;
-        --ital: "ital" 0.5;
         font-variation-settings: "PROP" 0, "XPRN" 0, "slnt" 0, "ital" 0, "wght" 800;
         text-align:center;
         width:100%;
@@ -1238,7 +1237,6 @@ $randomNumber: random(2);
     .controls{
         background-color: #f8f8f8;
         width:100%;
-        font-family:'RecMono', monospace;
         font-weight:450;
         padding:30px;
         
