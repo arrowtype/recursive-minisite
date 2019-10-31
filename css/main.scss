@@ -2271,6 +2271,7 @@ div#truerItalics {
             height:100%;
             line-height:568px;
             // line-height: calc(50vw - 12px);
+            overflow: hidden !important;
             
         }
         svg{
@@ -2299,7 +2300,9 @@ div#truerItalics {
         left:inherit;
         right:0px;
         svg{ right:5px; left:inherit; transform:rotate(90deg); }
-        small{ left:16px; right:inherit;}
+        small{ left:16px; 
+            right:inherit;
+            text-shadow: 0px 0px 2px #0051ff, 0px 0px 2px #0051ff;}
     }
 }
 
