@@ -9,3 +9,4 @@ url:
 permalink: :title/
 sass:
   sass_dir: css
+  style: compressed

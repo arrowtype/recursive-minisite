@@ -157,7 +157,7 @@ const viewer = {
 
         var text = this._createTextLabel();
         let letterClass= "d-none-2";
-        text.element.style.fontVariationSettings = "'MONO'" + 1 + ", 'wght'" + vertices[i].wght + ", 'XPRN'" + vertices[i].xprn + ", 'slnt'" + vertices[i].slnt;
+        text.element.style.fontVariationSettings = "'wght'" + vertices[i].wght + ", 'XPRN'" + vertices[i].xprn + ", 'slnt'" + vertices[i].slnt + ", 'ital' 0";
        
         Number.prototype.between  = function (a, b, inclusive) {
             var min = Math.min.apply(Math, [a,b]),
@@ -264,19 +264,19 @@ const viewer = {
     }
     let _this = this;
     for (const letter of document.getElementsByClassName("text-label")){
-        if  (letter.firstElementChild.classList.contains("sideA") && a ||
-            letter.firstElementChild.classList.contains("sideB") && b ||
-            letter.firstElementChild.classList.contains("sideC") && c ||
-            letter.firstElementChild.classList.contains("sideD") && d ||
-            letter.firstElementChild.classList.contains("top") && top ||
-            letter.firstElementChild.classList.contains("bottom") && bottom)
-            { letter.firstElementChild.classList.remove("d-none-2"); } 
+        if  (letter.firstElementChild.classList.contains("sideA") && !aFade ||
+            letter.firstElementChild.classList.contains("sideB") && !bFade ||
+            letter.firstElementChild.classList.contains("sideC") && !cFade ||
+            letter.firstElementChild.classList.contains("sideD") && !dFade ||
+            letter.firstElementChild.classList.contains("top") && !topFade ||
+            letter.firstElementChild.classList.contains("bottom") && !bottomFade)
+            { letter.firstElementChild.classList.remove("d-none-2");} 
         else{ letter.firstElementChild.classList.add("d-none-2"); }
     }
 
-    function render() {
-        _this.renderer.render(this.scene, this.camera);
-    }
+    // function render() {
+    //     _this.renderer.render(this.scene, this.camera);
+    // }
 
     this.renderer.render(this.scene, this.camera);
     // console.log(this.camera.position);
@@ -326,7 +326,7 @@ viewer.container = document.getElementById('THREE');
 setTimeout(function(){  
   viewer.onReady();
   document.getElementsByClassName("lines")[0].style.opacity = "1";
-}, 2000);
+}, 1000);
 
 setTimeout(function(){ 
   noLerp = true;

@@ -32,15 +32,15 @@ let fontVarSet = [mono, wght, xprn, slnt, ital];
     //     }
     // }, false);
 
-window.onload = function() {
+// window.onload = function() {
     // document.getElementsByTagName("body")[0].classList.add("preload");
     setTimeout(function(){ 
     document.getElementsByTagName("body")[0].classList.add("loaded");
-    }, 100);
+    }, 300);
     // setTimeout(function(){ 
     // document.getElementById("THREE").style.opacity = "1";
     // }, 1200);
-}
+// }
 
 // for (const detail of document.getElementsByClassName("detail")){
 //     detail.onclick = function(){
@@ -72,7 +72,14 @@ document.getElementById("navbarToggler").onclick = function(){
     document.getElementById("navbarTogglerDemo03").classList.toggle("hideOnMobile");
 }
 
-document.getElementById("chooseInstance").onchange = function(){   
+document.getElementsByTagName("select")[0].onmousedown = function(){
+    console.log("hello");
+    this.style.fontFamily = "sans-serif";
+    console.log(this.style);
+}
+
+document.getElementById("chooseInstance").onchange = function(){
+    document.getElementsByTagName("select")[0].style.fontFamily = "'Recursive', sans-serif";   
     let wght = this.selectedOptions[0].getAttribute('data-wght');
     let mono = this.selectedOptions[0].getAttribute('data-mono');
     let xprn = this.selectedOptions[0].getAttribute('data-xprn');
