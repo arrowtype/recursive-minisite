@@ -25,7 +25,7 @@ Recursive draws inspiration from single-stroke casual signpainting, a style of b
 Recursive is crafted with adaptability and diversity in mind, offering a complete type system but ensuring that each style can pair perfectly with its siblings. With so many possible variations across its subfamilies, weights and styles, Recursive allows for a dozen of font combinations that provide enough contrast to clearly define typographic roles, while maintaining a cohesive voice.
 
 
-## Sans & Mono – Two families in one. `PROP`
+## Sans & Mono – Two families in one. `MONO`
 
 The typeface comes in two practical and highly readable subfamilies, Sans and Mono. Thanks to its *Monospace* axis (`MONO`) both of these subfamilies can be used in a single font file. You can even select custom instances that are semi-proportional or semi-monospaced. 
 
@@ -169,7 +169,7 @@ Recursive’s true italics (`ital 1`) replace familiar letterforms with single-s
 <div class="scroll-on-sm my-4" id="truerItalicsSm">
     <div class="x-axis">slnt: <span id="truerItalics__italVal">600</span></div>
     <div class="y-axis"><span>ital: 0 (off)</span><span>ital: 0.5 (auto)</span><span>ital: 1 (on)</span></div>
-    <div class="content" id="truerItalics__content"><span id="truerItalics__crsv0">g</span><span id="truerItalics__crsv1">g</span><span id="truerItalics__crsv2">g</span></div>
+    <div class="content" id="truerItalics__content"><span id="truerItalics__ital0">g</span><span id="truerItalics__ital1">g</span><span id="truerItalics__ital2">g</span></div>
 </div>
 
 ## Powerful, yet simple to use.
