@@ -75,13 +75,10 @@ function measureLetters(inputElem, outputElem){
     let inputSans = inputElem.value;
     let lettersSans = inputSans.split('');
     for (var i=0; i<lettersSans.length; i++){
-        console.log(i)
         outputElem.innerHTML += "<span class='letterSans' id='letter" + i +"'>" + lettersSans[i] + "</span>";
         
         if (widthsDict[inputSans.codePointAt(i)] !== undefined){
             widthVal = widthsDict[inputSans.codePointAt(i)];
-            console.log(inputSans.codePointAt(i))
-            console.log(widthVal)
         } else {
             widthVal = 600;
         }
