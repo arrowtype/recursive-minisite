@@ -34,8 +34,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
 
   <!-- Switch these two lines after a purge: -->
-  <link rel="stylesheet" href="/css/purge-result/main.css">
-  <!-- <link rel="stylesheet" href="/css/main.css"> -->
+  <!-- <link rel="stylesheet" href="/css/purge-result/main.css"> -->
+  <link rel="stylesheet" href="/css/main.css">
   
 
   <style>
@@ -54,7 +54,7 @@
         <div class="pulsating-circle"></div>
         <div id="dollars">
         </div>
-        <div class="label">XPRN</div>
+        <div class="label">CASL</div>
         <div id="xAxis">
             <div class="float-left">864</div><div class="float-right">864</div>
         </div>
@@ -108,7 +108,7 @@
 
             if ((x > (lastX + offset)) || (x < (lastX - offset)) || (y > (lastY + offset)) || (y < (lastY - offset))) {
                 if (yPos < 400 && yPos > 60 && xPos < 933 && xPos > 60 ){
-                document.getElementById("dollars").innerHTML += `<div class='dollar' style='top: ${newY}px; left:${xPos}px; font-variation-settings: "XPRN" ${yAxisLabel.toFixed(2)}, "wght" ${Math.floor(newX)}'>$</div>`;
+                document.getElementById("dollars").innerHTML += `<div class='dollar' style='top: ${newY}px; left:${xPos}px; font-variation-settings: "CASL" ${yAxisLabel.toFixed(2)}, "wght" ${Math.floor(newX)}'>$</div>`;
                 [lastX, lastY] = [x, y];
                 }
             }

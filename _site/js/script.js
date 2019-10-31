@@ -94,7 +94,7 @@ document.getElementById("chooseInstance").onchange = function(){
     document.getElementById('globalXprnSlider').value = xprn;
     document.getElementById('globalSlntSlider').value = slnt;
     document.getElementById('globalMonoSlider').value = mono;
-    let styles = "'MONO' " + mono + ", 'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'ital' " + ital;
+    let styles = "'MONO' " + mono + ", 'wght' " + wght + ", 'CASL' " + xprn + ", 'slnt' " + slnt + ", 'ital' " + ital;
     for (const codemirrors of document.getElementsByClassName("CodeMirror-lines")){codemirrors.style.fontVariationSettings = styles};
     document.getElementsByClassName("mobile-version")[0].style.fontVariationSettings = styles;
     for (const header of document.querySelectorAll("h1, h2, h3, h4, h5, h6, em")){header.style.fontVariationSettings = styles;}
@@ -131,8 +131,8 @@ function hiderShower(trigger, drawer, closestId, activeClass) {
 function globalSlider(id, targetId, index){
     document.getElementById(id).addEventListener('input', function(){
         fontVarSet[index] = document.getElementById(id).value;
-        document.getElementsByClassName("CodeMirror-lines")[0].style.fontVariationSettings = "'MONO' " + fontVarSet[0] + ", 'wght' " + fontVarSet[1] + ", 'XPRN' " + fontVarSet[2] + ", 'slnt' " + fontVarSet[3] + ", 'ital' " + fontVarSet[4];
-        let styles = "'MONO' " + fontVarSet[0] + ", 'wght' " + fontVarSet[1] + ", 'XPRN' " + fontVarSet[2] + ", 'slnt' " + fontVarSet[3] + ", 'ital' " + fontVarSet[4];
+        document.getElementsByClassName("CodeMirror-lines")[0].style.fontVariationSettings = "'MONO' " + fontVarSet[0] + ", 'wght' " + fontVarSet[1] + ", 'CASL' " + fontVarSet[2] + ", 'slnt' " + fontVarSet[3] + ", 'ital' " + fontVarSet[4];
+        let styles = "'MONO' " + fontVarSet[0] + ", 'wght' " + fontVarSet[1] + ", 'CASL' " + fontVarSet[2] + ", 'slnt' " + fontVarSet[3] + ", 'ital' " + fontVarSet[4];
         changeSettings(styles);
         document.getElementById(targetId).innerHTML = fontVarSet[index];
     })
@@ -158,9 +158,9 @@ function globalRadio(id, value){
         ital = value;
         document.querySelector(".radio-ital.active").classList.remove("active");
         this.classList.add("active");
-        document.getElementsByClassName("CodeMirror-lines")[0].style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'MONO' " + mono + ", 'ital' " + ital;
+        document.getElementsByClassName("CodeMirror-lines")[0].style.fontVariationSettings = "'wght' " + wght + ", 'CASL' " + xprn + ", 'slnt' " + slnt + ", 'MONO' " + mono + ", 'ital' " + ital;
         document.getElementById("globalItal").innerHTML = ital;
-        let styles = "'MONO' " + mono + ", 'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'ital' " + ital;
+        let styles = "'MONO' " + mono + ", 'wght' " + wght + ", 'CASL' " + xprn + ", 'slnt' " + slnt + ", 'ital' " + ital;
         changeSettings(styles);
     }
 }
@@ -215,11 +215,11 @@ window.onscroll = function(){
 
     let moduleWghtVal = Math.floor(interpolate(document.getElementById("weightForItSm").getBoundingClientRect().top, navHeight + 120, window.innerHeight - 200, 900, 100));
     if (moduleWghtVal >= 100 && moduleWghtVal <= 900){ document.getElementById("weightForIt__wghtVal").innerHTML = moduleWghtVal; }
-    document.getElementById("weightForIt__xprn0").style.fontVariationSettings = "'XPRN' 0, 'wght' " + moduleWghtVal;
-    document.getElementById("weightForIt__xprn25").style.fontVariationSettings = "'XPRN' 0.25, 'wght' " + moduleWghtVal;
-    document.getElementById("weightForIt__xprn50").style.fontVariationSettings = "'XPRN' 0.50, 'wght' " + moduleWghtVal;
-    document.getElementById("weightForIt__xprn75").style.fontVariationSettings = "'XPRN' 0.75, 'wght' " + moduleWghtVal;
-    document.getElementById("weightForIt__xprn1").style.fontVariationSettings = "'XPRN' 1, 'wght' " + moduleWghtVal;
+    document.getElementById("weightForIt__xprn0").style.fontVariationSettings = "'CASL' 0, 'wght' " + moduleWghtVal;
+    document.getElementById("weightForIt__xprn25").style.fontVariationSettings = "'CASL' 0.25, 'wght' " + moduleWghtVal;
+    document.getElementById("weightForIt__xprn50").style.fontVariationSettings = "'CASL' 0.50, 'wght' " + moduleWghtVal;
+    document.getElementById("weightForIt__xprn75").style.fontVariationSettings = "'CASL' 0.75, 'wght' " + moduleWghtVal;
+    document.getElementById("weightForIt__xprn1").style.fontVariationSettings = "'CASL' 1, 'wght' " + moduleWghtVal;
 
     let moduleItalVal = interpolate(document.getElementById("truerItalicsSm").getBoundingClientRect().top, navHeight + 120, window.innerHeight - 200, -15, 0).toFixed(2);
     if (moduleItalVal >= -15 && moduleItalVal <= 0){ document.getElementById("truerItalics__italVal").innerHTML = moduleItalVal; }
@@ -229,7 +229,7 @@ window.onscroll = function(){
 
     let moduleXprnVal = interpolate(document.getElementById("readyForWorkSm").getBoundingClientRect().top, navHeight + 120, window.innerHeight - 200, 1, 0).toFixed(2);
     if (moduleXprnVal >= 0 && moduleXprnVal <= 1){ document.getElementById("readyForWork__xprnVal").innerHTML = moduleXprnVal; }
-    document.getElementById("readyForWork__amp").style.fontVariationSettings = "'wght' 800, 'XPRN' " + moduleXprnVal;
+    document.getElementById("readyForWork__amp").style.fontVariationSettings = "'wght' 800, 'CASL' " + moduleXprnVal;
     if (moduleXprnVal > 0.5){
         document.getElementById("ampersandTextLeft").classList.add("d-none");
         document.getElementById("ampersandTextRight").classList.remove("d-none");

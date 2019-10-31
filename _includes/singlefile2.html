@@ -37,8 +37,8 @@
     border: 0px;
     min-height: 50vh;
     font-weight: 800;
-    font-family: 'Recursive', sans-serif;
-    font-variation-settings: "MONO" 0, "XPRN" 0, "slnt" 0, "ital" 0, "wght" 800;
+    font-family: 'RecVF', sans-serif;
+    font-variation-settings: "MONO" 0, "CASL" 0, "slnt" 0, "ital" 0, "wght" 800;
     text-align: center;
     width: 100%;
     padding: calc(var(--padding-unit) * 2 * 0.9);
@@ -155,7 +155,7 @@
   #singleFile .controls {
     background-color: var(--offwhite-1);
     width: 100%;
-    font-family: "Recursive", monospace;
+    font-family: 'RecVF', monospace;
     font-weight: 450;
     overflow:hidden !important;
     padding: calc(var(--padding-unit) *2);
@@ -251,10 +251,10 @@
                 </li>
                 <li id="cust-xprn">
                     <div class="ccs-row">
-                        <span class="css d-inline-block"><span class="custom-prop hidden--sm">--xprn</span><span class="hidden--sm">: </span>"<span class="string">XPRN</span>" <span id="xprnResult" class="result" contenteditable="true">0</span><span class="hidden--sm">;</span></span>
+                        <span class="css d-inline-block"><span class="custom-prop hidden--sm">--xprn</span><span class="hidden--sm">: </span>"<span class="string">CASL</span>" <span id="xprnResult" class="result" contenteditable="true">0</span><span class="hidden--sm">;</span></span>
                         <span class="inputs"><input id="xprnSlider" min="0" max="1" value="0" step="0.01" type="range"></span>
                         <span class="comment d-inline-block">
-                            /* Expression: Linear to Casual */
+                            /* Casual: Linear to Casual */
                         </span>
                     </div>
                 </li>
@@ -321,23 +321,23 @@
 
     document.getElementById('monoSlider').addEventListener('input', function () {
         mono2 = document.getElementById('monoSlider').value;
-        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght2}, 'XPRN' ${xprn2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'ital' ${ital2}`
+        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght2}, 'CASL' ${xprn2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'ital' ${ital2}`
         document.getElementById("monoResult").innerHTML = document.getElementById('monoSlider').value;
     })
 
     document.getElementById('wghtSlider').addEventListener('input', function () {
         wght2 = document.getElementById('wghtSlider').value;
-        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght2}, 'XPRN' ${xprn2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'ital' ${ital2}`
+        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght2}, 'CASL' ${xprn2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'ital' ${ital2}`
         document.getElementById("wghtResult").innerHTML = document.getElementById('wghtSlider').value;
     })
     document.getElementById('xprnSlider').addEventListener('input', function () {
         xprn2 = document.getElementById('xprnSlider').value;
-        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght2}, 'XPRN' ${xprn2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'ital' ${ital2}`
+        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght2}, 'CASL' ${xprn2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'ital' ${ital2}`
         document.getElementById("xprnResult").innerHTML = document.getElementById('xprnSlider').value;
     })
     document.getElementById('slntSlider').addEventListener('input', function () {
         slnt2 = document.getElementById('slntSlider').value;
-        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght2}, 'XPRN' ${xprn2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'ital' ${ital2}`
+        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght2}, 'CASL' ${xprn2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'ital' ${ital2}`
         document.getElementById("slntResult").innerHTML = document.getElementById('slntSlider').value;
     })
 
@@ -346,16 +346,16 @@
     document.getElementById("ital-off").onchange = function () {
         ital2 = 0;
         document.getElementById("italResult").innerHTML = document.getElementById('ital-off').value;
-        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght2}, 'XPRN' ${xprn2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'ital' ${ital2}`
+        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght2}, 'CASL' ${xprn2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'ital' ${ital2}`
     }
     document.getElementById("ital-auto").onchange = function () {
         ital2 = 0.5;
         document.getElementById("italResult").innerHTML = document.getElementById('ital-auto').value;
-        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght2}, 'XPRN' ${xprn2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'ital' ${ital2}`
+        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght2}, 'CASL' ${xprn2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'ital' ${ital2}`
     }
     document.getElementById("ital-on").onchange = function () {
         ital2 = 1;
         document.getElementById("italResult").innerHTML = document.getElementById('ital-on').value;
-        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght2}, 'XPRN' ${xprn2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'ital' ${ital2}`
+        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght2}, 'CASL' ${xprn2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'ital' ${ital2}`
     }
 </script>

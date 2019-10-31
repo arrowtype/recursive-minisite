@@ -3,7 +3,7 @@ layout: default
 title: Recursive
 meta-content:
   image: 
-  description: Recursive is a variable font, providing a continuous range of design control across five axes, Proportion, Expression, Weight, Italic, and Cursive.
+  description: Recursive is a variable font, providing a continuous range of design control across five axes, Proportion, Casual, Weight, Italic, and Cursive.
 ---
 
 
@@ -18,7 +18,7 @@ meta-content:
         <div class="temp-hero-controls">
             <ul>
                 <li><span class="label">Proportinal</span>1</li>
-                <li><span class="label">Expression</span>0</li>
+                <li><span class="label">Casual</span>0</li>
                 <li class="active"><span class="label">Weight</span><span id="weightVal">400</span></li>
                 <li><span class="label">Italic</span>0</li>
                 <li><span class="label">Slant</span>0</li>
@@ -32,7 +32,7 @@ meta-content:
 <div class="toolbar clearfix" id="toolbar">
     <select class="toolbar__item" id="chooseInstance">
         {% for instance in site.data.instances %}
-        <option data-mono="{{ instance.MONO }}" data-xprn="{{ instance.XPRN }}" data-ital="{{ instance.ital }}" data-slnt="{{ instance.slnt }}" data-wght="{{ instance.wght }}">{{ instance.name }}</option>
+        <option data-mono="{{ instance.MONO }}" data-xprn="{{ instance.CASL }}" data-ital="{{ instance.ital }}" data-slnt="{{ instance.slnt }}" data-wght="{{ instance.wght }}">{{ instance.name }}</option>
         {% endfor %}
     </select>
     <div class="toolbar__item">
@@ -50,12 +50,12 @@ meta-content:
     </div>
     <div class="toolbar__item">
         <a data-toggle="collapse" data-target="#pickVariability" data-text="Collapse" id="collapseSettings">
-            <span>MONO </span><span id="globalMono">1</span><span>   XPRN </span><span id="globalXprn">0</span><span>   wght </span><span id="globalWght">400</span><span>   ital </span><span id="globalItal">0</span><span>   slnt </span><span id="globalSlnt">0</span>
+            <span>MONO </span><span id="globalMono">1</span><span>   CASL </span><span id="globalXprn">0</span><span>   wght </span><span id="globalWght">400</span><span>   ital </span><span id="globalItal">0</span><span>   slnt </span><span id="globalSlnt">0</span>
         </a>
         <div class="collapse" id="pickVariability">
             <ul>
                 <li><span class="collapse__label">MONO</span> <span class="inputs d-inline-block"><span class="collapse__label"><span class="radio radio-prop" id="globalRadioMono"></span> Mono</span> <span class="collapse__label"><span class="radio radio-prop active" id="globalRadioSans"></span> Sans</span></span></li>
-                <li><span class="collapse__label">XPRN</span><input id="globalXprnSlider" min="0" max="1" value="0" step="0.01" type="range"></li>
+                <li><span class="collapse__label">CASL</span><input id="globalXprnSlider" min="0" max="1" value="0" step="0.01" type="range"></li>
                 <li><span class="collapse__label">wght</span><input id="globalWghtSlider" min="300" max="900" value="400" step="1" type="range"></li>
                 <li><span class="collapse__label">ital</span> <span class="inputs d-inline-block"><span class="collapse__label"><span class="radio active radio-ital" id="globalItalOff"></span> Off</span> <span class="collapse__label"><span class="radio radio-ital" id="globalItalAuto"></span> Auto</span> <span class="collapse__label"><span class="radio radio-ital" id="globalItalOn"></span> On</span></span></li>
                 <li><span class="collapse__label">slnt</span><input id="globalSlntSlider" min="-15" max="0" value="0" step="0.01" type="range"></li>

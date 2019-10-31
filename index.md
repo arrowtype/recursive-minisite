@@ -37,7 +37,7 @@ Also, vertical metrics such as line height, cap height, and x-height are shared 
 
 ### Made for robust layouts.
 
-The characters within both subfamilies, Sans & Mono, maintain the exact same width across all font styles, independently of the values set on the *Weight, Expression, Slant, and Italic* axes. You can therefore use Recursive to create animated font transitions without breaking the layout of UI elements like menus and buttons.
+The characters within both subfamilies, Sans & Mono, maintain the exact same width across all font styles, independently of the values set on the *Weight, Casual, Slant, and Italic* axes. You can therefore use Recursive to create animated font transitions without breaking the layout of UI elements like menus and buttons.
 
 <div id="robustLayouts" class="robustLayoutsSm clearfix my-4">
         <div class="bad" id="bad"><ul class="d-inline-block">
@@ -91,13 +91,13 @@ The characters within both subfamilies, Sans & Mono, maintain the exact same wid
 </div>
 
 
-## Ready for work. Ready for play. `XPRN`
+## Ready for work. Ready for play. `CASL`
 
-Recursive uses its *Expression* axis (`XPRN`) to offer a range of personality, allowing you to get just the right tone for any context. Along this axis, letterforms adjust in stroke curvature, contrast, and terminals to go from a sturdy, rational *Linear* to a friendly, energetic *Casual*. All the styles along this axis are designed to maintain high legibility at medium and text sizes. In display sizes, it is most effective to use either end of the *Expression* axis. 
+Recursive uses its *Casual* axis (`CASL`) to offer a range of personality, allowing you to get just the right tone for any context. Along this axis, letterforms adjust in stroke curvature, contrast, and terminals to go from a sturdy, rational *Linear* to a friendly, energetic *Casual*. All the styles along this axis are designed to maintain high legibility at medium and text sizes. In display sizes, it is most effective to use either end of the *Casual* axis. 
 
-*Linear* (`XPRN 0`) styles have subtly-flattened edges and simple, open forms. This optimizes readability and enables enhanced focus in dense information, such as long-form text and complex code.
+*Linear* (`CASL 0`) styles have subtly-flattened edges and simple, open forms. This optimizes readability and enables enhanced focus in dense information, such as long-form text and complex code.
 
-*Casual* (`XPRN 1`) echoes the soft & curvy brush strokes of casual signpainting, but simplifies these forms for a striking and inviting tone. This makes it ideal for web headlines, code snippets, and command line interfaces.
+*Casual* (`CASL 1`) echoes the soft & curvy brush strokes of casual signpainting, but simplifies these forms for a striking and inviting tone. This makes it ideal for web headlines, code snippets, and command line interfaces.
 
 <div class="scroll-on-sm my-4" id="readyForWorkSm">
     <div class="numbers">
@@ -118,7 +118,7 @@ Recursive uses its *Expression* axis (`XPRN`) to offer a range of personality, a
 <path d="M126.912 124C127.422 122.74 127.862 121.65 128.252 120.69C128.912 119.05 129.432 117.75 129.432 117.69V117.11C129.432 117.04 129.392 117 129.322 117H124.722V118.97C124.722 119.04 124.762 119.08 124.832 119.08H125.492V117.73H127.122C127.572 117.73 128.072 117.72 128.652 117.69V117.9C128.182 118.81 127.842 119.59 127.532 120.36C126.412 123.12 126.132 123.8 126.132 123.9C126.132 123.97 126.172 124.01 126.242 124.01C126.352 124 126.802 124 126.912 124Z" fill="white"/>
 </svg>
     </div>
-    <div class="x-axis">XPRN: <span id="readyForWork__xprnVal">600</span></div>
+    <div class="x-axis">CASL: <span id="readyForWork__xprnVal">600</span></div>
     <div class="content" id="readyForWork__content">
         <span id="readyForWork__amp">&</span>
         <div id="ampersandTextLeft">
@@ -152,7 +152,7 @@ Recursive comes in a wide range of weights, from Light (`300`) to a super-heavy 
 <div class="scroll-on-sm border-bottom my-4" id="weightForItSm">
     <div class="x-axis">wght: <span id="weightForIt__wghtVal">600</span></div>
     <div class="y-axis">
-        <div class="y-axis--rght">XPRN: 0</div>
+        <div class="y-axis--rght">CASL: 0</div>
         <div class="y-axis--left">1.00</div>
     </div>
     <div class="content" id="weightForIt__content">

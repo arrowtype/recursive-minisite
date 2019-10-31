@@ -34,8 +34,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
 
   <!-- Switch these two lines after a purge: -->
-  <link rel="stylesheet" href="/css/purge-result/main.css">
-  <!-- <link rel="stylesheet" href="/css/main.css"> -->
+  <!-- <link rel="stylesheet" href="/css/purge-result/main.css"> -->
+  <link rel="stylesheet" href="/css/main.css">
   
 
   <style>
@@ -103,7 +103,7 @@
         <div class="temp-hero-controls">
             <ul>
                 <li><span class="label">Proportinal</span>1</li>
-                <li><span class="label">Expression</span>0</li>
+                <li><span class="label">Casual</span>0</li>
                 <li class="active"><span class="label">Weight</span><span id="weightVal">400</span></li>
                 <li><span class="label">Italic</span>0</li>
                 <li><span class="label">Slant</span>0</li>
@@ -261,12 +261,12 @@
     </div>
     <div class="toolbar__item">
         <a data-toggle="collapse" data-target="#pickVariability" data-text="Collapse" id="collapseSettings">
-            <span>MONO </span><span id="globalMono">1</span><span>   XPRN </span><span id="globalXprn">0</span><span>   wght </span><span id="globalWght">400</span><span>   ital </span><span id="globalItal">0</span><span>   slnt </span><span id="globalSlnt">0</span>
+            <span>MONO </span><span id="globalMono">1</span><span>   CASL </span><span id="globalXprn">0</span><span>   wght </span><span id="globalWght">400</span><span>   ital </span><span id="globalItal">0</span><span>   slnt </span><span id="globalSlnt">0</span>
         </a>
         <div class="collapse" id="pickVariability">
             <ul>
                 <li><span class="collapse__label">MONO</span> <span class="inputs d-inline-block"><span class="collapse__label"><span class="radio radio-prop" id="globalRadioMono"></span> Mono</span> <span class="collapse__label"><span class="radio radio-prop active" id="globalRadioSans"></span> Sans</span></span></li>
-                <li><span class="collapse__label">XPRN</span><input id="globalXprnSlider" min="0" max="1" value="0" step="0.01" type="range"></li>
+                <li><span class="collapse__label">CASL</span><input id="globalXprnSlider" min="0" max="1" value="0" step="0.01" type="range"></li>
                 <li><span class="collapse__label">wght</span><input id="globalWghtSlider" min="300" max="900" value="400" step="1" type="range"></li>
                 <li><span class="collapse__label">ital</span> <span class="inputs d-inline-block"><span class="collapse__label"><span class="radio active radio-ital" id="globalItalOff"></span> Off</span> <span class="collapse__label"><span class="radio radio-ital" id="globalItalAuto"></span> Auto</span> <span class="collapse__label"><span class="radio radio-ital" id="globalItalOn"></span> On</span></span></li>
                 <li><span class="collapse__label">slnt</span><input id="globalSlntSlider" min="-15" max="0" value="0" step="0.01" type="range"></li>
@@ -318,18 +318,18 @@ Also, vertical metrics such as line height, cap height, and x-height are shared 
 
 ### Made for robust layouts.
 
-The characters within both subfamilies, Sans & Mono, maintain the exact same width across all font styles, independently of the values set on the *Weight, Expression, Slant, and Italic* axes. You can therefore use Recursive to create animated font transitions without breaking the layout of UI elements like menus and buttons.
+The characters within both subfamilies, Sans & Mono, maintain the exact same width across all font styles, independently of the values set on the *Weight, Casual, Slant, and Italic* axes. You can therefore use Recursive to create animated font transitions without breaking the layout of UI elements like menus and buttons.
 
 <iframe src=/robustlayouts></iframe>
 
 
-## Ready for work. Ready for play. `XPRN`
+## Ready for work. Ready for play. `CASL`
 
-Recursive uses its *Expression* axis (`XPRN`) to offer a range of personality, allowing you to get just the right tone for any context. Along this axis, letterforms adjust in stroke curvature, contrast, and terminals to go from a sturdy, rational *Linear* to a friendly, energetic *Casual*. All the styles along this axis are designed to maintain high legibility at medium and text sizes. In display sizes, it is most effective to use either end of the *Expression* axis. 
+Recursive uses its *Casual* axis (`CASL`) to offer a range of personality, allowing you to get just the right tone for any context. Along this axis, letterforms adjust in stroke curvature, contrast, and terminals to go from a sturdy, rational *Linear* to a friendly, energetic *Casual*. All the styles along this axis are designed to maintain high legibility at medium and text sizes. In display sizes, it is most effective to use either end of the *Casual* axis. 
 
-*Linear* (`XPRN 0`) styles have subtly-flattened edges and simple, open forms. This optimizes readability and enables enhanced focus in dense information, such as long-form text and complex code.
+*Linear* (`CASL 0`) styles have subtly-flattened edges and simple, open forms. This optimizes readability and enables enhanced focus in dense information, such as long-form text and complex code.
 
-*Casual* (`XPRN  1`) echoes the soft & curvy brush strokes of casual signpainting, but simplifies these forms for a striking and inviting tone. This makes it ideal for web headlines, code snippets, and command line interfaces.
+*Casual* (`CASL 1`) echoes the soft & curvy brush strokes of casual signpainting, but simplifies these forms for a striking and inviting tone. This makes it ideal for web headlines, code snippets, and command line interfaces.
 
 <iframe src=/readyforwork></iframe>
 

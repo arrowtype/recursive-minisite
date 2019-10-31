@@ -14,7 +14,7 @@
         <div id="line1"></div>
         <div class="line1-label label">Weight</div>
         <div id="line2"></div>
-        <div class="line2-label label">Expression</div>
+        <div class="line2-label label">Casual</div>
         <div id="line3"></div>
         <div class="line3-label label">Slant</div>
       </div>
@@ -28,7 +28,7 @@
 <div class="toolbar clearfix" id="toolbar">
     <select class="toolbar__item" id="chooseInstance">
         {% for instance in site.data.instances %}
-        <option {% if instance.selected%} selected="selected" {% endif %}data-mono="{{ instance.MONO }}" data-xprn="{{ instance.XPRN }}" data-ital="{{ instance.ital }}" data-slnt="{{ instance.slnt }}" data-wght="{{ instance.wght }}">{{ instance.name }}</option>
+        <option {% if instance.selected%} selected="selected" {% endif %}data-mono="{{ instance.MONO }}" data-xprn="{{ instance.CASL }}" data-ital="{{ instance.ital }}" data-slnt="{{ instance.slnt }}" data-wght="{{ instance.wght }}">{{ instance.name }}</option>
         {% endfor %}
     </select>
     <div class="toolbar__item" id="collapseSize">
@@ -48,7 +48,7 @@
         <a data-toggle="collapse" data-target="#pickVariability" data-text="Collapse">
             <span class="grey">MONO </span>
                 <span id="globalMono">0.00</span>
-                <span class="grey">   XPRN </span>
+                <span class="grey">   CASL </span>
                 <span id="globalXprn">0.00</span>
                 <span class="grey">   wght </span>
                 <span id="globalWght">400</span>
@@ -59,9 +59,9 @@
         </a>
         <div class="collapse" id="pickVariability">
             <ul>
-                <li><span class="collapse__label">MONO</span><span class="inputs d-inline-block"><input id="globalMonoSlider" min="0.00" max="1.00" value="1.00"
+                <li><span class="collapse__label">MONO</span><span class="inputs d-inline-block"><input id="globalMonoSlider" min="0.00" max="1.00" value="0.00"
                         step="0.01" type="range"></span></li>
-                <li><span class="collapse__label">XPRN</span><input id="globalXprnSlider" min="0.00" max="1.00" value="0.00"
+                <li><span class="collapse__label">CASL</span><input id="globalXprnSlider" min="0.00" max="1.00" value="0.00"
                         step="0.01" type="range"></li>
                 <li><span class="collapse__label">wght</span><input id="globalWghtSlider" min="300" max="900"
                         value="400" step="1" type="range"></li>

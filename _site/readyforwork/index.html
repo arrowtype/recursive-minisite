@@ -34,8 +34,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
 
   <!-- Switch these two lines after a purge: -->
-  <link rel="stylesheet" href="/css/purge-result/main.css">
-  <!-- <link rel="stylesheet" href="/css/main.css"> -->
+  <!-- <link rel="stylesheet" href="/css/purge-result/main.css"> -->
+  <link rel="stylesheet" href="/css/main.css">
   
 
   <style>
@@ -172,7 +172,7 @@ let ampersandSlider = document.getElementById('ampersandSlider'),
         o.innerHTML = ampersandSlider.value;
         o.style.left = ampersandSlider.value*100 + "%";
         amp.style.left = ampersandSlider.value*100 + "%";
-        amp.style.fontVariationSettings = "'XPRN' " + ampersandSlider.value;
+        amp.style.fontVariationSettings = "'CASL' " + ampersandSlider.value;
         if (ampersandSlider.value == 0){
             document.getElementById("readyForWork").classList.add("linear");
         } else if (ampersandSlider.value == 1){
@@ -188,7 +188,7 @@ ampSlider.addEventListener('input', function () {
     o.innerHTML = ampersandSlider.value;
     o.style.left = ampersandSlider.value*100 + "%";
     amp.style.left = ampersandSlider.value*100 + "%";
-    amp.style.fontVariationSettings = "'XPRN' " + ampersandSlider.value;
+    amp.style.fontVariationSettings = "'CASL' " + ampersandSlider.value;
     if (ampersandSlider.value == 0){
         document.getElementById("readyForWork").classList.add("linear");
     } else if (ampersandSlider.value == 1){
