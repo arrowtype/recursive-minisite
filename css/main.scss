@@ -2863,6 +2863,10 @@ pre.CodeMirror-line {
      width: 100%;
  }
 
+.cm-header {
+    font-feature-settings: 'dlig' 1; // code ligatures
+}
+
  span.cm-comment.cm-header.cm-header-2 {
     font-size: 2.2rem;
 }
