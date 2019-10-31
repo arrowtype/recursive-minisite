@@ -1,10 +1,10 @@
 const triggers = Array.from(document.querySelectorAll('[data-toggle="collapse"]'));
 let wght = 400;
 let mono = 0;
-let xprn = 0.0;
+let casl = 0.0;
 let slnt = 0;
 let ital = 0.5;
-let fontVarSet = [mono, wght, xprn, slnt, ital];
+let fontVarSet = [mono, wght, casl, slnt, ital];
 
 
 // function yIntercept(x1,x2,y1,y2){
@@ -73,28 +73,28 @@ document.getElementById("navbarToggler").onclick = function(){
 }
 
 document.getElementsByTagName("select")[0].onmousedown = function(){
-    console.log("hello");
-    this.style.fontFamily = "'RecVF', sans-serif";
-    console.log(this.style);
+    // console.log("hello");
+    this.style.fontFamily = "sans-serif";
+    // console.log(this.style);
 }
 
 document.getElementById("chooseInstance").onchange = function(){
     document.getElementsByTagName("select")[0].style.fontFamily = "'RecVF', sans-serif";   
     let wght = this.selectedOptions[0].getAttribute('data-wght');
     let mono = this.selectedOptions[0].getAttribute('data-mono');
-    let xprn = this.selectedOptions[0].getAttribute('data-xprn');
+    let casl = this.selectedOptions[0].getAttribute('data-casl');
     let slnt = this.selectedOptions[0].getAttribute('data-slnt');
     let ital = this.selectedOptions[0].getAttribute('data-ital');
     document.getElementById("globalMono").innerHTML = mono;
     document.getElementById("globalWght").innerHTML = wght;
-    document.getElementById("globalXprn").innerHTML = xprn;
+    document.getElementById("globalXprn").innerHTML = casl;
     document.getElementById("globalItal").innerHTML = ital;
     document.getElementById("globalSlnt").innerHTML = slnt;
     document.getElementById('globalWghtSlider').value = wght;
-    document.getElementById('globalXprnSlider').value = xprn;
+    document.getElementById('globalXprnSlider').value = casl;
     document.getElementById('globalSlntSlider').value = slnt;
     document.getElementById('globalMonoSlider').value = mono;
-    let styles = "'MONO' " + mono + ", 'wght' " + wght + ", 'CASL' " + xprn + ", 'slnt' " + slnt + ", 'ital' " + ital;
+    let styles = "'MONO' " + mono + ", 'wght' " + wght + ", 'CASL' " + casl + ", 'slnt' " + slnt + ", 'ital' " + ital;
     for (const codemirrors of document.getElementsByClassName("CodeMirror-lines")){codemirrors.style.fontVariationSettings = styles};
     document.getElementsByClassName("mobile-version")[0].style.fontVariationSettings = styles;
     for (const header of document.querySelectorAll("h1, h2, h3, h4, h5, h6, em")){header.style.fontVariationSettings = styles;}
@@ -158,9 +158,9 @@ function globalRadio(id, value){
         ital = value;
         document.querySelector(".radio-ital.active").classList.remove("active");
         this.classList.add("active");
-        document.getElementsByClassName("CodeMirror-lines")[0].style.fontVariationSettings = "'wght' " + wght + ", 'CASL' " + xprn + ", 'slnt' " + slnt + ", 'MONO' " + mono + ", 'ital' " + ital;
+        document.getElementsByClassName("CodeMirror-lines")[0].style.fontVariationSettings = "'wght' " + wght + ", 'CASL' " + casl + ", 'slnt' " + slnt + ", 'MONO' " + mono + ", 'ital' " + ital;
         document.getElementById("globalItal").innerHTML = ital;
-        let styles = "'MONO' " + mono + ", 'wght' " + wght + ", 'CASL' " + xprn + ", 'slnt' " + slnt + ", 'ital' " + ital;
+        let styles = "'MONO' " + mono + ", 'wght' " + wght + ", 'CASL' " + casl + ", 'slnt' " + slnt + ", 'ital' " + ital;
         changeSettings(styles);
     }
 }
@@ -213,13 +213,13 @@ window.onscroll = function(){
 
     let navHeight = 137;
 
-    let moduleWghtVal = Math.floor(interpolate(document.getElementById("weightForItSm").getBoundingClientRect().top, navHeight + 120, window.innerHeight - 200, 900, 100));
-    if (moduleWghtVal >= 100 && moduleWghtVal <= 900){ document.getElementById("weightForIt__wghtVal").innerHTML = moduleWghtVal; }
-    document.getElementById("weightForIt__xprn0").style.fontVariationSettings = "'CASL' 0, 'wght' " + moduleWghtVal;
-    document.getElementById("weightForIt__xprn25").style.fontVariationSettings = "'CASL' 0.25, 'wght' " + moduleWghtVal;
-    document.getElementById("weightForIt__xprn50").style.fontVariationSettings = "'CASL' 0.50, 'wght' " + moduleWghtVal;
-    document.getElementById("weightForIt__xprn75").style.fontVariationSettings = "'CASL' 0.75, 'wght' " + moduleWghtVal;
-    document.getElementById("weightForIt__xprn1").style.fontVariationSettings = "'CASL' 1, 'wght' " + moduleWghtVal;
+    let moduleWghtVal = Math.floor(interpolate(document.getElementById("weightForItSm").getBoundingClientRect().top, navHeight + 120, window.innerHeight - 200, 1000, 100));
+    if (moduleWghtVal >= 100 && moduleWghtVal <= 1000){ document.getElementById("weightForIt__wghtVal").innerHTML = moduleWghtVal; }
+    document.getElementById("weightForIt__casl0").style.fontVariationSettings = "'CASL' 0, 'wght' " + moduleWghtVal;
+    document.getElementById("weightForIt__casl25").style.fontVariationSettings = "'CASL' 0.25, 'wght' " + moduleWghtVal;
+    document.getElementById("weightForIt__casl50").style.fontVariationSettings = "'CASL' 0.50, 'wght' " + moduleWghtVal;
+    document.getElementById("weightForIt__casl75").style.fontVariationSettings = "'CASL' 0.75, 'wght' " + moduleWghtVal;
+    document.getElementById("weightForIt__casl1").style.fontVariationSettings = "'CASL' 1, 'wght' " + moduleWghtVal;
 
     let moduleItalVal = interpolate(document.getElementById("truerItalicsSm").getBoundingClientRect().top, navHeight + 120, window.innerHeight - 200, -15, 0).toFixed(2);
     if (moduleItalVal >= -15 && moduleItalVal <= 0){ document.getElementById("truerItalics__italVal").innerHTML = moduleItalVal; }
@@ -228,7 +228,7 @@ window.onscroll = function(){
     document.getElementById("truerItalics__ital2").style.fontVariationSettings = "'ital' 1, 'wght' 700, 'slnt' " + moduleItalVal;
 
     let moduleXprnVal = interpolate(document.getElementById("readyForWorkSm").getBoundingClientRect().top, navHeight + 120, window.innerHeight - 200, 1, 0).toFixed(2);
-    if (moduleXprnVal >= 0 && moduleXprnVal <= 1){ document.getElementById("readyForWork__xprnVal").innerHTML = moduleXprnVal; }
+    if (moduleXprnVal >= 0 && moduleXprnVal <= 1){ document.getElementById("readyForWork__caslVal").innerHTML = moduleXprnVal; }
     document.getElementById("readyForWork__amp").style.fontVariationSettings = "'wght' 800, 'CASL' " + moduleXprnVal;
     if (moduleXprnVal > 0.5){
         document.getElementById("ampersandTextLeft").classList.add("d-none");

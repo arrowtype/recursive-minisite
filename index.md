@@ -118,7 +118,7 @@ Recursive uses its *Casual* axis (`CASL`) to offer a range of personality, allow
 <path d="M126.912 124C127.422 122.74 127.862 121.65 128.252 120.69C128.912 119.05 129.432 117.75 129.432 117.69V117.11C129.432 117.04 129.392 117 129.322 117H124.722V118.97C124.722 119.04 124.762 119.08 124.832 119.08H125.492V117.73H127.122C127.572 117.73 128.072 117.72 128.652 117.69V117.9C128.182 118.81 127.842 119.59 127.532 120.36C126.412 123.12 126.132 123.8 126.132 123.9C126.132 123.97 126.172 124.01 126.242 124.01C126.352 124 126.802 124 126.912 124Z" fill="white"/>
 </svg>
     </div>
-    <div class="x-axis">CASL: <span id="readyForWork__xprnVal">600</span></div>
+    <div class="x-axis">CASL: <span id="readyForWork__caslVal">600</span></div>
     <div class="content" id="readyForWork__content">
         <span id="readyForWork__amp">&</span>
         <div id="ampersandTextLeft">
@@ -156,7 +156,7 @@ Recursive comes in a wide range of weights, from Light (`300`) to a super-heavy 
         <div class="y-axis--left">1.00</div>
     </div>
     <div class="content" id="weightForIt__content">
-        <span id="weightForIt__xprn0">$</span><span id="weightForIt__xprn25">$</span><span id="weightForIt__xprn50">$</span><span id="weightForIt__xprn75">$</span><span id="weightForIt__xprn1">$</span>
+        <span id="weightForIt__casl0">$</span><span id="weightForIt__casl25">$</span><span id="weightForIt__casl50">$</span><span id="weightForIt__casl75">$</span><span id="weightForIt__casl1">$</span>
     </div>
 </div>
 

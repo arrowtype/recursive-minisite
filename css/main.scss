@@ -1571,7 +1571,7 @@ $randomNumber: random(2);
         // font-weight:800;
         transform: translateX(-50%) translateY(-50%);
         // --prop: "MONO" 1;
-        // --xprn: "CASL" 0;
+        // --casl: "CASL" 0;
         // --ital: "ital" 0;	   
         // --ital: "CRSV" 3;
         // --wght: "wght" 300;
@@ -2318,8 +2318,8 @@ ul.italic .rw{
     --ital: 1;
     --slnt: -15;
 }
-ul.linear .rw{--xprn: 0}
-ul.casual .rw{--xprn: 1}
+ul.linear .rw{--casl: 0}
+ul.casual .rw{--casl: 1}
 .powerful-table{
     .header{
         font-family: 'RecVF', sans-serif;
@@ -2354,10 +2354,10 @@ ul.casual .rw{--xprn: 1}
 .rw:nth-child(5){--wght: 600}
 .rw:nth-child(6){--wght: 700}
 .rw:nth-child(7){--wght: 800}
-.rw:nth-child(8){--wght: 850}
-.rw:nth-child(9){--wght: 900}
+.rw:nth-child(8){--wght: 900}
+.rw:nth-child(9){--wght: 1000}
 
-.rw{font-variation-settings:'wght' var(--wght), 'MONO' var(--mono), 'ital' var(--ital), 'slnt' var(--slnt), 'CASL' var(--xprn);}
+.rw{font-variation-settings:'wght' var(--wght), 'MONO' var(--mono), 'ital' var(--ital), 'slnt' var(--slnt), 'CASL' var(--casl);}
 
 .navbar-toggler{
     position: absolute;

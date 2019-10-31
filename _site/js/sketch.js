@@ -15,8 +15,8 @@ const slntMin = 0;
 const slntMax = -15;
 const wghtMin = 300;
 const wghtMax = 900;
-const xprnMin = 0;
-const xprnMax = 1;
+const caslMin = 0;
+const caslMax = 1;
 
 const mouse = new THREE.Vector2();
 
@@ -113,7 +113,7 @@ const viewer = {
                 y: y[j],
                 z: z[k], 
                 wght: mapRange(k, 0, numLetters, wghtMin, wghtMax),
-                xprn: mapRange(j, 0, numLetters, xprnMin, xprnMax),
+                casl: mapRange(j, 0, numLetters, caslMin, caslMax),
                 slnt: mapRange(i, 0, numLetters, slntMin, slntMax),
                 display: 1
               })
@@ -123,7 +123,7 @@ const viewer = {
                 y: y[j],
                 z: z[k], 
                 wght: 400,
-                xprn: 1,
+                casl: 1,
                 slnt: 0,
                 display: 1
               })
@@ -133,7 +133,7 @@ const viewer = {
                 y: y[j],
                 z: z[k], 
                 wght: mapRange(k, 0, numLetters, wghtMin, wghtMax),
-                xprn: mapRange(j, 0, numLetters, xprnMin, xprnMax),
+                casl: mapRange(j, 0, numLetters, caslMin, caslMax),
                 slnt: mapRange(i, 0, numLetters, slntMin, slntMax),
                 display: 0,
                 line: true
@@ -158,7 +158,7 @@ const viewer = {
         var text = this._createTextLabel();
         let letterClass= "d-none-2";
 
-        text.element.style.fontVariationSettings = "'MONO'" + 1 + ", 'wght'" + vertices[i].wght + ", 'CASL'" + vertices[i].xprn + ", 'slnt'" + vertices[i].slnt + ", 'ital' 0";
+        text.element.style.fontVariationSettings = "'MONO'" + 1 + ", 'wght'" + vertices[i].wght + ", 'CASL'" + vertices[i].casl + ", 'slnt'" + vertices[i].slnt + ", 'ital' 0";
        
         Number.prototype.between  = function (a, b, inclusive) {
             var min = Math.min.apply(Math, [a,b]),
