@@ -1,10 +1,10 @@
 const triggers = Array.from(document.querySelectorAll('[data-toggle="collapse"]'));
 let wght = 400;
-let prop = 1;
-let xprn = 0.5;
+let mono = 0;
+let xprn = 0.0;
 let slnt = 0;
 let ital = 0.5;
-let fontVarSet = [prop, wght, xprn, slnt, ital];
+let fontVarSet = [mono, wght, xprn, slnt, ital];
 
 
 // function yIntercept(x1,x2,y1,y2){
@@ -81,11 +81,11 @@ document.getElementsByTagName("select")[0].onmousedown = function(){
 document.getElementById("chooseInstance").onchange = function(){
     document.getElementsByTagName("select")[0].style.fontFamily = "'Recursive', sans-serif";   
     let wght = this.selectedOptions[0].getAttribute('data-wght');
-    let prop = this.selectedOptions[0].getAttribute('data-prop');
+    let mono = this.selectedOptions[0].getAttribute('data-mono');
     let xprn = this.selectedOptions[0].getAttribute('data-xprn');
     let slnt = this.selectedOptions[0].getAttribute('data-slnt');
     let ital = this.selectedOptions[0].getAttribute('data-ital');
-    document.getElementById("globalProp").innerHTML = prop;
+    document.getElementById("globalMono").innerHTML = mono;
     document.getElementById("globalWght").innerHTML = wght;
     document.getElementById("globalXprn").innerHTML = xprn;
     document.getElementById("globalItal").innerHTML = ital;
@@ -93,8 +93,8 @@ document.getElementById("chooseInstance").onchange = function(){
     document.getElementById('globalWghtSlider').value = wght;
     document.getElementById('globalXprnSlider').value = xprn;
     document.getElementById('globalSlntSlider').value = slnt;
-    document.getElementById('globalPropSlider').value = prop;
-    let styles = "'PROP' " + prop + ", 'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'ital' " + ital;
+    document.getElementById('globalMonoSlider').value = mono;
+    let styles = "'MONO' " + mono + ", 'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'ital' " + ital;
     for (const codemirrors of document.getElementsByClassName("CodeMirror-lines")){codemirrors.style.fontVariationSettings = styles};
     document.getElementsByClassName("mobile-version")[0].style.fontVariationSettings = styles;
     for (const header of document.querySelectorAll("h1, h2, h3, h4, h5, h6, em")){header.style.fontVariationSettings = styles;}
@@ -131,8 +131,8 @@ function hiderShower(trigger, drawer, closestId, activeClass) {
 function globalSlider(id, targetId, index){
     document.getElementById(id).addEventListener('input', function(){
         fontVarSet[index] = document.getElementById(id).value;
-        document.getElementsByClassName("CodeMirror-lines")[0].style.fontVariationSettings = "'PROP' " + fontVarSet[0] + ", 'wght' " + fontVarSet[1] + ", 'XPRN' " + fontVarSet[2] + ", 'slnt' " + fontVarSet[3] + ", 'ital' " + fontVarSet[4];
-        let styles = "'PROP' " + fontVarSet[0] + ", 'wght' " + fontVarSet[1] + ", 'XPRN' " + fontVarSet[2] + ", 'slnt' " + fontVarSet[3] + ", 'ital' " + fontVarSet[4];
+        document.getElementsByClassName("CodeMirror-lines")[0].style.fontVariationSettings = "'MONO' " + fontVarSet[0] + ", 'wght' " + fontVarSet[1] + ", 'XPRN' " + fontVarSet[2] + ", 'slnt' " + fontVarSet[3] + ", 'ital' " + fontVarSet[4];
+        let styles = "'MONO' " + fontVarSet[0] + ", 'wght' " + fontVarSet[1] + ", 'XPRN' " + fontVarSet[2] + ", 'slnt' " + fontVarSet[3] + ", 'ital' " + fontVarSet[4];
         changeSettings(styles);
         document.getElementById(targetId).innerHTML = fontVarSet[index];
     })
@@ -158,9 +158,9 @@ function globalRadio(id, value){
         ital = value;
         document.querySelector(".radio-ital.active").classList.remove("active");
         this.classList.add("active");
-        document.getElementsByClassName("CodeMirror-lines")[0].style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'PROP' " + prop + ", 'ital' " + ital;
+        document.getElementsByClassName("CodeMirror-lines")[0].style.fontVariationSettings = "'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'MONO' " + mono + ", 'ital' " + ital;
         document.getElementById("globalItal").innerHTML = ital;
-        let styles = "'PROP' " + prop + ", 'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'ital' " + ital;
+        let styles = "'MONO' " + mono + ", 'wght' " + wght + ", 'XPRN' " + xprn + ", 'slnt' " + slnt + ", 'ital' " + ital;
         changeSettings(styles);
     }
 }
@@ -168,7 +168,7 @@ function globalRadio(id, value){
 globalSlider("globalWghtSlider", "globalWght", 1);
 globalSlider("globalXprnSlider", "globalXprn", 2);
 globalSlider("globalSlntSlider", "globalSlnt", 3);
-globalSlider("globalPropSlider", "globalProp", 0);
+globalSlider("globalMonoSlider", "globalMono", 0);
 globalRadio("globalItalOn", 1);
 globalRadio("globalItalAuto", 0.5);
 globalRadio("globalItalOff", 0);
@@ -223,9 +223,9 @@ window.onscroll = function(){
 
     let moduleItalVal = interpolate(document.getElementById("truerItalicsSm").getBoundingClientRect().top, navHeight + 120, window.innerHeight - 200, -15, 0).toFixed(2);
     if (moduleItalVal >= -15 && moduleItalVal <= 0){ document.getElementById("truerItalics__italVal").innerHTML = moduleItalVal; }
-    document.getElementById("truerItalics__crsv0").style.fontVariationSettings = "'ital' 0, 'wght' 700, 'slnt' " + moduleItalVal;
-    document.getElementById("truerItalics__crsv1").style.fontVariationSettings = "'ital' 0.5, 'wght' 700, 'slnt' " + moduleItalVal;
-    document.getElementById("truerItalics__crsv2").style.fontVariationSettings = "'ital' 1, 'wght' 700, 'slnt' " + moduleItalVal;
+    document.getElementById("truerItalics__ital0").style.fontVariationSettings = "'ital' 0, 'wght' 700, 'slnt' " + moduleItalVal;
+    document.getElementById("truerItalics__ital1").style.fontVariationSettings = "'ital' 0.5, 'wght' 700, 'slnt' " + moduleItalVal;
+    document.getElementById("truerItalics__ital2").style.fontVariationSettings = "'ital' 1, 'wght' 700, 'slnt' " + moduleItalVal;
 
     let moduleXprnVal = interpolate(document.getElementById("readyForWorkSm").getBoundingClientRect().top, navHeight + 120, window.innerHeight - 200, 1, 0).toFixed(2);
     if (moduleXprnVal >= 0 && moduleXprnVal <= 1){ document.getElementById("readyForWork__xprnVal").innerHTML = moduleXprnVal; }

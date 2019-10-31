@@ -28,7 +28,7 @@
 <div class="toolbar clearfix" id="toolbar">
     <select class="toolbar__item" id="chooseInstance">
         {% for instance in site.data.instances %}
-        <option {% if instance.selected%} selected="selected" {% endif %}data-prop="{{ instance.PROP }}" data-xprn="{{ instance.XPRN }}" data-ital="{{ instance.ital }}" data-slnt="{{ instance.slnt }}" data-wght="{{ instance.wght }}">{{ instance.name }}</option>
+        <option {% if instance.selected%} selected="selected" {% endif %}data-mono="{{ instance.MONO }}" data-xprn="{{ instance.XPRN }}" data-ital="{{ instance.ital }}" data-slnt="{{ instance.slnt }}" data-wght="{{ instance.wght }}">{{ instance.name }}</option>
         {% endfor %}
     </select>
     <div class="toolbar__item" id="collapseSize">
@@ -47,7 +47,7 @@
     <div class="toolbar__item settings d-none d-md-block" id="collapseSettings">
         <a data-toggle="collapse" data-target="#pickVariability" data-text="Collapse">
             <span class="grey">MONO </span>
-                <span id="globalProp">1.00</span>
+                <span id="globalMono">0.00</span>
                 <span class="grey">   XPRN </span>
                 <span id="globalXprn">0.00</span>
                 <span class="grey">   wght </span>
@@ -59,7 +59,7 @@
         </a>
         <div class="collapse" id="pickVariability">
             <ul>
-                <li><span class="collapse__label">MONO</span><span class="inputs d-inline-block"><input id="globalPropSlider" min="0.00" max="1.00" value="1.00"
+                <li><span class="collapse__label">MONO</span><span class="inputs d-inline-block"><input id="globalMonoSlider" min="0.00" max="1.00" value="1.00"
                         step="0.01" type="range"></span></li>
                 <li><span class="collapse__label">XPRN</span><input id="globalXprnSlider" min="0.00" max="1.00" value="0.00"
                         step="0.01" type="range"></li>

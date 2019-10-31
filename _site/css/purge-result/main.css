@@ -640,7 +640,7 @@ body.inverse {
   body.inverse .toolbar {
     border-bottom: 1px solid white;
     border-top: 1px solid white; }
-    body.inverse .toolbar #globalProp, body.inverse .toolbar #globalXprn, body.inverse .toolbar #globalWght, body.inverse .toolbar #globalItal, body.inverse .toolbar #globalSlnt {
+    body.inverse .toolbar #globalMono, body.inverse .toolbar #globalXprn, body.inverse .toolbar #globalWght, body.inverse .toolbar #globalItal, body.inverse .toolbar #globalSlnt {
       color: white; }
   body.inverse .toolbar .toolbar__item {
     outline-color: white; }
@@ -689,7 +689,7 @@ body.inverse {
   body.inverse #singleFile * {
     color: white; }
 
-#globalProp, #globalWght, #globalXprn, #globalItal, #globalSlnt {
+#globalMono, #globalWght, #globalXprn, #globalItal, #globalSlnt {
   color: black;
   margin-right: 7px; }
 
@@ -850,7 +850,7 @@ h2 {
   padding: 0px calc(50% - 400px);
   overflow: hidden;
   font-family: 'Recursive' !important;
-  font-variation-settings: 'PROP' 1, 'wght' 400, 'XPRN' 0; }
+  font-variation-settings: 'MONO' 0, 'wght' 400, 'XPRN' 0; }
   .CodeMirror-lines > div {
     overflow: visible !important; }
 
@@ -914,7 +914,7 @@ span.cm-comment {
   padding-right: 6px;
   background-color: white;
   text-align: right;
-  font-variation-settings: "PROP" 1, "XPRN" 0, "wght" 400, "ital" 0, "slnt" 0 !important;
+  font-variation-settings: "MONO" 1, "XPRN" 0, "wght" 400, "ital" 0, "slnt" 0 !important;
   font-size: 15px !important; }
 
 iframe {
@@ -959,7 +959,7 @@ span.cm-formatting.cm-formatting-header.cm-formatting-header-6.cm-header.cm-head
   font-family: 'Recursive', sans-serif;
   font-weight: 800;
   position: relative;
-  font-variation-settings: "PROP" 1, "XPRN" 200; }
+  font-variation-settings: "MONO" 1, "XPRN" 200; }
 
 .CodeMirror .CodeMirror-code .cm-header-6 {
   font-size: 1.5rem;
@@ -1014,7 +1014,7 @@ nav.navbar {
     margin-right: 30px; }
   nav.navbar .nav-github-link {
     font-family: 'Recursive';
-    font-variation-settings: 'XPRN' .9, 'PROP' 1, 'wght' 800, 'slnt' -10;
+    font-variation-settings: 'XPRN' .9, 'MONO' 0, 'wght' 800, 'slnt' -10;
     text-align: left;
     position: absolute;
     right: 20px;
@@ -1035,10 +1035,10 @@ nav.navbar {
   text-transform: uppercase;
   font-style: italic;
   font-family: "Recursive";
-  font-variation-settings: 'PROP' 1, 'wght' 600; }
+  font-variation-settings: 'MONO' 0, 'wght' 600; }
 
 #hero {
-  font-variation-settings: 'PROP' 1, 'wght' 400;
+  font-variation-settings: 'MONO' 0, 'wght' 400;
   font-size: 150px;
   line-height: 150px;
   color: white;
@@ -1178,7 +1178,7 @@ div#pickVariability, #pickFontSize {
   min-height: 160px;
   background-color: white;
   color: black;
-  font-variation-settings: 'PROP' 1, 'XPRN' 0.6, 'slnt' -10, 'wght' 500; }
+  font-variation-settings: 'MONO' 0, 'XPRN' 0.6, 'slnt' -10, 'wght' 500; }
   .pre-footer div:nth-child(2) {
     width: 30%; }
 
@@ -1188,7 +1188,7 @@ div#pickVariability, #pickFontSize {
   text-align: right;
   display: block;
   color: #0050FF !important;
-  font-variation-settings: 'wght' 830, 'PROP' 1, 'slnt' 0, 'XPRN' 1; }
+  font-variation-settings: 'wght' 830, 'MONO' 0, 'slnt' 0, 'XPRN' 1; }
 
 .pre-footer, .footer-top {
   display: flex;
@@ -1513,7 +1513,7 @@ div#pickVariability, #pickFontSize {
   border: 0px;
   padding: 0px;
   color: white;
-  font-variation-settings: "wght" 800, "PROP" 0;
+  font-variation-settings: "wght" 800, "MONO" 1;
   cursor: url(/assets/img/cursor-auto.svg), auto; }
 #monoSans #inputSans, #monoSans #inputSansSpans {
   font-family: "Recursive", sans-serif;
@@ -1522,7 +1522,7 @@ div#pickVariability, #pickFontSize {
   background-color: transparent;
   border: 0px;
   padding: 0px;
-  font-variation-settings: "wght" 800, "PROP" 1;
+  font-variation-settings: "wght" 800, "MONO" 1;
   color: white;
   cursor: url(/assets/img/cursor-auto.svg), auto;
   border-top: 1px solid white; }
@@ -1549,7 +1549,7 @@ div#pickVariability, #pickFontSize {
   top: 10px;
   color: white;
   font-family: "Recursive";
-  font-variation-settings: 'PROP' 0;
+  font-variation-settings: 'MONO' 1;
   font-size: 12px;
   white-space: nowrap; }
   #monoSans #inputSansValues span, #monoSans #inputMonoValues span {
@@ -1619,7 +1619,7 @@ div#pickVariability, #pickFontSize {
   100% {
     transform: scale(0.9); } }
 #weightForIt .label {
-  font-variation-settings: 'PROP' 0;
+  font-variation-settings: 'MONO' 1;
   font-size: 12px;
   line-height: 14px;
   color: #BDBDBD;
@@ -1629,7 +1629,7 @@ div#pickVariability, #pickFontSize {
   transform: rotate(-90deg); }
 #weightForIt .label-bottom {
   color: #0050FF;
-  font-variation-settings: 'PROP' 0, 'wght' 400;
+  font-variation-settings: 'MONO' 1, 'wght' 400;
   font-size: 12px;
   font-weight: 900;
   line-height: 14px;
@@ -1666,7 +1666,7 @@ div#pickVariability, #pickFontSize {
   top: 0px;
   left: 0px;
   font-family: "Recursive";
-  font-variation-settings: 'PROP' 0;
+  font-variation-settings: 'MONO' 1;
   font-size: 12px;
   line-height: 14px;
   text-align: right; }
@@ -1747,12 +1747,12 @@ body {
     transform: translateX(-50%);
     left: 30%;
     font-family: "Recursive";
-    font-variation-settings: 'PROP' 0; }
+    font-variation-settings: 'MONO' 1; }
   #readyForWork .slider-label {
     width: 150px;
     padding: 3px 20px;
     font-family: "Recursive";
-    font-variation-settings: 'PROP' 0;
+    font-variation-settings: 'MONO' 1;
     color: #858585;
     font-weight: 600;
     font-size: 12px; }
@@ -1947,13 +1947,13 @@ body {
   transform: translateX(-50%);
   left: 30%;
   font-family: "Recursive";
-  font-variation-settings: 'PROP' 0;
+  font-variation-settings: 'MONO' 1;
   line-height: 16px; }
 #truerItalics .slider-label, #readyForWork .slider-label {
   width: 150px;
   padding: 3px 20px;
   font-family: "Recursive";
-  font-variation-settings: 'PROP' 0;
+  font-variation-settings: 'MONO' 1;
   font-size: 12px;
   color: #858585;
   font-weight: 600;
@@ -1978,7 +1978,7 @@ div#truerItalics {
 #truerItalics output {
   transform: translateX(-50%) rotate(-90deg);
   font-family: "Recursive";
-  font-variation-settings: 'PROP' 0;
+  font-variation-settings: 'MONO' 1;
   top: 43px; }
 #truerItalics #grsController {
   -webkit-appearance: none;
@@ -2023,18 +2023,18 @@ div#truerItalics {
     margin-right: 20px; }
 #truerItalics .grs-bottom {
   top: 100%; }
-  #truerItalics .grs-bottom .crsv-0 {
-    font-variation-settings: "ital" 0, "XPRN" 0, "CRSV" 0, "PROP" 0, 'slnt' -15, 'wght' 800; }
-  #truerItalics .grs-bottom .crsv-1 {
-    font-variation-settings: "ital" 0.5, "XPRN" 0, "CRSV" 1, "PROP" 0, 'slnt' -15, 'wght' 800; }
-  #truerItalics .grs-bottom .crsv-2 {
-    font-variation-settings: "ital" 1, "XPRN" 0, "CRSV" 2, "PROP" 0, 'slnt' -15, 'wght' 800; }
-#truerItalics .grs-top .crsv-0 {
-  font-variation-settings: "ital" 0, "XPRN" 0, "CRSV" 0, "PROP" 0, 'slnt' 0, 'wght' 800; }
-#truerItalics .grs-top .crsv-1 {
-  font-variation-settings: "ital" 0.5, "XPRN" 0, "CRSV" 1, "PROP" 0, 'slnt' 0, 'wght' 800; }
-#truerItalics .grs-top .crsv-2 {
-  font-variation-settings: "ital" 1, "XPRN" 0, "CRSV" 2, "PROP" 0, 'slnt' 0, 'wght' 800; }
+  #truerItalics .grs-bottom .ital-0 {
+    font-variation-settings: "ital" 0, "XPRN" 0, "CRSV" 0, "MONO" 1, 'slnt' -15, 'wght' 800; }
+  #truerItalics .grs-bottom .ital-1 {
+    font-variation-settings: "ital" 0.5, "XPRN" 0, "CRSV" 1, "MONO" 1, 'slnt' -15, 'wght' 800; }
+  #truerItalics .grs-bottom .ital-2 {
+    font-variation-settings: "ital" 1, "XPRN" 0, "CRSV" 2, "MONO" 1, 'slnt' -15, 'wght' 800; }
+#truerItalics .grs-top .ital-0 {
+  font-variation-settings: "ital" 0, "XPRN" 0, "CRSV" 0, "MONO" 1, 'slnt' 0, 'wght' 800; }
+#truerItalics .grs-top .ital-1 {
+  font-variation-settings: "ital" 0.5, "XPRN" 0, "CRSV" 1, "MONO" 1, 'slnt' 0, 'wght' 800; }
+#truerItalics .grs-top .ital-2 {
+  font-variation-settings: "ital" 1, "XPRN" 0, "CRSV" 2, "MONO" 1, 'slnt' 0, 'wght' 800; }
 #truerItalics #grsMiddle {
   color: #0050FF;
   top: 50%; }
@@ -2211,11 +2211,11 @@ div#truerItalics {
 
 ul.sans .rw {
   font-family: 'Recursive', sans-serif;
-  --prop: 1; }
+  --mono: 0; }
 
 ul.mono .rw {
   font-family: 'Recursive', monospace;
-  --prop: 0; }
+  --mono: 1; }
 
 ul .rw {
   --ital: 0;
@@ -2278,7 +2278,7 @@ ul.casual .rw {
   --wght: 900; }
 
 .rw {
-  font-variation-settings: "wght" var(--wght), "PROP" var(--prop), "ital" var(--ital), "slnt" var(--slnt), "XPRN" var(--xprn); }
+  font-variation-settings: "wght" var(--wght), "MONO" var(--mono), "ital" var(--ital), "slnt" var(--slnt), "XPRN" var(--xprn); }
 
 .navbar-toggler {
   position: absolute;
@@ -2651,7 +2651,7 @@ ul.casual .rw {
   code {
     color: #7e7e7e;
     font-family: 'Recursive', 'Courier New', Courier, monospace;
-    font-variation-settings: 'wght' 400, 'PROP' 0; } }
+    font-variation-settings: 'wght' 400, 'MONO' 1; } }
 
 span.cm-comment.cm-header.cm-header-2 {
   font-size: 2.2rem; }
@@ -2674,7 +2674,7 @@ span.cm-comment.cm-header.cm-header-2 {
   position: absolute;
   left: 52%;
   top: 10px;
-  font-variation-settings: 'PROP' 1; }
+  font-variation-settings: 'MONO' 0; }
 #readyForWorkSm .numbers svg {
   z-index: 1;
   position: absolute;
@@ -2703,7 +2703,7 @@ span.cm-comment.cm-header.cm-header-2 {
   0% {
     background-color: #0050FF;
     font-weight: 460;
-    font-variation-settings: 'wght' 400, 'PROP' 0, 'slnt' 0, 'XPRN' 0; }
+    font-variation-settings: 'wght' 400, 'MONO' 1, 'slnt' 0, 'XPRN' 0; }
   5% {
     background-color: #266Aff;
     color: white;
@@ -2715,11 +2715,11 @@ span.cm-comment.cm-header.cm-header-2 {
   25% {
     background-color: #0050FF;
     font-weight: 460;
-    font-variation-settings: 'wght' 400, 'PROP' 0, 'slnt' 0, 'XPRN' 0; }
+    font-variation-settings: 'wght' 400, 'MONO' 1, 'slnt' 0, 'XPRN' 0; }
   100% {
     background-color: #0050FF;
     font-weight: 460;
-    font-variation-settings: 'wght' 400, 'PROP' 0, 'slnt' 0, 'XPRN' 0; } }
+    font-variation-settings: 'wght' 400, 'MONO' 1, 'slnt' 0, 'XPRN' 0; } }
 @keyframes activateBad {
   0% {
     font-weight: normal;
