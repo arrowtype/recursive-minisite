@@ -98,7 +98,7 @@ function measureLetters(inputElem, outputElem){
         if (widthsDict[inputSans.codePointAt(i)] !== undefined){
             widthVal = widthsDict[inputSans.codePointAt(i)][0];
         } else {
-            widthVal = 598;
+            widthVal = 600;
         }
         let printVal = interpolate(widthVal, 0, 900, 0, 250);
         document.getElementById("inputSansValues").innerHTML += '<span class="d-inline-block" style="width: ' + printVal + 'px">'+widthVal+'</span>';

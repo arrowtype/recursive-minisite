@@ -34,8 +34,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
 
   <!-- Switch these two lines after a purge: -->
-  <link rel="stylesheet" href="/css/purge-result/main.css">
-  <!-- <link rel="stylesheet" href="/css/main.css"> -->
+  <!-- <link rel="stylesheet" href="/css/purge-result/main.css"> -->
+  <link rel="stylesheet" href="/css/main.css">
   
 
   <style>
@@ -144,7 +144,7 @@ function measureLetters(inputElem, outputElem){
         if (widthsDict[inputSans.codePointAt(i)] !== undefined){
             widthVal = widthsDict[inputSans.codePointAt(i)][0];
         } else {
-            widthVal = 598;
+            widthVal = 600;
         }
         let printVal = interpolate(widthVal, 0, 900, 0, 250);
         document.getElementById("inputSansValues").innerHTML += '<span class="d-inline-block" style="width: ' + printVal + 'px">'+widthVal+'</span>';

@@ -17,7 +17,7 @@ Recursive draws inspiration from single-stroke casual signpainting, a style of b
 Recursive is crafted with adaptability and diversity in mind, offering a complete type system but ensuring that each style can pair perfectly with its siblings. With so many possible variations across its subfamilies, weights and styles, Recursive allows for a dozen of font combinations that provide enough contrast to clearly define typographic roles, while maintaining a cohesive voice.
 
 
-## Sans & Mono – Two families in one. `PROP`
+## Sans & Mono – Two families in one. `MONO`
 
 The typeface comes in two practical and highly readable subfamilies, Sans and Mono. Thanks to its *Monospace* axis (`MONO`) both of these subfamilies can be used in a single font file. You can even select custom instances that are semi-proportional or semi-monospaced. 
 
@@ -31,25 +31,25 @@ Also, vertical metrics such as line height, cap height, and x-height are shared 
 
 ### Made for robust layouts.
 
-The characters within both subfamilies, Sans & Mono, maintain the exact same width across all font styles, independently of the values set on the *Weight, Expression, Slant, and Italic* axes. You can therefore use Recursive to create animated font transitions without breaking the layout of UI elements like menus and buttons.
+The characters within both subfamilies, Sans & Mono, maintain the exact same width across all font styles, independently of the values set on the *Weight, Casual, Slant, and Italic* axes. You can therefore use Recursive to create animated font transitions without breaking the layout of UI elements like menus and buttons.
 
 <iframe src=/robustlayouts></iframe>
 
 
-## Ready for work. Ready for play. `XPRN`
+## Ready for work. Ready for play. `CASL`
 
-Recursive uses its *Expression* axis (`XPRN`) to offer a range of personality, allowing you to get just the right tone for any context. Along this axis, letterforms adjust in stroke curvature, contrast, and terminals to go from a sturdy, rational *Linear* to a friendly, energetic *Casual*. All the styles along this axis are designed to maintain high legibility at medium and text sizes. In display sizes, it is most effective to use either end of the *Expression* axis. 
+Recursive uses its *Casual* axis (`CASL`) to offer a range of personality, allowing you to get just the right tone for any context. Along this axis, letterforms adjust in stroke curvature, contrast, and terminals to go from a sturdy, rational *Linear* to a friendly, energetic *Casual*. All the styles along this axis are designed to maintain high legibility at medium and text sizes. In display sizes, it is most effective to use either end of the *Casual* axis. 
 
-*Linear* (`XPRN 0`) styles have subtly-flattened edges and simple, open forms. This optimizes readability and enables enhanced focus in dense information, such as long-form text and complex code.
+*Linear* (`CASL 0`) styles have subtly-flattened edges and simple, open forms. This optimizes readability and enables enhanced focus in dense information, such as long-form text and complex code.
 
-*Casual* (`XPRN  1`) echoes the soft & curvy brush strokes of casual signpainting, but simplifies these forms for a striking and inviting tone. This makes it ideal for web headlines, code snippets, and command line interfaces.
+*Casual* (`CASL 1`) echoes the soft & curvy brush strokes of casual signpainting, but simplifies these forms for a striking and inviting tone. This makes it ideal for web headlines, code snippets, and command line interfaces.
 
 <iframe src=/readyforwork></iframe>
 
 
 ## Light to Heavy. And everything in between. `wght`
 
-Recursive comes in a wide range of weights, from Light (`300`) to a super-heavy Black (`900`). You can choose from its seven predefined weights, or set a custom value through its *Weight* (`wght`) axis. And because Recursive maintains consistent letterforms along the entire *Weight* axis, it allows for smooth animations between any of its different weights.
+Recursive comes in a wide range of weights, from Light (`300`) to a super-heavy ExtraBlack (`1000`). You can choose from its seven predefined weights, or set a custom value through its *Weight* (`wght`) axis. And because Recursive maintains consistent letterforms along the entire *Weight* axis, it allows for smooth animations between any of its different weights.
 
 <iframe src=/weightforit></iframe>
 

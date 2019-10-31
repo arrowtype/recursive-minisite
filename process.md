@@ -20,7 +20,7 @@ Recursive is crafted with adaptability and diversity in mind, offering a complet
 ![alt text](/assets/img/og-img.png "Logo Title Text 1")
 
 
-## Sans & Mono – Two families in one. `PROP`
+## Sans & Mono – Two families in one. `MONO`
 
 The typeface comes in two practical and highly readable subfamilies, Sans and Mono. Thanks to its *Monospace* axis (`MONO`) both of these subfamilies can be used in a single font file. You can even select custom instances that are semi-proportional or semi-monospaced. 
 
@@ -32,16 +32,16 @@ Also, vertical metrics such as line height, cap height, and x-height are shared 
 
 ### Made for robust layouts.
 
-The characters within both subfamilies, Sans & Mono, maintain the exact same width across all font styles, independently of the values set on the *Weight, Expression, Slant, and Italic* axes. You can therefore use Recursive to create animated font transitions without breaking the layout of UI elements like menus and buttons.
+The characters within both subfamilies, Sans & Mono, maintain the exact same width across all font styles, independently of the values set on the *Weight, Casual, Slant, and Italic* axes. You can therefore use Recursive to create animated font transitions without breaking the layout of UI elements like menus and buttons.
 
 
-## Ready for work. Ready for play. `XPRN`
+## Ready for work. Ready for play. `CASL`
 
-Recursive uses its *Expression* axis (`XPRN`) to offer a range of personality, allowing you to get just the right tone for any context. Along this axis, letterforms adjust in stroke curvature, contrast, and terminals to go from a sturdy, rational *Linear* to a friendly, energetic *Casual*. All the styles along this axis are designed to maintain high legibility at medium and text sizes. In display sizes, it is most effective to use either end of the *Expression* axis. 
+Recursive uses its *Casual* axis (`CASL`) to offer a range of personality, allowing you to get just the right tone for any context. Along this axis, letterforms adjust in stroke curvature, contrast, and terminals to go from a sturdy, rational *Linear* to a friendly, energetic *Casual*. All the styles along this axis are designed to maintain high legibility at medium and text sizes. In display sizes, it is most effective to use either end of the *Casual* axis. 
 
-*Linear* (`XPRN 0`) styles have subtly-flattened edges and simple, open forms. This optimizes readability and enables enhanced focus in dense information, such as long-form text and complex code.
+*Linear* (`CASL 0`) styles have subtly-flattened edges and simple, open forms. This optimizes readability and enables enhanced focus in dense information, such as long-form text and complex code.
 
-*Casual* (`XPRN  1`) echoes the soft & curvy brush strokes of casual signpainting, but simplifies these forms for a striking and inviting tone. This makes it ideal for web headlines, code snippets, and command line interfaces.
+*Casual* (`CASL 1`) echoes the soft & curvy brush strokes of casual signpainting, but simplifies these forms for a striking and inviting tone. This makes it ideal for web headlines, code snippets, and command line interfaces.
 
 
 ## Light to Heavy. And everything in between. `wght`

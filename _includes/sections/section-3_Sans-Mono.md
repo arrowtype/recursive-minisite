@@ -3,7 +3,7 @@
 Recursive is crafted with adaptability and diversity in mind, offering a complete type system but ensuring that each style can pair perfectly with its siblings. With so many possible variations across its subfamilies, weights and styles, Recursive allows for a dozen of font combinations that provide enough contrast to clearly define typographic roles, while maintaining a cohesive voice.
 
 
-## Sans & Mono – Two families in one. `PROP`
+## Sans & Mono – Two families in one. `MONO`
 
 The typeface comes in two practical and highly readable subfamilies, Sans and Mono. Thanks to its *Monospace* axis (`MONO`) both of these subfamilies can be used in a single font file. You can even select custom instances that are semi-proportional or semi-monospaced. 
 
