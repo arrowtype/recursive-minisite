@@ -2223,21 +2223,22 @@ div#truerItalics {
 .grid{
     cursor:zoom-in;
     padding-bottom: 2px;
+    border-top: 1px solid #E0E0DF;
     // background-color:#f7f7f7;
     span{
         width:69px;
         height:71px;
-        outline-color:#e0e0e0;
         background-color:white;
-        outline-width: 1px;
-        outline-style:solid;
+        border: 1px solid #E0E0DF;
+        border-top: none;
+        border-left: none;
         display:block;
         float:left;
         font-size:40px;
         padding:6px;
         color:#e0e0e0;
         text-align:center;
-        padding-top:28px;
+        padding-top:24px;
         font-family:'RecVF';
         position:relative;
     }
@@ -2287,6 +2288,7 @@ div#truerItalics {
             width: 80%;
             font-size: 14px;
             line-height:17px;
+            text-shadow: 0px 0px 2px #0051ff, 0px 0px 2px #0051ff;
             // display:none;
         }
     }
@@ -2302,7 +2304,7 @@ div#truerItalics {
         svg{ right:5px; left:inherit; transform:rotate(90deg); }
         small{ left:16px; 
             right:inherit;
-            text-shadow: 0px 0px 2px #0051ff, 0px 0px 2px #0051ff;}
+            }
     }
 }
 
