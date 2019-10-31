@@ -885,6 +885,11 @@ div#pickVariability, #pickFontSize {
     }
 }
 
+.pre-footer, .footer-top, .footer-bottom{
+    p {
+        max-width: 88ch;
+    }
+}
 .footer-top{
     padding:23px 33px;
     div:first-child{
@@ -3033,5 +3038,5 @@ textarea {
   font-family: 'RecVF';
   font-weight: 300 1000;  
   /* woff2 font as base64 string */
-  src: url("/assets/fonts/recursive-MONO_CASL_wght_slnt_ital--2019_10_31-11_10.woff2");
+  src: url("/assets/fonts/recursive-MONO_CASL_wght_slnt_ital--2019_10_31-18_00.woff2");
 }

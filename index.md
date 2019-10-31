@@ -27,9 +27,9 @@ Recursive is crafted with adaptability and diversity in mind, offering a complet
 
 ## Sans && Mono. In one file. `MONO`
 
-The typeface comes in two practical and highly readable subfamilies, Sans and Mono. Thanks to its *Monospace* axis (`MONO`) both of these subfamilies can be used in a single font file. You can even select custom instances that are semi-proportional or semi-monospaced. 
+The typeface comes in two practical and highly readable subfamilies, Sans and Mono. Thanks to its *Monospace* axis (`MONO`), both of these subfamilies can be used in a single font file. You can even select custom instances that are semi-proportional or semi-monospaced. 
 
-Also, vertical metrics such as line height, cap height, and x-height are shared across the entire *Monospace* axis. This allows harmonious and performant layouts, even where different proportions are mixed, such as in data-rich applications and technical documentation. 
+Of course, vertical metrics such as line height, cap height, and x-height are shared across the entire *Monospace* axis. This allows harmonious and performant layouts, even where different proportions are mixed, such as in data-rich applications and technical documentation. 
 
 *Recursive Sans* is made for text & user interface design. While its proportional characters deliver comfortable reading at text sizes, its heaviest weights are perfect to create punchy, tightly-spaced headlines.
 
