@@ -7326,6 +7326,22 @@ To meet the needs of global communication, Recursive supports a wide range of La
         </div>
 </div>
 
+<script type="text/javascript">
+document.getElementById("grid").onmouseover = function(e){
+    if (e.clientX > window.outerWidth /2){
+        document.getElementById("grid").classList.add("left");
+    } else {
+        document.getElementById("grid").classList.remove("left");
+    }
+    if (e.clientY > document.getElementById("grid").getBoundingClientRect().bottom - 568){
+        document.getElementById("grid").classList.add("bottom");
+    } else {
+        document.getElementById("grid").classList.remove("bottom");
+    }
+}
+</script>
+
+
 	</div>
 		
 <div class="pre-footer">

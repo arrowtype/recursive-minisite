@@ -53,14 +53,14 @@
         <div class="position-relative">
             <div class="element" id="inputMonoSpans">Wi#7%:</div>
             <div id="inputMonoValues"></div>
-            <input type="text" id="inputMono" value="Wi#7%:"maxlength="8" ></input>
+            <input type="text" id="inputMono" value="Wi#7%_"></input>
             
             
         </div>
         <div class="position-relative">
             <div class="element" id="inputSansSpans"></div>
             <div id="inputSansValues"></div>
-            <input type="text" id="inputSans" value="Wi#7%:"maxlength="8" ></input>
+            <input type="text" id="inputSans" value="Wi#7%_"></input>
         </div>
     </div>
 </div>
@@ -71,7 +71,7 @@
             const widthsDict = widthData();
             const testWord = document.querySelector(".test");
             const output = document.querySelector(".output");
-            let words = ["8W!&ã@", "Reader", "Writer", "Editor"];
+            // let words = ["8W!&ã@", "Reader", "Writer", "Editor"];
             let c="0";
             let enableHandler = true;
 
@@ -88,15 +88,26 @@
             for (var i=0; i<lettersMono.length; i++){
                 document.getElementById("inputMonoSpans").innerHTML += "<span class='letterMono' id='letterMono" + i +"'>" + lettersMono[i] + "</span>";
                 let printVal = document.getElementById("letterMono" + i).clientWidth;
-                document.getElementById("inputMonoValues").innerHTML += '<span class="d-inline-block" style="width: ' + printVal + 'px">600</span>';
+                document.getElementById("inputMonoValues").innerHTML += '<span class="d-inline-block" style="width: ' + printVal + 'px">600</span>';      
             } 
 
-            document.getElementById("inputSans").onkeyup = function(){
+            document.getElementById("inputSans").onkeyup = function(e){
+                // document.getElementById('letter'+ e.target.selectionStart).style.color = 'red';
+                // document.getElementById('letter'+ e.target.selectionStart).classList.add('blinking-child');
+                // console.log(e.target.selectionStart);
+                // console.log(document.getElementById('letter'+ e.target.selectionStart - 1));
+                document.getElementById("inputSans").scrollLeft = "0px";
                 measureLetters(document.getElementById("inputSans"), document.getElementById("inputSansSpans"));
                 document.getElementById("inputMono").value = document.getElementById("inputSans").value;
+                let highlightedLetter = e.target.selectionStart - 1
+                document.getElementById('letter'+ highlightedLetter).classList.add('blinking-child');
+            }
+            document.getElementById("inputSans").onmousedown = function(e){
+                // document.getElementById('letter'+ e.target.selectionStart).classList.add('blinking-child');
             }
 
             document.getElementById("inputMono").onkeyup = function(){
+                document.getElementById("inputSans").scrollLeft = "0px";
                 document.getElementById("inputSans").value = document.getElementById("inputMono").value;
                 document.getElementById("inputMonoSpans").innerHTML = '';
                 for (var i=0; i<document.getElementById("inputMono").value.length; i++){
@@ -105,7 +116,14 @@
                 measureLetters(document.getElementById("inputSans"), document.getElementById("inputSansSpans"))
             }
 
-            measureLetters(document.getElementById("inputSans"), document.getElementById("inputSansSpans"))
+            // var container = document.getElementById("inputSans");
+            // setInterval(function(){
+            // container.scrollLeft = "0px";
+            // }, 100);
+
+            measureLetters(document.getElementById("inputSans"), document.getElementById("inputSansSpans"));
+            document.getElementById("letter" + 5).classList.add("start-blink");
+
 
     // }
 
@@ -128,12 +146,13 @@ function measureLetters(inputElem, outputElem){
         } else {
             widthVal = 600;
         }
-        let printVal = interpolate(widthVal, 0, 900, 0, 250) + 2;
+        let printVal = interpolate(widthVal, 0, 900, 0, 250);
         document.getElementById("inputSansValues").innerHTML += '<span class="d-inline-block" style="width: ' + printVal + 'px">'+widthVal+'</span>';
         document.getElementById("inputMonoSpans").innerHTML += "<span class='letterMono' id='letterMono" + i +"'>" + lettersSans[i] + "</span>";
         let tint = interpolate(document.getElementById("letter" + i).offsetWidth, lettersMinWidth, lettersMaxWidth, 80,50);
         document.getElementById("letter" + i).style.backgroundColor = "hsl(221,100%," + tint + "%)";
-        document.getElementById("letter" + i).style.color = "hsl(221,100%," + tint + "%)";
+        // document.getElementById("letter" + i).style.color = "hsl(221,100%," + tint + "%)";
+        // document.getElementById("letter" + i).style.color = "white";
     } 
 }
 
