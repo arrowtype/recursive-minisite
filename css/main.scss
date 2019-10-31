@@ -1337,19 +1337,54 @@ $randomNumber: random(2);
         border-top: 1px solid white;
     }
 
-    .letterSans:last-child{
+    .letterSans.blinking-child{
         animation:blink-182 1s steps(5, start) infinite;
+    }
+    .letterSans.start-blink{
+        animation:blink-181 1s steps(5, start) infinite;
     }
 
     @keyframes blink-182 {
     to {
-        visibility: hidden;
+        // visibility: hidden;
+        text-decoration:underline;
     }
     }
     @-webkit-keyframes blink-182 {
     to {
-        visibility: hidden;
+        // visibility: hidden;
+        text-decoration:underline;
     }
+    }
+
+    @keyframes blink-181 {
+        0%{
+            color:white;
+        }
+        69%{
+            color:white;
+        }
+        70% {
+            color:transparent;
+        }
+        100%{
+            color:transparent;
+        }
+    }
+    
+    @-webkit-keyframes blink-181 {
+        0%{
+            color:white;
+        }
+        69%{
+            color:white;
+        }
+        70% {
+            color:transparent;
+        }
+        100%{
+            color:transparent;
+        }
     }
 
 
@@ -1380,18 +1415,19 @@ $randomNumber: random(2);
     }
     #inputMono, #inputSans{
         letter-spacing:1px;
+        opacity: 0;
     }
     span.letterSans, span.letterMono{
         line-height: 350px;
         background-color:black;
-        color:black;
+        color:white;
         border-left:1px solid white;
         display: inline-block;
     }
     #inputMono:focus, #inputSans:focus{
         outline:none;
     }
-    input{ max-width:1000px;}
+    // input{ max-width:1000px;}
 }
 
 #superplexed{
