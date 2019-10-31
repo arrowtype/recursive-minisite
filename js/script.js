@@ -74,12 +74,12 @@ document.getElementById("navbarToggler").onclick = function(){
 
 document.getElementsByTagName("select")[0].onmousedown = function(){
     console.log("hello");
-    this.style.fontFamily = "sans-serif";
+    this.style.fontFamily = "'RecVF', sans-serif";
     console.log(this.style);
 }
 
 document.getElementById("chooseInstance").onchange = function(){
-    document.getElementsByTagName("select")[0].style.fontFamily = "'Recursive', sans-serif";   
+    document.getElementsByTagName("select")[0].style.fontFamily = "'RecVF', sans-serif";   
     let wght = this.selectedOptions[0].getAttribute('data-wght');
     let mono = this.selectedOptions[0].getAttribute('data-mono');
     let xprn = this.selectedOptions[0].getAttribute('data-xprn');

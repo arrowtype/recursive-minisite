@@ -70,18 +70,6 @@
   ital: 1
   slnt: -15
   wght: 800
-- name: Mono Casual UltraBold
-  MONO: 1
-  CASL: 1
-  ital: 0.5
-  slnt: 0
-  wght: 850
-- name: Mono Casual UltraBold Italic
-  MONO: 1
-  CASL: 1
-  ital: 1
-  slnt: -15
-  wght: 850
 - name: Mono Casual Black
   MONO: 1
   CASL: 1
@@ -94,6 +82,18 @@
   ital: 1
   slnt: -15
   wght: 900
+- name: Mono Casual ExtraBlack
+  MONO: 1
+  CASL: 1
+  ital: 0.5
+  slnt: 0
+  wght: 1000
+- name: Mono Casual ExtraBlack Italic
+  MONO: 1
+  CASL: 1
+  ital: 1
+  slnt: -15
+  wght: 1000
 - name: Mono Linear Light
   MONO: 1
   CASL: 0
@@ -166,18 +166,6 @@
   ital: 1
   slnt: -15
   wght: 800
-- name: Mono Linear UltraBold
-  MONO: 1
-  CASL: 0
-  ital: 0.5
-  slnt: 0
-  wght: 850
-- name: Mono Linear UltraBold Italic
-  MONO: 1
-  CASL: 0
-  ital: 1
-  slnt: -15
-  wght: 850
 - name: Mono Linear Black
   MONO: 1
   CASL: 0
@@ -190,6 +178,18 @@
   ital: 1
   slnt: -15
   wght: 900
+- name: Mono Linear ExtraBlack
+  MONO: 1
+  CASL: 0
+  ital: 0.5
+  slnt: 0
+  wght: 1000
+- name: Mono Linear ExtraBlack Italic
+  MONO: 1
+  CASL: 0
+  ital: 1
+  slnt: -15
+  wght: 1000
 - name: Sans Casual Light
   MONO: 0
   CASL: 1
@@ -262,18 +262,6 @@
   ital: 1
   slnt: -15
   wght: 800
-- name: Sans Casual UltraBold
-  MONO: 0
-  CASL: 1
-  ital: 0.5
-  slnt: 0
-  wght: 850
-- name: Sans Casual UltraBold Italic
-  MONO: 0
-  CASL: 1
-  ital: 1
-  slnt: -15
-  wght: 850
 - name: Sans Casual Black
   MONO: 0
   CASL: 1
@@ -286,6 +274,18 @@
   ital: 1
   slnt: -15
   wght: 900
+- name: Sans Casual ExtraBlack
+  MONO: 0
+  CASL: 1
+  ital: 0.5
+  slnt: 0
+  wght: 1000
+- name: Sans Casual ExtraBlack Italic
+  MONO: 0
+  CASL: 1
+  ital: 1
+  slnt: -15
+  wght: 1000
 - name: Sans Linear Light
   MONO: 0
   CASL: 0
@@ -341,7 +341,6 @@
   ital: 0.5
   slnt: 0
   wght: 700
-  
 - name: Sans Linear Bold Italic
   MONO: 0
   CASL: 0
@@ -360,18 +359,6 @@
   ital: 1
   slnt: -15
   wght: 800
-- name: Sans Linear UltraBold
-  MONO: 0
-  CASL: 0
-  ital: 0.5
-  slnt: 0
-  wght: 850
-- name: Sans Linear UltraBold Italic
-  MONO: 0
-  CASL: 0
-  ital: 1
-  slnt: -15
-  wght: 850
 - name: Sans Linear Black
   MONO: 0
   CASL: 0
@@ -384,3 +371,15 @@
   ital: 1
   slnt: -15
   wght: 900
+- name: Sans Linear ExtraBlack
+  MONO: 0
+  CASL: 0
+  ital: 0.5
+  slnt: 0
+  wght: 1000
+- name: Sans Linear ExtraBlack Italic
+  MONO: 0
+  CASL: 0
+  ital: 1
+  slnt: -15
+  wght: 1000
