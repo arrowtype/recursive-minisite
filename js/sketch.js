@@ -14,7 +14,7 @@ const boxWidth = 50;
 const slntMin = 0;
 const slntMax = -15;
 const wghtMin = 300;
-const wghtMax = 900;
+const wghtMax = 1000;
 const caslMin = 0;
 const caslMax = 1;
 
@@ -186,19 +186,19 @@ const viewer = {
         }
 
         if (i<(Math.pow(half,2))){           
-          if (i%half==i%half){text.setHTML("<span data-index='"+i+"' class='"+letterClass+"'>" + strArr[half-1-(i%half)] + "</span>");}
+          if (i%half==i%half){text.setHTML("<span data-index='"+i+"' class='"+letterClass+"'>" + strArr[half-1-(i%half)] + "&#8203;</span>");}
         } else if (i<2*(Math.pow(half,2))){       
-          if (i%half==i%half){text.setHTML("<span data-index='"+i+"' class='"+letterClass+"'>" +strArr[half-(i%half)] + "</span>");}
+          if (i%half==i%half){text.setHTML("<span data-index='"+i+"' class='"+letterClass+"'>" +strArr[half-(i%half)] + "&#8203;</span>");}
         } else if (i<3*(Math.pow(half,2))){       
-          if (i%half==i%half){text.setHTML("<span data-index='"+i+"' class='"+letterClass+"'>" +strArr[half+1-(i%half)] + "</span>");}
+          if (i%half==i%half){text.setHTML("<span data-index='"+i+"' class='"+letterClass+"'>" +strArr[half+1-(i%half)] + "&#8203;</span>");}
         } else if (i<4*(Math.pow(half,2))){       
-          if (i%half==i%half){text.setHTML("<span data-index='"+i+"' class='"+letterClass+"'>" +strArr[half+2-(i%half)] + "</span>");}
+          if (i%half==i%half){text.setHTML("<span data-index='"+i+"' class='"+letterClass+"'>" +strArr[half+2-(i%half)] + "&#8203;</span>");}
         } else if (i<5*(Math.pow(half,2))){       
-          if (i%half==i%half){text.setHTML("<span data-index='"+i+"' class='"+letterClass+"'>" +strArr[half+3-(i%half)] + "</span>");}
+          if (i%half==i%half){text.setHTML("<span data-index='"+i+"' class='"+letterClass+"'>" +strArr[half+3-(i%half)] + "&#8203;</span>");}
         } 
         
         if (i==124){
-          text.setHTML("<span id='blinkingSpan' class='top sideA sideB'>" + strArr[half+3-(i%half)] + "</span>");
+          text.setHTML("<span id='blinkingSpan' class='top sideA sideB'>" + strArr[half+3-(i%half)] + "&#8203;</span>");
         }
 
         if (i == 62){
@@ -397,7 +397,7 @@ let upListener = () => {
         // document.getElementById("THREE").innerHTML = '';
         // cubify("rrrrrrrrr");
         for (let letterElement of document.querySelectorAll('.text-label span')){
-            letterElement.innerHTML = 'r';
+            letterElement.innerHTML = 'r&#8203;';
         }
         document.getElementById("THREE").classList.add("blink");
     }
@@ -412,7 +412,7 @@ element.removeEventListener('mouseup', upListener)
 // }
 
 function changeString(){
-  str = document.getElementById("textInput").value;
+  str = document.getElementById("textInput").value + '&#8203;';
   noLerp = true;
   document.getElementById("THREE").classList.remove("blink");
   document.getElementById("textInput").value = '';
