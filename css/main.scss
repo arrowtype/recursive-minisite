@@ -130,6 +130,9 @@ body.inverse {
     .grs-top *, .grs-bottom * {
         color: #262626 !important;
     }
+    .cm-em{
+        font-variation-settings: "wght" 500, "ital" 1, "slnt" -9;
+    }
     .cm-em, .cm-strong, #grsMiddle span, .complete{
         color:$primary-dark !important;
     }
@@ -634,7 +637,7 @@ span.cm-formatting.cm-formatting-header.cm-formatting-header-2.cm-header.cm-head
     font-weight:normal;
     color:$primary;
     font-style:italic;
-    font-variation-settings: "ital" 1, "slnt" -9;
+    font-variation-settings: "wght" 425, "ital" 1, "slnt" -9;
 }
 .cm-strong{
     color:$primary;
