@@ -18,7 +18,8 @@ Built to maximize versatility, control, and performance, Recursive is a five-axi
 
 Recursive draws inspiration from single-stroke casual signpainting, a style of brush writing that is stylistically flexible and warmly energetic. Adapting this aesthetic basis into a type system, Recursive is designed to excel in digital interactive environments. This makes the typeface ideal for a wide range of uses, including data-rich apps, technical documentation and code editors.
 
-<img class="my-4" src="assets/img/mobile-app.svg">
+<!-- <img class="my-4" src="assets/img/mobile-app.svg"> -->
+<img class="my-4" id="mobile-illustrations" src="assets/img/mobile-app-angles.svg">
 
 ### One font. Infinite combinations.
 
