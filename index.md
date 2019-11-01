@@ -169,7 +169,7 @@ Recursive’s true italics (`ital 1`) replace familiar letterforms with single-s
 <div class="scroll-on-sm my-4" id="truerItalicsSm">
     <div class="x-axis">slnt: <span id="truerItalics__italVal">600</span></div>
     <div class="y-axis"><span>ital: 0 (off)</span><span>ital: 0.5 (auto)</span><span>ital: 1 (on)</span></div>
-    <div class="content" id="truerItalics__content"><span id="truerItalics__ital0">g</span><span id="truerItalics__ital1">g</span><span id="truerItalics__ital2">g</span></div>
+    <div class="content" id="truerItalics__content"><span class="ital-gsub" id="truerItalics__ital0">&#x200a;g&#x200a;</span><span class="ital-gsub" id="truerItalics__ital1">&#x200a;g&#x200a;</span><span class="ital-gsub" id="truerItalics__ital2">&#x200a;g&#x200a;</span></div>
 </div>
 
 ## Powerful, yet simple to use.

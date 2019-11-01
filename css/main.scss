@@ -539,7 +539,6 @@ span.cm-comment{
     padding-right:6px;
     background-color:white;
     text-align:right;
-    // font-family:Recursive;
     font-variation-settings: "MONO" 1, "CASL" 0, "wght" 400, "ital" 0, "slnt" 0 !important;
     font-size:15px !important;
 }
@@ -2537,7 +2536,7 @@ pre.CodeMirror-line {
 
     .x-axis, .y-axis{
         font-size:11.5px;
-        font-family:Recursive;
+        font-family:'RecVF', monospace;
         font-weight:500;
     }
     .x-axis{
@@ -2589,9 +2588,13 @@ pre.CodeMirror-line {
     color: $primary;
     font-size:30vw;
     // top: calc(8vw - 20px);
-    letter-spacing:2vw;
+    // letter-spacing:2vw;
     position:relative;
     top:-30px;
+    display: flex;
+    justify-content: space-around;
+    width: 85%;
+    margin: 0 auto;
     span{
         display:inline-block;
         // line-height: calc(43vw - 20px);
@@ -2989,7 +2992,8 @@ pre.CodeMirror-line {
             margin-left: 10%;
       }
   }
- 
+
+
 
 .mobile-version{
     padding:20px;
