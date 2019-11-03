@@ -1,4 +1,6 @@
-# recursive
+# Recursive
+
+A minisite for [Recursive Sans & Mono](https://github.com/arrowtype/recursive).
 
 ## Local Development
 
