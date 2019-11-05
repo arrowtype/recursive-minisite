@@ -6,11 +6,31 @@ let slnt = 0;
 let ital = 0.5;
 let fontVarSet = [mono, wght, casl, slnt, ital];
 
+let labelHeight = Math.min(window.innerWidth*0.5 / Math.sqrt(3) + window.innerHeight * 0.45, window.innerHeight * 0.9 - 120);
 
-// function yIntercept(x1,x2,y1,y2){
-//     let m = (x2 - x1)/(y2 - y1);
-//     return (x2 - x1)/(y2 - y1);
-// }
+document.getElementsByClassName("line3-label")[0].style.top = labelHeight + "px";
+document.getElementsByClassName("line1-label")[0].style.top = labelHeight + "px";
+
+
+document.onresize = function(){
+    labelHeight = Math.min(window.innerWidth*0.5 / Math.sqrt(3) + window.innerHeight * 0.45, window.innerHeight * 0.9 - 120);
+    document.getElementsByClassName("line3-label")[0].style.top = labelHeight + "px";
+    document.getElementsByClassName("line1-label")[0].style.top = labelHeight + "px";
+}
+
+
+// console.log(Math.min(window.innerWidth*0.5 / Math.sqrt(3) + window.innerHeight * 0.45, window.innerHeight * 0.9 - 70));
+let labelHeight = Math.min(window.innerWidth*0.5 / Math.sqrt(3) + window.innerHeight * 0.45, window.innerHeight * 0.9 - 120);
+
+document.getElementsByClassName("line3-label")[0].style.top = labelHeight + "px";
+document.getElementsByClassName("line1-label")[0].style.top = labelHeight + "px";
+
+
+document.onresize = function(){
+    labelHeight = Math.min(window.innerWidth*0.5 / Math.sqrt(3) + window.innerHeight * 0.45, window.innerHeight * 0.9 - 120);
+    document.getElementsByClassName("line3-label")[0].style.top = labelHeight + "px";
+    document.getElementsByClassName("line1-label")[0].style.top = labelHeight + "px";
+}
 
 // document.getElementById("line1").setAttribute("points", "democlass");
 
