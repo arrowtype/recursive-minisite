@@ -968,14 +968,26 @@ div#pickVariability, #pickFontSize {
 
 #THREE {
 //   width: 100%;
-  height: 100%;
-  padding: 0;
-  margin: 0 auto;
-  position: absolute;
-  overflow-y: hidden;
-  transform: translateX(-50%);
+//   height: 100%;
+//   padding: 0;
+//   margin: 0 auto;
+//   position: absolute;
+//   overflow-y: hidden;
+//   transform: translateX(-50%);
+//     left: calc(50vw - 3%);
+//     top: 0px;
+
+
+    height: 100%;
+    padding: 0;
+    margin: 0% 3% auto;
+    position: absolute;
+    overflow-y: hidden;
+    transform: translateX(-50%);
     left: calc(50vw - 3%);
     top: 0px;
+    width: 103%;
+
 }
 #line1 { 
     position:absolute;
@@ -1022,8 +1034,9 @@ div#pickVariability, #pickFontSize {
     width: 100%;
     height: 100%;
     position: absolute;
-    left:20px;
+    // left:20px;
     top:-10px;
+    // left: 33px;
     pointer-events: none;
     opacity: 0;
     transition: opacity 500ms ease;
@@ -1036,19 +1049,19 @@ div#pickVariability, #pickFontSize {
     }
     .line1-label{
         color: #0000ff;
-        bottom: 200px;
-        right:40px;
+        top: 75vh;
+        right: 40px;
     }
     .line2-label{
         color: #00ff00;
         top: 20px;
-        left: calc(50% + 20px);
+        left: calc(50% + 40px);
         z-index:1;
     }
     .line3-label{
         color: #ff0000;
-        bottom: 200px;
-        left:20px;
+        top: 75vh;
+        left: 40px;
     }
 }
 .lines.loaded{
