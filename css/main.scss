@@ -12,14 +12,16 @@
   background-color:black;
   pointer-events: none;
   cursor:url(/assets/img/cursor-pointer.svg), auto;
-}
 
-// .text-label {
-//   color: #fff;
-// /*   margin: -5px 0 0 15px; */
-//   pointer-events:none;
-//   font-size:20px;
-// }
+// hiding these until they can be aligned to hero panel consistently
+  .lines .label {
+    display: none;
+  }
+
+  canvas {
+      outline: none;
+  }
+}
 
 #textInput{
   position:fixed;
@@ -2729,7 +2731,13 @@ pre.CodeMirror-line {
     #THREE{
         top: -25px;
         left: -3.5%;
-        transform: translate(0);
+        // nudge the cube over to be centered on load
+        transform: translateX(-2.5%);
+
+        // until these can be consistently aligned with center 'r' of cube
+        .lines {
+            display: none;
+        }
     }
     .pre-footer{
         font-size: 26px;
