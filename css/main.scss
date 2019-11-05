@@ -969,7 +969,7 @@ div#pickVariability, #pickFontSize {
   position: absolute;
   overflow:hidden;
   transform: translateX(-50%);
-    left: 50vw;
+    left: calc(50vw - 3%);
     top: 0px;
 }
 #line1 { 
@@ -2424,7 +2424,7 @@ ul.casual .rw{--casl: 1}
 //
 
 .text-label {
-  font-size:80px;
+//   font-size:80px;
 }
 .toolbar .toolbar__item{
     padding: 8px 20px;
@@ -2691,7 +2691,7 @@ pre.CodeMirror-line {
     }
     #THREE{
         top: -25px;
-        left: -13px;
+        left: -3.5%;
         transform: translate(0);
     }
     .pre-footer{
