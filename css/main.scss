@@ -28,6 +28,7 @@
 
 body{
     counter-reset: line;
+    font-feature-settings: 'dlig' 1, 'liga' 1;
 }
 
 body.loaded{
@@ -496,6 +497,7 @@ h2{
 
 .CodeMirror .CodeMirror-line .cm-comment, code{
     background:transparent;
+    font-variation-settings: "MONO" 1, "CASL" 1 !important;
 }
 
 .CodeMirror .CodeMirror-line .cm-comment:before, code:before {
@@ -2880,7 +2882,7 @@ pre.CodeMirror-line {
  }
 
 .cm-header {
-    font-feature-settings: 'dlig' 1; // code ligatures
+    font-feature-settings: 'dlig' 1, 'liga' 1; // 'dlig' for code ligatures, 'liga' for fi & fl
 }
 
  span.cm-comment.cm-header.cm-header-2 {
@@ -3050,5 +3052,5 @@ textarea {
   font-family: 'RecVF';
   font-weight: 300 1000;  
   /* woff2 font as base64 string */
-  src: url("/assets/fonts/recursive-MONO_CASL_wght_slnt_ital--2019_11_03-21_13.woff2");
+  src: url("/assets/fonts/recursive-MONO_CASL_wght_slnt_ital--10_31--2019_11_04-19_36.woff2");
 }
