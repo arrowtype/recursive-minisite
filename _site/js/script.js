@@ -203,13 +203,13 @@ window.onscroll = function(){
             y: window.pageYOffset
         }
 
-    if(scrollObject.y > (935 - 104)) {
-        document.getElementById("toolbar").classList.add("fixed");
-        document.getElementById("phantomToolbar").classList.remove("d-none");
-    } else {
-        document.getElementById("toolbar").classList.remove("fixed");
-        document.getElementById("phantomToolbar").classList.add("d-none");
-    }
+    // if(scrollObject.y > (935 - 104)) {
+    //     document.getElementById("toolbar").classList.add("fixed");
+    //     document.getElementById("phantomToolbar").classList.remove("d-none");
+    // } else {
+    //     document.getElementById("toolbar").classList.remove("fixed");
+    //     document.getElementById("phantomToolbar").classList.add("d-none");
+    // }
 
     let navHeight = 137;
 
@@ -239,8 +239,8 @@ window.onscroll = function(){
     }
 };
 
-document.getElementById("toolbar").classList.remove("fixed");
-document.getElementById("phantomToolbar").classList.add("d-none");
+// document.getElementById("toolbar").classList.remove("fixed");
+// document.getElementById("phantomToolbar").classList.add("d-none");
 
 function interpolate(value, low1, high1, low2, high2) {
     return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
