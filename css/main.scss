@@ -28,6 +28,7 @@
 
 body{
     counter-reset: line;
+    font-feature-settings: 'dlig' 1, 'liga' 1;
 }
 
 body.loaded{
@@ -130,6 +131,9 @@ body.inverse {
     }
     .grs-top *, .grs-bottom * {
         color: #262626 !important;
+    }
+    .cm-em{
+        font-variation-settings: "wght" 500, "ital" 1; //, "slnt" -9
     }
     .cm-em, .cm-strong, #grsMiddle span, .complete{
         color:$primary-dark !important;
@@ -498,6 +502,7 @@ h2{
 
 .CodeMirror .CodeMirror-line .cm-comment, code{
     background:transparent;
+    font-variation-settings: "MONO" 1, "CASL" 1 !important;
 }
 
 .CodeMirror .CodeMirror-line .cm-comment:before, code:before {
@@ -541,7 +546,6 @@ span.cm-comment{
     padding-right:6px;
     background-color:white;
     text-align:right;
-    // font-family:Recursive;
     font-variation-settings: "MONO" 1, "CASL" 0, "wght" 400, "ital" 0, "slnt" 0 !important;
     font-size:15px !important;
 }
@@ -638,8 +642,8 @@ span.cm-formatting.cm-formatting-header.cm-formatting-header-2.cm-header.cm-head
 .cm-em{
     font-weight:normal;
     color:$primary;
-    font-style:italic;
-    font-variation-settings: "ital" 1, "slnt" -9;
+    font-style:normal; //italic
+    font-variation-settings: "wght" 425, "ital" 1; //"slnt" -9
 }
 .cm-strong{
     color:$primary;
@@ -890,6 +894,11 @@ div#pickVariability, #pickFontSize {
     }
 }
 
+.pre-footer, .footer-top, .footer-bottom{
+    p {
+        max-width: 88ch;
+    }
+}
 .footer-top{
     padding:23px 33px;
     div:first-child{
@@ -2242,21 +2251,22 @@ div#truerItalics {
 .grid{
     cursor:zoom-in;
     padding-bottom: 2px;
+    border-top: 1px solid #E0E0DF;
     // background-color:#f7f7f7;
     span{
         width:69px;
         height:71px;
-        outline-color:#e0e0e0;
         background-color:white;
-        outline-width: 1px;
-        outline-style:solid;
+        border: 1px solid #E0E0DF;
+        border-top: none;
+        border-left: none;
         display:block;
         float:left;
         font-size:40px;
         padding:6px;
         color:#e0e0e0;
         text-align:center;
-        padding-top:28px;
+        padding-top:24px;
         font-family:'RecVF';
         position:relative;
     }
@@ -2290,6 +2300,7 @@ div#truerItalics {
             height:100%;
             line-height:568px;
             // line-height: calc(50vw - 12px);
+            overflow: hidden !important;
             
         }
         svg{
@@ -2305,6 +2316,7 @@ div#truerItalics {
             width: 80%;
             font-size: 14px;
             line-height:17px;
+            text-shadow: 0px 0px 2px #0051ff, 0px 0px 2px #0051ff;
             // display:none;
         }
     }
@@ -2318,7 +2330,9 @@ div#truerItalics {
         left:inherit;
         right:0px;
         svg{ right:5px; left:inherit; transform:rotate(90deg); }
-        small{ left:16px; right:inherit;}
+        small{ left:16px; 
+            right:inherit;
+            }
     }
 }
 
@@ -2543,7 +2557,7 @@ pre.CodeMirror-line {
 
     .x-axis, .y-axis{
         font-size:11.5px;
-        font-family:Recursive;
+        font-family:'RecVF', monospace;
         font-weight:500;
     }
     .x-axis{
@@ -2595,9 +2609,13 @@ pre.CodeMirror-line {
     color: $primary;
     font-size:30vw;
     // top: calc(8vw - 20px);
-    letter-spacing:2vw;
+    // letter-spacing:2vw;
     position:relative;
     top:-30px;
+    display: flex;
+    justify-content: space-around;
+    width: 85%;
+    margin: 0 auto;
     span{
         display:inline-block;
         // line-height: calc(43vw - 20px);
@@ -2877,6 +2895,15 @@ pre.CodeMirror-line {
      width: 100%;
  }
 
+ #mobile-illustrations {
+    width: 112%;
+    margin: 0 -6%;
+ }
+
+.cm-header {
+    font-feature-settings: 'dlig' 1, 'liga' 1; // 'dlig' for code ligatures, 'liga' for fi & fl
+}
+
  span.cm-comment.cm-header.cm-header-2 {
     font-size: 2.2rem;
 }
@@ -2991,7 +3018,8 @@ pre.CodeMirror-line {
             margin-left: 10%;
       }
   }
- 
+
+
 
 .mobile-version{
     padding:20px;
@@ -3047,5 +3075,5 @@ textarea {
   font-family: 'RecVF';
   font-weight: 300 1000;  
   /* woff2 font as base64 string */
-  src: url("/assets/fonts/recursive-MONO_CASL_wght_slnt_ital--2019_10_31-11_10.woff2");
+  src: url("/assets/fonts/recursive-MONO_CASL_wght_slnt_ital--full_gsub--2019_11_05-00_13.woff2");
 }
