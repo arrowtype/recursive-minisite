@@ -967,7 +967,7 @@ div#pickVariability, #pickFontSize {
   padding: 0;
   margin: 0 auto;
   position: absolute;
-  overflow:hidden;
+  overflow-y: hidden;
   transform: translateX(-50%);
     left: calc(50vw - 3%);
     top: 0px;
@@ -1058,6 +1058,7 @@ $randomNumber: random(2);
   position:absolute;
   height:100px;
   width:100px;
+  overflow: visible;
 // font-size:20px;
   line-height:60px;
   mix-blend-mode: lighten;
@@ -2977,6 +2978,10 @@ pre.CodeMirror-line {
 .mobile-version{
     padding:20px;
     padding-bottom: 0px;
+}
+
+@media (max-width: 960px) {
+    .text-label{font-size:13.5vw;}
 }
 
 @media (max-width: 515px) { 
