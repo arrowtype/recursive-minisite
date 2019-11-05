@@ -637,7 +637,7 @@ span.cm-formatting.cm-formatting-header.cm-formatting-header-2.cm-header.cm-head
 .cm-em{
     font-weight:normal;
     color:$primary;
-    font-style:italic;
+    font-style:normal; //italic
     font-variation-settings: "wght" 425, "ital" 1; //"slnt" -9
 }
 .cm-strong{
@@ -3052,5 +3052,5 @@ textarea {
   font-family: 'RecVF';
   font-weight: 300 1000;  
   /* woff2 font as base64 string */
-  src: url("/assets/fonts/recursive-MONO_CASL_wght_slnt_ital--10_31--2019_11_04-19_36.woff2");
+  src: url("/assets/fonts/recursive-MONO_CASL_wght_slnt_ital--full_gsub--2019_11_05-00_13.woff2");
 }
