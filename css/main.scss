@@ -1835,7 +1835,7 @@ body {
     height: 394px;
     background: transparent;
     outline: none;
-    opacity: 0.7;
+    opacity: 0;
     -webkit-transition: .2s;
     transition: opacity .2s;
     position: absolute;
@@ -2037,6 +2037,7 @@ body {
 }
 div#truerItalics {
     height: 460px;
+    display:flex;
 }
 
 #truerItalics{
@@ -2066,7 +2067,7 @@ div#truerItalics {
         height: 680px;
         background: transparent;
         outline: none;
-        opacity: 0.7;
+        opacity: 0;
         -webkit-transition: .2s;
         transition: opacity .2s;
         position: absolute;
@@ -2132,6 +2133,7 @@ div#truerItalics {
         left:115px;
         position:absolute;
         width: fit-content;
+        width: 105%;
         font-variation-settings: "ital" 0, "CASL" 0, "MONO" 1, 'slnt' 0, 'wght' 600;
         span:not(:last-child){
             margin-right:125px !important;
