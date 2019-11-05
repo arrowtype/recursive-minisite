@@ -77,7 +77,7 @@ const viewer = {
     this.camera.position.x = 500;
     this.camera.position.y = 500;
     this.camera.position.z = 750;
-    if (originalInnerWidth < 600){
+    if (originalInnerWidth < 960){
       this.camera.zoom = 0.0002 * originalInnerWidth;
     } else {
       this.camera.zoom = 0.0002 * originalInnerHeight;
@@ -250,12 +250,15 @@ const viewer = {
   },
   
   onResize: function() {
-    this.camera.aspect = originalInnerWidth / (originalInnerHeight - 200);
+
+    this.camera.aspect = window.innerHeight / (window.innerHeight - 200);
     this.camera.updateProjectionMatrix();
-    this.renderer.setSize(originalInnerWidth, (originalInnerHeight - 200));
-    this.camera.aspect = originalInnerWidth / originalInnerHeight;
-    this.camera.updateProjectionMatrix();
-    this.renderer.setSize( originalInnerWidth, originalInnerHeight );
+    this.renderer.setSize(window.innerWeight, (window.innerHeight - 200));
+    // document.getElementById("THREE").innerHTML = ''
+    // cubify("recursive");
+    // this.camera.aspect = originalInnerWidth / originalInnerHeight;
+    // this.camera.updateProjectionMatrix();
+    // this.renderer.setSize( originalInnerWidth, originalInnerHeight );
   
   },
 
