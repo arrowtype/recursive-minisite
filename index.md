@@ -332,7 +332,7 @@ To meet the needs of global communication, Recursive supports a wide range of La
         </span>
     </div>
     
-   <!-- begin glyph grid -->
+       <!-- BEGIN CHARSET GRID -->
     <div class="grid clearfix" id="grid">
         <span class="complete">
             A
@@ -6341,20 +6341,6 @@ To meet the needs of global communication, Recursive supports a wide range of La
             </div>
         </span>
         <span class="complete">
-            \
-            <div class="detail">
-                <div class="letter-lg">
-                    \          
-                </div>
-                <div class="detail-top-content">
-                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M23 0H0V23L23 0Z" fill="white"/>
-                    </svg>
-                    <small>reverse solidus (u+005c)</small>
-                </div>
-            </div>
-        </span>
-        <span class="complete">
             {
             <div class="detail">
                 <div class="letter-lg">
@@ -6365,20 +6351,6 @@ To meet the needs of global communication, Recursive supports a wide range of La
                         <path d="M23 0H0V23L23 0Z" fill="white"/>
                     </svg>
                     <small>left curly bracket (u+007b)</small>
-                </div>
-            </div>
-        </span>
-        <span class="complete">
-            \
-            <div class="detail">
-                <div class="letter-lg">
-                    \          
-                </div>
-                <div class="detail-top-content">
-                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M23 0H0V23L23 0Z" fill="white"/>
-                    </svg>
-                    <small>reverse solidus (u+005c)</small>
                 </div>
             </div>
         </span>
@@ -6813,20 +6785,6 @@ To meet the needs of global communication, Recursive supports a wide range of La
                         <path d="M23 0H0V23L23 0Z" fill="white"/>
                     </svg>
                     <small>inverted question mark (u+00bf)</small>
-                </div>
-            </div>
-        </span>
-        <span class="complete">
-            /
-            <div class="detail">
-                <div class="letter-lg">
-                    /          
-                </div>
-                <div class="detail-top-content">
-                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M23 0H0V23L23 0Z" fill="white"/>
-                    </svg>
-                    <small>solidus (u+002f)</small>
                 </div>
             </div>
         </span>
@@ -8455,7 +8413,7 @@ To meet the needs of global communication, Recursive supports a wide range of La
             </div>
         </span>
     </div>
-    <!-- end of glyph grid -->
+    <!-- END CHARSET GRID -->
 </div>
 
 <script type="text/javascript">
