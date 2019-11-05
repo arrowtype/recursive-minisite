@@ -14,9 +14,9 @@
   cursor:url(/assets/img/cursor-pointer.svg), auto;
 
 // hiding these until they can be aligned to hero panel consistently
-  .lines .label {
-    display: none;
-  }
+//   .lines .label {
+//     display: none;
+//   }
 
   canvas {
       outline: none;
@@ -456,7 +456,6 @@ h2{
     padding: 0px calc(50% - 400px);
     overflow: hidden;
     font-family: 'RecVF' !important; 
-    font-variation-settings:'MONO' 0, 'wght' 400, 'CASL' 0;
     > div{
         overflow:visible !important;    
     }
