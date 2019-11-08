@@ -2528,7 +2528,7 @@ pre.CodeMirror-line {
 }
 #hero{
     // min-height: calc(90vw + 200px);
-    display: block;
+    // display: block;
     padding-top: 60px;
 }
 
@@ -2727,7 +2727,7 @@ pre.CodeMirror-line {
 
 @media (max-width: 767.98px) { 
     #hero{
-        height: 85vh;
+        height: 85vh; // setting to exact number due to iOS Safari's treatment of vh units
     }
     #THREE{
         top: -25px;
