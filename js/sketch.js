@@ -44,6 +44,8 @@ let tint, dist;
 
 let aFade, bFade, cFade, dFade, topFade, bottomFade;
 
+let frustumSize = -450;
+
 const viewer = {
 
   // variables
@@ -53,13 +55,14 @@ const viewer = {
   renderer: false,
   container: false,
   textlabels: [],
+  
 
   onMouseDown: function( event ) {
     mouseMoved = 1;
     // mouse.x = interpolate(event.clientX, 0, window.innerWidth, 500, 1000 );
 	  // mouse.y = interpolate(event.clientY, 0, originalInnerHeight, 500, 1000 );
   },
-
+  
   onReady: function() {
     this.scene = new THREE.Scene();
     this.renderer = new THREE.WebGLRenderer();
@@ -68,15 +71,38 @@ const viewer = {
 
     this.container.appendChild(this.renderer.domElement);
 
+      // 
     this.camera = new THREE.OrthographicCamera( originalInnerWidth / - 50, 
                                                 originalInnerWidth / 50, 
                                                 (originalInnerHeight - 200) / 50, 
                                                 (originalInnerHeight - 200) / -50, 
                                                 -500, 
                                                 0);
-    this.camera.position.x = 500;
-    this.camera.position.y = 500;
+    // this.camera = new THREE.OrthographicCamera( originalInnerWidth / - 50, 
+    //                                             originalInnerWidth / 50, 
+    //                                             (originalInnerHeight) / 50, 
+    //                                             (originalInnerHeight - 200) / -50, 
+    //                                             50, 
+    //                                             500);
+    
+    // this.camera = new THREE.OrthographicCamera( 0, 
+    //                                             originalInnerWidth, 
+    //                                             0, 
+    //                                             originalInnerHeight, 
+    //                                             -50, 
+    //                                             1000);
+    var aspect = window.innerWidth / window.innerHeight;
+    // this.camera = new THREE.OrthographicCamera( frustumSize * aspect / - 2, frustumSize * aspect / 2, frustumSize / 2, frustumSize / - 2, -500, 1000);
+
+      // 
+    // this.camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 1, 200 );
+    // this.camera.position.x = 500;
+    // this.camera.position.y = 500;
+    // this.camera.position.z = 750;
+    this.camera.position.x = originalInnerWidth/2;
+    this.camera.position.y = originalInnerHeight/2;
     this.camera.position.z = 750;
+
     if (originalInnerWidth < 960){
       this.camera.zoom = 0.0002 * originalInnerWidth;
     } else {
@@ -90,7 +116,8 @@ const viewer = {
     this.controls = new THREE.OrbitControls(this.camera, this.renderer.domElement);
     this.controls.enableDamping = true;
     this.controls.dampingFactor =  0.25;
-    this.controls.enableZoom = false;;
+    this.controls.enableZoom = false;
+    // this.controls.enableZoom = true;
     this.controls.enablePan = false;
     this.controls.enableKeys = false;
     this.controls.rotateSpeed = 0.4;
