@@ -3004,27 +3004,27 @@ pre.CodeMirror-line {
       0%{
           background-color:$primary;
           font-weight: 460;
-          font-variation-settings: 'wght' 400, 'MONO' 1, 'slnt' 0, 'CASL' 0;
+          font-variation-settings: 'wght' 400, 'MONO' 0, 'slnt' 0, 'CASL' 0;
       }
       5%{
         background-color:#266Aff;
         color:white;
-        font-variation-settings: 'wght' 800, 'MONO' 1, 'slnt' 0, 'CASL' 1;
+        font-variation-settings: 'wght' 800, 'MONO' 0, 'slnt' 0, 'CASL' 1;
       }
       20%{
         background-color:#266Aff;
         color:white;
-        font-variation-settings: 'wght' 800, 'MONO' 1, 'slnt' 0, 'CASL' 1;
+        font-variation-settings: 'wght' 800, 'MONO' 0, 'slnt' 0, 'CASL' 1;
       }
       25%{
           background-color:$primary;
           font-weight: 460;
-        font-variation-settings: 'wght' 400, 'MONO' 1, 'slnt' 0, 'CASL' 0;
+        font-variation-settings: 'wght' 400, 'MONO' 0, 'slnt' 0, 'CASL' 0;
       }
       100%{
           background-color:$primary;
           font-weight: 460;
-        font-variation-settings: 'wght' 400, 'MONO' 1, 'slnt' 0, 'CASL' 0;
+        font-variation-settings: 'wght' 400, 'MONO' 0, 'slnt' 0, 'CASL' 0;
       }
   }
   @keyframes activateBad{
