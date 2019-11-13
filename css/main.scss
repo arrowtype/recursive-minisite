@@ -3,9 +3,16 @@
 
 @import 'bootstrap/bootstrap';
 
+.three-container {
+    display: grid;
+    align-items: center;
+    // height: 100%;
+    overflow: hidden;
+}
+
 #THREE {
 //   width: 100vw;
-  height: 935px;
+//   height: 935px;
   padding: 0;
   margin: 0 auto;
   position: relative;
@@ -37,7 +44,8 @@ body.loaded{
     background-color:white;
     overflow:visible;
     .fixed-nav{
-        top:0px;
+        // top:0px;
+        transform: translateY(0);
     }
     .hero__headline, .toolbar, #mdContainer{
         opacity:1;
@@ -422,12 +430,24 @@ ul{
 }
 
 .fixed-nav{
-    position:absolute;
-    top:-200px;
-    left:0px;
+    // position:absolute;
+    // top:-200px;
+    top:0;
+    // left:0px;
     z-index:2;
     width:100%;
-    transition: top 400ms;
+    // transition: top 400ms;
+    transform: translateY(-3.5rem);
+    transition: transform 400ms;
+    // animation: 0.4s slide-in forward;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(-3.5rem);
+    } to {
+        transform: translateY(0rem);
+    }
 }
 
 #phantomToolbar{
@@ -699,9 +719,12 @@ nav.navbar{
     color:white;
     // min-height: 935px;
     height:90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    // display: flex;
+    display:grid;
+    // align-items: center;
+    // justify-content: center;
+    overflow:hidden;
+    grid-template-rows: 1fr min-content;
     // cursor: crosshair;
     .temp-hero{
         padding:20px;
@@ -766,8 +789,10 @@ nav.navbar{
     bottom:0px;
     border-top:1px dashed white;
     background-color:black;
-    position: absolute;
-    width: 100%;
+    // position: absolute;
+    width: 100vw;
+    align-self: flex-end;
+    z-index:2;
 }
 
 .toolbar{
@@ -988,15 +1013,19 @@ div#pickVariability, #pickFontSize {
 //     top: 0px;
 
 
-    height: 100%;
+    // height: 100%;
     padding: 0;
-    margin: 0% 3% auto;
-    position: absolute;
+    // margin: 0% 3% auto;
+    // margin-top: 3%;
+    // position: absolute;
     overflow-y: hidden;
-    transform: translateX(-50%);
-    left: calc(50vw - 3%);
+    // transform: translateX(-50%);
+    // left: calc(50vw - 3%);
     top: 0px;
-    width: 103%;
+    width: 100vw;
+    display: grid;
+    justify-items: center;
+    align-items: center;
 
 }
 #line1 { 
@@ -1045,7 +1074,7 @@ div#pickVariability, #pickFontSize {
     height: 100%;
     position: absolute;
     // left:20px;
-    top:-10px;
+    top:-1rem;
     // left: 33px;
     pointer-events: none;
     opacity: 0;
@@ -1056,6 +1085,7 @@ div#pickVariability, #pickFontSize {
         font-variation-settings: 'MONO' 0, 'wght' 400;
         position:absolute;
         line-height: 14px;
+        transform: translateY(3.5rem);
     }
     .line1-label{
         color: #0000ff;
@@ -1080,18 +1110,23 @@ div#pickVariability, #pickFontSize {
 $randomNumber: random(2);
 
 .text-label {
-  color: #fff;
-  pointer-events:none;
-  font-size:calc(10px + 10vh);
-  position:absolute;
-  height:100px;
-  width:100px;
-  overflow: visible;
-// font-size:20px;
-  line-height:60px;
-  mix-blend-mode: lighten;
+    color: #fff;
+    pointer-events:none;
+    font-size:calc(10px + 10vh);
+    position:absolute;
+    height:100px;
+    width:100px;
+    overflow: visible;
+    line-height:60px;
+    mix-blend-mode: lighten;
     font-weight:800;
-    font-variation-settings: "MONO" 1, "CASL" 1,;
+    font-variation-settings: "MONO" 1, "CASL" 1;
+    transform: translate(-50%, 50%);
+    text-align: center;
+    display: grid;
+    align-items: center;
+    padding-bottom: 0.3em;
+
 
     span:not(.loaded){  
         // transition: color 300ms;   
@@ -2526,11 +2561,6 @@ pre.CodeMirror-line {
 #verticalBar{
     display:none;
 }
-#hero{
-    // min-height: calc(90vw + 200px);
-    display: block;
-    padding-top: 60px;
-}
 
 .CodeMirror-lines{
     background-color:white;
@@ -2727,13 +2757,13 @@ pre.CodeMirror-line {
 
 @media (max-width: 767.98px) { 
     #hero{
-        height: 85vh;
+        height: 68vh; // setting to exact number due to iOS Safari's treatment of vh units
     }
     #THREE{
-        top: -25px;
-        left: -3.5%;
+        // top: -25px;
+        // left: -3.5%;
         // nudge the cube over to be centered on load
-        transform: translateX(-2.5%);
+        // transform: translateX(-2.5%);
 
         // until these can be consistently aligned with center 'r' of cube
         .lines {
