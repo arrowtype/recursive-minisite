@@ -281,7 +281,7 @@ const viewer = {
     this.camera.aspect = window.innerHeight / (window.innerHeight - 0); // was 200
     console.log("this.camera.aspect is ", this.camera.aspect)
     this.camera.updateProjectionMatrix();
-    this.renderer.setSize(window.innerWeight, (window.innerHeight - 0)); // was 200
+    // this.renderer.setSize(window.innerWeight, (window.innerHeight - 0)); // was 200
     // document.getElementById("THREE").innerHTML = ''
     // cubify("recursive");
     // this.camera.aspect = originalInnerWidth / originalInnerHeight;
