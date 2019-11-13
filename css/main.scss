@@ -2367,10 +2367,11 @@ div#truerItalics {
     .detail{
         left:inherit;
         right:0px;
-        text-align: left;
+        
         svg{ right:5px; left:inherit; transform:rotate(90deg); }
         small{ left:16px; 
             right:inherit;
+            text-align: left;
             }
     }
 }
