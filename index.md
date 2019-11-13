@@ -332,7 +332,7 @@ To meet the needs of global communication, Recursive supports a wide range of La
         </span>
     </div>
     
-       <!-- BEGIN CHARSET GRID -->
+    <!-- BEGIN CHARSET GRID -->
     <div class="grid clearfix" id="grid">
         <span class="complete">
             A
@@ -8203,6 +8203,48 @@ To meet the needs of global communication, Recursive supports a wide range of La
             </div>
         </span>
         <span class="complete">
+            ·
+            <div class="detail">
+                <div class="letter-lg">
+                    ·          
+                </div>
+                <div class="detail-top-content">
+                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23 0H0V23L23 0Z" fill="white"/>
+                    </svg>
+                    <small>middle dot (u+00b7)</small>
+                </div>
+            </div>
+        </span>
+        <span class="complete">
+            •
+            <div class="detail">
+                <div class="letter-lg">
+                    •          
+                </div>
+                <div class="detail-top-content">
+                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23 0H0V23L23 0Z" fill="white"/>
+                    </svg>
+                    <small>bullet (u+2022)</small>
+                </div>
+            </div>
+        </span>
+        <span class="complete">
+            …
+            <div class="detail">
+                <div class="letter-lg">
+                    …          
+                </div>
+                <div class="detail-top-content">
+                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23 0H0V23L23 0Z" fill="white"/>
+                    </svg>
+                    <small>horizontal ellipsis (u+2026)</small>
+                </div>
+            </div>
+        </span>
+        <span class="complete">
             .
             <div class="detail">
                 <div class="letter-lg">
@@ -8255,20 +8297,6 @@ To meet the needs of global communication, Recursive supports a wide range of La
                         <path d="M23 0H0V23L23 0Z" fill="white"/>
                     </svg>
                     <small>semicolon (u+003b)</small>
-                </div>
-            </div>
-        </span>
-        <span class="complete">
-            …
-            <div class="detail">
-                <div class="letter-lg">
-                    …          
-                </div>
-                <div class="detail-top-content">
-                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M23 0H0V23L23 0Z" fill="white"/>
-                    </svg>
-                    <small>horizontal ellipsis (u+2026)</small>
                 </div>
             </div>
         </span>
@@ -8343,20 +8371,6 @@ To meet the needs of global communication, Recursive supports a wide range of La
             </div>
         </span>
         <span class="complete">
-            /
-            <div class="detail">
-                <div class="letter-lg">
-                    /          
-                </div>
-                <div class="detail-top-content">
-                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M23 0H0V23L23 0Z" fill="white"/>
-                    </svg>
-                    <small>solidus (u+002f)</small>
-                </div>
-            </div>
-        </span>
-        <span class="complete">
             \
             <div class="detail">
                 <div class="letter-lg">
@@ -8409,20 +8423,6 @@ To meet the needs of global communication, Recursive supports a wide range of La
                         <path d="M23 0H0V23L23 0Z" fill="white"/>
                     </svg>
                     <small>broken bar (u+00a6)</small>
-                </div>
-            </div>
-        </span>
-        <span class="complete">
-            @
-            <div class="detail">
-                <div class="letter-lg">
-                    @          
-                </div>
-                <div class="detail-top-content">
-                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M23 0H0V23L23 0Z" fill="white"/>
-                    </svg>
-                    <small>commercial at (u+0040)</small>
                 </div>
             </div>
         </span>
@@ -8493,34 +8493,6 @@ To meet the needs of global communication, Recursive supports a wide range of La
                         <path d="M23 0H0V23L23 0Z" fill="white"/>
                     </svg>
                     <small>numero sign (u+2116)</small>
-                </div>
-            </div>
-        </span>
-        <span class="complete">
-            ·
-            <div class="detail">
-                <div class="letter-lg">
-                    ·          
-                </div>
-                <div class="detail-top-content">
-                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M23 0H0V23L23 0Z" fill="white"/>
-                    </svg>
-                    <small>middle dot (u+00b7)</small>
-                </div>
-            </div>
-        </span>
-        <span class="complete">
-            •
-            <div class="detail">
-                <div class="letter-lg">
-                    •          
-                </div>
-                <div class="detail-top-content">
-                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M23 0H0V23L23 0Z" fill="white"/>
-                    </svg>
-                    <small>bullet (u+2022)</small>
                 </div>
             </div>
         </span>
@@ -8759,76 +8731,6 @@ To meet the needs of global communication, Recursive supports a wide range of La
                         <path d="M23 0H0V23L23 0Z" fill="white"/>
                     </svg>
                     <small>commercial minus sign (u+2052)</small>
-                </div>
-            </div>
-        </span>
-        <span class="complete">
-            ←
-            <div class="detail">
-                <div class="letter-lg">
-                    ←          
-                </div>
-                <div class="detail-top-content">
-                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M23 0H0V23L23 0Z" fill="white"/>
-                    </svg>
-                    <small>leftwards arrow (u+2190)</small>
-                </div>
-            </div>
-        </span>
-        <span class="complete">
-            ↑
-            <div class="detail">
-                <div class="letter-lg">
-                    ↑          
-                </div>
-                <div class="detail-top-content">
-                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M23 0H0V23L23 0Z" fill="white"/>
-                    </svg>
-                    <small>upwards arrow (u+2191)</small>
-                </div>
-            </div>
-        </span>
-        <span class="complete">
-            →
-            <div class="detail">
-                <div class="letter-lg">
-                    →          
-                </div>
-                <div class="detail-top-content">
-                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M23 0H0V23L23 0Z" fill="white"/>
-                    </svg>
-                    <small>rightwards arrow (u+2192)</small>
-                </div>
-            </div>
-        </span>
-        <span class="complete">
-            ↓
-            <div class="detail">
-                <div class="letter-lg">
-                    ↓          
-                </div>
-                <div class="detail-top-content">
-                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M23 0H0V23L23 0Z" fill="white"/>
-                    </svg>
-                    <small>downwards arrow (u+2193)</small>
-                </div>
-            </div>
-        </span>
-        <span class="complete">
-            ↔
-            <div class="detail">
-                <div class="letter-lg">
-                    ↔          
-                </div>
-                <div class="detail-top-content">
-                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M23 0H0V23L23 0Z" fill="white"/>
-                    </svg>
-                    <small>left right arrow (u+2194)</small>
                 </div>
             </div>
         </span>
@@ -9659,6 +9561,76 @@ To meet the needs of global communication, Recursive supports a wide range of La
             </div>
         </span>
         <span class="complete">
+            ←
+            <div class="detail">
+                <div class="letter-lg">
+                    ←          
+                </div>
+                <div class="detail-top-content">
+                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23 0H0V23L23 0Z" fill="white"/>
+                    </svg>
+                    <small>leftwards arrow (u+2190)</small>
+                </div>
+            </div>
+        </span>
+        <span class="complete">
+            ↑
+            <div class="detail">
+                <div class="letter-lg">
+                    ↑          
+                </div>
+                <div class="detail-top-content">
+                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23 0H0V23L23 0Z" fill="white"/>
+                    </svg>
+                    <small>upwards arrow (u+2191)</small>
+                </div>
+            </div>
+        </span>
+        <span class="complete">
+            →
+            <div class="detail">
+                <div class="letter-lg">
+                    →          
+                </div>
+                <div class="detail-top-content">
+                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23 0H0V23L23 0Z" fill="white"/>
+                    </svg>
+                    <small>rightwards arrow (u+2192)</small>
+                </div>
+            </div>
+        </span>
+        <span class="complete">
+            ↓
+            <div class="detail">
+                <div class="letter-lg">
+                    ↓          
+                </div>
+                <div class="detail-top-content">
+                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23 0H0V23L23 0Z" fill="white"/>
+                    </svg>
+                    <small>downwards arrow (u+2193)</small>
+                </div>
+            </div>
+        </span>
+        <span class="complete">
+            ↔
+            <div class="detail">
+                <div class="letter-lg">
+                    ↔          
+                </div>
+                <div class="detail-top-content">
+                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23 0H0V23L23 0Z" fill="white"/>
+                    </svg>
+                    <small>left right arrow (u+2194)</small>
+                </div>
+            </div>
+        </span>
+        <span class="complete">
             ↕
             <div class="detail">
                 <div class="letter-lg">
@@ -9926,6 +9898,7 @@ To meet the needs of global communication, Recursive supports a wide range of La
         </span>
     </div>
     <!-- END CHARSET GRID -->
+
 </div>
 
 <script type="text/javascript">
