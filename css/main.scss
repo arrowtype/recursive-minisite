@@ -2354,7 +2354,7 @@ div#truerItalics {
             width: 80%;
             font-size: 14px;
             line-height:17px;
-            text-shadow: 0px 0px 2px #0051ff, 0px 0px 2px #0051ff;
+            text-shadow: 0px 0px 2px #0051ff, 0px 0px 2px #0051ff, 0px 0px 3px #0051ff, 0px 0px 3px #0051ff;
             // display:none;
         }
     }
@@ -2367,9 +2367,11 @@ div#truerItalics {
     .detail{
         left:inherit;
         right:0px;
+        
         svg{ right:5px; left:inherit; transform:rotate(90deg); }
         small{ left:16px; 
             right:inherit;
+            text-align: left;
             }
     }
 }
@@ -2523,6 +2525,7 @@ ul.casual .rw{--casl: 1}
     min-height:200px !important;
     height: 350px;
     font-size:300px;
+    overflow: auto !important;
 }
 #singleFile input[type="text"]{
     height:200px;
@@ -3114,5 +3117,5 @@ textarea {
   font-family: 'RecVF';
   font-weight: 300 1000;  
   /* woff2 font as base64 string */
-  src: url("/assets/fonts/recursive-MONO_CASL_wght_slnt_ital--full_gsub--2019_11_05-00_13.woff2");
+  src: url("/assets/fonts/recursive-MONO_CASL_wght_slnt_ital--full_gsub--2019_11_12-14_18.woff2");
 }
