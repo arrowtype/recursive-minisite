@@ -2533,10 +2533,11 @@ ul.casual .rw{--casl: 1}
       left:5px;
     }
 }
-// #singleFile{
-//     width: calc(100% + 40px);
-//     position: relative;
-// }
+#singleFile{
+    width: calc(100% + 40px);
+    position: relative;
+    left:-20px;
+}
 #singleFile .controls ul{
     left:0px;
 }
