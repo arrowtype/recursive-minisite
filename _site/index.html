@@ -389,34 +389,33 @@ To meet the needs of global communication, Recursive supports a wide range of La
 <div class="my-4" id="singleFile">
 <style>
   :root {
-  --padding-unit: 1rem;
-  --offwhite-1: hsla(0, 0%, 95%, 1);
-  --offwhite-2: hsla(0, 0%, 85%, 1);
-  --accent: hsl(221, 100%, 50%);
-  --accent-on-dark: hsla(211, 100%, 65%, 1); }
-  
-#singleFile {
-  color: #454545; }
+    --padding-unit: 1rem;
+    --offwhite-1: hsla(0, 0%, 95%, 1);
+    --offwhite-2: hsla(0, 0%, 85%, 1);
+    --accent: hsl(221, 100%, 50%);
+    --accent-on-dark: hsla(211, 100%, 65%, 1);
+  }
+
+  #singleFile {
+    color: #454545;
+  }
   @media (max-width: 500px) {
-      .hidden--sm{
-        display:none !important;
-      }
+    .hidden--sm {
+      display: none !important;
     }
+  }
   #singleFile .ccs-row {
     display: grid;
     grid-template-columns: 196px 196px auto;
-    column-gap: 1rem; }
-    @media (max-width: 500px) {
-      #singleFile .ccs-row:first-child .inputs #fontSizeSlider {
-          width: 80%;
-          margin-left: 20%;
-          /* float: right; */
-      }
-      #singleFile .ccs-row {
-        grid-template-columns: calc(35vw - var(--padding-unit)) calc(65vw - var(--padding-unit));
-        column-gap: 0; } 
+    column-gap: 1rem;
+  }
+  @media (max-width: 500px) {
+    #singleFile .ccs-row {
+      grid-template-columns: calc(40vw - var(--padding-unit)) calc(65vw - var(--padding-unit));
+      column-gap: 0;
     }
-    
+  }
+
   #singleFile #controls-result {
     background: white;
     color: black;
@@ -426,8 +425,8 @@ To meet the needs of global communication, Recursive supports a wide range of La
     border: 0px;
     min-height: 50vh;
     font-weight: 800;
-    font-family: 'RecVF', sans-serif;
-    font-variation-settings: "MONO" 0, "CASL" 0, "slnt" 0, "ital" 0, "wght" 800;
+    font-family: "RecVF", sans-serif;
+    font-variation-settings: "MONO" 0.01, "CASL" 0.01, "slnt" 0, "ital" 0, "wght" 800;
     text-align: center;
     width: 100%;
     padding: calc(var(--padding-unit) * 2 * 0.9);
@@ -437,317 +436,282 @@ To meet the needs of global communication, Recursive supports a wide range of La
     display: grid;
     align-content: center;
     overflow-x: auto;
-    max-width: 100vw; }
-    @media (max-width: 500px) {
-      #singleFile #controls-result {
-        padding: calc(var(--padding-unit) * 0.9);
-        padding-right: 0; } }
-  /* #singleFile input[type="text"]:focus {
-    outline: none; }
-  #singleFile input[type="range"] {
-    -webkit-appearance: none;
-    width: 100%;
-    background: transparent; }
-  #singleFile input[type="range"]:focus {
-    outline: none; }
-  #singleFile input[type="range"]::-webkit-slider-runnable-track {
-    width: 100%;
-    height: 1px;
-    position: relative;
-    top: -0.25rem;
-    cursor: pointer;
-    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-    background: #bdbdbd;
-    border-radius: 0px;
-    border: 0.1px solid rgba(0, 0, 0, 0); }
-  #singleFile input[type="range"]::-webkit-slider-thumb {
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
-    border: 0px solid rgba(0, 0, 0, 0);
-    height: 12px;
-    width: 12px;
-    border-radius: 999px;
-    background: #858585;
-    cursor: pointer;
-    -webkit-appearance: none;
-    margin-top: -5.6px; }
-  #singleFile input[type="range"]:focus::-webkit-slider-runnable-track {
-    background: #cacaca; }
-  #singleFile input[type="range"]::-moz-range-track {
-    width: 100%;
-    height: 1px;
-    cursor: pointer;
-    background: #bdbdbd;
-    border-radius: 0px;
-    border: 0.1px solid rgba(0, 0, 0, 0); }
-  #singleFile input[type="range"]::-moz-range-thumb {
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
-    border: 0px solid rgba(0, 0, 0, 0);
-    height: 12px;
-    width: 12px;
-    border-radius: 999px;
-    background: #858585;
-    cursor: pointer; }
-  #singleFile input[type="range"]::-ms-track {
-    width: 100%;
-    height: 1px;
-    cursor: pointer;
-    background: transparent;
-    border-color: transparent;
-    color: transparent; }
-  #singleFile input[type="range"]::-ms-fill-lower {
-    background: #b0b0b0;
-    border: 0.1px solid rgba(0, 0, 0, 0);
-    border-radius: 0px;
-    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d; }
-  #singleFile input[type="range"]::-ms-fill-upper {
-    background: #bdbdbd;
-    border: 0.1px solid rgba(0, 0, 0, 0);
-    border-radius: 0px;
-    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d; }
-  #singleFile input[type="range"]::-ms-thumb {
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
-    border: 0px solid rgba(0, 0, 0, 0);
-    height: 12px;
-    width: 12px;
-    border-radius: 999px;
-    background: #858585;
-    cursor: pointer;
-    height: 1px; }
+    max-width: 100vw;
+  }
   @media (max-width: 500px) {
-    #singleFile input[type="range"]::-webkit-slider-thumb {
-      height: 20px;
-      width: 20px;
-      box-sizing: content-box;
-      position: relative;
-      top: -4px; }
-    #singleFile input[type="range"]::-moz-range-thumb {
-      height: 20px;
-      width: 20px;
-      box-sizing: content-box;
-      position: relative;
-      top: -4px; }
-    #singleFile input[type="range"]::-ms-thumb {
-      height: 20px;
-      width: 20px;
-      box-sizing: content-box;
-      position: relative;
-      top: -4px; } }
-  #singleFile input[type="range"]:focus::-ms-fill-lower {
-    background: #bdbdbd; }
-  #singleFile input[type="range"]:focus::-ms-fill-upper {
-    background: #cacaca; }*/
+    #singleFile #controls-result {
+      padding: calc(var(--padding-unit) * 0.9);
+      padding-right: 0;
+    }
+  }
+
   #singleFile fieldset {
     border: none;
-    padding: 0; }
+    padding: 0;
+  }
   #singleFile input[type="radio"] {
-    margin: 0; }
+    margin: 0;
+  }
   #singleFile .controls {
     background-color: var(--offwhite-1);
     width: 100%;
-    font-family: 'RecVF', monospace;
+    font-family: "RecVF", monospace;
     font-weight: 450;
-    overflow:hidden !important;
-    padding: calc(var(--padding-unit) *2);
+    overflow: hidden !important;
+    padding: calc(var(--padding-unit) * 2);
     display: grid;
     --mono: 1;
-    font-variation-settings: "MONO" var(--mono); }
-    @media (max-width: 500px) {
-      #singleFile .controls {
-        padding: var(--padding-unit); } }
-    #singleFile .controls .css,
+    font-variation-settings: "MONO" var(--mono);
+  }
+  @media (max-width: 500px) {
+    #singleFile .controls {
+      padding: var(--padding-unit);
+    }
+  }
+  #singleFile .controls .css,
+  #singleFile .controls .inputs {
+    display: inline-block;
+  }
+  #singleFile .controls .inputs {
+    width: 100%;
+  }
+  @media (max-width: 500px) {
     #singleFile .controls .inputs {
-      display: inline-block; }
-    #singleFile .controls .inputs {
-      width: 100%; }
-      @media (max-width: 500px) {
-        #singleFile .controls .inputs {
-          width: 100%;
-          max-width: none;
-          top: -0.25rem;
-          position: relative; } }
+      width: 100%;
+      max-width: none;
+      top: -0.25rem;
+      position: relative;
+    }
+  }
+  #singleFile .controls .radio {
+    border: 1px solid #bdbdbd;
+    width: 12px;
+    height: 12px;
+    border-radius: 999px;
+    display: inline-block;
+    cursor: pointer;
+  }
+  @media (max-width: 500px) {
     #singleFile .controls .radio {
-      border: 1px solid #bdbdbd;
-      width: 12px;
-      height: 12px;
-      border-radius: 999px;
-      display: inline-block;
-      cursor: pointer; }
-      @media (max-width: 500px) {
-        #singleFile .controls .radio {
-          width: 20px;
-          height: 20px;
-          position: relative;
-          top: 6px; } }
-    #singleFile .controls .radio.active {
-      background-color: #bdbdbd; }
-    #singleFile .controls ul {
-      list-style-type: none;
-      padding: 0;
-      width: 100%; }
+      width: 20px;
+      height: 20px;
+      position: relative;
+      top: 6px;
+    }
+  }
+  #singleFile .controls .radio.active {
+    background-color: #bdbdbd;
+  }
+  #singleFile .controls ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+  }
+  #singleFile .controls li {
+    display: block;
+  }
+  @media (max-width: 500px) {
     #singleFile .controls li {
-      display: block; }
-      @media (max-width: 500px) {
-        #singleFile .controls li {
-          margin: 5px 0;
-          display: grid;
-          grid-template-columns: 45% 55%; } }
-    #singleFile .controls .property {
-      color: #c2404c; }
-    #singleFile .controls .custom-prop {
-      color: #1fa87a; }
-    #singleFile .controls .value {
-      color: #494949; }
-    #singleFile .controls .string {
-      color: #0050ff; }
+      margin: 5px 0;
+      display: grid;
+      grid-template-columns: 45% 55%;
+    }
+  }
+  #singleFile .controls .property {
+    color: #c2404c;
+  }
+  #singleFile .controls .custom-prop {
+    color: #1fa87a;
+  }
+  #singleFile .controls .value {
+    color: #494949;
+  }
+  #singleFile .controls .string {
+    color: #0050ff;
+  }
+  #singleFile .controls span.comment {
+    font-variation-settings: "MONO" 1, "slnt" -12, "ital" 1;
+    color: #858585;
+  }
+  @media (max-width: 1150px) {
     #singleFile .controls span.comment {
-      font-variation-settings: "MONO" 1, "slnt" -12, "ital" 1;
-      color: #858585; }
-      @media (max-width: 1150px) {
-        #singleFile .controls span.comment {
-          display: none !important; } } 
-      
+      display: none !important;
+    }
+  }
 </style>
 
-    <input type="text" value="Experiment" id="controls-result" />
-    <div class="controls noWhiteSpace">
-
-            <ul class="central-column">
-                <li id="font-size">
-                    <div class="ccs-row">
-                      <!-- 767.98px -->
-                    <div class="css d-none d-md-inline">
-                        <span class="property">font-size</span>: <span id="fontSizeResult" contenteditable="true">16vw</span><span class="hidden--sm">;</span>
-                    </div>
-                    <div class="css d-md-none">
+<input type="text" value="trialSection" id="controls-result" />
+<div class="controls noWhiteSpace">
+  <ul class="central-column">
+    <li id="font-size">
+      <div class="ccs-row">
+        <!-- 767.98px -->
+        <div class="css d-none d-md-inline">
+          <span class="property">font-size</span>: <span id="fontSizeResult" contenteditable="true">16vw</span><span class="hidden--sm">;</span>
+        </div>
+        <!-- <div class="css d-md-none">
                         <span class="property">font-size</span>: <span id="fontSizeResultSm" contenteditable="true">300px</span><span class="hidden--sm">;</span>
-                    </div>
-                    <div class="inputs">
-                      <input id="fontSizeSlider" min="0.5" max="40" step="0.01" value="16" type="range" />
-                    </div>
-                    </div>
-                </li>
-                <!-- <li class="hidden--sm"><span class="comment not-aligned">&nbsp;</span></li> -->
-                <li class="hidden--sm"><span class="comment not-aligned">/* set variation axis values */</span></li>
-                <li id="cust-prop">
-                    <div class="ccs-row">
-                        <span class="css d-inline-block"><span class="custom-prop hidden--sm">--mono</span><span class="hidden--sm">: </span>"<span class="string">MONO</span>" 
-                         <span class="result" id="monoResult" contenteditable="true">0</span><span class="hidden--sm">;</span></span>
-                        <span class="inputs"><input id="monoSlider" min="0" max="1" value="0" step="0.01" type="range" /></span>
-                        <span class="comment d-inline-block">
-                            /* Monospace: Sans (natural-width) or Mono (fixed-width) */
-                        </span>
-                    </div>
-                </li>
-                <li id="cust-casl">
-                    <div class="ccs-row">
-                        <span class="css d-inline-block"><span class="custom-prop hidden--sm">--casl</span><span class="hidden--sm">: </span>"<span class="string">CASL</span>" <span id="caslResult" class="result" contenteditable="true">0</span><span class="hidden--sm">;</span></span>
-                        <span class="inputs"><input id="caslSlider" min="0" max="1" value="0" step="0.01" type="range" /></span>
-                        <span class="comment d-inline-block">
-                            /* Casual: Linear to Casual */
-                        </span>
-                    </div>
-                </li>
-                <li id="font-weight">
-                    <div class="ccs-row">
-                        <span class="css">
-                            <span class="css d-inline-block"><span class="custom-prop hidden--sm">--wght</span><span class="hidden--sm">: </span>"<span class="string">wght</span>" <span id="wghtResult" class="result" contenteditable="true">800</span><span class="hidden--sm">;</span></span>
-                        </span>
-                        <span class="inputs"><input id="wghtSlider" min="300" max="1000" value="800" type="range" /></span>
-                        <span class="comment d-inline-block">
-                            /* Weight: Light to ExtraBlack – usually set with `font-weight` */
-                        </span>
-                    </div>
-                </li>
-                <li id="cust-slnt">
-                    <div class="ccs-row">
-                        <span class="css"><span class="custom-prop hidden--sm">--slnt</span><span class="hidden--sm">: </span>"<span class="string">slnt</span>" <span id="slntResult" class="result" contenteditable="true">0</span><span class="hidden--sm">;</span></span>
-                        <span class="inputs"><input id="slntSlider" min="-15" max="0" step=".1" value="0" type="range" /></span>
-                        <span class="comment d-inline-block">
-                            /* Slant: 0 to -15 degrees */
-                        </span>
-                    </div>
-                </li>
-                <li id="cust-ital">
-                    <div class="ccs-row">
-                        <span class="css"><span class="custom-prop hidden--sm">--ital</span><span class="hidden--sm">: </span>"<span class="string">ital</span>" <span id="italResult" class="result" contenteditable="true">0.5</span><span class="hidden--sm">;</span></span>
+                    </div> -->
+        <div class="css d-md-none">
+          <span class="property">[size]</span> <span id="fontSizeResultSm" contenteditable="true">32vw</span><span class="hidden--sm">;</span>
+        </div>
+        <div class="inputs">
+          <input id="fontSizeSlider" min="0.5" max="40" step="0.01" value="16" type="range" />
+        </div>
+      </div>
+    </li>
+    <!-- <li class="hidden--sm"><span class="comment not-aligned">&nbsp;</span></li> -->
+    <li class="hidden--sm"><span class="comment not-aligned">/* set variation axis values */</span></li>
+    <li id="cust-prop">
+      <div class="ccs-row">
+        <span class="css d-inline-block"><span class="custom-prop hidden--sm">--mono</span><span class="hidden--sm">: </span>"<span class="string">MONO</span>"
+          <span class="result" id="monoResult" contenteditable="true">0</span><span class="hidden--sm">;</span></span>
+        <span class="inputs"><input id="monoSlider" min="0" max="1" value="0" step="0.01" type="range" /></span>
+        <span class="comment d-inline-block">
+          /* Monospace: Sans (natural-width) or Mono (fixed-width) */
+        </span>
+      </div>
+    </li>
+    <li id="cust-casl">
+      <div class="ccs-row">
+        <span class="css d-inline-block"><span class="custom-prop hidden--sm">--casl</span><span class="hidden--sm">: </span>"<span class="string">CASL</span>"
+          <span id="caslResult" class="result" contenteditable="true">0</span><span class="hidden--sm">;</span></span>
+        <span class="inputs"><input id="caslSlider" min="0" max="1" value="0" step="0.01" type="range" /></span>
+        <span class="comment d-inline-block">
+          /* Casual: Linear to Casual */
+        </span>
+      </div>
+    </li>
+    <li id="font-weight">
+      <div class="ccs-row">
+        <span class="css">
+          <span class="css d-inline-block"><span class="custom-prop hidden--sm">--wght</span><span class="hidden--sm">: </span>"<span class="string">wght</span>"
+            <span id="wghtResult" class="result" contenteditable="true">800</span><span class="hidden--sm">;</span></span>
+        </span>
+        <span class="inputs"><input id="wghtSlider" min="300" max="1000" value="800" type="range" /></span>
+        <span class="comment d-inline-block">
+          /* Weight: Light to ExtraBlack – usually set with `font-weight` */
+        </span>
+      </div>
+    </li>
+    <li id="cust-slnt">
+      <div class="ccs-row">
+        <span class="css"><span class="custom-prop hidden--sm">--slnt</span><span class="hidden--sm">: </span>"<span class="string">slnt</span>"
+          <span id="slntResult" class="result" contenteditable="true">0</span><span class="hidden--sm">;</span></span>
+        <span class="inputs"><input id="slntSlider" min="-15" max="0" step=".1" value="0" type="range" /></span>
+        <span class="comment d-inline-block">
+          /* Slant: 0 to -15 degrees */
+        </span>
+      </div>
+    </li>
+    <li id="cust-ital">
+      <div class="ccs-row">
+        <span class="css"><span class="custom-prop hidden--sm">--ital</span><span class="hidden--sm">: </span>"<span class="string">ital</span>"
+          <span id="italResult" class="result" contenteditable="true">0.5</span><span class="hidden--sm">;</span></span>
 
-                        <fieldset id="tester--ital-axis">
-                            <input type="radio" name="ital-selection" id="ital-off" value="0" />
-                            <label for="ital-off">off</label>
+        <fieldset id="tester--ital-axis">
+          <input type="radio" name="ital-selection" id="ital-off" value="0" />
+          <label for="ital-off">off</label>
 
-                            <input type="radio" name="ital-selection" id="ital-auto" value="0.5" checked="" />
-                            <label for="ital-auto">auto</label>
+          <input type="radio" name="ital-selection" id="ital-auto" value="0.5" checked="" />
+          <label for="ital-auto">auto</label>
 
-                            <input type="radio" name="ital-selection" id="ital-on" value="1" />
-                            <label for="ital-on">on</label>
-                        </fieldset>
-                        <span class="comment d-inline-block">
-                            /* Italic: always roman, auto, or always italic */
-                        </span>
-                    </div>
-                </li>
-                <li><span class="comment not-aligned">&nbsp;</span></li>
-                <li><span class="comment not-aligned">/* apply axis values with CSS custom properties */</span></li>
-                <li id="font-variation-settings" class="hidden--sm"><span class="property">font-variation-settings</span>: <span class="string">var</span>(<span class="custom-prop">--mono</span>), <span class="string">var</span>(<span class="custom-prop">--casl</span>), <span class="string">var</span>(<span class="custom-prop">--wght</span>), <span class="string">var</span>(<span class="custom-prop">--slnt</span>), <span class="string">var</span>(<span class="custom-prop">--ital</span>);</li>
-            </ul>
-    </div>
+          <input type="radio" name="ital-selection" id="ital-on" value="1" />
+          <label for="ital-on">on</label>
+        </fieldset>
+        <span class="comment d-inline-block">
+          /* Italic: always roman, auto, or always italic */
+        </span>
+      </div>
+    </li>
+    <li><span class="comment not-aligned">&nbsp;</span></li>
+    <li><span class="comment not-aligned">/* apply axis values with CSS custom properties */</span></li>
+    <li id="font-variation-settings" class="hidden--sm">
+      <span class="property">font-variation-settings</span>: <span class="string">var</span>(<span class="custom-prop">--mono</span>),
+      <span class="string">var</span>(<span class="custom-prop">--casl</span>), <span class="string">var</span>(<span class="custom-prop">--wght</span>), <span class="string">var</span>(<span class="custom-prop">--slnt</span>), <span class="string">var</span>(<span class="custom-prop">--ital</span>);
+    </li>
+  </ul>
+</div>
 
-    <script type="text/javascript">
-    let wght2 = 800;
-    let mono2 = 0;
-    let casl2 = 0;
-    let slnt2 = 0;
-    let ital2 = 0.5;
-    document.getElementById('fontSizeSlider').addEventListener('input', function () {
-        if (window.innerWidth > 767.98){
-          document.getElementById("controls-result").style.fontSize = document.getElementById('fontSizeSlider').value + 'vw';
-        } else {
-          document.getElementById("controls-result").style.fontSize = document.getElementById('fontSizeSlider').value * 9 + 60 + 'px';
-        }
-        document.getElementById("fontSizeResult").innerHTML = document.getElementById('fontSizeSlider').value + 'vw';
-        document.getElementById("fontSizeResultSm").innerHTML = Math.floor(document.getElementById('fontSizeSlider').value * 16 + 44) + 'px';
-    })
-
-    document.getElementById('monoSlider').addEventListener('input', function () {
-        mono2 = document.getElementById('monoSlider').value;
-        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght2}, 'CASL' ${casl2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'ital' ${ital2}`
-        document.getElementById("monoResult").innerHTML = document.getElementById('monoSlider').value;
-    })
-
-    document.getElementById('wghtSlider').addEventListener('input', function () {
-        wght2 = document.getElementById('wghtSlider').value;
-        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght2}, 'CASL' ${casl2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'ital' ${ital2}`
-        document.getElementById("wghtResult").innerHTML = document.getElementById('wghtSlider').value;
-    })
-    document.getElementById('caslSlider').addEventListener('input', function () {
-        casl2 = document.getElementById('caslSlider').value;
-        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght2}, 'CASL' ${casl2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'ital' ${ital2}`
-        document.getElementById("caslResult").innerHTML = document.getElementById('caslSlider').value;
-    })
-    document.getElementById('slntSlider').addEventListener('input', function () {
-        slnt2 = document.getElementById('slntSlider').value;
-        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght2}, 'CASL' ${casl2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'ital' ${ital2}`
-        document.getElementById("slntResult").innerHTML = document.getElementById('slntSlider').value;
-    })
-
-    italAxis = document.getElementById("tester--ital-axis").elements['ital-selection']
-    
-    document.getElementById("ital-off").onchange = function () {
-        ital2 = 0;
-        document.getElementById("italResult").innerHTML = document.getElementById('ital-off').value;
-        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght2}, 'CASL' ${casl2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'ital' ${ital2}`
+<script type="text/javascript">
+  let wght2 = 800;
+  let mono2 = 0;
+  let casl2 = 0;
+  let slnt2 = 0;
+  let ital2 = 0.5;
+  document.getElementById("fontSizeSlider").addEventListener("input", function() {
+    // if (window.innerWidth > 767.98){
+    //   document.getElementById("controls-result").style.fontSize = document.getElementById('fontSizeSlider').value + 'vw';
+    // } else {
+    //   document.getElementById("controls-result").style.fontSize = document.getElementById('fontSizeSlider').value * 9 + 60 + 'px';
+    // }
+    // document.getElementById("fontSizeResult").innerHTML = document.getElementById('fontSizeSlider').value + 'vw';
+    // document.getElementById("fontSizeResultSm").innerHTML = Math.floor(document.getElementById('fontSizeSlider').value * 16 + 44) + 'px';
+    // document.getElementById("controls-result").style.fontSize = document.getElementById('fontSizeSlider').value + 'vw';
+    if (window.innerWidth > 767.98) {
+      document.getElementById("controls-result").style.fontSize = document.getElementById("fontSizeSlider").value + "vw";
+      document.getElementById("fontSizeResult").innerHTML = document.getElementById("fontSizeSlider").value + "vw";
+    } else {
+      document.getElementById("controls-result").style.fontSize = document.getElementById("fontSizeSlider").value * 2 + "vw";
+      document.getElementById("fontSizeResultSm").innerHTML = Math.floor(document.getElementById("fontSizeSlider").value * 2) + "vw";
     }
-    document.getElementById("ital-auto").onchange = function () {
-        ital2 = 0.5;
-        document.getElementById("italResult").innerHTML = document.getElementById('ital-auto').value;
-        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght2}, 'CASL' ${casl2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'ital' ${ital2}`
-    }
-    document.getElementById("ital-on").onchange = function () {
-        ital2 = 1;
-        document.getElementById("italResult").innerHTML = document.getElementById('ital-on').value;
-        document.getElementById("controls-result").style.fontVariationSettings = `'wght' ${wght2}, 'CASL' ${casl2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'ital' ${ital2}`
-    }
+  });
+
+  document.getElementById("monoSlider").addEventListener("input", function() {
+    mono2 = document.getElementById("monoSlider").value;
+    document.getElementById(
+      "controls-result"
+    ).style.fontVariationSettings = `'wght' ${wght2}, 'CASL' ${casl2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'ital' ${ital2}`;
+    document.getElementById("monoResult").innerHTML = document.getElementById("monoSlider").value;
+  });
+
+  document.getElementById("wghtSlider").addEventListener("input", function() {
+    wght2 = document.getElementById("wghtSlider").value;
+    document.getElementById(
+      "controls-result"
+    ).style.fontVariationSettings = `'wght' ${wght2}, 'CASL' ${casl2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'ital' ${ital2}`;
+    document.getElementById("wghtResult").innerHTML = document.getElementById("wghtSlider").value;
+  });
+  document.getElementById("caslSlider").addEventListener("input", function() {
+    casl2 = document.getElementById("caslSlider").value;
+    document.getElementById(
+      "controls-result"
+    ).style.fontVariationSettings = `'wght' ${wght2}, 'CASL' ${casl2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'ital' ${ital2}`;
+    document.getElementById("caslResult").innerHTML = document.getElementById("caslSlider").value;
+  });
+  document.getElementById("slntSlider").addEventListener("input", function() {
+    slnt2 = document.getElementById("slntSlider").value;
+    document.getElementById(
+      "controls-result"
+    ).style.fontVariationSettings = `'wght' ${wght2}, 'CASL' ${casl2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'ital' ${ital2}`;
+    document.getElementById("slntResult").innerHTML = document.getElementById("slntSlider").value;
+  });
+
+  italAxis = document.getElementById("tester--ital-axis").elements["ital-selection"];
+
+  document.getElementById("ital-off").onchange = function() {
+    ital2 = 0;
+    document.getElementById("italResult").innerHTML = document.getElementById("ital-off").value;
+    document.getElementById(
+      "controls-result"
+    ).style.fontVariationSettings = `'wght' ${wght2}, 'CASL' ${casl2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'ital' ${ital2}`;
+  };
+  document.getElementById("ital-auto").onchange = function() {
+    ital2 = 0.5;
+    document.getElementById("italResult").innerHTML = document.getElementById("ital-auto").value;
+    document.getElementById(
+      "controls-result"
+    ).style.fontVariationSettings = `'wght' ${wght2}, 'CASL' ${casl2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'ital' ${ital2}`;
+  };
+  document.getElementById("ital-on").onchange = function() {
+    ital2 = 1;
+    document.getElementById("italResult").innerHTML = document.getElementById("ital-on").value;
+    document.getElementById(
+      "controls-result"
+    ).style.fontVariationSettings = `'wght' ${wght2}, 'CASL' ${casl2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'ital' ${ital2}`;
+  };
 </script>
+
 </div>
 
 <h2 id="extraordinarily-versatile">Extraordinarily versatile.</h2>

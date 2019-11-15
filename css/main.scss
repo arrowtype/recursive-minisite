@@ -1194,7 +1194,7 @@ $randomNumber: random(2);
 :root {
     --trackBg: #bdbdbd; //#777;
     --trackFocus: #cacaca; //#0051ff;
-    --thumbBg: red;//#222;
+    --thumbBg: #666;//#222;
     --trackHeight: 1px;
     --thumbHeight: 12px;
     --thumbTouchHeight: 48px;
@@ -1227,8 +1227,11 @@ $randomNumber: random(2);
 
     input[type=range] {
         -webkit-appearance: none;
-        margin: 18px 0;
-        width: 240px;
+        margin: 18px;
+        margin-left: calc(-1 * var(--thumbTouchHeight)/2);
+        margin-right: calc(-1 * var(--thumbTouchHeight)/2);
+        width: calc(100% + var(--thumbTouchHeight)/2);
+        max-width: 400px;
         background: transparent; /* necessary for firefox */
       }
 
@@ -1242,14 +1245,14 @@ $randomNumber: random(2);
         height: var(--trackHeight);
         cursor: pointer;
         background: transparent;
-        background-image: linear-gradient(to right, var(--sliderComponentBg), var(--sliderComponentBg) 20px, var(--trackBg) 20px,  var(--trackBg) 50%, transparent 50%),
-                    linear-gradient(to left, var(--sliderComponentBg), var(--sliderComponentBg) 20px, var(--trackBg) 20px, var(--trackBg) 50%, transparent 50%);
+        background-image: linear-gradient(to right, var(--sliderComponentBg), var(--sliderComponentBg) calc(var(--thumbTouchHeight)/2), var(--trackBg) calc(var(--thumbTouchHeight)/2),  var(--trackBg) 50%, transparent 50%),
+                    linear-gradient(to left, var(--sliderComponentBg), var(--sliderComponentBg) calc(var(--thumbTouchHeight)/2), var(--trackBg) calc(var(--thumbTouchHeight)/2), var(--trackBg) 50%, transparent 50%);
         border-radius: 1px; /* weidly, this property must be here */
       }
     input[type=range]:focus::-webkit-slider-runnable-track {
         outline: none;
-        background-image: linear-gradient(to right,  var(--sliderComponentBg),  var(--sliderComponentBg) 20px, var(--trackFocus) 20px,  var(--trackFocus) 50%, transparent 50%),
-                    linear-gradient(to left,  var(--sliderComponentBg),  var(--sliderComponentBg) 20px, var(--trackFocus) 20px, var(--trackFocus) 50%, transparent 50%);
+        background-image: linear-gradient(to right,  var(--sliderComponentBg),  var(--sliderComponentBg) calc(var(--thumbTouchHeight)/2), var(--trackFocus) calc(var(--thumbTouchHeight)/2),  var(--trackFocus) 50%, transparent 50%),
+                    linear-gradient(to left,  var(--sliderComponentBg),  var(--sliderComponentBg) calc(var(--thumbTouchHeight)/2), var(--trackFocus) calc(var(--thumbTouchHeight)/2), var(--trackFocus) 50%, transparent 50%);
       }
     input[type=range]::-webkit-slider-thumb {
         height: var(--thumbTouchHeight);
@@ -2530,12 +2533,10 @@ ul.casual .rw{--casl: 1}
       left:5px;
     }
 }
-#singleFile{
-    width: calc(100% + 40px);
-    position: relative;
-    left: -20px;
-    
-}
+// #singleFile{
+//     width: calc(100% + 40px);
+//     position: relative;
+// }
 #singleFile .controls ul{
     left:0px;
 }
