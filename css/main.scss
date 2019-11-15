@@ -38,6 +38,7 @@
 body{
     counter-reset: line;
     font-feature-settings: 'dlig' 1, 'liga' 1;
+    font-variation-settings: "MONO" 0.001, "CASL" 0.001; // required for macOS to display weights properly
 }
 
 body.loaded{
