@@ -1191,6 +1191,16 @@ $randomNumber: random(2);
 
 /// Express Yourself section
 
+:root {
+    --trackBg: #bdbdbd; //#777;
+    --trackFocus: #cacaca; //#0051ff;
+    --thumbBg: #666;//#222;
+    --trackHeight: 1px;
+    --thumbHeight: 12px;
+    --thumbTouchHeight: 48px;
+    --sliderComponentBg: #f4f4f4;
+  }
+
 #singleFile{
     border-top:1px solid #bdbdbd;
     color:#454545;
@@ -1214,91 +1224,101 @@ $randomNumber: random(2);
         outline:none;
     }
 
+
     input[type=range] {
-    -webkit-appearance: none;
-    width: 240px;
-    margin: 5.5px 0;
-    }
+        -webkit-appearance: none;
+        margin: 18px;
+        margin-left: calc(-1 * var(--thumbTouchHeight)/2);
+        margin-right: calc(-1 * var(--thumbTouchHeight)/2);
+        width: calc(100% + var(--thumbTouchHeight)/2);
+        max-width: 400px;
+        background: transparent; /* necessary for firefox */
+      }
+
     input[type=range]:focus {
-    outline: none;
-    }
+        outline: none;
+        color: transparent;
+        text-shadow: 0 0 0 #000;
+      }
     input[type=range]::-webkit-slider-runnable-track {
-    width: 100%;
-    height: 1px;
-    cursor: pointer;
-    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-    background: #bdbdbd;
-    border-radius: 0px;
-    border: 0.1px solid rgba(0, 0, 0, 0);
-    }
-    input[type=range]::-webkit-slider-thumb {
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
-    border: 0px solid rgba(0, 0, 0, 0);
-    height: 12px;
-    width: 12px;
-    border-radius: 12px;
-    background: #858585;
-    cursor: pointer;
-    -webkit-appearance: none;
-    margin-top: -5.6px;
-    }
+        width: 100%;
+        height: var(--trackHeight);
+        cursor: pointer;
+        background: transparent;
+        background-image: linear-gradient(to right, transparent, transparent calc(var(--thumbTouchHeight)/2), var(--trackBg) calc(var(--thumbTouchHeight)/2),  var(--trackBg) 50%, transparent 50%),
+                    linear-gradient(to left, transparent, transparent calc(var(--thumbTouchHeight)/2), var(--trackBg) calc(var(--thumbTouchHeight)/2), var(--trackBg) 50%, transparent 50%);
+        border-radius: 1px; /* weidly, this property must be here */
+      }
     input[type=range]:focus::-webkit-slider-runnable-track {
-    background: #cacaca;
-    }
+        outline: none;
+        background-image: linear-gradient(to right,  transparent,  transparent calc(var(--thumbTouchHeight)/2), var(--trackFocus) calc(var(--thumbTouchHeight)/2),  var(--trackFocus) 50%, transparent 50%),
+                    linear-gradient(to left,  transparent,  transparent calc(var(--thumbTouchHeight)/2), var(--trackFocus) calc(var(--thumbTouchHeight)/2), var(--trackFocus) 50%, transparent 50%);
+      }
+    input[type=range]::-webkit-slider-thumb {
+        height: var(--thumbTouchHeight);
+        width: var(--thumbTouchHeight);
+        border-radius: var(--thumbTouchHeight);
+        border: none;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: calc(-1 * (var(--thumbTouchHeight) / 2) + (var(--trackHeight) / 2 ));
+        background: none; /* necessary for iOS Safari */
+        background-image: radial-gradient(var(--thumbBg) calc(var(--thumbHeight)/2), transparent calc(var(--thumbHeight)/2), transparent);
+      }
+    
     input[type=range]::-moz-range-track {
-    width: 100%;
-    height: 1px;
-    cursor: pointer;
-    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-    background: #bdbdbd;
-    border-radius: 0px;
-    border: 0.1px solid rgba(0, 0, 0, 0);
-    }
+        width: 100%;
+        height: var(--trackHeight);
+        border-radius:1px;
+        cursor: pointer;
+        background-color: red;
+        background-image: linear-gradient(to right,  var(--sliderComponentBg),  var(--sliderComponentBg) 20px, var(--trackBg) 20px,  var(--trackBg) 50%, transparent 50%),
+                    linear-gradient(to left,  var(--sliderComponentBg),  var(--sliderComponentBg) 20px, var(--trackBg) 20px, var(--trackBg) 50%, transparent 50%);
+      }
+    input[type=range]:focus::-moz-range-track {
+        background-image: linear-gradient(to right,  var(--sliderComponentBg),  var(--sliderComponentBg) 20px, var(--trackFocus) 20px,  var(--trackFocus) 50%, transparent 50%),
+                    linear-gradient(to left,  var(--sliderComponentBg),  var(--sliderComponentBg) 20px, var(--trackFocus) 20px, var(--trackFocus) 50%, transparent 50%);
+      }
+    input[type=range]::-moz-focus-outer {
+        border: 0;
+        }
     input[type=range]::-moz-range-thumb {
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
-    border: 0px solid rgba(0, 0, 0, 0);
-    height: 12px;
-    width: 12px;
-    border-radius: 12px;
-    background: #858585;
-    cursor: pointer;
-    }
+        height: var(--thumbTouchHeight);
+        width: var(--thumbTouchHeight);
+        border:none;
+        border-radius: var(--thumbTouchHeight);
+        background: none; /* necessary for iOS Safari */
+        background-image: radial-gradient(var(--thumbBg) calc(var(--thumbHeight)/2), transparent calc(var(--thumbHeight)/2), transparent);
+        cursor: pointer;
+        }
+          
+
     input[type=range]::-ms-track {
-    width: 100%;
-    height: 1px;
-    cursor: pointer;
-    background: transparent;
-    border-color: transparent;
-    color: transparent;
-    }
-    input[type=range]::-ms-fill-lower {
-    background: #b0b0b0;
-    border: 0.1px solid rgba(0, 0, 0, 0);
-    border-radius: 0px;
-    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-    }
-    input[type=range]::-ms-fill-upper {
-    background: #bdbdbd;
-    border: 0.1px solid rgba(0, 0, 0, 0);
-    border-radius: 0px;
-    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-    }
-    input[type=range]::-ms-thumb {
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
-    border: 0px solid rgba(0, 0, 0, 0);
-    height: 12px;
-    width: 12px;
-    border-radius: 12px;
-    background: #858585;
-    cursor: pointer;
-    height: 1px;
-    }
-    input[type=range]:focus::-ms-fill-lower {
-    background: #bdbdbd;
-    }
-    input[type=range]:focus::-ms-fill-upper {
-    background: #cacaca;
-    }
+        width: calc(100%- var(--thumbTouchHeight));
+        margin-left: calc(var(--thumbTouchHeight)/2);
+        height:var(--trackHeight);
+        cursor: pointer;
+      }
+      input[type=range]::-ms-fill-lower {
+         background-color: #777;
+      }
+      input[type=range]::-ms-fill-upper {
+         background: #777;
+      }
+      input[type=range]::-ms-thumb {
+        width: var(--thumbHeight); 
+        margin-left:  calc(var(--thumbTouchHeight)/2);
+        margin-right: calc(var(--thumbTouchHeight)/2);
+        border-radius: 999px;
+        background-color: #222;
+        cursor: pointer;
+      }
+      input[type=range]:focus::-ms-fill-lower {
+        background: blue;
+      }
+      input[type=range]:focus::-ms-fill-upper {
+        background: blue;
+      }
 
 
     .controls{
@@ -2516,8 +2536,7 @@ ul.casual .rw{--casl: 1}
 #singleFile{
     width: calc(100% + 40px);
     position: relative;
-    left: -20px;
-    
+    left:-20px;
 }
 #singleFile .controls ul{
     left:0px;
