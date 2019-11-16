@@ -31,7 +31,7 @@
   #singleFile #controls-result {
     background: white;
     color: black;
-    font-size: 16vw;
+    font-size: 12vw;
     font-weight: 800;
     line-height: 1.125;
     border: 0px;
@@ -264,14 +264,6 @@
   let slnt2 = 0;
   let ital2 = 0.5;
   document.getElementById("fontSizeSlider").addEventListener("input", function() {
-    // if (window.innerWidth > 767.98){
-    //   document.getElementById("controls-result").style.fontSize = document.getElementById('fontSizeSlider').value + 'vw';
-    // } else {
-    //   document.getElementById("controls-result").style.fontSize = document.getElementById('fontSizeSlider').value * 9 + 60 + 'px';
-    // }
-    // document.getElementById("fontSizeResult").innerHTML = document.getElementById('fontSizeSlider').value + 'vw';
-    // document.getElementById("fontSizeResultSm").innerHTML = Math.floor(document.getElementById('fontSizeSlider').value * 16 + 44) + 'px';
-    // document.getElementById("controls-result").style.fontSize = document.getElementById('fontSizeSlider').value + 'vw';
     if (window.innerWidth > 767.98) {
       document.getElementById("controls-result").style.fontSize = document.getElementById("fontSizeSlider").value + "vw";
       document.getElementById("fontSizeResult").innerHTML = document.getElementById("fontSizeSlider").value + "vw";

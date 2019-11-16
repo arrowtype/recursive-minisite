@@ -420,7 +420,7 @@ To meet the needs of global communication, Recursive supports a wide range of La
   #singleFile #controls-result {
     background: white;
     color: black;
-    font-size: 16vw;
+    font-size: 12vw;
     font-weight: 800;
     line-height: 1.125;
     border: 0px;
@@ -540,14 +540,14 @@ To meet the needs of global communication, Recursive supports a wide range of La
   }
 </style>
 
-<input type="text" value="trialSection" id="controls-result" />
+<input type="text" value="trialSegment" id="controls-result" />
 <div class="controls noWhiteSpace">
   <ul class="central-column">
     <li id="font-size">
       <div class="ccs-row">
         <!-- 767.98px -->
         <div class="css d-none d-md-inline">
-          <span class="property">font-size</span>: <span id="fontSizeResult" contenteditable="true">14vw</span><span class="hidden--sm">;</span>
+          <span class="property">font-size</span>: <span id="fontSizeResult" contenteditable="true">12vw</span><span class="hidden--sm">;</span>
         </div>
         <!-- <div class="css d-md-none">
                         <span class="property">font-size</span>: <span id="fontSizeResultSm" contenteditable="true">300px</span><span class="hidden--sm">;</span>
@@ -640,14 +640,6 @@ To meet the needs of global communication, Recursive supports a wide range of La
   let slnt2 = 0;
   let ital2 = 0.5;
   document.getElementById("fontSizeSlider").addEventListener("input", function() {
-    // if (window.innerWidth > 767.98){
-    //   document.getElementById("controls-result").style.fontSize = document.getElementById('fontSizeSlider').value + 'vw';
-    // } else {
-    //   document.getElementById("controls-result").style.fontSize = document.getElementById('fontSizeSlider').value * 9 + 60 + 'px';
-    // }
-    // document.getElementById("fontSizeResult").innerHTML = document.getElementById('fontSizeSlider').value + 'vw';
-    // document.getElementById("fontSizeResultSm").innerHTML = Math.floor(document.getElementById('fontSizeSlider').value * 16 + 44) + 'px';
-    // document.getElementById("controls-result").style.fontSize = document.getElementById('fontSizeSlider').value + 'vw';
     if (window.innerWidth > 767.98) {
       document.getElementById("controls-result").style.fontSize = document.getElementById("fontSizeSlider").value + "vw";
       document.getElementById("fontSizeResult").innerHTML = document.getElementById("fontSizeSlider").value + "vw";
