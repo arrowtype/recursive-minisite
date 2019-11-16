@@ -31,7 +31,7 @@
   #singleFile #controls-result {
     background: white;
     color: black;
-    font-size: 16vw;
+    font-size: 12vw;
     font-weight: 800;
     line-height: 1.125;
     border: 0px;
@@ -41,8 +41,7 @@
     font-variation-settings: "MONO" 0.01, "CASL" 0.01, "slnt" 0, "ital" 0, "wght" 800;
     text-align: center;
     width: 100%;
-    padding: calc(var(--padding-unit) * 2 * 0.9);
-    padding-right: 0;
+    padding: 0;
     margin: 0;
     border-radius: 0;
     display: grid;
@@ -152,14 +151,14 @@
   }
 </style>
 
-<input type="text" value="trialSection" id="controls-result" />
+<input type="text" value="trialSegment" id="controls-result" />
 <div class="controls noWhiteSpace">
   <ul class="central-column">
     <li id="font-size">
       <div class="ccs-row">
         <!-- 767.98px -->
         <div class="css d-none d-md-inline">
-          <span class="property">font-size</span>: <span id="fontSizeResult" contenteditable="true">16vw</span><span class="hidden--sm">;</span>
+          <span class="property">font-size</span>: <span id="fontSizeResult" contenteditable="true">12vw</span><span class="hidden--sm">;</span>
         </div>
         <!-- <div class="css d-md-none">
                         <span class="property">font-size</span>: <span id="fontSizeResultSm" contenteditable="true">300px</span><span class="hidden--sm">;</span>
@@ -265,14 +264,6 @@
   let slnt2 = 0;
   let ital2 = 0.5;
   document.getElementById("fontSizeSlider").addEventListener("input", function() {
-    // if (window.innerWidth > 767.98){
-    //   document.getElementById("controls-result").style.fontSize = document.getElementById('fontSizeSlider').value + 'vw';
-    // } else {
-    //   document.getElementById("controls-result").style.fontSize = document.getElementById('fontSizeSlider').value * 9 + 60 + 'px';
-    // }
-    // document.getElementById("fontSizeResult").innerHTML = document.getElementById('fontSizeSlider').value + 'vw';
-    // document.getElementById("fontSizeResultSm").innerHTML = Math.floor(document.getElementById('fontSizeSlider').value * 16 + 44) + 'px';
-    // document.getElementById("controls-result").style.fontSize = document.getElementById('fontSizeSlider').value + 'vw';
     if (window.innerWidth > 767.98) {
       document.getElementById("controls-result").style.fontSize = document.getElementById("fontSizeSlider").value + "vw";
       document.getElementById("fontSizeResult").innerHTML = document.getElementById("fontSizeSlider").value + "vw";
