@@ -1227,7 +1227,7 @@ $randomNumber: random(2);
 
     input[type=range] {
         -webkit-appearance: none;
-        margin: 18px;
+        margin: calc(1em - var(--thumbTouchHeight)/2);
         margin-left: calc(-1 * var(--thumbTouchHeight)/2);
         margin-right: calc(-1 * var(--thumbTouchHeight)/2);
         width: calc(100% + var(--thumbTouchHeight)/2);
