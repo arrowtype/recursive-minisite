@@ -8,7 +8,7 @@ title: Recursive
 
 ## A highly-flexible new variable font.
 
-Built to maximize versatility, control, and performance, Recursive is a five-axis variable font. This enables you to choose from a wide range of predefined styles, or dial in exactly what you want for each of its axes: *Proportion, Monospace, Weight, Slant, and Italic*. Taking full advantage of variable font technology, Recursive offers an unprecedented level of flexibility, all from a single font file.
+Built to maximize versatility, control, and performance, Recursive is a five-axis variable font. This enables you to choose from a wide range of predefined styles, or dial in exactly what you want for each of its axes: *Monospace, Casual, Weight, Slant, and Italic*. Taking full advantage of variable font technology, Recursive offers an unprecedented level of flexibility, all from a single font file.ile.
 
 <div class="my-4" id="singleFile">
 {% include singlefile2.html %}
