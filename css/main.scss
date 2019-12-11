@@ -2211,6 +2211,8 @@ div#truerItalics {
 }
 
 #robustLayouts{
+    min-height: 300px; /* hacky magic value due to the iframe :( */
+
     #cursorGood, #cursorBad{
         position:absolute;
         top:110px;
