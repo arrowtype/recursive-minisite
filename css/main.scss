@@ -593,12 +593,7 @@ iframe{
 iframe:last-child{
     margin-bottom:0px;
 }
-iframe:not(.yall-loaded){
-    height:600px;
-    // background-color:#fafafa;
-    opacity:0;
-    transition:opacity 1s;
-}
+
 // iframe:first-child{
 //     height:675px;
 // }
