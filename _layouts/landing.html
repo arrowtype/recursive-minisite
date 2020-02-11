@@ -1,10 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<style>html{visibility: hidden;opacity:0;}</style>
-  		{% include head.html %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-  	</head>
+    <title>{{ site.data.globals.title}}</title>
+    <meta property="og:title" content="{{ site.data.globals.title}}">
+    <meta name="twitter:title" content="{{ site.data.globals.title}}">
+
+    <meta name="author" content="{{ site.data.globals.author}}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.data.globals.url }}">
+    <meta name="twitter:image" content="{{ site.data.globals.image }}">
+    <meta name="twitter:url" content="{{ site.data.globals.url }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@arrowtype">
+    <meta name="twitter:image:alt" content="Recursive is a new font with 5 stylistic variation axes">
+
+    <meta name="description" content="{{ site.data.globals.description}}">
+    <meta property="twitter:description" content="{{ site.data.globals.description}}">
+    <meta property="og:description" content="{{ site.data.globals.description}}">
+    <meta property="og:image" content="{{ site.data.globals.image }}">
+
+    <link rel="icon" type="image/png" href="/assets/favicon/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/assets/favicon/favicon-16x16.png" sizes="16x16" />
+
+    <style>
+      html {
+          visibility: hidden;opacity:0;
+      }
+    </style>
+
+    {% include head.html %}
+
+
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151519261-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-151519261-1');
+    </script>
+
+  </head>
 	<body>
 		{% include navigation.html %}
 	<input type="text" id="textInput" oninput="changeString()"></input>
