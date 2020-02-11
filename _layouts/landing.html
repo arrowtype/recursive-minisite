@@ -34,6 +34,7 @@
     </style>
 
     {% include head.html %}
+    <script src="../js/lazysizes.min.js?v=5.2.0" async=""></script>
 
 
       <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -137,23 +138,23 @@
 
 	<div class="container-fluid d-none d-md-block" id="mdContainer">
 		<textarea class="mdSection">{% include sections/section-1_Highly-Customizable.md %}</textarea>
-		<iframe data-src="/singlefile" title="Highly Customizable" class="yall-loaded" src="/singlefile"></iframe>
+		<iframe data-src="/singlefile" title="Highly Customizable" class="lazyload" data-expand="50" style="height: 814px"></iframe>
 		<textarea class="mdSection">{% include sections/section-2_Extraordinarily.md %}</textarea>
-		<iframe data-src="/morewithtypography" title="Single File" class="yall-loaded" src="/morewithtypography"></iframe>
+		<iframe data-src="/morewithtypography" title="Single File" class="lazyload" data-expand="50" style="height: 652px"></iframe>
 		<textarea class="mdSection">{% include sections/section-3_Sans-Mono.md %}</textarea>
-		<iframe data-src="/monosans" title="Sans and Monospace" class="yall-loaded" src="/monosans"></iframe>
+		<iframe data-src="/monosans" title="Sans and Monospace" class="lazyload" style="height: 750px"></iframe>
 		<textarea class="mdSection">{% include sections/section-4_Made-for.md %}</textarea>
-		<iframe data-src="/robustlayouts" title="Robust Layouts" class="yall-loaded" src="/robustlayouts"></iframe>
+		<iframe data-src="/robustlayouts" title="Robust Layouts" class="lazyload" style="height: 350px"></iframe>
 		<textarea class="mdSection">{% include sections/section-5_Ready.md %}</textarea>
-		<iframe data-src="/readyforwork" title="Ready for Work" class="yall-loaded" src="/readyforwork"></iframe>
+		<iframe data-src="/readyforwork" title="Ready for Work" class="lazyload" style="height: 496px"></iframe>
 		<textarea class="mdSection">{% include sections/section-6_Light-to-Heavy.md %}</textarea>
-		<iframe data-src="/weightforit" title="Light to ExtraBlack" class="yall-loaded" src="/weightforit"></iframe>
+		<iframe data-src="/weightforit" title="Light to ExtraBlack" class="lazyload" style="height: 546px"></iframe>
 		<textarea class="mdSection">{% include sections/section-7_Slant-Ital.md %}</textarea>
-		<iframe data-src="/trueritalics" title="Slant and Italics" class="yall-loaded" src="/trueritalics"></iframe>
+		<iframe data-src="/trueritalics" title="Slant and Italics" class="lazyload" style="height: 510px"></iframe>
 		<textarea class="mdSection">{% include sections/section-8_Powerful.md %}</textarea>
-		<iframe data-src="/powerfulbutsimple" title="Powerful but Simple" class="yall-loaded" src="/powerfulbutsimple"></iframe>
+		<iframe data-src="/powerfulbutsimple" title="Powerful but Simple" class="lazyload" style="height: 807px"></iframe>
 		<textarea class="mdSection">{% include sections/section-9_Languages.md %}</textarea>
-		<iframe data-src="/languages" title="Languages" class="yall-loaded" src="/languages"></iframe>
+		<iframe data-src="/languages" title="Languages" class="lazyload" style="height: 2000px"></iframe>
 	</div>
   <!-- For purge css to work it needs to see some of the codemirror classes -->
   <!-- <span class="cm-formatting cm-formatting-header cm-formatting-header-2 cm-header cm-header-2 CodeMirror cm-s-paper CodeMirror-wrap CodeMirror-scroll CodeMirror-sizer CodeMirror-lines"></span>
@@ -172,10 +173,6 @@
 
 <!-- Markdown -->
 <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
-
-<!-- Yall JS for lazy loading -->
-<script src="/js/yall.min.js"></script>
-<script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
 
 <script type="text/javascript" src="/js/fontfaceonload.js"></script>
 <!-- Custom -->
@@ -235,7 +232,7 @@
 
 	for (var i=0;i<document.getElementsByTagName("iframe").length;i++){
 		document.getElementsByTagName('iframe')[i].onload = function(){
-			this.style.height = this.contentWindow.document.body.offsetHeight + 50 + 'px';
+        this.style.height = this.contentWindow.document.body.offsetHeight + 50 + 'px';
 		}
 	}
 

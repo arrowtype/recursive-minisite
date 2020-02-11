@@ -593,12 +593,7 @@ iframe{
 iframe:last-child{
     margin-bottom:0px;
 }
-iframe:not(.yall-loaded){
-    height:600px;
-    // background-color:#fafafa;
-    opacity:0;
-    transition:opacity 1s;
-}
+
 // iframe:first-child{
 //     height:675px;
 // }
@@ -3138,4 +3133,8 @@ textarea {
   font-family: 'RecVF';
   font-weight: 300 1000;
   src: url("/assets/fonts/recursive-MONO_CASL_wght_slnt_ital--full_gsub--2019_12_21-21_07.woff2");
+}
+
+.lazyload {
+    background: var(--offwhite-1);
 }
