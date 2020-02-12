@@ -354,7 +354,7 @@ function cubify(inputString) {
 					text.setParent(mesh);
 					this.textlabels.push(text);
 
-					this.container.appendChild(text.element);
+					this.container.appendChild(text.fragment);
 				}
 			}
 
@@ -504,13 +504,16 @@ function cubify(inputString) {
 		},
 
 		_createTextLabel: function() {
-			var div = document.createElement("div");
-			div.className = "text-label loaded";
-			div.innerHTML = " ";
+			const fragment = new DocumentFragment();
+			var textLabelEl = document.createElement("div");
+			textLabelEl.className = "text-label loaded";
+			textLabelEl.innerHTML = " ";
+			fragment.appendChild(textLabelEl);
 			var _this = this;
 
 			return {
-				element: div,
+				element: textLabelEl,
+				fragment,
 				parent: false,
 				position: new THREE.Vector3(0, 0, 0),
 				setHTML: function(html) {
