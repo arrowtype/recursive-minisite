@@ -1,260 +1,471 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <title>{{ site.data.globals.title}}</title>
-    <meta property="og:title" content="{{ site.data.globals.title}}">
-    <meta name="twitter:title" content="{{ site.data.globals.title}}">
+		<title>{{ site.data.globals.title}}</title>
+		<meta property="og:title" content="{{ site.data.globals.title}}" />
+		<meta name="twitter:title" content="{{ site.data.globals.title}}" />
 
-    <meta name="author" content="{{ site.data.globals.author}}">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ site.data.globals.url }}">
-    <meta name="twitter:image" content="{{ site.data.globals.image }}">
-    <meta name="twitter:url" content="{{ site.data.globals.url }}">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@arrowtype">
-    <meta name="twitter:image:alt" content="Recursive is a new font with 5 stylistic variation axes">
+		<meta name="author" content="{{ site.data.globals.author}}" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="{{ site.data.globals.url }}" />
+		<meta name="twitter:image" content="{{ site.data.globals.image }}" />
+		<meta name="twitter:url" content="{{ site.data.globals.url }}" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@arrowtype" />
+		<meta
+			name="twitter:image:alt"
+			content="Recursive is a new font with 5 stylistic variation axes"
+		/>
 
-    <meta name="description" content="{{ site.data.globals.description}}">
-    <meta property="twitter:description" content="{{ site.data.globals.description}}">
-    <meta property="og:description" content="{{ site.data.globals.description}}">
-    <meta property="og:image" content="{{ site.data.globals.image }}">
+		<meta name="description" content="{{ site.data.globals.description}}" />
+		<meta
+			property="twitter:description"
+			content="{{ site.data.globals.description}}"
+		/>
+		<meta
+			property="og:description"
+			content="{{ site.data.globals.description}}"
+		/>
+		<meta property="og:image" content="{{ site.data.globals.image }}" />
 
-    <link rel="icon" type="image/png" href="/assets/favicon/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="/assets/favicon/favicon-16x16.png" sizes="16x16" />
+		<link
+			rel="icon"
+			type="image/png"
+			href="/assets/favicon/favicon-32x32.png"
+			sizes="32x32"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			href="/assets/favicon/favicon-16x16.png"
+			sizes="16x16"
+		/>
 
-    <style>
-      html {
-          visibility: hidden;opacity:0;
-      }
-    </style>
+		<style>
+			html {
+				visibility: hidden;
+				opacity: 0;
+			}
+		</style>
 
-    {% include head.html %}
-    <script src="../js/lazysizes.min.js?v=5.2.0" async=""></script>
+		{% include head.html %}
+		<script src="../js/lazysizes.min.js?v=5.2.0" async=""></script>
 
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=UA-151519261-1"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
 
-      <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151519261-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-151519261-1');
-    </script>
-
-  </head>
+			gtag("config", "UA-151519261-1");
+		</script>
+	</head>
 	<body>
 		{% include navigation.html %}
-	<input type="text" id="textInput" oninput="changeString()"></input>
-	<div class="container-fluid bg-dark position-relative" id="hero">
-    <div class="three-container">
-      <div id="THREE">
-        <div class="lines">
-          <div id="line1"></div>
-          <div class="line1-label label">Weight</div>
-          <div id="line2"></div>
-          <div class="line2-label label">Casual</div>
-          <div id="line3"></div>
-          <div class="line3-label label">Slant</div>
-        </div>
-      </div>
-    </div>
-    <div class="hero__headline">
-        A typographic palette for vibrant code & UI
-    </div>
-</div>
-<div id="phantomToolbar" class="d-none"></div>
+		<input type="text" id="textInput" oninput="changeString()" />
+		<div class="container-fluid bg-dark position-relative" id="hero">
+			<div class="three-container">
+				<div id="THREE">
+					<div class="lines">
+						<div id="line1"></div>
+						<div class="line1-label label">Weight</div>
+						<div id="line2"></div>
+						<div class="line2-label label">Casual</div>
+						<div id="line3"></div>
+						<div class="line3-label label">Slant</div>
+					</div>
+				</div>
+			</div>
+			<div class="hero__headline">
+				A typographic palette for vibrant code & UI
+			</div>
+		</div>
+		<div id="phantomToolbar" class="d-none"></div>
 
-<div class="toolbar clearfix" id="toolbar">
-    <select class="toolbar__item" id="chooseInstance">
-        {% for instance in site.data.instances %}
-        <option {% if instance.selected%} selected="selected" {% endif %}data-mono="{{ instance.MONO }}" data-casl="{{ instance.CASL }}" data-ital="{{ instance.ital }}" data-slnt="{{ instance.slnt }}" data-wght="{{ instance.wght }}">{{ instance.name }}</option>
-        {% endfor %}
-    </select>
-    <div class="toolbar__item" id="collapseSize">
-        <a data-toggle="collapse" data-target="#pickFontSize" data-text="Collapse">
-        <span id="changeFontSize">15</span>pt
-        <svg style="pointer-events:none" class="arrow" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1.41 0.589844L6 5.16984L10.59 0.589844L12 1.99984L6 7.99984L0 1.99984L1.41 0.589844Z" fill="black"/>
-        </svg>
-        </a>
-        <div class="collapse" id="pickFontSize">
-            <ul>
-                <li><input id="globalFontSizeSlider" min="6" max="60" step="1" value="15" type="range"></li>
-            </ul>
-        </div>
-    </div>
-    <div class="toolbar__item settings d-none d-md-block" id="collapseSettings">
-        <a data-toggle="collapse" data-target="#pickVariability" data-text="Collapse">
-            <span class="grey">MONO </span>
-                <span id="globalMono">0.00</span>
-                <span class="grey">   CASL </span>
-                <span id="globalXprn">0.00</span>
-                <span class="grey">   wght </span>
-                <span id="globalWght">400</span>
-                <span class="grey">   ital </span>
-                <span id="globalItal">0</span>
-                <span class="grey">   slnt </span>
-                <span id="globalSlnt">0.00</span>
-        </a>
-        <div class="collapse" id="pickVariability">
-            <ul>
-                <li><span class="collapse__label">MONO</span><span class="inputs d-inline-block"><input id="globalMonoSlider" min="0.00" max="1.00" value="0.00"
-                        step="0.01" type="range"></span></li>
-                <li><span class="collapse__label">CASL</span><input id="globalXprnSlider" min="0.00" max="1.00" value="0.00"
-                        step="0.01" type="range"></li>
-                <li><span class="collapse__label">wght</span><input id="globalWghtSlider" min="300" max="1000"
-                        value="400" step="1" type="range"></li>
-                <li><span class="collapse__label">slnt</span><input id="globalSlntSlider" min="-15.00" max="00.00" value="00.00"
-                        step="0.01" type="range"></li>
-                <li>
-                    <span class="collapse__label">ital</span>
-                    <span class="inputs d-inline-block">
-                        <span class="collapse__label">
-                            <span class="radio radio-ital" id="globalItalOff"></span>
-                            Off</span>
-                        <span class="collapse__label"><span class="radio active radio-ital" id="globalItalAuto"></span>
-                            Auto</span>
-                        <span class="collapse__label">
-                            <span class="radio radio-ital" id="globalItalOn"></span> On</span></span>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="toolbar__item d-none d-md-block">
-        <a id="inversePage">
-            <svg id="inverseSVG" style="pointer-events:none" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="8" cy="8" r="7.5" fill="white" stroke="black"/>
-                <path d="M15.4836 7.5H0.516402C0.773695 3.59098 4.02588 0.5 8 0.5C11.9741 0.5 15.2263 3.59098 15.4836 7.5Z" fill="black" stroke="black"/>
-            </svg>
-        </a>
-    </div>
-</div>
+		<div class="toolbar clearfix" id="toolbar">
+			<select class="toolbar__item" id="chooseInstance">
+				{% for instance in site.data.instances %}
+				<option
+					{%
+					if
+					instance.selected%}
+					selected="selected"
+					{%
+					endif
+					%}data-mono="{{ instance.MONO }}"
+					data-casl="{{ instance.CASL }}"
+					data-ital="{{ instance.ital }}"
+					data-slnt="{{ instance.slnt }}"
+					data-wght="{{ instance.wght }}"
+					>{{ instance.name }}</option
+				>
+				{% endfor %}
+			</select>
+			<div class="toolbar__item" id="collapseSize">
+				<a
+					data-toggle="collapse"
+					data-target="#pickFontSize"
+					data-text="Collapse"
+				>
+					<span id="changeFontSize">15</span>pt
+					<svg
+						style="pointer-events:none"
+						class="arrow"
+						width="12"
+						height="8"
+						viewBox="0 0 12 8"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M1.41 0.589844L6 5.16984L10.59 0.589844L12 1.99984L6 7.99984L0 1.99984L1.41 0.589844Z"
+							fill="black"
+						/>
+					</svg>
+				</a>
+				<div class="collapse" id="pickFontSize">
+					<ul>
+						<li>
+							<input
+								id="globalFontSizeSlider"
+								min="6"
+								max="60"
+								step="1"
+								value="15"
+								type="range"
+							/>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div
+				class="toolbar__item settings d-none d-md-block"
+				id="collapseSettings"
+			>
+				<a
+					data-toggle="collapse"
+					data-target="#pickVariability"
+					data-text="Collapse"
+				>
+					<span class="grey">MONO </span>
+					<span id="globalMono">0.00</span>
+					<span class="grey"> CASL </span>
+					<span id="globalXprn">0.00</span>
+					<span class="grey"> wght </span>
+					<span id="globalWght">400</span>
+					<span class="grey"> ital </span>
+					<span id="globalItal">0</span>
+					<span class="grey"> slnt </span>
+					<span id="globalSlnt">0.00</span>
+				</a>
+				<div class="collapse" id="pickVariability">
+					<ul>
+						<li>
+							<span class="collapse__label">MONO</span
+							><span class="inputs d-inline-block"
+								><input
+									id="globalMonoSlider"
+									min="0.00"
+									max="1.00"
+									value="0.00"
+									step="0.01"
+									type="range"
+							/></span>
+						</li>
+						<li>
+							<span class="collapse__label">CASL</span
+							><input
+								id="globalXprnSlider"
+								min="0.00"
+								max="1.00"
+								value="0.00"
+								step="0.01"
+								type="range"
+							/>
+						</li>
 
-	<div class="container-fluid d-none d-md-block" id="mdContainer">
-		<textarea class="mdSection">{% include sections/section-1_Highly-Customizable.md %}</textarea>
-		<iframe data-src="/singlefile" title="Highly Customizable" class="lazyload" data-expand="50" style="height: 814px"></iframe>
-		<textarea class="mdSection">{% include sections/section-2_Extraordinarily.md %}</textarea>
-		<iframe data-src="/morewithtypography" title="Single File" class="lazyload" data-expand="50" style="height: 652px"></iframe>
-		<textarea class="mdSection">{% include sections/section-3_Sans-Mono.md %}</textarea>
-		<iframe data-src="/monosans" title="Sans and Monospace" class="lazyload" style="height: 750px"></iframe>
-		<textarea class="mdSection">{% include sections/section-4_Made-for.md %}</textarea>
-		<iframe data-src="/robustlayouts" title="Robust Layouts" class="lazyload" style="height: 350px"></iframe>
-		<textarea class="mdSection">{% include sections/section-5_Ready.md %}</textarea>
-		<iframe data-src="/readyforwork" title="Ready for Work" class="lazyload" style="height: 496px"></iframe>
-		<textarea class="mdSection">{% include sections/section-6_Light-to-Heavy.md %}</textarea>
-		<iframe data-src="/weightforit" title="Light to ExtraBlack" class="lazyload" style="height: 546px"></iframe>
-		<textarea class="mdSection">{% include sections/section-7_Slant-Ital.md %}</textarea>
-		<iframe data-src="/trueritalics" title="Slant and Italics" class="lazyload" style="height: 510px"></iframe>
-		<textarea class="mdSection">{% include sections/section-8_Powerful.md %}</textarea>
-		<iframe data-src="/powerfulbutsimple" title="Powerful but Simple" class="lazyload" style="height: 807px"></iframe>
-		<textarea class="mdSection">{% include sections/section-9_Languages.md %}</textarea>
-		<iframe data-src="/languages" title="Languages" class="lazyload" style="height: 2000px"></iframe>
-	</div>
-  <!-- For purge css to work it needs to see some of the codemirror classes -->
-  <!-- <span class="cm-formatting cm-formatting-header cm-formatting-header-2 cm-header cm-header-2 CodeMirror cm-s-paper CodeMirror-wrap CodeMirror-scroll CodeMirror-sizer CodeMirror-lines"></span>
+						<li>
+							<span class="collapse__label">wght</span
+							><input
+								id="globalWghtSlider"
+								min="300"
+								max="1000"
+								value="400"
+								step="1"
+								type="range"
+							/>
+						</li>
+
+						<li>
+							<span class="collapse__label">slnt</span
+							><input
+								id="globalSlntSlider"
+								min="-15.00"
+								max="00.00"
+								value="00.00"
+								step="0.01"
+								type="range"
+							/>
+						</li>
+
+						<li>
+							<span class="collapse__label">ital</span>
+							<span class="inputs d-inline-block">
+								<span class="collapse__label">
+									<span
+										class="radio radio-ital"
+										id="globalItalOff"
+									></span>
+									Off</span
+								>
+								<span class="collapse__label"
+									><span
+										class="radio active radio-ital"
+										id="globalItalAuto"
+									></span>
+									Auto</span
+								>
+								<span class="collapse__label">
+									<span
+										class="radio radio-ital"
+										id="globalItalOn"
+									></span>
+									On</span
+								></span
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="toolbar__item d-none d-md-block">
+				<a id="inversePage">
+					<svg
+						id="inverseSVG"
+						style="pointer-events:none"
+						width="16"
+						height="16"
+						viewBox="0 0 16 16"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<circle
+							cx="8"
+							cy="8"
+							r="7.5"
+							fill="white"
+							stroke="black"
+						/>
+						<path
+							d="M15.4836 7.5H0.516402C0.773695 3.59098 4.02588 0.5 8 0.5C11.9741 0.5 15.2263 3.59098 15.4836 7.5Z"
+							fill="black"
+							stroke="black"
+						/>
+					</svg>
+				</a>
+			</div>
+		</div>
+
+		<div class="container-fluid d-none d-md-block" id="mdContainer">
+			<textarea class="mdSection">
+{% include sections/section-1_Highly-Customizable.md %}</textarea
+			>
+			<iframe
+				data-src="/singlefile"
+				title="Highly Customizable"
+				class="lazyload"
+				data-expand="50"
+				style="height: 814px"
+			></iframe>
+			<textarea class="mdSection">
+{% include sections/section-2_Extraordinarily.md %}</textarea
+			>
+			<iframe
+				data-src="/morewithtypography"
+				title="Single File"
+				class="lazyload"
+				data-expand="50"
+				style="height: 652px"
+			></iframe>
+			<textarea class="mdSection">
+{% include sections/section-3_Sans-Mono.md %}</textarea
+			>
+			<iframe
+				data-src="/monosans"
+				title="Sans and Monospace"
+				class="lazyload"
+				style="height: 750px"
+			></iframe>
+			<textarea class="mdSection">
+{% include sections/section-4_Made-for.md %}</textarea
+			>
+			<iframe
+				data-src="/robustlayouts"
+				title="Robust Layouts"
+				class="lazyload"
+				style="height: 350px"
+			></iframe>
+			<textarea class="mdSection">
+{% include sections/section-5_Ready.md %}</textarea
+			>
+			<iframe
+				data-src="/readyforwork"
+				title="Ready for Work"
+				class="lazyload"
+				style="height: 496px"
+			></iframe>
+			<textarea class="mdSection">
+{% include sections/section-6_Light-to-Heavy.md %}</textarea
+			>
+			<iframe
+				data-src="/weightforit"
+				title="Light to ExtraBlack"
+				class="lazyload"
+				style="height: 546px"
+			></iframe>
+			<textarea class="mdSection">
+{% include sections/section-7_Slant-Ital.md %}</textarea
+			>
+			<iframe
+				data-src="/trueritalics"
+				title="Slant and Italics"
+				class="lazyload"
+				style="height: 510px"
+			></iframe>
+			<textarea class="mdSection">
+{% include sections/section-8_Powerful.md %}</textarea
+			>
+			<iframe
+				data-src="/powerfulbutsimple"
+				title="Powerful but Simple"
+				class="lazyload"
+				style="height: 807px"
+			></iframe>
+			<textarea class="mdSection">
+{% include sections/section-9_Languages.md %}</textarea
+			>
+			<iframe
+				data-src="/languages"
+				title="Languages"
+				class="lazyload"
+				style="height: 2000px"
+			></iframe>
+		</div>
+		<!-- For purge css to work it needs to see some of the codemirror classes -->
+		<!-- <span class="cm-formatting cm-formatting-header cm-formatting-header-2 cm-header cm-header-2 CodeMirror cm-s-paper CodeMirror-wrap CodeMirror-scroll CodeMirror-sizer CodeMirror-lines"></span>
 	<div class="CodeMirror-code"><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span cm-text="">&#8203;</span></span></pre><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-formatting cm-formatting-header cm-formatting-header-2 cm-header cm-header-2"></span><span class="cm-header cm-header-2"></span></span></pre></div>
   <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-formatting cm-formatting-header cm-formatting-header-2 cm-formatting-header-1 cm-formatting-header-3 cm-formatting-header-4 cm-formatting-header-5 cm-formatting-header-6 cm-header cm-header-2"></span><span class="cm-header cm-header-2"></span><span class="cm-formatting cm-formatting-code cm-comment cm-header cm-header-2"></span><span class="cm-comment cm-header cm-header-2"></span><span class="cm-formatting cm-formatting-code cm-comment cm-header cm-header-2 cm-header-3 cm-header-1 cm-header-4 cm-header-5 cm-header-6"></span></span></pre> -->
 
-
-  <div class="mobile-version d-md-none">
-		{{ content }}
-	</div>
+		<div class="mobile-version d-md-none">
+			{{ content }}
+		</div>
 		{% include footer.html %}
 
-<!-- Three JS -->
-<script src='/js/three.min.js?v=0.112.1'></script>
-<script src='/js/three-orbit-controls.min.js?v=0.112.1'></script>
+		<!-- Three JS -->
+		<script src="/js/three.min.js?v=0.112.1"></script>
+		<script src="/js/three-orbit-controls.min.js?v=0.112.1"></script>
 
-<!-- Markdown -->
-<script src="/js/simplemde.min.js?v=1.11.2"></script>
+		<!-- Markdown -->
+		<script src="/js/simplemde.min.js?v=1.11.2"></script>
 
-<script type="text/javascript" src="/js/fontfaceonload.js"></script>
-<!-- Custom -->
-<script type="text/javascript" src="/js/sketch.js"></script>
-<script type="text/javascript" src="/js/script.js"></script>
+		<script type="text/javascript" src="/js/fontfaceonload.js"></script>
+		<!-- Custom -->
+		<script type="text/javascript" src="/js/sketch.js"></script>
+		<script type="text/javascript" src="/js/script.js"></script>
 
-<script>
+		<script>
+			let loaded = false;
+			let simplemdes = [];
+			let c = 0;
 
-	let loaded = false;
-	let simplemdes = [];
-  let c = 0;
+			for (let textarea of document.querySelectorAll("textarea")) {
+				if (c == 0) {
+					bool = true;
+				} else {
+					bool = false;
+				}
+				simplemdes.push(
+					new SimpleMDE({
+						autofocus: bool,
+						autorefresh: true,
+						autosave: {
+							enabled: false
+						},
+						blockStyles: {
+							bold: "__",
+							italic: "_"
+						},
+						element: textarea,
+						forceSync: true,
+						hideIcons: ["guide", "heading"],
+						indentWithTabs: false,
+						lineWrapping: true,
+						parsingConfig: {
+							allowAtxHeaderWithoutSpace: true,
+							strikethrough: false,
+							underscoresBreakWords: true
+						},
+						placeholder: "",
+						promptURLs: false,
+						renderingConfig: {
+							singleLineBreaks: true,
+							codeSyntaxHighlighting: true
+						},
+						spellChecker: false,
+						status: false,
+						styleSelectedText: false,
+						tabSize: 4,
+						toolbar: false,
+						toolbarTips: false
+					})
+				);
 
-	for (let textarea of document.querySelectorAll('textarea')){
-        if (c == 0){ bool = true;} else { bool = false};
-		    simplemdes.push ( new SimpleMDE({
-				autofocus: bool,
-				autorefresh: true,
-				autosave: {
-					enabled: false
-				},
-				blockStyles: {
-					bold: "__",
-					italic: "_"
-				},
-				element: textarea,
-				forceSync: true,
-				hideIcons: ["guide", "heading"],
-				indentWithTabs: false,
-				lineWrapping: true,
-				parsingConfig: {
-					allowAtxHeaderWithoutSpace: true,
-					strikethrough: false,
-					underscoresBreakWords: true,
-				},
-				placeholder: "",
-				promptURLs: false,
-				renderingConfig: {
-					singleLineBreaks: true,
-					codeSyntaxHighlighting: true,
-				},
-				spellChecker: false,
-				status: false,
-				styleSelectedText: false,
-				tabSize: 4,
-				toolbar: false,
-				toolbarTips: false,
-			}));
-  
-    c++;
-		 
-	};
-	for (let i = 0; i<simplemdes.length; i++){
-    if (i == 0){
-      simplemdes[i].codemirror.setCursor({line: 0, ch: 45}); 
-    } simplemdes[i].render();
-	}
+				c++;
+			}
+			for (let i = 0; i < simplemdes.length; i++) {
+				if (i == 0) {
+					simplemdes[i].codemirror.setCursor({ line: 0, ch: 45 });
+				}
+				simplemdes[i].render();
+			}
 
-	for (var i=0;i<document.getElementsByTagName("iframe").length;i++){
-		document.getElementsByTagName('iframe')[i].onload = function(){
-        this.style.height = this.contentWindow.document.body.offsetHeight + 50 + 'px';
-		}
-	}
+			for (
+				var i = 0;
+				i < document.getElementsByTagName("iframe").length;
+				i++
+			) {
+				document.getElementsByTagName("iframe")[i].onload = function() {
+					this.style.height =
+						this.contentWindow.document.body.offsetHeight +
+						50 +
+						"px";
+				};
+			}
 
-  function getAbsoluteHeight(el) {
-    // Get the DOM Node if you pass in a string
-    el = (typeof el === 'string') ? document.querySelector(el) : el; 
+			function getAbsoluteHeight(el) {
+				// Get the DOM Node if you pass in a string
+				el = typeof el === "string" ? document.querySelector(el) : el;
 
-    var styles = window.getComputedStyle(el);
-    var margin = parseFloat(styles['marginTop']) +
-                parseFloat(styles['marginBottom']);
+				var styles = window.getComputedStyle(el);
+				var margin =
+					parseFloat(styles["marginTop"]) +
+					parseFloat(styles["marginBottom"]);
 
-    return Math.ceil(el.offsetHeight + margin);
-  }
-
-</script>
-
-<!-- Fade in loading -->
-<!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script> -->
-
-
-  </body>
+				return Math.ceil(el.offsetHeight + margin);
+			}
+		</script>
+	</body>
 </html>

@@ -1,39 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <title>Recursive Sans & Mono</title>
-    <meta property="og:title" content="Recursive Sans & Mono">
-    <meta name="twitter:title" content="Recursive Sans & Mono">
+		<title>Recursive Sans & Mono</title>
+		<meta property="og:title" content="Recursive Sans & Mono" />
+		<meta name="twitter:title" content="Recursive Sans & Mono" />
 
-    <meta name="author" content="Arrow Type">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://recursive.design">
-    <meta name="twitter:image" content="https://recursive.design/assets/img/og-img-singleline-3.png">
-    <meta name="twitter:url" content="https://recursive.design">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@arrowtype">
-    <meta name="twitter:image:alt" content="Recursive is a new font with 5 stylistic variation axes">
+		<meta name="author" content="Arrow Type" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://recursive.design" />
+		<meta name="twitter:image" content="https://recursive.design/assets/img/og-img-singleline-3.png" />
+		<meta name="twitter:url" content="https://recursive.design" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@arrowtype" />
+		<meta
+			name="twitter:image:alt"
+			content="Recursive is a new font with 5 stylistic variation axes"
+		/>
 
-    <meta name="description" content="A highly-flexible variable font for design, code, and UI.">
-    <meta property="twitter:description" content="A highly-flexible variable font for design, code, and UI.">
-    <meta property="og:description" content="A highly-flexible variable font for design, code, and UI.">
-    <meta property="og:image" content="https://recursive.design/assets/img/og-img-singleline-3.png">
+		<meta name="description" content="A highly-flexible variable font for design, code, and UI." />
+		<meta
+			property="twitter:description"
+			content="A highly-flexible variable font for design, code, and UI."
+		/>
+		<meta
+			property="og:description"
+			content="A highly-flexible variable font for design, code, and UI."
+		/>
+		<meta property="og:image" content="https://recursive.design/assets/img/og-img-singleline-3.png" />
 
-    <link rel="icon" type="image/png" href="/assets/favicon/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="/assets/favicon/favicon-16x16.png" sizes="16x16" />
+		<link
+			rel="icon"
+			type="image/png"
+			href="/assets/favicon/favicon-32x32.png"
+			sizes="32x32"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			href="/assets/favicon/favicon-16x16.png"
+			sizes="16x16"
+		/>
 
-    <style>
-      html {
-          visibility: hidden;opacity:0;
-      }
-    </style>
+		<style>
+			html {
+				visibility: hidden;
+				opacity: 0;
+			}
+		</style>
 
-    <link rel="canonical" href="https://www.recursive.design/" />
+		<link rel="canonical" href="https://www.recursive.design/" />
 <link
 	rel="stylesheet"
 	href="/css/simplemde.min.css?v=1.11.2"
@@ -50,20 +73,23 @@
 	}
 </style>
 
-    <script src="../js/lazysizes.min.js?v=5.2.0" async=""></script>
+		<script src="../js/lazysizes.min.js?v=5.2.0" async=""></script>
 
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=UA-151519261-1"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
 
-      <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151519261-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-151519261-1');
-    </script>
-
-  </head>
+			gtag("config", "UA-151519261-1");
+		</script>
+	</head>
 	<body>
 		<div class="fixed-nav">
 <!-- <a href="#">
@@ -107,228 +133,799 @@
 </nav>
 
 </div>
-	<input type="text" id="textInput" oninput="changeString()"></input>
-	<div class="container-fluid bg-dark position-relative" id="hero">
-    <div class="three-container">
-      <div id="THREE">
-        <div class="lines">
-          <div id="line1"></div>
-          <div class="line1-label label">Weight</div>
-          <div id="line2"></div>
-          <div class="line2-label label">Casual</div>
-          <div id="line3"></div>
-          <div class="line3-label label">Slant</div>
-        </div>
-      </div>
-    </div>
-    <div class="hero__headline">
-        A typographic palette for vibrant code & UI
-    </div>
-</div>
-<div id="phantomToolbar" class="d-none"></div>
+		<input type="text" id="textInput" oninput="changeString()" />
+		<div class="container-fluid bg-dark position-relative" id="hero">
+			<div class="three-container">
+				<div id="THREE">
+					<div class="lines">
+						<div id="line1"></div>
+						<div class="line1-label label">Weight</div>
+						<div id="line2"></div>
+						<div class="line2-label label">Casual</div>
+						<div id="line3"></div>
+						<div class="line3-label label">Slant</div>
+					</div>
+				</div>
+			</div>
+			<div class="hero__headline">
+				A typographic palette for vibrant code & UI
+			</div>
+		</div>
+		<div id="phantomToolbar" class="d-none"></div>
 
-<div class="toolbar clearfix" id="toolbar">
-    <select class="toolbar__item" id="chooseInstance">
-        
-        <option data-mono="1" data-casl="1" data-ital="0.5" data-slnt="0" data-wght="300">Mono Casual Light</option>
-        
-        <option data-mono="1" data-casl="1" data-ital="1" data-slnt="-15" data-wght="300">Mono Casual Light Italic</option>
-        
-        <option data-mono="1" data-casl="1" data-ital="0.5" data-slnt="0" data-wght="400">Mono Casual Regular</option>
-        
-        <option data-mono="1" data-casl="1" data-ital="1" data-slnt="-15" data-wght="400">Mono Casual Italic</option>
-        
-        <option data-mono="1" data-casl="1" data-ital="0.5" data-slnt="0" data-wght="500">Mono Casual Medium</option>
-        
-        <option data-mono="1" data-casl="1" data-ital="1" data-slnt="-15" data-wght="500">Mono Casual Medium Italic</option>
-        
-        <option data-mono="1" data-casl="1" data-ital="0.5" data-slnt="0" data-wght="600">Mono Casual SemiBold</option>
-        
-        <option data-mono="1" data-casl="1" data-ital="1" data-slnt="-15" data-wght="600">Mono Casual SemiBold Italic</option>
-        
-        <option data-mono="1" data-casl="1" data-ital="0.5" data-slnt="0" data-wght="700">Mono Casual Bold</option>
-        
-        <option data-mono="1" data-casl="1" data-ital="1" data-slnt="-15" data-wght="700">Mono Casual Bold Italic</option>
-        
-        <option data-mono="1" data-casl="1" data-ital="0.5" data-slnt="0" data-wght="800">Mono Casual ExtraBold</option>
-        
-        <option data-mono="1" data-casl="1" data-ital="1" data-slnt="-15" data-wght="800">Mono Casual ExtraBold Italic</option>
-        
-        <option data-mono="1" data-casl="1" data-ital="0.5" data-slnt="0" data-wght="900">Mono Casual Black</option>
-        
-        <option data-mono="1" data-casl="1" data-ital="1" data-slnt="-15" data-wght="900">Mono Casual Black Italic</option>
-        
-        <option data-mono="1" data-casl="1" data-ital="0.5" data-slnt="0" data-wght="1000">Mono Casual ExtraBlack</option>
-        
-        <option data-mono="1" data-casl="1" data-ital="1" data-slnt="-15" data-wght="1000">Mono Casual ExtraBlack Italic</option>
-        
-        <option data-mono="1" data-casl="0" data-ital="0.5" data-slnt="0" data-wght="300">Mono Linear Light</option>
-        
-        <option data-mono="1" data-casl="0" data-ital="1" data-slnt="-15" data-wght="300">Mono Linear Light Italic</option>
-        
-        <option data-mono="1" data-casl="0" data-ital="0.5" data-slnt="0" data-wght="400">Mono Linear Regular</option>
-        
-        <option data-mono="1" data-casl="0" data-ital="1" data-slnt="-15" data-wght="400">Mono Linear Italic</option>
-        
-        <option data-mono="1" data-casl="0" data-ital="0.5" data-slnt="0" data-wght="500">Mono Linear Medium</option>
-        
-        <option data-mono="1" data-casl="0" data-ital="1" data-slnt="-15" data-wght="500">Mono Linear Medium Italic</option>
-        
-        <option data-mono="1" data-casl="0" data-ital="0.5" data-slnt="0" data-wght="600">Mono Linear SemiBold</option>
-        
-        <option data-mono="1" data-casl="0" data-ital="1" data-slnt="-15" data-wght="600">Mono Linear SemiBold Italic</option>
-        
-        <option data-mono="1" data-casl="0" data-ital="0.5" data-slnt="0" data-wght="700">Mono Linear Bold</option>
-        
-        <option data-mono="1" data-casl="0" data-ital="1" data-slnt="-15" data-wght="700">Mono Linear Bold Italic</option>
-        
-        <option data-mono="1" data-casl="0" data-ital="0.5" data-slnt="0" data-wght="800">Mono Linear ExtraBold</option>
-        
-        <option data-mono="1" data-casl="0" data-ital="1" data-slnt="-15" data-wght="800">Mono Linear ExtraBold Italic</option>
-        
-        <option data-mono="1" data-casl="0" data-ital="0.5" data-slnt="0" data-wght="900">Mono Linear Black</option>
-        
-        <option data-mono="1" data-casl="0" data-ital="1" data-slnt="-15" data-wght="900">Mono Linear Black Italic</option>
-        
-        <option data-mono="1" data-casl="0" data-ital="0.5" data-slnt="0" data-wght="1000">Mono Linear ExtraBlack</option>
-        
-        <option data-mono="1" data-casl="0" data-ital="1" data-slnt="-15" data-wght="1000">Mono Linear ExtraBlack Italic</option>
-        
-        <option data-mono="0" data-casl="1" data-ital="0.5" data-slnt="0" data-wght="300">Sans Casual Light</option>
-        
-        <option data-mono="0" data-casl="1" data-ital="1" data-slnt="-15" data-wght="300">Sans Casual Light Italic</option>
-        
-        <option data-mono="0" data-casl="1" data-ital="0.5" data-slnt="0" data-wght="400">Sans Casual Regular</option>
-        
-        <option data-mono="0" data-casl="1" data-ital="1" data-slnt="-15" data-wght="400">Sans Casual Italic</option>
-        
-        <option data-mono="0" data-casl="1" data-ital="0.5" data-slnt="0" data-wght="500">Sans Casual Medium</option>
-        
-        <option data-mono="0" data-casl="1" data-ital="1" data-slnt="-15" data-wght="500">Sans Casual Medium Italic</option>
-        
-        <option data-mono="0" data-casl="1" data-ital="0.5" data-slnt="0" data-wght="600">Sans Casual SemiBold</option>
-        
-        <option data-mono="0" data-casl="1" data-ital="1" data-slnt="-15" data-wght="600">Sans Casual SemiBold Italic</option>
-        
-        <option data-mono="0" data-casl="1" data-ital="0.5" data-slnt="0" data-wght="700">Sans Casual Bold</option>
-        
-        <option data-mono="0" data-casl="1" data-ital="1" data-slnt="-15" data-wght="700">Sans Casual Bold Italic</option>
-        
-        <option data-mono="0" data-casl="1" data-ital="0.5" data-slnt="0" data-wght="800">Sans Casual ExtraBold</option>
-        
-        <option data-mono="0" data-casl="1" data-ital="1" data-slnt="-15" data-wght="800">Sans Casual ExtraBold Italic</option>
-        
-        <option data-mono="0" data-casl="1" data-ital="0.5" data-slnt="0" data-wght="900">Sans Casual Black</option>
-        
-        <option data-mono="0" data-casl="1" data-ital="1" data-slnt="-15" data-wght="900">Sans Casual Black Italic</option>
-        
-        <option data-mono="0" data-casl="1" data-ital="0.5" data-slnt="0" data-wght="1000">Sans Casual ExtraBlack</option>
-        
-        <option data-mono="0" data-casl="1" data-ital="1" data-slnt="-15" data-wght="1000">Sans Casual ExtraBlack Italic</option>
-        
-        <option data-mono="0" data-casl="0" data-ital="0.5" data-slnt="0" data-wght="300">Sans Linear Light</option>
-        
-        <option data-mono="0" data-casl="0" data-ital="1" data-slnt="-15" data-wght="300">Sans Linear Light Italic</option>
-        
-        <option  selected="selected" data-mono="0" data-casl="0" data-ital="0.5" data-slnt="0" data-wght="400">Sans Linear Regular</option>
-        
-        <option data-mono="0" data-casl="0" data-ital="1" data-slnt="-15" data-wght="400">Sans Linear Italic</option>
-        
-        <option data-mono="0" data-casl="0" data-ital="0.5" data-slnt="0" data-wght="500">Sans Linear Medium</option>
-        
-        <option data-mono="0" data-casl="0" data-ital="1" data-slnt="-15" data-wght="500">Sans Linear Medium Italic</option>
-        
-        <option data-mono="0" data-casl="0" data-ital="0.5" data-slnt="0" data-wght="600">Sans Linear SemiBold</option>
-        
-        <option data-mono="0" data-casl="0" data-ital="1" data-slnt="-15" data-wght="600">Sans Linear SemiBold Italic</option>
-        
-        <option data-mono="0" data-casl="0" data-ital="0.5" data-slnt="0" data-wght="700">Sans Linear Bold</option>
-        
-        <option data-mono="0" data-casl="0" data-ital="1" data-slnt="-15" data-wght="700">Sans Linear Bold Italic</option>
-        
-        <option data-mono="0" data-casl="0" data-ital="0.5" data-slnt="0" data-wght="800">Sans Linear ExtraBold</option>
-        
-        <option data-mono="0" data-casl="0" data-ital="1" data-slnt="-15" data-wght="800">Sans Linear ExtraBold Italic</option>
-        
-        <option data-mono="0" data-casl="0" data-ital="0.5" data-slnt="0" data-wght="900">Sans Linear Black</option>
-        
-        <option data-mono="0" data-casl="0" data-ital="1" data-slnt="-15" data-wght="900">Sans Linear Black Italic</option>
-        
-        <option data-mono="0" data-casl="0" data-ital="0.5" data-slnt="0" data-wght="1000">Sans Linear ExtraBlack</option>
-        
-        <option data-mono="0" data-casl="0" data-ital="1" data-slnt="-15" data-wght="1000">Sans Linear ExtraBlack Italic</option>
-        
-    </select>
-    <div class="toolbar__item" id="collapseSize">
-        <a data-toggle="collapse" data-target="#pickFontSize" data-text="Collapse">
-        <span id="changeFontSize">15</span>pt
-        <svg style="pointer-events:none" class="arrow" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1.41 0.589844L6 5.16984L10.59 0.589844L12 1.99984L6 7.99984L0 1.99984L1.41 0.589844Z" fill="black"/>
-        </svg>
-        </a>
-        <div class="collapse" id="pickFontSize">
-            <ul>
-                <li><input id="globalFontSizeSlider" min="6" max="60" step="1" value="15" type="range"></li>
-            </ul>
-        </div>
-    </div>
-    <div class="toolbar__item settings d-none d-md-block" id="collapseSettings">
-        <a data-toggle="collapse" data-target="#pickVariability" data-text="Collapse">
-            <span class="grey">MONO </span>
-                <span id="globalMono">0.00</span>
-                <span class="grey">   CASL </span>
-                <span id="globalXprn">0.00</span>
-                <span class="grey">   wght </span>
-                <span id="globalWght">400</span>
-                <span class="grey">   ital </span>
-                <span id="globalItal">0</span>
-                <span class="grey">   slnt </span>
-                <span id="globalSlnt">0.00</span>
-        </a>
-        <div class="collapse" id="pickVariability">
-            <ul>
-                <li><span class="collapse__label">MONO</span><span class="inputs d-inline-block"><input id="globalMonoSlider" min="0.00" max="1.00" value="0.00"
-                        step="0.01" type="range"></span></li>
-                <li><span class="collapse__label">CASL</span><input id="globalXprnSlider" min="0.00" max="1.00" value="0.00"
-                        step="0.01" type="range"></li>
-                <li><span class="collapse__label">wght</span><input id="globalWghtSlider" min="300" max="1000"
-                        value="400" step="1" type="range"></li>
-                <li><span class="collapse__label">slnt</span><input id="globalSlntSlider" min="-15.00" max="00.00" value="00.00"
-                        step="0.01" type="range"></li>
-                <li>
-                    <span class="collapse__label">ital</span>
-                    <span class="inputs d-inline-block">
-                        <span class="collapse__label">
-                            <span class="radio radio-ital" id="globalItalOff"></span>
-                            Off</span>
-                        <span class="collapse__label"><span class="radio active radio-ital" id="globalItalAuto"></span>
-                            Auto</span>
-                        <span class="collapse__label">
-                            <span class="radio radio-ital" id="globalItalOn"></span> On</span></span>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="toolbar__item d-none d-md-block">
-        <a id="inversePage">
-            <svg id="inverseSVG" style="pointer-events:none" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="8" cy="8" r="7.5" fill="white" stroke="black"/>
-                <path d="M15.4836 7.5H0.516402C0.773695 3.59098 4.02588 0.5 8 0.5C11.9741 0.5 15.2263 3.59098 15.4836 7.5Z" fill="black" stroke="black"/>
-            </svg>
-        </a>
-    </div>
-</div>
+		<div class="toolbar clearfix" id="toolbar">
+			<select class="toolbar__item" id="chooseInstance">
+				
+				<option
+					data-mono="1"
+					data-casl="1"
+					data-ital="0.5"
+					data-slnt="0"
+					data-wght="300"
+					>Mono Casual Light</option
+				>
+				
+				<option
+					data-mono="1"
+					data-casl="1"
+					data-ital="1"
+					data-slnt="-15"
+					data-wght="300"
+					>Mono Casual Light Italic</option
+				>
+				
+				<option
+					data-mono="1"
+					data-casl="1"
+					data-ital="0.5"
+					data-slnt="0"
+					data-wght="400"
+					>Mono Casual Regular</option
+				>
+				
+				<option
+					data-mono="1"
+					data-casl="1"
+					data-ital="1"
+					data-slnt="-15"
+					data-wght="400"
+					>Mono Casual Italic</option
+				>
+				
+				<option
+					data-mono="1"
+					data-casl="1"
+					data-ital="0.5"
+					data-slnt="0"
+					data-wght="500"
+					>Mono Casual Medium</option
+				>
+				
+				<option
+					data-mono="1"
+					data-casl="1"
+					data-ital="1"
+					data-slnt="-15"
+					data-wght="500"
+					>Mono Casual Medium Italic</option
+				>
+				
+				<option
+					data-mono="1"
+					data-casl="1"
+					data-ital="0.5"
+					data-slnt="0"
+					data-wght="600"
+					>Mono Casual SemiBold</option
+				>
+				
+				<option
+					data-mono="1"
+					data-casl="1"
+					data-ital="1"
+					data-slnt="-15"
+					data-wght="600"
+					>Mono Casual SemiBold Italic</option
+				>
+				
+				<option
+					data-mono="1"
+					data-casl="1"
+					data-ital="0.5"
+					data-slnt="0"
+					data-wght="700"
+					>Mono Casual Bold</option
+				>
+				
+				<option
+					data-mono="1"
+					data-casl="1"
+					data-ital="1"
+					data-slnt="-15"
+					data-wght="700"
+					>Mono Casual Bold Italic</option
+				>
+				
+				<option
+					data-mono="1"
+					data-casl="1"
+					data-ital="0.5"
+					data-slnt="0"
+					data-wght="800"
+					>Mono Casual ExtraBold</option
+				>
+				
+				<option
+					data-mono="1"
+					data-casl="1"
+					data-ital="1"
+					data-slnt="-15"
+					data-wght="800"
+					>Mono Casual ExtraBold Italic</option
+				>
+				
+				<option
+					data-mono="1"
+					data-casl="1"
+					data-ital="0.5"
+					data-slnt="0"
+					data-wght="900"
+					>Mono Casual Black</option
+				>
+				
+				<option
+					data-mono="1"
+					data-casl="1"
+					data-ital="1"
+					data-slnt="-15"
+					data-wght="900"
+					>Mono Casual Black Italic</option
+				>
+				
+				<option
+					data-mono="1"
+					data-casl="1"
+					data-ital="0.5"
+					data-slnt="0"
+					data-wght="1000"
+					>Mono Casual ExtraBlack</option
+				>
+				
+				<option
+					data-mono="1"
+					data-casl="1"
+					data-ital="1"
+					data-slnt="-15"
+					data-wght="1000"
+					>Mono Casual ExtraBlack Italic</option
+				>
+				
+				<option
+					data-mono="1"
+					data-casl="0"
+					data-ital="0.5"
+					data-slnt="0"
+					data-wght="300"
+					>Mono Linear Light</option
+				>
+				
+				<option
+					data-mono="1"
+					data-casl="0"
+					data-ital="1"
+					data-slnt="-15"
+					data-wght="300"
+					>Mono Linear Light Italic</option
+				>
+				
+				<option
+					data-mono="1"
+					data-casl="0"
+					data-ital="0.5"
+					data-slnt="0"
+					data-wght="400"
+					>Mono Linear Regular</option
+				>
+				
+				<option
+					data-mono="1"
+					data-casl="0"
+					data-ital="1"
+					data-slnt="-15"
+					data-wght="400"
+					>Mono Linear Italic</option
+				>
+				
+				<option
+					data-mono="1"
+					data-casl="0"
+					data-ital="0.5"
+					data-slnt="0"
+					data-wght="500"
+					>Mono Linear Medium</option
+				>
+				
+				<option
+					data-mono="1"
+					data-casl="0"
+					data-ital="1"
+					data-slnt="-15"
+					data-wght="500"
+					>Mono Linear Medium Italic</option
+				>
+				
+				<option
+					data-mono="1"
+					data-casl="0"
+					data-ital="0.5"
+					data-slnt="0"
+					data-wght="600"
+					>Mono Linear SemiBold</option
+				>
+				
+				<option
+					data-mono="1"
+					data-casl="0"
+					data-ital="1"
+					data-slnt="-15"
+					data-wght="600"
+					>Mono Linear SemiBold Italic</option
+				>
+				
+				<option
+					data-mono="1"
+					data-casl="0"
+					data-ital="0.5"
+					data-slnt="0"
+					data-wght="700"
+					>Mono Linear Bold</option
+				>
+				
+				<option
+					data-mono="1"
+					data-casl="0"
+					data-ital="1"
+					data-slnt="-15"
+					data-wght="700"
+					>Mono Linear Bold Italic</option
+				>
+				
+				<option
+					data-mono="1"
+					data-casl="0"
+					data-ital="0.5"
+					data-slnt="0"
+					data-wght="800"
+					>Mono Linear ExtraBold</option
+				>
+				
+				<option
+					data-mono="1"
+					data-casl="0"
+					data-ital="1"
+					data-slnt="-15"
+					data-wght="800"
+					>Mono Linear ExtraBold Italic</option
+				>
+				
+				<option
+					data-mono="1"
+					data-casl="0"
+					data-ital="0.5"
+					data-slnt="0"
+					data-wght="900"
+					>Mono Linear Black</option
+				>
+				
+				<option
+					data-mono="1"
+					data-casl="0"
+					data-ital="1"
+					data-slnt="-15"
+					data-wght="900"
+					>Mono Linear Black Italic</option
+				>
+				
+				<option
+					data-mono="1"
+					data-casl="0"
+					data-ital="0.5"
+					data-slnt="0"
+					data-wght="1000"
+					>Mono Linear ExtraBlack</option
+				>
+				
+				<option
+					data-mono="1"
+					data-casl="0"
+					data-ital="1"
+					data-slnt="-15"
+					data-wght="1000"
+					>Mono Linear ExtraBlack Italic</option
+				>
+				
+				<option
+					data-mono="0"
+					data-casl="1"
+					data-ital="0.5"
+					data-slnt="0"
+					data-wght="300"
+					>Sans Casual Light</option
+				>
+				
+				<option
+					data-mono="0"
+					data-casl="1"
+					data-ital="1"
+					data-slnt="-15"
+					data-wght="300"
+					>Sans Casual Light Italic</option
+				>
+				
+				<option
+					data-mono="0"
+					data-casl="1"
+					data-ital="0.5"
+					data-slnt="0"
+					data-wght="400"
+					>Sans Casual Regular</option
+				>
+				
+				<option
+					data-mono="0"
+					data-casl="1"
+					data-ital="1"
+					data-slnt="-15"
+					data-wght="400"
+					>Sans Casual Italic</option
+				>
+				
+				<option
+					data-mono="0"
+					data-casl="1"
+					data-ital="0.5"
+					data-slnt="0"
+					data-wght="500"
+					>Sans Casual Medium</option
+				>
+				
+				<option
+					data-mono="0"
+					data-casl="1"
+					data-ital="1"
+					data-slnt="-15"
+					data-wght="500"
+					>Sans Casual Medium Italic</option
+				>
+				
+				<option
+					data-mono="0"
+					data-casl="1"
+					data-ital="0.5"
+					data-slnt="0"
+					data-wght="600"
+					>Sans Casual SemiBold</option
+				>
+				
+				<option
+					data-mono="0"
+					data-casl="1"
+					data-ital="1"
+					data-slnt="-15"
+					data-wght="600"
+					>Sans Casual SemiBold Italic</option
+				>
+				
+				<option
+					data-mono="0"
+					data-casl="1"
+					data-ital="0.5"
+					data-slnt="0"
+					data-wght="700"
+					>Sans Casual Bold</option
+				>
+				
+				<option
+					data-mono="0"
+					data-casl="1"
+					data-ital="1"
+					data-slnt="-15"
+					data-wght="700"
+					>Sans Casual Bold Italic</option
+				>
+				
+				<option
+					data-mono="0"
+					data-casl="1"
+					data-ital="0.5"
+					data-slnt="0"
+					data-wght="800"
+					>Sans Casual ExtraBold</option
+				>
+				
+				<option
+					data-mono="0"
+					data-casl="1"
+					data-ital="1"
+					data-slnt="-15"
+					data-wght="800"
+					>Sans Casual ExtraBold Italic</option
+				>
+				
+				<option
+					data-mono="0"
+					data-casl="1"
+					data-ital="0.5"
+					data-slnt="0"
+					data-wght="900"
+					>Sans Casual Black</option
+				>
+				
+				<option
+					data-mono="0"
+					data-casl="1"
+					data-ital="1"
+					data-slnt="-15"
+					data-wght="900"
+					>Sans Casual Black Italic</option
+				>
+				
+				<option
+					data-mono="0"
+					data-casl="1"
+					data-ital="0.5"
+					data-slnt="0"
+					data-wght="1000"
+					>Sans Casual ExtraBlack</option
+				>
+				
+				<option
+					data-mono="0"
+					data-casl="1"
+					data-ital="1"
+					data-slnt="-15"
+					data-wght="1000"
+					>Sans Casual ExtraBlack Italic</option
+				>
+				
+				<option
+					data-mono="0"
+					data-casl="0"
+					data-ital="0.5"
+					data-slnt="0"
+					data-wght="300"
+					>Sans Linear Light</option
+				>
+				
+				<option
+					data-mono="0"
+					data-casl="0"
+					data-ital="1"
+					data-slnt="-15"
+					data-wght="300"
+					>Sans Linear Light Italic</option
+				>
+				
+				<option
+					
+					selected="selected"
+					data-mono="0"
+					data-casl="0"
+					data-ital="0.5"
+					data-slnt="0"
+					data-wght="400"
+					>Sans Linear Regular</option
+				>
+				
+				<option
+					data-mono="0"
+					data-casl="0"
+					data-ital="1"
+					data-slnt="-15"
+					data-wght="400"
+					>Sans Linear Italic</option
+				>
+				
+				<option
+					data-mono="0"
+					data-casl="0"
+					data-ital="0.5"
+					data-slnt="0"
+					data-wght="500"
+					>Sans Linear Medium</option
+				>
+				
+				<option
+					data-mono="0"
+					data-casl="0"
+					data-ital="1"
+					data-slnt="-15"
+					data-wght="500"
+					>Sans Linear Medium Italic</option
+				>
+				
+				<option
+					data-mono="0"
+					data-casl="0"
+					data-ital="0.5"
+					data-slnt="0"
+					data-wght="600"
+					>Sans Linear SemiBold</option
+				>
+				
+				<option
+					data-mono="0"
+					data-casl="0"
+					data-ital="1"
+					data-slnt="-15"
+					data-wght="600"
+					>Sans Linear SemiBold Italic</option
+				>
+				
+				<option
+					data-mono="0"
+					data-casl="0"
+					data-ital="0.5"
+					data-slnt="0"
+					data-wght="700"
+					>Sans Linear Bold</option
+				>
+				
+				<option
+					data-mono="0"
+					data-casl="0"
+					data-ital="1"
+					data-slnt="-15"
+					data-wght="700"
+					>Sans Linear Bold Italic</option
+				>
+				
+				<option
+					data-mono="0"
+					data-casl="0"
+					data-ital="0.5"
+					data-slnt="0"
+					data-wght="800"
+					>Sans Linear ExtraBold</option
+				>
+				
+				<option
+					data-mono="0"
+					data-casl="0"
+					data-ital="1"
+					data-slnt="-15"
+					data-wght="800"
+					>Sans Linear ExtraBold Italic</option
+				>
+				
+				<option
+					data-mono="0"
+					data-casl="0"
+					data-ital="0.5"
+					data-slnt="0"
+					data-wght="900"
+					>Sans Linear Black</option
+				>
+				
+				<option
+					data-mono="0"
+					data-casl="0"
+					data-ital="1"
+					data-slnt="-15"
+					data-wght="900"
+					>Sans Linear Black Italic</option
+				>
+				
+				<option
+					data-mono="0"
+					data-casl="0"
+					data-ital="0.5"
+					data-slnt="0"
+					data-wght="1000"
+					>Sans Linear ExtraBlack</option
+				>
+				
+				<option
+					data-mono="0"
+					data-casl="0"
+					data-ital="1"
+					data-slnt="-15"
+					data-wght="1000"
+					>Sans Linear ExtraBlack Italic</option
+				>
+				
+			</select>
+			<div class="toolbar__item" id="collapseSize">
+				<a
+					data-toggle="collapse"
+					data-target="#pickFontSize"
+					data-text="Collapse"
+				>
+					<span id="changeFontSize">15</span>pt
+					<svg
+						style="pointer-events:none"
+						class="arrow"
+						width="12"
+						height="8"
+						viewBox="0 0 12 8"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M1.41 0.589844L6 5.16984L10.59 0.589844L12 1.99984L6 7.99984L0 1.99984L1.41 0.589844Z"
+							fill="black"
+						/>
+					</svg>
+				</a>
+				<div class="collapse" id="pickFontSize">
+					<ul>
+						<li>
+							<input
+								id="globalFontSizeSlider"
+								min="6"
+								max="60"
+								step="1"
+								value="15"
+								type="range"
+							/>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div
+				class="toolbar__item settings d-none d-md-block"
+				id="collapseSettings"
+			>
+				<a
+					data-toggle="collapse"
+					data-target="#pickVariability"
+					data-text="Collapse"
+				>
+					<span class="grey">MONO </span>
+					<span id="globalMono">0.00</span>
+					<span class="grey"> CASL </span>
+					<span id="globalXprn">0.00</span>
+					<span class="grey"> wght </span>
+					<span id="globalWght">400</span>
+					<span class="grey"> ital </span>
+					<span id="globalItal">0</span>
+					<span class="grey"> slnt </span>
+					<span id="globalSlnt">0.00</span>
+				</a>
+				<div class="collapse" id="pickVariability">
+					<ul>
+						<li>
+							<span class="collapse__label">MONO</span
+							><span class="inputs d-inline-block"
+								><input
+									id="globalMonoSlider"
+									min="0.00"
+									max="1.00"
+									value="0.00"
+									step="0.01"
+									type="range"
+							/></span>
+						</li>
+						<li>
+							<span class="collapse__label">CASL</span
+							><input
+								id="globalXprnSlider"
+								min="0.00"
+								max="1.00"
+								value="0.00"
+								step="0.01"
+								type="range"
+							/>
+						</li>
 
-	<div class="container-fluid d-none d-md-block" id="mdContainer">
-		<textarea class="mdSection">## A highly-flexible new variable font.
+						<li>
+							<span class="collapse__label">wght</span
+							><input
+								id="globalWghtSlider"
+								min="300"
+								max="1000"
+								value="400"
+								step="1"
+								type="range"
+							/>
+						</li>
 
-Built to maximize versatility, control, and performance, Recursive is a five-axis variable font. This enables you to choose from a wide range of predefined styles, or dial in exactly what you want for each of its axes: *Monospace, Casual, Weight, Slant, and Italic*. Taking full advantage of variable font technology, Recursive offers an unprecedented level of flexibility, all from a single font file.</textarea>
-		<iframe data-src="/singlefile" title="Highly Customizable" class="lazyload" data-expand="50" style="height: 814px"></iframe>
-		<textarea class="mdSection">## Extraordinarily versatile.
+						<li>
+							<span class="collapse__label">slnt</span
+							><input
+								id="globalSlntSlider"
+								min="-15.00"
+								max="00.00"
+								value="00.00"
+								step="0.01"
+								type="range"
+							/>
+						</li>
 
-Recursive draws inspiration from single-stroke casual signpainting, a style of brush writing that is stylistically flexible and warmly energetic. Adapting this aesthetic basis into a type system, Recursive is designed to excel in digital interactive environments. This makes the typeface ideal for a wide range of uses, including data-rich apps, technical documentation and code editors.</textarea>
-		<iframe data-src="/morewithtypography" title="Single File" class="lazyload" data-expand="50" style="height: 652px"></iframe>
-		<textarea class="mdSection">### One font. Infinite combinations.
+						<li>
+							<span class="collapse__label">ital</span>
+							<span class="inputs d-inline-block">
+								<span class="collapse__label">
+									<span
+										class="radio radio-ital"
+										id="globalItalOff"
+									></span>
+									Off</span
+								>
+								<span class="collapse__label"
+									><span
+										class="radio active radio-ital"
+										id="globalItalAuto"
+									></span>
+									Auto</span
+								>
+								<span class="collapse__label">
+									<span
+										class="radio radio-ital"
+										id="globalItalOn"
+									></span>
+									On</span
+								></span
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="toolbar__item d-none d-md-block">
+				<a id="inversePage">
+					<svg
+						id="inverseSVG"
+						style="pointer-events:none"
+						width="16"
+						height="16"
+						viewBox="0 0 16 16"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<circle
+							cx="8"
+							cy="8"
+							r="7.5"
+							fill="white"
+							stroke="black"
+						/>
+						<path
+							d="M15.4836 7.5H0.516402C0.773695 3.59098 4.02588 0.5 8 0.5C11.9741 0.5 15.2263 3.59098 15.4836 7.5Z"
+							fill="black"
+							stroke="black"
+						/>
+					</svg>
+				</a>
+			</div>
+		</div>
+
+		<div class="container-fluid d-none d-md-block" id="mdContainer">
+			<textarea class="mdSection">
+## A highly-flexible new variable font.
+
+Built to maximize versatility, control, and performance, Recursive is a five-axis variable font. This enables you to choose from a wide range of predefined styles, or dial in exactly what you want for each of its axes: *Monospace, Casual, Weight, Slant, and Italic*. Taking full advantage of variable font technology, Recursive offers an unprecedented level of flexibility, all from a single font file.</textarea
+			>
+			<iframe
+				data-src="/singlefile"
+				title="Highly Customizable"
+				class="lazyload"
+				data-expand="50"
+				style="height: 814px"
+			></iframe>
+			<textarea class="mdSection">
+## Extraordinarily versatile.
+
+Recursive draws inspiration from single-stroke casual signpainting, a style of brush writing that is stylistically flexible and warmly energetic. Adapting this aesthetic basis into a type system, Recursive is designed to excel in digital interactive environments. This makes the typeface ideal for a wide range of uses, including data-rich apps, technical documentation and code editors.</textarea
+			>
+			<iframe
+				data-src="/morewithtypography"
+				title="Single File"
+				class="lazyload"
+				data-expand="50"
+				style="height: 652px"
+			></iframe>
+			<textarea class="mdSection">
+### One font. Infinite combinations.
 
 Recursive is crafted with adaptability and diversity in mind, offering a complete type system but ensuring that each style can pair perfectly with its siblings. With so many possible variations across its subfamilies, weights and styles, Recursive allows for a dozen of font combinations that provide enough contrast to clearly define typographic roles, while maintaining a cohesive voice.
 
@@ -341,49 +938,96 @@ Of course, vertical metrics such as line height, cap height, and x-height are sh
 
 *Recursive Sans* is made for text & user interface design. While its proportional characters deliver comfortable reading at text sizes, its heaviest weights are perfect to create punchy, tightly-spaced headlines.
 
-*Recursive Mono* is made for code. Its characters share the same width for clear legibility and perfect alignment. This is particularly helpful for use in programming and data-heavy design tasks, but also allows for creative possibilities in display typography.</textarea>
-		<iframe data-src="/monosans" title="Sans and Monospace" class="lazyload" style="height: 750px"></iframe>
-		<textarea class="mdSection">### A Sans for more robust layouts.
+*Recursive Mono* is made for code. Its characters share the same width for clear legibility and perfect alignment. This is particularly helpful for use in programming and data-heavy design tasks, but also allows for creative possibilities in display typography.</textarea
+			>
+			<iframe
+				data-src="/monosans"
+				title="Sans and Monospace"
+				class="lazyload"
+				style="height: 750px"
+			></iframe>
+			<textarea class="mdSection">
+### A Sans for more robust layouts.
 
-The characters within both subfamilies, Sans & Mono, maintain the exact same width across all font styles, independently of the values set on the *Weight, Casual, Slant, and Italic* axes. You can therefore use Recursive to create animated font transitions without breaking the layout of UI elements like menus and buttons.</textarea>
-		<iframe data-src="/robustlayouts" title="Robust Layouts" class="lazyload" style="height: 350px"></iframe>
-		<textarea class="mdSection">## Ready for work. Ready for play. `CASL`
+The characters within both subfamilies, Sans & Mono, maintain the exact same width across all font styles, independently of the values set on the *Weight, Casual, Slant, and Italic* axes. You can therefore use Recursive to create animated font transitions without breaking the layout of UI elements like menus and buttons.</textarea
+			>
+			<iframe
+				data-src="/robustlayouts"
+				title="Robust Layouts"
+				class="lazyload"
+				style="height: 350px"
+			></iframe>
+			<textarea class="mdSection">
+## Ready for work. Ready for play. `CASL`
 
 Recursive uses its *Casual* axis (`CASL`) to offer a range of personality, allowing you to get just the right tone for any context. Along this axis, letterforms adjust in stroke curvature, contrast, and terminals to go from a sturdy, rational *Linear* to a friendly, energetic *Casual*. All the styles along this axis are designed to maintain high legibility at medium and text sizes. In display sizes, it is most effective to use either end of the *Casual* axis. 
 
 *Linear* (`CASL 0`) styles have subtly-flattened edges and simple, open forms. This optimizes readability and enables enhanced focus in dense information, such as long-form text and complex code.
 
-*Casual* (`CASL 1`) echoes the soft & curvy brush strokes of casual signpainting, but simplifies these forms for a striking and inviting tone. This makes it ideal for web headlines, code snippets, and command line interfaces.</textarea>
-		<iframe data-src="/readyforwork" title="Ready for Work" class="lazyload" style="height: 496px"></iframe>
-		<textarea class="mdSection">## Light to ExtraBlack. And everything in between. `wght`
+*Casual* (`CASL 1`) echoes the soft & curvy brush strokes of casual signpainting, but simplifies these forms for a striking and inviting tone. This makes it ideal for web headlines, code snippets, and command line interfaces.</textarea
+			>
+			<iframe
+				data-src="/readyforwork"
+				title="Ready for Work"
+				class="lazyload"
+				style="height: 496px"
+			></iframe>
+			<textarea class="mdSection">
+## Light to ExtraBlack. And everything in between. `wght`
 
-Recursive comes in a wide range of weights, from Light (`300`) to a super-heavy ExtraBlack (`1000`). You can choose from its seven predefined weights, or set a custom value through its *Weight* (`wght`) axis. And because Recursive maintains consistent letterforms along the entire *Weight* axis, it allows for smooth animations between any of its different weights.</textarea>
-		<iframe data-src="/weightforit" title="Light to ExtraBlack" class="lazyload" style="height: 546px"></iframe>
-		<textarea class="mdSection">## Slant and Italics. Two axes that work great together, or separate. `slnt` & `ital`
+Recursive comes in a wide range of weights, from Light (`300`) to a super-heavy ExtraBlack (`1000`). You can choose from its seven predefined weights, or set a custom value through its *Weight* (`wght`) axis. And because Recursive maintains consistent letterforms along the entire *Weight* axis, it allows for smooth animations between any of its different weights.</textarea
+			>
+			<iframe
+				data-src="/weightforit"
+				title="Light to ExtraBlack"
+				class="lazyload"
+				style="height: 546px"
+			></iframe>
+			<textarea class="mdSection">
+## Slant and Italics. Two axes that work great together, or separate. `slnt` & `ital`
 
 In Recursive, italics and slant can be controlled separately. The *Italic* axis (`ital`) lets you switch on true italics, while the *Slant* axis (`slnt`) defines the angle of the letters. This makes it possible to use sloped romans ( `slnt -15, ital 0`), upright italics ( `slnt 0, ital 1`), or set custom values on both axes for more options to play with.  
 
-Recursive’s true italics (`ital 1`) replace familiar letterforms with single-story cursive alternates. By default, Recursive will automatically apply these cursive alternates when setting the *Slant* axis (`slnt`) to a high value. This ensures that your code and text reads beautifully and instantly, no matter how slanted it needs to be.</textarea>
-		<iframe data-src="/trueritalics" title="Slant and Italics" class="lazyload" style="height: 510px"></iframe>
-		<textarea class="mdSection">## Powerful, yet simple to use.
+Recursive’s true italics (`ital 1`) replace familiar letterforms with single-story cursive alternates. By default, Recursive will automatically apply these cursive alternates when setting the *Slant* axis (`slnt`) to a high value. This ensures that your code and text reads beautifully and instantly, no matter how slanted it needs to be.</textarea
+			>
+			<iframe
+				data-src="/trueritalics"
+				title="Slant and Italics"
+				class="lazyload"
+				style="height: 510px"
+			></iframe>
+			<textarea class="mdSection">
+## Powerful, yet simple to use.
 
 As a variable font, Recursive gives you fine-grained control over each one of its styles. However, it also comes with 64 predefined styles that are easy to access through your font menu. Called *named instances¹*, these work just like regular static fonts do.
 
-¹ Named instance: a predetermined location in the designspace of a variable font, similar to the "static instances" that are familiar in traditional digital fonts.</textarea>
-		<iframe data-src="/powerfulbutsimple" title="Powerful but Simple" class="lazyload" style="height: 807px"></iframe>
-		<textarea class="mdSection">## Supports over 200 languages.
+¹ Named instance: a predetermined location in the designspace of a variable font, similar to the "static instances" that are familiar in traditional digital fonts.</textarea
+			>
+			<iframe
+				data-src="/powerfulbutsimple"
+				title="Powerful but Simple"
+				class="lazyload"
+				style="height: 807px"
+			></iframe>
+			<textarea class="mdSection">
+## Supports over 200 languages.
 
-To meet the needs of global communication, Recursive supports a wide range of Latin-based languages, including Vietnamese. It also comes with an extended set of currencies, symbols, fractions, and arrows.</textarea>
-		<iframe data-src="/languages" title="Languages" class="lazyload" style="height: 2000px"></iframe>
-	</div>
-  <!-- For purge css to work it needs to see some of the codemirror classes -->
-  <!-- <span class="cm-formatting cm-formatting-header cm-formatting-header-2 cm-header cm-header-2 CodeMirror cm-s-paper CodeMirror-wrap CodeMirror-scroll CodeMirror-sizer CodeMirror-lines"></span>
+To meet the needs of global communication, Recursive supports a wide range of Latin-based languages, including Vietnamese. It also comes with an extended set of currencies, symbols, fractions, and arrows.</textarea
+			>
+			<iframe
+				data-src="/languages"
+				title="Languages"
+				class="lazyload"
+				style="height: 2000px"
+			></iframe>
+		</div>
+		<!-- For purge css to work it needs to see some of the codemirror classes -->
+		<!-- <span class="cm-formatting cm-formatting-header cm-formatting-header-2 cm-header cm-header-2 CodeMirror cm-s-paper CodeMirror-wrap CodeMirror-scroll CodeMirror-sizer CodeMirror-lines"></span>
 	<div class="CodeMirror-code"><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span cm-text="">&#8203;</span></span></pre><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-formatting cm-formatting-header cm-formatting-header-2 cm-header cm-header-2"></span><span class="cm-header cm-header-2"></span></span></pre></div>
   <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-formatting cm-formatting-header cm-formatting-header-2 cm-formatting-header-1 cm-formatting-header-3 cm-formatting-header-4 cm-formatting-header-5 cm-formatting-header-6 cm-header cm-header-2"></span><span class="cm-header cm-header-2"></span><span class="cm-formatting cm-formatting-code cm-comment cm-header cm-header-2"></span><span class="cm-comment cm-header cm-header-2"></span><span class="cm-formatting cm-formatting-code cm-comment cm-header cm-header-2 cm-header-3 cm-header-1 cm-header-4 cm-header-5 cm-header-6"></span></span></pre> -->
 
-
-  <div class="mobile-version d-md-none">
-		<!-- Responsive Version -->
+		<div class="mobile-version d-md-none">
+			<!-- Responsive Version -->
 
 <h2 id="a-highly-flexible-new-variable-font">A highly-flexible new variable font.</h2>
 
@@ -10610,7 +11254,7 @@ document.getElementById("grid").onmouseover = function(e){
 </script>
 
 
-	</div>
+		</div>
 		
 <!-- <div class="pre-footer">
     <div>
@@ -10695,94 +11339,98 @@ Google and the Google Fonts logo are registered trademarks or service marks of G
 Google and the Google Fonts logo are registered trademarks or service marks of Google, Inc.</p>
 </div>
 
-<!-- Three JS -->
-<script src='/js/three.min.js?v=0.112.1'></script>
-<script src='/js/three-orbit-controls.min.js?v=0.112.1'></script>
+		<!-- Three JS -->
+		<script src="/js/three.min.js?v=0.112.1"></script>
+		<script src="/js/three-orbit-controls.min.js?v=0.112.1"></script>
 
-<!-- Markdown -->
-<script src="/js/simplemde.min.js?v=1.11.2"></script>
+		<!-- Markdown -->
+		<script src="/js/simplemde.min.js?v=1.11.2"></script>
 
-<script type="text/javascript" src="/js/fontfaceonload.js"></script>
-<!-- Custom -->
-<script type="text/javascript" src="/js/sketch.js"></script>
-<script type="text/javascript" src="/js/script.js"></script>
+		<script type="text/javascript" src="/js/fontfaceonload.js"></script>
+		<!-- Custom -->
+		<script type="text/javascript" src="/js/sketch.js"></script>
+		<script type="text/javascript" src="/js/script.js"></script>
 
-<script>
+		<script>
+			let loaded = false;
+			let simplemdes = [];
+			let c = 0;
 
-	let loaded = false;
-	let simplemdes = [];
-  let c = 0;
+			for (let textarea of document.querySelectorAll("textarea")) {
+				if (c == 0) {
+					bool = true;
+				} else {
+					bool = false;
+				}
+				simplemdes.push(
+					new SimpleMDE({
+						autofocus: bool,
+						autorefresh: true,
+						autosave: {
+							enabled: false
+						},
+						blockStyles: {
+							bold: "__",
+							italic: "_"
+						},
+						element: textarea,
+						forceSync: true,
+						hideIcons: ["guide", "heading"],
+						indentWithTabs: false,
+						lineWrapping: true,
+						parsingConfig: {
+							allowAtxHeaderWithoutSpace: true,
+							strikethrough: false,
+							underscoresBreakWords: true
+						},
+						placeholder: "",
+						promptURLs: false,
+						renderingConfig: {
+							singleLineBreaks: true,
+							codeSyntaxHighlighting: true
+						},
+						spellChecker: false,
+						status: false,
+						styleSelectedText: false,
+						tabSize: 4,
+						toolbar: false,
+						toolbarTips: false
+					})
+				);
 
-	for (let textarea of document.querySelectorAll('textarea')){
-        if (c == 0){ bool = true;} else { bool = false};
-		    simplemdes.push ( new SimpleMDE({
-				autofocus: bool,
-				autorefresh: true,
-				autosave: {
-					enabled: false
-				},
-				blockStyles: {
-					bold: "__",
-					italic: "_"
-				},
-				element: textarea,
-				forceSync: true,
-				hideIcons: ["guide", "heading"],
-				indentWithTabs: false,
-				lineWrapping: true,
-				parsingConfig: {
-					allowAtxHeaderWithoutSpace: true,
-					strikethrough: false,
-					underscoresBreakWords: true,
-				},
-				placeholder: "",
-				promptURLs: false,
-				renderingConfig: {
-					singleLineBreaks: true,
-					codeSyntaxHighlighting: true,
-				},
-				spellChecker: false,
-				status: false,
-				styleSelectedText: false,
-				tabSize: 4,
-				toolbar: false,
-				toolbarTips: false,
-			}));
-  
-    c++;
-		 
-	};
-	for (let i = 0; i<simplemdes.length; i++){
-    if (i == 0){
-      simplemdes[i].codemirror.setCursor({line: 0, ch: 45}); 
-    } simplemdes[i].render();
-	}
+				c++;
+			}
+			for (let i = 0; i < simplemdes.length; i++) {
+				if (i == 0) {
+					simplemdes[i].codemirror.setCursor({ line: 0, ch: 45 });
+				}
+				simplemdes[i].render();
+			}
 
-	for (var i=0;i<document.getElementsByTagName("iframe").length;i++){
-		document.getElementsByTagName('iframe')[i].onload = function(){
-        this.style.height = this.contentWindow.document.body.offsetHeight + 50 + 'px';
-		}
-	}
+			for (
+				var i = 0;
+				i < document.getElementsByTagName("iframe").length;
+				i++
+			) {
+				document.getElementsByTagName("iframe")[i].onload = function() {
+					this.style.height =
+						this.contentWindow.document.body.offsetHeight +
+						50 +
+						"px";
+				};
+			}
 
-  function getAbsoluteHeight(el) {
-    // Get the DOM Node if you pass in a string
-    el = (typeof el === 'string') ? document.querySelector(el) : el; 
+			function getAbsoluteHeight(el) {
+				// Get the DOM Node if you pass in a string
+				el = typeof el === "string" ? document.querySelector(el) : el;
 
-    var styles = window.getComputedStyle(el);
-    var margin = parseFloat(styles['marginTop']) +
-                parseFloat(styles['marginBottom']);
+				var styles = window.getComputedStyle(el);
+				var margin =
+					parseFloat(styles["marginTop"]) +
+					parseFloat(styles["marginBottom"]);
 
-    return Math.ceil(el.offsetHeight + margin);
-  }
-
-</script>
-
-<!-- Fade in loading -->
-<!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script> -->
-
-
-  </body>
+				return Math.ceil(el.offsetHeight + margin);
+			}
+		</script>
+	</body>
 </html>
