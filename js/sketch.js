@@ -55,8 +55,6 @@ function cubify(inputString) {
 
 		onMouseDown: function(event) {
 			mouseMoved = 1;
-			// mouse.x = interpolate(event.clientX, 0, window.innerWidth, 500, 1000 );
-			// mouse.y = interpolate(event.clientY, 0, originalInnerHeight, 500, 1000 );
 		},
 
 		onReady: function() {
@@ -76,27 +74,7 @@ function cubify(inputString) {
 				-500,
 				0
 			);
-			// this.camera = new THREE.OrthographicCamera( originalInnerWidth / - 50,
-			//                                             originalInnerWidth / 50,
-			//                                             (originalInnerHeight) / 50,
-			//                                             (originalInnerHeight - 200) / -50,
-			//                                             50,
-			//                                             500);
 
-			// this.camera = new THREE.OrthographicCamera( 0,
-			//                                             originalInnerWidth,
-			//                                             0,
-			//                                             originalInnerHeight,
-			//                                             -50,
-			//                                             1000);
-			var aspect = window.innerWidth / window.innerHeight;
-			// this.camera = new THREE.OrthographicCamera( frustumSize * aspect / - 2, frustumSize * aspect / 2, frustumSize / 2, frustumSize / - 2, -500, 1000);
-
-			//
-			// this.camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 1, 200 );
-			// this.camera.position.x = 500;
-			// this.camera.position.y = 500;
-			// this.camera.position.z = 750;
 			this.camera.position.x = originalInnerWidth / 2;
 			this.camera.position.y = originalInnerHeight / 2;
 			this.camera.position.z = 750;
@@ -457,14 +435,7 @@ function cubify(inputString) {
 
 		onResize: function() {
 			this.camera.aspect = window.innerHeight / (window.innerHeight - 0); // was 200
-			console.log("this.camera.aspect is ", this.camera.aspect);
 			this.camera.updateProjectionMatrix();
-			// this.renderer.setSize(window.innerWeight, (window.innerHeight - 0)); // was 200
-			// document.getElementById("THREE").innerHTML = ''
-			// cubify("recursive");
-			// this.camera.aspect = originalInnerWidth / originalInnerHeight;
-			// this.camera.updateProjectionMatrix();
-			// this.renderer.setSize( originalInnerWidth, originalInnerHeight );
 		},
 
 		_render: function() {
@@ -494,13 +465,7 @@ function cubify(inputString) {
 					letter.firstElementChild.classList.add("d-none-2");
 				}
 			}
-
-			// function render() {
-			//     _this.renderer.render(this.scene, this.camera);
-			// }
-
 			this.renderer.render(this.scene, this.camera);
-			// console.log(this.camera.position);
 		},
 
 		_createTextLabel: function() {
@@ -563,12 +528,6 @@ function cubify(inputString) {
 		document.getElementById("THREE").style.pointerEvents = "auto";
 	}, 4000);
 
-	// viewer.animate();
-	// viewer.container.onmousemove = function(){
-	//   // console.log("mousemoved");
-	//   mouse.x = ( event.clientX - windowHalf.x );
-	// 	mouse.y = ( event.clientY - windowHalf.x );
-	// }
 	window.addEventListener(
 		"resize",
 		function() {
@@ -585,10 +544,6 @@ function cubify(inputString) {
 		false
 	);
 }
-
-// function countDistanceToCamera(obj, cam){
-//       return Math.sqrt((obj.x - cam.x) * (obj.x - cam.x) + (obj.y - cam.y) * (obj.y - cam.y) + (obj.z - cam.z) * (obj.z - cam.z));
-// }
 
 function countDistanceToCamera(obj, cam) {
 	var a = new THREE.Vector3(obj.x, obj.y, obj.z);
@@ -629,8 +584,6 @@ let upListener = () => {
 		// not moved
 		noLerp = false;
 		document.getElementById("textInput").focus();
-		// document.getElementById("THREE").innerHTML = '';
-		// cubify("rrrrrrrrr");
 		for (let letterElement of document.querySelectorAll(
 			".text-label span"
 		)) {
@@ -645,8 +598,6 @@ element.removeEventListener("mousedown", downListener);
 element.removeEventListener("mousemove", moveListener);
 element.removeEventListener("mouseup", upListener);
 
-// }
-
 function changeString() {
 	str = document.getElementById("textInput").value + "&#8203;";
 	noLerp = true;
@@ -657,14 +608,6 @@ function changeString() {
 	}
 }
 
-// document.getElementById("textInput").onkeydown = function(e){
-//   noLerp = true;
-//   document.getElementById("THREE").classList.remove("blink");
-//   document.getElementById("textInput").value = '';
-//   // let str = e.key;
-//   // document.getElementById("textInput").value = str;
-// }
-
 function lerp(start, end, t) {
 	return start * (1 - t) + end * t;
 }
@@ -674,5 +617,3 @@ Number.prototype.between = function(a, b, inclusive) {
 		max = Math.max.apply(Math, [a, b]);
 	return inclusive ? this >= min && this <= max : this > min && this < max;
 };
-
-function hasOverlap() {}
