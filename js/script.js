@@ -18,41 +18,10 @@ document.onresize = function(){
     document.getElementsByClassName("line1-label")[0].style.top = labelHeight + "px";
 }
 
-// document.getElementById("line1").setAttribute("points", "democlass");
 
-
-// FontFaceOnload('Recursive', {
-// 	success: function() {
-// 		var docEl = document.documentElement;
-// 		docEl.className += ' recursive-loaded';
-// 	}
-// });
-
-// var image = document.querySelector('iframe');
-    // window.addEventListener('scroll', function (event) {
-    //     let iframe = document.getElementsByTagName("iframe")[i];
-    //     if (isInViewport(iframe)) {            
-    //         iframe.contentDocument.getElementsByTagName("body")[0].classList.add("inViewport");
-    //     } else {
-    //         iframe.contentDocument.getElementsByTagName("body")[0].classList.remove("inViewport");
-    //     }
-    // }, false);
-
-// window.onload = function() {
-    // document.getElementsByTagName("body")[0].classList.add("preload");
     setTimeout(function(){ 
     document.getElementsByTagName("body")[0].classList.add("loaded");
     }, 300);
-    // setTimeout(function(){ 
-    // document.getElementById("THREE").style.opacity = "1";
-    // }, 1200);
-// }
-
-// for (const detail of document.getElementsByClassName("detail")){
-//     detail.onclick = function(){
-//         this.style.display = "none";
-//     }
-// }
 
 document.getElementById("globalFontSizeSlider").oninput = function(){
     document.getElementsByTagName("html")[0].style.fontSize = document.getElementById("globalFontSizeSlider").value + "px"
