@@ -46,8 +46,8 @@ layout: iframe
 		var offset = 42;
 	}
 	const pulse = document.getElementsByClassName("pulsating-circle")[0];
-	const xAxisEl = document.getElementById("yAxis");
 	const yAxisEl = document.getElementById("xAxis");
+	const xAxisEl = document.getElementById("yAxis");
 
 	// Only keep track of mouse position, do nothing else
 	document.getElementById("canvas").onmousemove = function(e) {
@@ -90,7 +90,7 @@ layout: iframe
 		);
 		let yAxisLabel = interpolate(newY, bounds.top, bounds.bottom, 0, 1);
 		if (xPos > 0) {
-			xAxisEl.style.transform = `translateX(${xPos}px)`;
+			xAxisEl.style.transform = `translateX(${xPos}px) translateX(-100%)`;
 			xAxisEl.innerHTML =
 				"<div>" +
 				Math.floor(newX) +
@@ -99,7 +99,7 @@ layout: iframe
 				"</div>";
 		}
 
-		yAxisEl.style.transform = `translateY(${yPos}px)`;
+		yAxisEl.style.transform = `translateY(${yPos}px) translateY(-100%)`;
 		yAxisEl.innerHTML =
 			'<div class="float-left">' +
 			yAxisLabel.toFixed(2) +
