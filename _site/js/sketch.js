@@ -431,30 +431,31 @@ function cubify(inputString) {
 		},
 
 		_render: function() {
+
+      const letterElements = document.querySelectorAll(".text-label"); 
 			for (var i = 0; i < this.textlabels.length; i++) {
 				this.textlabels[i].updatePosition();
 			}
-			let _this = this;
-			for (const letter of document.getElementsByClassName(
-				"text-label"
-			)) {
+
+			for (const letter of letterElements) {
+        const letterContains = letter.firstElementChild.classList; 
 				if (
-					(letter.firstElementChild.classList.contains("sideA") &&
+					(letterContains.contains("sideA") &&
 						!aFade) ||
-					(letter.firstElementChild.classList.contains("sideB") &&
+					(letterContains.contains("sideB") &&
 						!bFade) ||
-					(letter.firstElementChild.classList.contains("sideC") &&
+					(letterContains.contains("sideC") &&
 						!cFade) ||
-					(letter.firstElementChild.classList.contains("sideD") &&
+					(letterContains.contains("sideD") &&
 						!dFade) ||
-					(letter.firstElementChild.classList.contains("top") &&
+					(letterContains.contains("top") &&
 						!topFade) ||
-					(letter.firstElementChild.classList.contains("bottom") &&
+					(letterContains.contains("bottom") &&
 						!bottomFade)
 				) {
-					letter.firstElementChild.classList.remove("d-none-2");
+					letterContains.remove("d-none-2");
 				} else {
-					letter.firstElementChild.classList.add("d-none-2");
+					letterContains.add("d-none-2");
 				}
 			}
 			this.renderer.render(this.scene, this.camera);
@@ -510,6 +511,7 @@ function cubify(inputString) {
 	};
 
 	viewer.container = document.getElementById("THREE");
+
 	setTimeout(function() {
 		viewer.onReady();
 		document.getElementsByClassName("lines")[0].style.opacity = "1";
