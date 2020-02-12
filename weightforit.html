@@ -2,74 +2,135 @@
 layout: iframe
 ---
 
-<div id="weightForIt" class="container container-sm module" style="overflow:visible">
-
-    <div id="canvas">
-        <div class="pulsating-circle"></div>
-        <div id="dollars">
-        </div>
-        <div class="label">CASL</div>
-        <div id="xAxis">
-            <div class="float-left">864</div><div class="float-right">864</div>
-        </div>
-        <div id="yAxis">
-            <div>864</div><div>864</div>
-        </div>
-    </div>
-    <div class="label-bottom clearfix">
-        <div class="float-left">Weight:300</div><div class="float-right" style="margin-left:800px">1000</div>
-    </div>
+<div
+	id="weightForIt"
+	class="container container-sm module"
+	style="overflow:visible"
+>
+	<div id="canvas">
+		<div class="pulsating-circle"></div>
+		<div id="dollars"></div>
+		<div class="label">CASL</div>
+		<div id="xAxis">
+			<div class="float-left">864</div>
+			<div class="float-right">864</div>
+		</div>
+		<div id="yAxis">
+			<div>864</div>
+			<div>864</div>
+		</div>
+	</div>
+	<div class="label-bottom clearfix">
+		<div class="float-left">Weight:300</div>
+		<div class="float-right" style="margin-left:800px">1000</div>
+	</div>
 </div>
 
 <script type="text/javascript">
+	const body = document.querySelector("body");
 
-        const body = document.querySelector('body');
-        let lastX = 0,
-            lastY = 0,
-            i = 0;
+	let lastX = 0,
+		lastY = 0,
+		i = 0;
 
-        document.getElementById("canvas").onmousemove = function(e){
-            document.getElementsByClassName("pulsating-circle")[0].style.display = "none";
-            let {
-                offsetX: x,
-                offsetY: y
-            } = e;
+	const mousePos = {
+		x: 0,
+		y: 0,
+		cx: 0,
+		cy: 0
+	};
+	let dollarCount = 0;
+	if (body.classList.contains("touch-input")) {
+		var offset = 0;
+	} else {
+		var offset = 42;
+	}
+	const pulse = document.getElementsByClassName("pulsating-circle")[0];
+	const xAxisEl = document.getElementById("yAxis");
+	const yAxisEl = document.getElementById("xAxis");
 
-            if (this != e.target) {
-                x = x + e.target.offsetLeft;
-                y = y + e.target.offsetTop;
-            }
-            // defines a variable that offsets when the next word will be printed, so that it's not a word for every pixel of hover movement
-            if (body.classList.contains('touch-input')) {
-                var offset = 0;
-            } else {
-                var offset = 42;
-            }
+	// Only keep track of mouse position, do nothing else
+	document.getElementById("canvas").onmousemove = function(e) {
+		mousePos.x = e.offsetX;
+		mousePos.y = e.offsetY;
+		mousePos.cx = e.clientX;
+		mousePos.cy = e.clientY;
+		if (this != e.target) {
+			mousePos.x = mousePos.x + e.target.offsetLeft;
+			mousePos.y = mousePos.y + e.target.offsetTop;
+		}
+		// Ask browser to repaint at earliest convenience instead
+		// of forcing a repaint
+		requestAnimationFrame(draw);
+	};
+	function draw() {
+		pulse.style.display = "none";
 
-            let bounds = document.getElementById("dollars").getBoundingClientRect();
-            let newX = interpolate(e.clientX, bounds.left, bounds.right, 0, bounds.width);
-            let newY = interpolate(e.clientY, bounds.top, bounds.bottom, 0, bounds.height);
-            let xPos = interpolate(e.clientX, bounds.left, bounds.right, 0, document.getElementById("dollars").clientWidth);
-            let yPos = interpolate(e.clientY, bounds.top, bounds.bottom, 0, document.getElementById("dollars").clientHeight);
-            let yAxisLabel = interpolate(newY, bounds.top, bounds.bottom, 0, 1);
+		const x = mousePos.x;
+		const y = mousePos.y;
+		const cx = mousePos.cx;
+		const cy = mousePos.cy;
+		const dollarsContainer = document.getElementById("dollars");
+		let bounds = dollarsContainer.getBoundingClientRect();
+		let newX = interpolate(cx, bounds.left, bounds.right, 0, bounds.width);
+		let newY = interpolate(cy, bounds.top, bounds.bottom, 0, bounds.height);
+		let xPos = interpolate(
+			cx,
+			bounds.left,
+			bounds.right,
+			0,
+			dollarsContainer.clientWidth
+		);
+		let yPos = interpolate(
+			cy,
+			bounds.top,
+			bounds.bottom,
+			0,
+			dollarsContainer.clientHeight
+		);
+		let yAxisLabel = interpolate(newY, bounds.top, bounds.bottom, 0, 1);
+		if (xPos > 0) {
+			xAxisEl.style.transform = `translateX(${xPos}px)`;
+			xAxisEl.innerHTML =
+				"<div>" +
+				Math.floor(newX) +
+				"</div><div>" +
+				Math.floor(newX) +
+				"</div>";
+		}
 
-            if (xPos > 0){
-                document.getElementById("yAxis").style.left = xPos + "px";
-                document.getElementById("yAxis").innerHTML = "<div>"+Math.floor(newX)+"</div><div>"+Math.floor(newX)+"</div>";
-            }
-            document.getElementById("xAxis").style.top = yPos + "px";
-            document.getElementById("xAxis").innerHTML = '<div class="float-left">'+yAxisLabel.toFixed(2)+'</div><div class="float-right">'+yAxisLabel.toFixed(2)+'</div>';
+		yAxisEl.style.transform = `translateY(${yPos}px)`;
+		yAxisEl.innerHTML =
+			'<div class="float-left">' +
+			yAxisLabel.toFixed(2) +
+			'</div><div class="float-right">' +
+			yAxisLabel.toFixed(2) +
+			"</div>";
+		if (
+			x > lastX + offset ||
+			x < lastX - offset ||
+			y > lastY + offset ||
+			y < lastY - offset
+		) {
+			if (yPos < 400 && yPos > 60 && xPos < 933 && xPos > 60) {
+				document.getElementById(
+					"dollars"
+				).innerHTML += `<div class='dollar' style='transform:translate(${xPos}px, ${newY}px); font-variation-settings: "CASL" ${yAxisLabel.toFixed(
+					2
+				)}, "wght" ${Math.floor(newX)}'>$</div>`;
+				[lastX, lastY] = [x, y];
+				if (dollarCount++ >= 8) {
+					// Clean up!
+					const dead = dollarsContainer.querySelector(
+						".dollar:first-child"
+					);
+					dead.parentNode.removeChild(dead);
+				}
+			}
+		}
+	}
 
-            if ((x > (lastX + offset)) || (x < (lastX - offset)) || (y > (lastY + offset)) || (y < (lastY - offset))) {
-                if (yPos < 400 && yPos > 60 && xPos < 933 && xPos > 60 ){
-                document.getElementById("dollars").innerHTML += `<div class='dollar' style='top: ${newY}px; left:${xPos}px; font-variation-settings: "CASL" ${yAxisLabel.toFixed(2)}, "wght" ${Math.floor(newX)}'>$</div>`;
-                [lastX, lastY] = [x, y];
-                }
-            }
-        }
-
-        function interpolate(value, low1, high1, low2, high2) {
-            return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
-        }
+	function interpolate(value, low1, high1, low2, high2) {
+		return low2 + ((high2 - low2) * (value - low1)) / (high1 - low1);
+	}
 </script>
-   
