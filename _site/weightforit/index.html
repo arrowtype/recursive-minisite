@@ -64,8 +64,8 @@
 		var offset = 42;
 	}
 	const pulse = document.getElementsByClassName("pulsating-circle")[0];
-	const xAxisEl = document.getElementById("yAxis");
-	const yAxisEl = document.getElementById("xAxis");
+	const xAxisEl = document.getElementById("xAxis");
+	const yAxisEl = document.getElementById("yAxis");
 
 	// Only keep track of mouse position, do nothing else
 	document.getElementById("canvas").onmousemove = function(e) {
@@ -108,8 +108,8 @@
 		);
 		let yAxisLabel = interpolate(newY, bounds.top, bounds.bottom, 0, 1);
 		if (xPos > 0) {
-			xAxisEl.style.transform = `translateX(${xPos}px)`;
-			xAxisEl.innerHTML =
+			yAxisEl.style.transform = `translateX(${xPos}px) translateX(-100%)`;
+			yAxisEl.innerHTML =
 				"<div>" +
 				Math.floor(newX) +
 				"</div><div>" +
@@ -117,8 +117,8 @@
 				"</div>";
 		}
 
-		yAxisEl.style.transform = `translateY(${yPos}px)`;
-		yAxisEl.innerHTML =
+		xAxisEl.style.transform = `translateY(${yPos}px) translateY(-100%)`;
+		xAxisEl.innerHTML =
 			'<div class="float-left">' +
 			yAxisLabel.toFixed(2) +
 			'</div><div class="float-right">' +
@@ -133,7 +133,7 @@
 			if (yPos < 400 && yPos > 60 && xPos < 933 && xPos > 60) {
 				document.getElementById(
 					"dollars"
-				).innerHTML += `<div class='dollar' style='transform:translate(${xPos}px, ${newY}px); font-variation-settings: "CASL" ${yAxisLabel.toFixed(
+				).innerHTML += `<div class='dollar' style='transform:translate(${xPos}px, ${newY}px) translate(-50%, -50%); font-variation-settings: "CASL" ${yAxisLabel.toFixed(
 					2
 				)}, "wght" ${Math.floor(newX)}'>$</div>`;
 				[lastX, lastY] = [x, y];
