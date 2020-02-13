@@ -1049,6 +1049,7 @@ $randomNumber: random(2);
     --posX: 0; 
     --posY: 0; 
     
+    will-change: transform, color;
     transform: translate(var(--posX), var(--posY)) translate(-50%, 0);
     color: rgb(var(--text-tint), var(--text-tint), var(--text-tint));
     pointer-events:none;

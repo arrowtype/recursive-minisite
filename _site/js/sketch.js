@@ -565,29 +565,49 @@ function interpolate(min, max, t) {
 // Distinguish between clicking for typing and dragging for moving
 let element = document.getElementById("THREE");
 let moved;
+
 let downListener = () => {
 	moved = false;
 	mouseIsDown = true;
+
+	const letterElements = document.querySelectorAll(".text-label");
+
+	for (let letterElement of letterElements) {
+		letterElement.style.willChange = "transform, color";
+	}
+
 	document.getElementsByClassName("lines")[0].style.opacity = "0";
 };
+
 element.onmousedown = downListener;
 element.ontouchstart = downListener;
+
 let moveListener = () => {
 	moved = true;
 };
+
 element.onmousemove = moveListener;
+
 let upListener = () => {
+	const letterElements = document.querySelectorAll(".text-label");
+
+	for (let letterElement of letterElements) {
+		letterElement.style.willChange = "auto";
+	}
+
 	if (moved) {
-		// moved
 	} else {
 		// not moved
 		noLerp = false;
 		document.getElementById("textInput").focus();
-		for (let letterElement of document.querySelectorAll(
+		const letterElementsSpans = document.querySelectorAll(
 			".text-label span"
-		)) {
+		);
+
+		for (let letterElement of letterElementsSpans) {
 			letterElement.innerHTML = "r&#8203;";
 		}
+
 		document.getElementById("THREE").classList.add("blink");
 	}
 };
