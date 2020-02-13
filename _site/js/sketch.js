@@ -570,12 +570,6 @@ let downListener = () => {
 	moved = false;
 	mouseIsDown = true;
 
-	const letterElements = document.querySelectorAll(".text-label");
-
-	for (let letterElement of letterElements) {
-		letterElement.style.willChange = "transform, color";
-	}
-
 	document.getElementsByClassName("lines")[0].style.opacity = "0";
 };
 
@@ -589,12 +583,6 @@ let moveListener = () => {
 element.onmousemove = moveListener;
 
 let upListener = () => {
-	const letterElements = document.querySelectorAll(".text-label");
-
-	for (let letterElement of letterElements) {
-		letterElement.style.willChange = "auto";
-	}
-
 	if (moved) {
 	} else {
 		// not moved
