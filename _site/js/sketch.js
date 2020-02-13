@@ -491,9 +491,7 @@ function cubify(inputString) {
 					);
 					tint = interpolate(dist, 1250, 1350, 255, 0);
 
-					this.element.style.setProperty("--text-tint-r", tint);
-					this.element.style.setProperty("--text-tint-g", tint);
-					this.element.style.setProperty("--text-tint-b", tint);
+					this.element.style.setProperty("--text-tint", tint);
 				},
 				get2DCoords: function(position, camera) {
 					var vector = position.project(camera);
