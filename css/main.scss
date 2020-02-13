@@ -2411,89 +2411,80 @@ ul.casual .rw{--casl: 1}
         width: 900px;
         padding-left:0px;
     }
-//
-
-.text-label {
-//   font-size:80px;
-}
-.toolbar .toolbar__item{
-    padding: 8px 20px;
-}
-.navbar-brand{
-    padding:16px 20px;
-}
-.navbar-toggler {
-    padding: 0.25rem 0px;
-    svg{
-      position:relative;
-      left:5px;
+    .toolbar .toolbar__item{
+        padding: 8px 20px;
     }
-}
-#singleFile{
-    width: calc(100% + 40px);
-    position: relative;
-    left:-20px;
-}
-#singleFile .controls ul{
-    left:0px;
-}
-#singleFile input#controls-result, #singleFile input#controls-result-sm{
-    min-height:200px !important;
-    height: 350px;
-    font-size:300px;
-    overflow: auto !important;
-}
-#singleFile input[type="text"]{
-    height:200px;
-    font-size:300px;
-}
-.toolbar select.toolbar__item{
-    background-position:right 20px center;
-}
-.toolbar__item:nth-child(2){
-    display:none;
-}
+    .navbar-brand{
+        padding:16px 20px;
+    }
+    .navbar-toggler {
+        padding: 0.25rem 0px;
+        svg{
+        position:relative;
+        left:5px;
+        }
+    }
+    #singleFile{
+        width: calc(100% + 40px);
+        position: relative;
+        left:-20px;
+    }
+    #singleFile .controls ul{
+        left:0px;
+    }
+    #singleFile input#controls-result, #singleFile input#controls-result-sm{
+        min-height:200px !important;
+        height: 350px;
+        font-size:300px;
+        overflow: auto !important;
+    }
+    #singleFile input[type="text"]{
+        height:200px;
+        font-size:300px;
+    }
+    .toolbar select.toolbar__item{
+        background-position:right 20px center;
+    }
+    .toolbar__item:nth-child(2){
+        display:none;
+    }
 
-span.cm-formatting.cm-formatting-header.cm-formatting-header-6.cm-header.cm-header-6, span.cm-formatting.cm-formatting-header.cm-formatting-header-5.cm-header.cm-header-5,span.cm-formatting.cm-formatting-header.cm-formatting-header-4.cm-header.cm-header-4,span.cm-formatting.cm-formatting-header.cm-formatting-header-3.cm-header.cm-header-3,span.cm-formatting.cm-formatting-header.cm-formatting-header-2.cm-header.cm-header-2,span.cm-formatting.cm-formatting-header.cm-formatting-header-1.cm-header.cm-header-1{margin-left:0px;}
+    span.cm-formatting.cm-formatting-header.cm-formatting-header-6.cm-header.cm-header-6, span.cm-formatting.cm-formatting-header.cm-formatting-header-5.cm-header.cm-header-5,span.cm-formatting.cm-formatting-header.cm-formatting-header-4.cm-header.cm-header-4,span.cm-formatting.cm-formatting-header.cm-formatting-header-3.cm-header.cm-header-3,span.cm-formatting.cm-formatting-header.cm-formatting-header-2.cm-header.cm-header-2,span.cm-formatting.cm-formatting-header.cm-formatting-header-1.cm-header.cm-header-1{margin-left:0px;}
 
 
 
-.hero__headline{
-    font-size: 28px;
-    line-height: 32px;
-}
-.hideOnMobile{
-    display:none;
-}
-pre.CodeMirror-line {
-    // padding: 0px 20px 0px 60px;
-    padding: 0px 20px 0px 20px;
-}
+    .hero__headline{
+        font-size: 28px;
+        line-height: 32px;
+    }
+    .hideOnMobile{
+        display:none;
+    }
+    pre.CodeMirror-line {
+        // padding: 0px 20px 0px 60px;
+        padding: 0px 20px 0px 20px;
+    }
 
-.CodeMirror-line:before {
-    left: 0px;
-    display:none;
-}
-.CodeMirror .CodeMirror-code .cm-header-1, .CodeMirror .CodeMirror-code .cm-header-2, .CodeMirror .CodeMirror-code .cm-header-3, .CodeMirror .CodeMirror-code .cm-header-4 {
-    left: 0px;
-}
-#verticalBar{
-    display:none;
-}
+    .CodeMirror-line:before {
+        left: 0px;
+        display:none;
+    }
+    .CodeMirror .CodeMirror-code .cm-header-1, .CodeMirror .CodeMirror-code .cm-header-2, .CodeMirror .CodeMirror-code .cm-header-3, .CodeMirror .CodeMirror-code .cm-header-4 {
+        left: 0px;
+    }
+    #verticalBar{
+        display:none;
+    }
 
-.CodeMirror-lines{
-    background-color:white;
-}
+    .CodeMirror-lines{
+        background-color:white;
+    }
 
-// .CodeMirror-lines:before{
-#mdContainer:before{
-    opacity:0px;
-    display:none;
-}
-
-* {
-    overflow-x: hidden;
-}
+    // .CodeMirror-lines:before{
+    #mdContainer:before{
+        opacity:0px;
+        display:none;
+    }
 
 }
 
