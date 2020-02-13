@@ -435,7 +435,23 @@ function cubify(inputString) {
 			for (var i = 0; i < this.textlabels.length; i++) {
 				this.textlabels[i].updatePosition();
 			}
+			const letterElements = document.querySelectorAll(".text-label");
 
+			for (const letter of letterElements) {
+				const letterContains = letter.firstElementChild.classList;
+				if (
+					(letterContains.contains("sideA") && !aFade) ||
+					(letterContains.contains("sideB") && !bFade) ||
+					(letterContains.contains("sideC") && !cFade) ||
+					(letterContains.contains("sideD") && !dFade) ||
+					(letterContains.contains("top") && !topFade) ||
+					(letterContains.contains("bottom") && !bottomFade)
+				) {
+					letterContains.remove("d-none-2");
+				} else {
+					letterContains.add("d-none-2");
+				}
+			}
 			this.renderer.render(this.scene, this.camera);
 		},
 
@@ -448,11 +464,8 @@ function cubify(inputString) {
 
 			var _this = this;
 
-			const textLabelElements = document.querySelectorAll(".text-label");
-
 			return {
 				element: textLabelEl,
-				// elements: document.querySelectorAll(".text-label"),
 				fragment,
 				parent: false,
 				position: new THREE.Vector3(0, 0, 0),
@@ -479,23 +492,6 @@ function cubify(inputString) {
 						_this.camera.position
 					);
 					tint = interpolate(dist, 1250, 1350, 255, 0);
-
-					for (const letter of textLabelElements) {
-						const letterContains =
-							letter.firstElementChild.classList;
-						if (
-							(letterContains.contains("sideA") && !aFade) ||
-							(letterContains.contains("sideB") && !bFade) ||
-							(letterContains.contains("sideC") && !cFade) ||
-							(letterContains.contains("sideD") && !dFade) ||
-							(letterContains.contains("top") && !topFade) ||
-							(letterContains.contains("bottom") && !bottomFade)
-						) {
-							letterContains.remove("d-none-2");
-						} else {
-							letterContains.add("d-none-2");
-						}
-					}
 
 					this.element.style.setProperty("--text-tint", tint);
 				},
