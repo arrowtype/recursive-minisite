@@ -482,15 +482,18 @@ function cubify(inputString) {
 						_this.camera
 					);
 
-					this.element.style.transform = `translate(${coords2d.x}px, ${coords2d.y}px) translate(-50%, 0)`;
+					this.element.style.setProperty("--posX", `${coords2d.x}px`);
+					this.element.style.setProperty("--posY", `${coords2d.y}px`);
 
 					dist = countDistanceToCamera(
 						this.parent.position,
 						_this.camera.position
 					);
 					tint = interpolate(dist, 1250, 1350, 255, 0);
-					this.element.style.color =
-						"rgb(" + tint + ", " + tint + ", " + tint + ")";
+
+					this.element.style.setProperty("--text-tint-r", tint);
+					this.element.style.setProperty("--text-tint-g", tint);
+					this.element.style.setProperty("--text-tint-b", tint);
 				},
 				get2DCoords: function(position, camera) {
 					var vector = position.project(camera);
@@ -505,15 +508,26 @@ function cubify(inputString) {
 
 	viewer.container = document.getElementById("THREE");
 
-	setTimeout(function() {
+	let animateTimeout = null;
+
+	const animate = () => {
 		viewer.onReady();
 		document.getElementsByClassName("lines")[0].style.opacity = "1";
-	}, 1000);
+		clearTimeout(animateTimeout);
+	};
+	// Consider requestAnimationFrame here, but then the intro animation doesn't work properly.
+	animateTimeout = setTimeout(animate, 1000);
 
-	setTimeout(function() {
+	let lerpTimeoput = null;
+
+	const lerpFn = () => {
 		noLerp = true;
 		document.getElementById("THREE").style.pointerEvents = "auto";
-	}, 4000);
+
+		clearTimeout(lerpTimeoput);
+	};
+
+	lerpTimeout = setTimeout(lerpFn, 4000);
 
 	window.addEventListener(
 		"resize",

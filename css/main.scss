@@ -1043,8 +1043,17 @@ div#pickVariability, #pickFontSize {
 }
 $randomNumber: random(2);
 
+
 .text-label {
-    color: #fff;
+    --text-tint-r: 0;
+    --text-tint-g: 0;
+    --text-tint-b: 0;
+    --posX: 0; 
+    --posY: 0; 
+    
+    // color: #fff;
+    transform: translate(var(--posX), var(--posY)) translate(-50%, 0);
+    color: rgb(var(--text-tint-r), var(--text-tint-g), var(--text-tint-b));
     pointer-events:none;
     font-size:calc(10px + 10vh);
     position:absolute;
