@@ -431,27 +431,20 @@ function cubify(inputString) {
 		},
 
 		_render: function() {
-
-      const letterElements = document.querySelectorAll(".text-label"); 
+			const letterElements = document.querySelectorAll(".text-label");
 			for (var i = 0; i < this.textlabels.length; i++) {
 				this.textlabels[i].updatePosition();
 			}
 
 			for (const letter of letterElements) {
-        const letterContains = letter.firstElementChild.classList; 
+				const letterContains = letter.firstElementChild.classList;
 				if (
-					(letterContains.contains("sideA") &&
-						!aFade) ||
-					(letterContains.contains("sideB") &&
-						!bFade) ||
-					(letterContains.contains("sideC") &&
-						!cFade) ||
-					(letterContains.contains("sideD") &&
-						!dFade) ||
-					(letterContains.contains("top") &&
-						!topFade) ||
-					(letterContains.contains("bottom") &&
-						!bottomFade)
+					(letterContains.contains("sideA") && !aFade) ||
+					(letterContains.contains("sideB") && !bFade) ||
+					(letterContains.contains("sideC") && !cFade) ||
+					(letterContains.contains("sideD") && !dFade) ||
+					(letterContains.contains("top") && !topFade) ||
+					(letterContains.contains("bottom") && !bottomFade)
 				) {
 					letterContains.remove("d-none-2");
 				} else {
@@ -488,8 +481,8 @@ function cubify(inputString) {
 						this.position,
 						_this.camera
 					);
-					this.element.style.left = coords2d.x + "px";
-					this.element.style.top = coords2d.y + "px";
+
+					this.element.style.transform = `translate(${coords2d.x}px, ${coords2d.y}px) translate(-50%, 0)`;
 
 					dist = countDistanceToCamera(
 						this.parent.position,
