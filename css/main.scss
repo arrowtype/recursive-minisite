@@ -908,17 +908,18 @@ div#pickVariability, #pickFontSize {
     border-top: 1px dashed white;
     font-size:13px;
     line-height: 20px;
+
+    display: grid;
+    grid-template-columns: 2fr 2fr 3fr 3fr;
     a{
         color:white;
         text-decoration: none;
     }
-    .column{
-        width:200px;
-    }
+
     .credits{
-        width:calc(65% - 400px);
-        margin-right:5%;
-        min-width:300px;
+        // width:calc(65% - 400px);
+        padding-right:5%;
+        // min-width:300px;
         a{
             color:white;
         }
@@ -2772,6 +2773,7 @@ ul.casual .rw{--casl: 1}
         }
     }
     .footer-bottom{
+        grid-template-columns: 1fr;
         padding:23px 20px;
         border-top: 1px dashed white;
         font-size:13px;
