@@ -1,0 +1,332 @@
+<button id="get-rec-button">
+  Get Recursive
+</button>
+<div id="api-config-drawer">
+  <div id="customize-sidebar">
+      <div id="controls">
+      <div class="sidebar-header">
+        <h2>Embed from Google Fonts</h2>
+        <button id="close-sidebar">×</button>
+      </div>
+
+      <h3>Variable Axes</h3>
+
+      <div class="axis-controls">
+
+      <div id="wght-control" class="axis-control">
+        <div class="axis__header">
+          <h4>Weight</h4>
+
+
+          <div class="subset-type">
+            <input type="radio" id="wght_subset__range" name="wght-subset-type" value="range" checked>
+            <label for="wght_subset__range">Range</label>
+
+            <input type="radio" id="wght_subset__pinned" name="wght-subset-type" value="pinned" >
+            <label for="wght_subset__pinned">Pinned</label>
+          </div>
+          <details class="details-reset details-with-dialog mt-4">
+            <summary class="casl"></summary>
+            <div class="details-dialog anim-fade-in fast wide" aria-label="Dialog">
+              <div class="Box d-flex flex-column">
+                <div class="Box-header header4">
+                  Weight <code>wght</code>
+                </div>
+                <div class="Box-body overflow-auto">
+                  <p>
+                    Controls how light or bold the font is.
+                  </p>
+                  <p>
+                    Use the full axis range, or subset it to <code>300–800</code> or <code>800–1000</code> for a smaller font file size.
+                  </p>
+                  <p>
+                    To use just a single weight, pin it on a 100-unit value (e.g. <code>300</code>, <code>400</code>, <code>500</code>, etc).
+                  </p>
+                </div>
+                <!-- <div class="Box-footer">
+                  <button type="button" class="btn btn-block" data-close-dialog>Close</button>
+                </div> -->
+              </div>
+            </div>
+          </details>
+        </div>
+
+        <div class="subset-controls" data-subset-type="range">
+          <div id="wght__range" class="range-controls">
+
+            <div class="range-selector" data-wght-src="300" data-selected="true">300</div>
+            <div class="range-gap" data-active="true" data-wght-range="300-800"></div>
+            <div class="range-selector" data-wght-src="800" data-selected="true">800</div>
+            <div class="range-gap" data-active="true" data-wght-range="800-1000"></div>
+            <div class="range-selector" data-wght-src="1000" data-selected="true">1000</div>
+          </div>
+
+          <div id="wght--pinned" class="pinned-controls">
+            <input type="range" id="wght--pinned__slider" name="wght-pinned" min="300" max="1000" value="400" step="5">
+            <label id="wght--pinned__label" for="wght-pinned">400</label>
+          </div>
+        </div>
+      </div>
+
+
+      
+      <!-- slnt AXIS CONTROLS -->
+      <div id="slnt-control" class="axis-control">
+        <div class="axis__header">
+          <h4>Slant</h4>
+          
+          <div class="subset-type">
+            <input type="radio" id="slnt_subset__range"
+          name="slnt-subset-type" value="range" checked>
+            <label for="slnt_subset__range">Range</label>
+
+            <input type="radio" id="slnt_subset__pinned"
+          name="slnt-subset-type" value="pinned" >
+            <label for="slnt_subset__pinned">Pinned</label>
+          </div>
+
+          <!-- HEADER WITH DETAILS - based on https://github.com/github/details-dialog-element -->
+          <details class="details-reset details-with-dialog mt-4">
+            <summary class="casl"></summary>
+            <div class="details-dialog anim-fade-in fast wide" aria-label="Dialog">
+              <div class="Box d-flex flex-column">
+                <div class="Box-header header4">
+                  Slant <code>slnt</code>
+                </div>
+                <div class="Box-body overflow-auto">
+                  <p>
+                    The Slant axis controls the slope of letters.
+                  </p>
+                  <p>
+                    Use the full axis range, or pin it at <code>0</code> for an upright-only font or <code>-15</code> for a slanted-only font.
+                    <!-- But wait, should this be able to send any integer between 0 and -15? -->
+                  </p>
+                </div>
+              </div>
+            </details-dialog>
+          </details>
+          <!-- END -- HEADER WITH DETAILS -->
+        </div>
+
+        <div class="subset-controls" data-subset-type="range">
+          <div id="slnt__range" class="range-controls basic-range">
+            <div class="range-selector" data-wght-src="0" data-selected="true">-15</div>
+            <div class="range-gap" data-active="true">
+              <!-- <p>Single-segment range</p> -->
+            </div>
+            <div class="range-selector" data-wght-src="1" data-selected="true">0</div>
+          </div>
+
+          <div id="slnt--pinned" class="pinned-controls">
+            <input type="range" id="slnt--pinned__slider" name="slnt-pinned" min="-15" max="0" value="0" step="1">
+            <label id="slnt--pinned__label" for="wght-pinned">0</label>
+          </div>
+        </div>
+      </div>
+      
+      <!-- ital AXIS CONTROLS -->
+      <div id="ital-control" class="axis-control">
+        <div class="axis__header">
+        <h4>Italic</h4>
+          <div class="subset-type">
+            <input type="radio" id="ital_subset__range"
+          name="ital-subset-type" value="range" checked>
+            <label for="ital_subset__range">Range</label>
+
+            <input type="radio" id="ital_subset__pinned"
+          name="ital-subset-type" value="pinned" >
+            <label for="ital_subset__pinned">Pinned</label>
+          </div>
+          <!-- HEADER WITH DETAILS -->
+          <details class="details-reset details-with-dialog mt-4">
+            <summary class="casl"></summary>
+            <div class="details-dialog anim-fade-in fast wide" aria-label="Dialog">
+              <div class="Box d-flex flex-column">
+                <div class="Box-header header4">
+                  Italic <code>ital</code>
+                </div>
+                <div class="Box-body overflow-auto">
+                  <p>
+                    Controls how “cursive” letters look.
+                  </p>
+                  <p>
+                    Use the full axis range, or pin it at <code>0</code> for a Normal-only font or <code>1</code> for an Italic-only font.
+                  </p>
+                </div>
+                <!-- <div class="Box-footer">
+                  <button type="button" class="btn btn-block" data-close-dialog>Close</button>
+                </div> -->
+              </div>
+            </div>
+          </details>
+          <!-- END -- HEADER WITH DETAILS -->
+        </div>
+
+        <div class="subset-controls" data-subset-type="range">
+          <div id="ital__range" class="range-controls basic-range">
+            <div class="range-selector" data-wght-src="0" data-selected="true">0</div>
+            <div class="range-gap" data-active="true">
+              <!-- <p>Single-segment range</p> -->
+            </div>
+            <div class="range-selector" data-wght-src="1" data-selected="true">1</div>
+          </div>
+
+          <div id="ital--pinned" class="pinned-controls">
+            <input type="range" id="ital--pinned__slider" name="ital-pinned" min="0" max="1" value="0" step="1">
+            <label id="ital--pinned__label" for="wght-pinned">0</label>
+          </div>
+        </div>
+      </div>
+
+        <!-- MONO AXIS CONTROLS -->
+      <div id="MONO-control" class="axis-control">
+        <div class="axis__header">
+        <h4>Monospace</h4>
+          <div class="subset-type">
+            <input type="radio" id="MONO_subset__range"
+          name="MONO-subset-type" value="range" checked>
+            <label for="MONO_subset__range">Range</label>
+
+            <input type="radio" id="MONO_subset__pinned"
+          name="MONO-subset-type" value="pinned" >
+            <label for="MONO_subset__pinned">Pinned</label>
+          </div>
+          <!-- HEADER WITH DETAILS -->
+          <details class="details-reset details-with-dialog mt-4">
+            <summary class="casl"></summary>
+            <div class="details-dialog anim-fade-in fast wide" aria-label="Dialog">
+              <div class="Box d-flex flex-column">
+                <div class="Box-header header4">
+                  Monospace <code>MONO</code>
+                </div>
+                <div class="Box-body overflow-auto">
+                  <p>
+                    Controls whether letters have a natural width (“Sans”) or fixed width (“Mono”). 
+                    <!-- 0 is “Sans” or natural-width (for general text & UI), and 1 is “Mono” or fixed-width (for code & high-legibility text). -->
+                  </p>
+                  <p>
+                    Use the full axis range, or pin it at <code>0</code> for a Sans-only font or <code>1</code> for an Mono-only font.
+                  </p>
+                </div>
+                <!-- <div class="Box-footer">
+                  <button type="button" class="btn btn-block" data-close-dialog>Close</button>
+                </div> -->
+              </div>
+            </div>
+          </details>
+          <!-- END -- HEADER WITH DETAILS -->
+        </div>
+
+        <div class="subset-controls" data-subset-type="range">
+          <div id="MONO__range" class="range-controls basic-range">
+            <div class="range-selector" data-wght-src="0" data-selected="true">0</div>
+            <div class="range-gap" data-active="true">
+              <!-- <p>Single-segment range</p> -->
+            </div>
+            <div class="range-selector" data-wght-src="1" data-selected="true">1</div>
+          </div>
+
+          <div id="MONO--pinned" class="pinned-controls">
+            <input type="range" id="MONO--pinned__slider" name="MONO-pinned" min="0" max="1" value="0" step="1">
+            <label id="MONO--pinned__label" for="wght-pinned">0</label>
+          </div>
+        </div>
+      </div>
+      
+      <!-- CASL AXIS CONTROLS -->
+      <div id="CASL-control" class="axis-control">
+        <div class="axis__header">
+        <h4>Casual</h4>
+          <div class="subset-type">
+            <input type="radio" id="CASL_subset__range"
+          name="CASL-subset-type" value="range" checked>
+            <label for="CASL_subset__range">Range</label>
+
+            <input type="radio" id="CASL_subset__pinned"
+          name="CASL-subset-type" value="pinned" >
+            <label for="CASL_subset__pinned">Pinned</label>
+          </div>
+          <!-- HEADER WITH DETAILS -->
+          <details class="details-reset details-with-dialog mt-4">
+            <summary class="casl"></summary>
+            <div class="details-dialog anim-fade-in fast wide" aria-label="Dialog">
+              <div class="Box d-flex flex-column">
+                <div class="Box-header header4">
+                  Casual <code>CASL</code>
+                </div>
+                <div class="Box-body overflow-auto">
+                  <p>
+                    Controls how “brushy” letters look. 
+                    <!-- 0 is “Linear” or normal-looking, while 1 is “Casual” or brushy (based on single-stroke casual signpainting). -->
+                  </p>
+                  <p>
+                    Use the full axis range, or pin it at <code>0</code> for a Linear-only font or <code>1</code> for an Casual-only font.
+                  </p>
+                </div>
+                <!-- <div class="Box-footer">
+                  <button type="button" class="btn btn-block" data-close-dialog>Close</button>
+                </div> -->
+              </div>
+            </div>
+          </details>
+          <!-- END -- HEADER WITH DETAILS -->
+        </div>
+
+        <div class="subset-controls" data-subset-type="range">
+          <div id="CASL__range" class="range-controls basic-range">
+            <div class="range-selector" data-wght-src="0" data-selected="true">0</div>
+            <div class="range-gap" data-active="true">
+              <!-- <p>Single-segment range</p> -->
+            </div>
+            <div class="range-selector" data-wght-src="1" data-selected="true">1</div>
+          </div>
+
+          <div id="CASL--pinned" class="pinned-controls">
+            <input type="range" id="CASL--pinned__slider" name="CASL-pinned" min="0" max="1" value="0" step="1">
+            <label id="CASL--pinned__label" for="wght-pinned">0</label>
+          </div>
+        </div>
+      </div>
+      </div> <!-- END axis controls -->
+      <div id="languages">
+        <h3>Languages</h3>
+        <div class="checkboxes">
+          <div>
+            <input type="checkbox" id="latin-basic" name="latin-basic" checked>
+            <label for="latin-basic">Latin Basic<span class="subset--description"> (Required)</span></label> 
+          </div>
+
+          <div>
+            <input type="checkbox" id="latin-ext" name="latin-ext">
+            <label for="latin-ext">Latin Extended</label>
+          </div>
+
+          <div>
+            <input type="checkbox" id="vietnamese" name="vietnamese">
+            <label for="vietnamese">Vietnamese</label>
+          </div>
+        </div>
+      </div>
+
+      
+      </div>
+
+      <div id="embed">
+        <h2>Embed</h2>
+        <div class="embed-type" data-embed-type="html">
+            <input type="radio" id="embed_type__html" name="embed-type-type" value="html" checked>
+            <label for="embed_type__html">HTML Link</label>
+
+            <input type="radio" id="embed_type__css" name="embed-type-type" value="css" >
+            <label for="embed_type__css">CSS Import</label>
+        </div>
+        <div class="code">
+          <code id="api-call" ></code>
+        </div>
+        <p id="howto--html-embed">To embed your selected fonts into a webpage, copy this code into the &lt;head&gt; of your HTML document.</p>
+      </div>
+
+    </div>
+
+  </div>
+</div> 
