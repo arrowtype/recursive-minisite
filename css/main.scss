@@ -3095,12 +3095,12 @@ textarea {
     top: 0;
     z-index: 9999;
     border-left: 1px solid var(--mainText);
-    transform: translateX(100%);
+    transform: translateX(0);
     transition: transform 0.5s;
 }
 
-#api-config-drawer.is-open {
-    transform: translateX(0);
+#api-config-drawer.drawer-hidden {
+    transform: translateX(100%);
 }
 
 #customize-sidebar, #preview {

@@ -10,7 +10,7 @@ getRecButton.addEventListener("click", toggleDrawer)
 closeDrawerButton.addEventListener("click", toggleDrawer)
 
 function toggleDrawer() {
-  apiConfigDrawer.classList.toggle("is-open")
+  apiConfigDrawer.classList.toggle("drawer-hidden")
 }
 
 let selectedSources = [300, 1000]
