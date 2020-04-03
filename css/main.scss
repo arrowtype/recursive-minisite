@@ -3077,14 +3077,15 @@ textarea {
 
 
 #get-rec-button {
-    padding:16px 24px;
+    padding:0.5rem 1rem;
     background: #0050FF;
     font-weight: 700;
     color: white;
     border: none;
     position: fixed;
-    right: 0;
-    top: 0;
+    border-radius: 999px;
+    right: 0.5rem;
+    top: 0.5rem;
     cursor: pointer;
     z-index: 9998;
 }
@@ -3097,6 +3098,8 @@ textarea {
     border-left: 1px solid var(--mainText);
     transform: translateX(0);
     transition: transform 0.5s;
+    max-height: 100vh;
+    overflow: auto;
 }
 
 #api-config-drawer.drawer-hidden {
@@ -3192,8 +3195,10 @@ textarea {
     font-family: "Recursive";
     --MONO: 1;
     padding: 0.25em 0.25em;
-    background-color: var(--darkTransp);
+    background-color: var(--darkTransp) !important;
     font-weight: 400;
+    color: var(--mainText);
+    border: none;
     }
     .mono {
     --MONO: 1;
@@ -3395,7 +3400,7 @@ textarea {
         min-height: 9em;
         code {
         // font-family: 'Recursive', monospace;
-        background-color: transparent;
+        background-color: transparent !important;
         font-family: "Recursive";
         font-variation-settings: "MONO" 1;
         overflow-wrap: break-word;
