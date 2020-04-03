@@ -893,7 +893,7 @@ div#pickVariability, #pickFontSize {
     font-size: 15px;
     color: #FFFFFF;
     margin-bottom:0px;
-    font-variation-settings:'CASL' 0.7, 'wght' 700, 'ital' 1, 'slnt' -15;
+    font-variation-settings:'CASL' 0.7, 'wght' 700, 'CRSV' 1, 'slnt' -15;
     }
     a{
         color:white;
@@ -2382,7 +2382,7 @@ ul.casual .rw{--casl: 1}
 .rw:nth-child(8){--wght: 900}
 .rw:nth-child(9){--wght: 1000}
 
-.rw{font-variation-settings:'wght' var(--wght), 'MONO' var(--mono), 'ital' var(--ital), 'slnt' var(--slnt), 'CASL' var(--casl);}
+.rw{font-variation-settings:'wght' var(--wght), 'MONO' var(--mono), 'CRSV' var(--ital), 'slnt' var(--slnt), 'CASL' var(--casl);}
 
 .navbar-toggler{
     position: absolute;
@@ -2822,7 +2822,7 @@ ul.casual .rw{--casl: 1}
     }
     em{
         color: $primary;
-        font-variation-settings: 'ital' 1, 'slnt' -5;
+        font-variation-settings: 'CRSV' 1, 'slnt' -5;
     }
     code{
         color:#7e7e7e;
@@ -3023,7 +3023,8 @@ textarea {
 @font-face {
   font-family: 'RecVF';
   font-weight: 300 1000;
-  src: url("/assets/fonts/recursive-MONO_CASL_wght_slnt_ital--full_gsub--2019_12_21-21_07.woff2");
+  font-style: oblique 0deg 14deg;
+  src: url("/assets/fonts/Recursive_VF_1.046.woff2");
 }
 
 .lazyload {

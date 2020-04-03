@@ -214,7 +214,7 @@ function cubify(inputString) {
 						vertices[i].casl +
 						", 'slnt'" +
 						vertices[i].slnt +
-						", 'ital' 0";
+						", 'CRSV' 0";
 
 					if (
 						i.between(20, 24, true) ||
