@@ -3088,6 +3088,13 @@ textarea {
     top: 0.5rem;
     cursor: pointer;
     z-index: 9998;
+
+    @media screen and (max-width: 768px){
+        right: 1.5rem;
+        top: auto;
+        bottom: 1.5rem;
+        border: white 2px solid;
+    }
 }
 
 #api-config-drawer {
