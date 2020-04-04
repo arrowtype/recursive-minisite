@@ -42,9 +42,9 @@ layout: iframe
                 o2.innerHTML = grSlider.value;
                 o2.style.left = "50%";
 
-            document.getElementById('ital0').style.fontVariationSettings = "'MONO' 1, 'ital' 0, 'wght' 800, 'slnt' -7.5";
-                document.getElementById('ital1').style.fontVariationSettings = "'MONO' 1, 'ital' 0.5, 'wght' 800, 'slnt' -7.5";
-                document.getElementById('ital2').style.fontVariationSettings = "'MONO' 1, 'ital' 1, 'wght' 800, 'slnt' -7.5";
+            document.getElementById('ital0').style.fontVariationSettings = "'MONO' 1, 'CRSV' 0, 'wght' 800, 'slnt' -7.5";
+                document.getElementById('ital1').style.fontVariationSettings = "'MONO' 1, 'CRSV' 0.5, 'wght' 800, 'slnt' -7.5";
+                document.getElementById('ital2').style.fontVariationSettings = "'MONO' 1, 'CRSV' 1, 'wght' 800, 'slnt' -7.5";
 
 
             grSlider.addEventListener('input', function () {
@@ -54,10 +54,10 @@ layout: iframe
 
                 o2.innerHTML = Math.floor(variable);
                 grs.style.top = 100 - grSlider.value*6.667 * -1 + "%";
-                let newStyle = '"ital" 0, "CASL" 0, "MONO" 1, "slnt" ' + variable + ', "wght" 800';
-                document.getElementById('ital0').style.fontVariationSettings = "'MONO' 1, 'ital' 0, 'wght' 800, 'slnt' " + variable;
-                document.getElementById('ital1').style.fontVariationSettings = "'MONO' 1, 'ital' 0.5, 'wght' 800, 'slnt' " + variable;
-                document.getElementById('ital2').style.fontVariationSettings = "'MONO' 1, 'ital' 1, 'wght' 800, 'slnt' " + variable;
+                let newStyle = '"CRSV" 0, "CASL" 0, "MONO" 1, "slnt" ' + variable + ', "wght" 800';
+                document.getElementById('ital0').style.fontVariationSettings = "'MONO' 1, 'CRSV' 0, 'wght' 800, 'slnt' " + variable;
+                document.getElementById('ital1').style.fontVariationSettings = "'MONO' 1, 'CRSV' 0.5, 'wght' 800, 'slnt' " + variable;
+                document.getElementById('ital2').style.fontVariationSettings = "'MONO' 1, 'CRSV' 1, 'wght' 800, 'slnt' " + variable;
 
                 // document.getElementById('ital2').style.fontVariationSettings = "'CASL' " + ampersandSlider.value;
             }, false);
@@ -69,10 +69,10 @@ layout: iframe
 
                 o2.innerHTML = Math.floor(variable);
                 grs.style.top = 100 - grSlider.value*6.667 * -1 + "%";
-                let newStyle = '"ital" 0, "CASL" 0, "MONO" 1, "slnt" ' + variable + ', "wght" 800';
-                document.getElementById('ital0').style.fontVariationSettings = "'MONO' 1, 'ital' 0, 'wght' 800, 'slnt' " + variable;
-                document.getElementById('ital1').style.fontVariationSettings = "'MONO' 1, 'ital' 0.5, 'wght' 800, 'slnt' " + variable;
-                document.getElementById('ital2').style.fontVariationSettings = "'MONO' 1, 'ital' 1, 'wght' 800, 'slnt' " + variable;
+                let newStyle = '"CRSV" 0, "CASL" 0, "MONO" 1, "slnt" ' + variable + ', "wght" 800';
+                document.getElementById('ital0').style.fontVariationSettings = "'MONO' 1, 'CRSV' 0, 'wght' 800, 'slnt' " + variable;
+                document.getElementById('ital1').style.fontVariationSettings = "'MONO' 1, 'CRSV' 0.5, 'wght' 800, 'slnt' " + variable;
+                document.getElementById('ital2').style.fontVariationSettings = "'MONO' 1, 'CRSV' 1, 'wght' 800, 'slnt' " + variable;
 
             }, false);
 
