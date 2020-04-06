@@ -11,9 +11,19 @@ getRecButton.addEventListener("click", toggleDrawer)
 closeDrawerButton.addEventListener("click", toggleDrawer)
 drawerScrim.addEventListener("click", toggleDrawer)
 
+let drawerIsOpen = false
+
+document.addEventListener("keydown", e => {
+  if (e.keyCode === 27 && drawerIsOpen === true) {
+    toggleDrawer()
+  }
+})
+
 function toggleDrawer() {
   apiConfigDrawer.classList.toggle("drawer-hidden")
   drawerScrim.classList.toggle("scrim-hidden")
+
+  drawerIsOpen = !drawerIsOpen;
 }
 
 let selectedSources = [300, 1000]
