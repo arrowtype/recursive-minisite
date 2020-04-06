@@ -71,20 +71,21 @@ function setUrl() {
     italResult = ital
   }
 
-  let languages = ""
-  console.log(selectedLanguages.length)
+  // let languages = ""
+  // console.log(selectedLanguages.length)
 
-  for (var language of selectedLanguages) {
-    if (selectedLanguages.indexOf(language) === 0) {
-      languages = "&subset="
-        console.log(language)
-        languages += `${language}`
-      } else if (selectedLanguages.indexOf(language) >= 1) {
-        languages += `,${language}`
-    }
-  }
+  // for (var language of selectedLanguages) {
+  //   if (selectedLanguages.indexOf(language) === 0) {
+  //     languages = "&subset="
+  //       console.log(language)
+  //       languages += `${language}`
+  //     } else if (selectedLanguages.indexOf(language) >= 1) {
+  //       languages += `,${language}`
+  //   }
+  // }
 
-  urlString = `https://fonts.sandbox.google.com/css2?family=<span class="code--bold">Recursive:ital,slnt,wght,CASL,MONO@${italResult},${slntResult},${wghtResult},${CASLResult},${MONOResult}</span>&display=swap${languages}`
+  // urlString = `https://fonts.sandbox.google.com/css2?family=<span class="code--bold">Recursive:ital,slnt,wght,CASL,MONO@${italResult},${slntResult},${wghtResult},${CASLResult},${MONOResult}</span>&display=swap${languages}`
+  urlString = `https://fonts.sandbox.google.com/css2?family=<span class="code--bold">Recursive:ital,slnt,wght,CASL,MONO@${italResult},${slntResult},${wghtResult},${CASLResult},${MONOResult}</span>&display=swap`
 
   const howToHTML = document.querySelector('#howto--html-embed')
   const howToCSS = document.querySelector('#howto--css-embed')
