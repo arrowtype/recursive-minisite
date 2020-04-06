@@ -161,11 +161,11 @@ Recursive comes in a wide range of weights, from Light (`300`) to a super-heavy 
     </div>
 </div>
 
-## Slant and Italics. Two axes that work great together, or separate. `slnt` & `ital`
+## Slant and Cursive. Two axes that work great together, or separate. `slnt, CRSV`
 
-In Recursive, italics and slant can be controlled separately. The *Italic* axis (`ital`) lets you switch on true italics, while the *Slant* axis (`slnt`) defines the angle of the letters. This makes it possible to use sloped romans ( `slnt -15, ital 0`), upright italics ( `slnt 0, ital 1`), or set custom values on both axes for more options to play with.  
+In Recursive, slant and cursive letterforms can be controlled separately. The *Slant* axis (`slnt`) defines the angle of the letters, while the *Cursive* axis (`CRSV`) lets you tweak how cursive letterforms are substituted in along `slnt`.
 
-Recursive’s true italics (`ital 1`) replace familiar letterforms with single-story cursive alternates. By default, Recursive will automatically apply these cursive alternates when setting the *Slant* axis (`slnt`) to a high value. This ensures that your code and text reads beautifully and instantly, no matter how slanted it needs to be.
+Recursive’s cursive letterforms (`CRSV 1`) replace familiar “roman” letterforms with cursive alternates like the single-story “a” and “g”. By default, Recursive will automatically apply these cursive alternates when setting the *Slant* axis (`slnt`) beyond `-14`. This allows smooth, animated transitions from normal to oblique type up to 13.99° of slope, but also a “true italic” style with cursive letterforms at 14°. It is also possible to use sloped romans (`slnt -15, CRSV 0`), upright italics (`slnt 0, CRSV 1`), or set custom values on both axes for more options to play with.
 
 <div class="scroll-on-sm my-4" id="truerItalicsSm">
     <div class="x-axis">slnt: <span id="truerItalics__italVal">600</span></div>

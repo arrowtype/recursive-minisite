@@ -38,7 +38,7 @@
     min-height: 50vh;
     font-weight: 800;
     font-family: "RecVF", sans-serif;
-    font-variation-settings: "MONO" 0.01, "CASL" 0.01, "slnt" 0, "ital" 0, "wght" 800;
+    font-variation-settings: "MONO" 0.01, "CASL" 0.01, "slnt" 0, "CRSV" 0, "wght" 800;
     text-align: center;
     width: 100%;
     padding: 0;
@@ -142,7 +142,7 @@
     color: #0050ff;
   }
   #singleFile .controls span.comment {
-    font-variation-settings: "MONO" 1, "slnt" -12, "ital" 1;
+    font-variation-settings: "MONO" 1, "slnt" -12, "CRSV" 1;
     color: #858585;
   }
   @media (max-width: 1150px) {
@@ -208,7 +208,7 @@
         </span>
         <span class="inputs"><input id="wghtSlider" min="300" max="1000" value="800" type="range"/></span>
         <span class="comment d-inline-block">
-          /* Weight: Light to ExtraBlack – usually set with `font-weight` */
+          /* Weight: Light to ExtraBlack; usually set with `font-weight` */
         </span>
       </div>
     </li>
@@ -220,18 +220,18 @@
         >
         <span class="inputs"><input id="slntSlider" min="-15" max="0" step=".1" value="0" type="range"/></span>
         <span class="comment d-inline-block">
-          /* Slant: 0 to -15 degrees */
+          /* Slant: 0 to -15 degrees, auto cursive at -14 */
         </span>
       </div>
     </li>
     <li id="cust-ital">
       <div class="ccs-row">
         <span class="css"
-          ><span class="custom-prop hidden--sm">--ital</span><span class="hidden--sm">: </span>"<span class="string">ital</span>"
+          ><span class="custom-prop hidden--sm">--CRSV</span><span class="hidden--sm">: </span>"<span class="string">CRSV</span>"
           <span id="italResult" class="result" contenteditable="true">0.5</span><span class="hidden--sm">;</span></span
         >
 
-        <fieldset id="tester--ital-axis">
+        <fieldset id="tester--CRSV-axis">
           <input type="radio" name="ital-selection" id="ital-off" value="0" />
           <label for="ital-off">off</label>
 
@@ -242,7 +242,7 @@
           <label for="ital-on">on</label>
         </fieldset>
         <span class="comment d-inline-block">
-          /* Italic: always roman, auto, or always italic */
+          /* Cursive: always roman, auto substitution, or always cursive */
         </span>
       </div>
     </li>
@@ -252,7 +252,7 @@
       <span class="property">font-variation-settings</span>: <span class="string">var</span>(<span class="custom-prop">--mono</span>),
       <span class="string">var</span>(<span class="custom-prop">--casl</span>), <span class="string">var</span>(<span class="custom-prop">--wght</span
       >), <span class="string">var</span>(<span class="custom-prop">--slnt</span>), <span class="string">var</span>(<span class="custom-prop"
-        >--ital</span
+        >--CRSV</span
       >);
     </li>
   </ul>
@@ -278,7 +278,7 @@
     mono2 = document.getElementById("monoSlider").value;
     document.getElementById(
       "controls-result"
-    ).style.fontVariationSettings = `'wght' ${wght2}, 'CASL' ${casl2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'ital' ${ital2}`;
+    ).style.fontVariationSettings = `'wght' ${wght2}, 'CASL' ${casl2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'CRSV' ${ital2}`;
     document.getElementById("monoResult").innerHTML = document.getElementById("monoSlider").value;
   });
 
@@ -286,45 +286,45 @@
     wght2 = document.getElementById("wghtSlider").value;
     document.getElementById(
       "controls-result"
-    ).style.fontVariationSettings = `'wght' ${wght2}, 'CASL' ${casl2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'ital' ${ital2}`;
+    ).style.fontVariationSettings = `'wght' ${wght2}, 'CASL' ${casl2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'CRSV' ${ital2}`;
     document.getElementById("wghtResult").innerHTML = document.getElementById("wghtSlider").value;
   });
   document.getElementById("caslSlider").addEventListener("input", function() {
     casl2 = document.getElementById("caslSlider").value;
     document.getElementById(
       "controls-result"
-    ).style.fontVariationSettings = `'wght' ${wght2}, 'CASL' ${casl2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'ital' ${ital2}`;
+    ).style.fontVariationSettings = `'wght' ${wght2}, 'CASL' ${casl2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'CRSV' ${ital2}`;
     document.getElementById("caslResult").innerHTML = document.getElementById("caslSlider").value;
   });
   document.getElementById("slntSlider").addEventListener("input", function() {
     slnt2 = document.getElementById("slntSlider").value;
     document.getElementById(
       "controls-result"
-    ).style.fontVariationSettings = `'wght' ${wght2}, 'CASL' ${casl2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'ital' ${ital2}`;
+    ).style.fontVariationSettings = `'wght' ${wght2}, 'CASL' ${casl2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'CRSV' ${ital2}`;
     document.getElementById("slntResult").innerHTML = document.getElementById("slntSlider").value;
   });
 
-  italAxis = document.getElementById("tester--ital-axis").elements["ital-selection"];
+  italAxis = document.getElementById("tester--CRSV-axis").elements["ital-selection"];
 
   document.getElementById("ital-off").onchange = function() {
     ital2 = 0;
     document.getElementById("italResult").innerHTML = document.getElementById("ital-off").value;
     document.getElementById(
       "controls-result"
-    ).style.fontVariationSettings = `'wght' ${wght2}, 'CASL' ${casl2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'ital' ${ital2}`;
+    ).style.fontVariationSettings = `'wght' ${wght2}, 'CASL' ${casl2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'CRSV' ${ital2}`;
   };
   document.getElementById("ital-auto").onchange = function() {
     ital2 = 0.5;
     document.getElementById("italResult").innerHTML = document.getElementById("ital-auto").value;
     document.getElementById(
       "controls-result"
-    ).style.fontVariationSettings = `'wght' ${wght2}, 'CASL' ${casl2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'ital' ${ital2}`;
+    ).style.fontVariationSettings = `'wght' ${wght2}, 'CASL' ${casl2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'CRSV' ${ital2}`;
   };
   document.getElementById("ital-on").onchange = function() {
     ital2 = 1;
     document.getElementById("italResult").innerHTML = document.getElementById("ital-on").value;
     document.getElementById(
       "controls-result"
-    ).style.fontVariationSettings = `'wght' ${wght2}, 'CASL' ${casl2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'ital' ${ital2}`;
+    ).style.fontVariationSettings = `'wght' ${wght2}, 'CASL' ${casl2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'CRSV' ${ital2}`;
   };
 </script>
