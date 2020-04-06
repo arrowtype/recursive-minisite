@@ -3068,10 +3068,6 @@ textarea {
     --cap-spacing: 0.025em;
   }
 
-
-
-
-
 #get-rec-button {
     padding:0.5rem 1rem;
     background: #0050FF;
@@ -3080,16 +3076,23 @@ textarea {
     border: none;
     position: fixed;
     border-radius: 999px;
+    top: 0.4rem;
     right: 0.5rem;
-    top: 0.5rem;
     cursor: pointer;
     z-index: 9998;
+    box-sizing: border-box;
+    border: transparent 1px solid;
 
     @media screen and (max-width: 768px){
         right: 1.5rem;
         top: auto;
         bottom: 1.5rem;
-        border: white 2px solid;
+        border: var(--mainBackground) 2px solid;
+    }
+
+    &:focus {
+        outline: none;
+        border: var(--mainBackground) 1px solid;
     }
 }
 
@@ -3102,7 +3105,6 @@ textarea {
     transform: translateX(0);
     transition: transform 0.5s;
     max-height: 100vh;
-    overflow: auto;
 }
 
 #api-config-drawer.drawer-hidden {
@@ -3122,7 +3124,7 @@ textarea {
     display: grid;
     grid-template-rows: min-content min-content min-content;
     grid-template-columns: 100%;
-    overflow-y: auto;
+    
 
     *,
     *:after,
@@ -3144,14 +3146,14 @@ textarea {
         display: none;
     }
     
-    .sidebar-header {
+    .sidebar--header {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 0.25rem 1rem;
         height: var(--nav_height);
         border-bottom: solid black 1px;
-        
+ 
         h2 {
             font-size: 1rem;
             margin: 0;
@@ -3179,6 +3181,11 @@ textarea {
                 cursor: pointer;
             }
         }
+    }
+
+    .sidebar--main {
+        overflow-y: auto;
+        max-height: calc(100vh - var(--nav_height) );
     }
     
     p {
