@@ -4,13 +4,16 @@
 
 const getRecButton = document.querySelector("#get-rec-button");
 const closeDrawerButton = document.querySelector("#close-sidebar");
+const drawerScrim = document.querySelector("#sidebar--scrim");
 const apiConfigDrawer = document.querySelector("#api-config-drawer");
 
 getRecButton.addEventListener("click", toggleDrawer)
 closeDrawerButton.addEventListener("click", toggleDrawer)
+drawerScrim.addEventListener("click", toggleDrawer)
 
 function toggleDrawer() {
   apiConfigDrawer.classList.toggle("drawer-hidden")
+  drawerScrim.classList.toggle("scrim-hidden")
 }
 
 let selectedSources = [300, 1000]
@@ -30,6 +33,7 @@ function setUrl() {
   let MONOResult = `0..1`
   let CASLResult = `0..1`
   let slntResult = `-15..0`
+  let CRSVResult = `0..1`
 
 
   if (wghtSubsetControls.dataset.subsetType === "range") {
@@ -64,11 +68,11 @@ function setUrl() {
     slntResult = slnt
   }
 
-  if (italSubsetControls.dataset.subsetType === "range") {
-    italResult = `0..1`
+  if (CRSVSubsetControls.dataset.subsetType === "range") {
+    CRSVResult = `0..1`
   } else {
-    ital = ital_pinned_slider.value
-    italResult = ital
+    CRSV = CRSV_pinned_slider.value
+    CRSVResult = CRSV
   }
 
   // let languages = ""
@@ -85,7 +89,7 @@ function setUrl() {
   // }
 
   // urlString = `https://fonts.sandbox.google.com/css2?family=<span class="code--bold">Recursive:ital,slnt,wght,CASL,MONO@${italResult},${slntResult},${wghtResult},${CASLResult},${MONOResult}</span>&display=swap${languages}`
-  urlString = `https://fonts.sandbox.google.com/css2?family=<span class="code--bold">Recursive:ital,slnt,wght,CASL,MONO@${italResult},${slntResult},${wghtResult},${CASLResult},${MONOResult}</span>&display=swap`
+  urlString = `https://fonts.sandbox.google.com/css2?family=<span class="code--bold">Recursive:slnt,wght,CASL,CRSV,MONO@${slntResult},${wghtResult},${CASLResult},${CRSVResult},${MONOResult}</span>&display=swap`
 
   const howToHTML = document.querySelector('#howto--html-embed')
   const howToCSS = document.querySelector('#howto--css-embed')
@@ -325,28 +329,28 @@ slnt_pinned_slider.addEventListener('input', (e) => {
 
 
 // -----------------------------------------------------------------------------
-// ital subset type
+// CRSV subset type
 
-const italSubsetControls = document.querySelector('#ital-control .subset-controls')
+const CRSVSubsetControls = document.querySelector('#CRSV-control .subset-controls')
 
-document.getElementById("ital_subset__range").addEventListener('input', () => {  
-  italSubsetControls.dataset.subsetType = "range"
+document.getElementById("CRSV_subset__range").addEventListener('input', () => {  
+  CRSVSubsetControls.dataset.subsetType = "range"
   setUrl()
 });
 
-document.getElementById("ital_subset__pinned").addEventListener('input', () => {
-  italSubsetControls.dataset.subsetType = "pinned"
+document.getElementById("CRSV_subset__pinned").addEventListener('input', () => {
+  CRSVSubsetControls.dataset.subsetType = "pinned"
   setUrl()
 });
 
-// ital pinned slider
+// CRSV pinned slider
 
-const ital_pinned_slider = document.querySelector("#ital--pinned__slider");
-const ital_pinned_val = document.querySelector("#ital--pinned__label");
-ital_pinned_val.innerHTML = ital_pinned_slider.value
+const CRSV_pinned_slider = document.querySelector("#CRSV--pinned__slider");
+const CRSV_pinned_val = document.querySelector("#CRSV--pinned__label");
+CRSV_pinned_val.innerHTML = CRSV_pinned_slider.value
 
-ital_pinned_slider.addEventListener('input', (e) => {
-  ital_pinned_val.innerHTML = e.target.value;
+CRSV_pinned_slider.addEventListener('input', (e) => {
+  CRSV_pinned_val.innerHTML = e.target.value;
   setUrl()
 });
 
