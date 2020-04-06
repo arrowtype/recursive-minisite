@@ -1,6 +1,10 @@
 ---
 ---
 
+:root {
+    --nav_height: 3.5rem;
+}
+
 @import 'bootstrap/bootstrap';
 
 .three-container {
@@ -642,6 +646,7 @@ nav.navbar{
     border-bottom:1px solid white;
     background-color:black;
     z-index:200;
+    height: var(--nav_height);
     a{
         color:white;
     }
@@ -3064,15 +3069,6 @@ textarea {
   }
 
 
-*,
-*:after,
-*:before {
-  font-variation-settings: "MONO" var(--MONO), "CASL" var(--CASL);
-}
-
-.hide {
-	display: none;
-}
 
 
 
@@ -3113,8 +3109,8 @@ textarea {
     transform: translateX(100%);
 }
 
-#customize-sidebar, #preview {
-    padding: 0 1rem 2rem;
+#controls, #embed, #preview {
+    padding: 1.5rem 1rem 2rem;
 }
 
 #customize-sidebar {
@@ -3124,9 +3120,20 @@ textarea {
     background: var(--mainBackground);
     // padding: 1rem;
     display: grid;
-    grid-template-rows: 1fr min-content;
+    grid-template-rows: min-content min-content min-content;
     grid-template-columns: 100%;
     overflow-y: auto;
+
+    *,
+    *:after,
+    *:before {
+    font-variation-settings: "MONO" var(--MONO), "CASL" var(--CASL);
+    }
+
+    .hide {
+        display: none;
+    }
+
     
     @media screen and (max-width: 600px){
         width: 100vw;
@@ -3138,10 +3145,12 @@ textarea {
     }
     
     .sidebar-header {
-        display: grid;
-        grid-template-columns: 1fr min-content;
+        display: flex;
+        justify-content: space-between;
         align-items: center;
-        padding: 1rem 0;
+        padding: 0.25rem 1rem;
+        height: var(--nav_height);
+        border-bottom: solid black 1px;
         
         h2 {
             font-size: 1rem;
@@ -3156,16 +3165,17 @@ textarea {
             border: none;
             width: 2rem;
             height: 2rem;
-            background: var(--gray4);
+            background: var(--mainBackground);
             border-radius: 999px;
             display: grid;
             align-content: center;
             justify-content: center;
             outline: none;
             transition: 0.25s;
+            margin-right: -0.5rem;
 
             &:hover {
-                background: var(--gray2);
+                background: var(--gray4);
                 cursor: pointer;
             }
         }
@@ -3175,12 +3185,12 @@ textarea {
     line-height: 1.5;
     }
 
-    h2, .header2 {
+    h3, .header3 {
     font-variation-settings: "CASL" 1;
     font-size: 1.5rem;
-    margin-top: 0;
+    margin: 0 0 1rem;
     }
-    h3, .header3 {
+    h4, .header4 {
     text-transform: uppercase;
     letter-spacing: var(--cap-spacing);
     color: var(--gray1);
@@ -3190,12 +3200,16 @@ textarea {
     border-bottom: var(--gray4) solid 1px;
     }
 
-    h4, .header4 {
+    h5, .header5 {
     --CASL: 1;
     font-weight: 700;
     font-size: 1rem;
     line-height: 1rem;
     margin: 0;
+    }
+
+    .subset-type {
+        line-height: 1rem;
     }
 
     code {
@@ -3219,9 +3233,17 @@ textarea {
     border-top: var(--gray4) solid 1px;
     }
 
-    .axis-controls .axis-control:first-of-type {
-    border: none;
+    .axis-control input[type="radio"] {
+        margin-left: 1rem;
     }
+
+    label {
+        margin-bottom: 0;
+    }
+
+    // .axis-controls .axis-control:first-of-type {
+    // border: none;
+    // }
 
     .axis__header {
     width: 100%;
@@ -3229,7 +3251,7 @@ textarea {
     align-items: center;
     // grid-template-columns: 1fr max-content 2rem;
     grid-template-columns: 1fr max-content; // TEMPORARY
-    padding: 1rem 0 0;
+    padding: 1rem 0 0.5rem;
     justify-content: space-between;
     }
 
@@ -3369,11 +3391,11 @@ textarea {
     }
 
     .checkboxes {
-    padding: 0.5rem 0;
+    padding: 1rem 0 0.5rem;
     }
 
     .checkboxes div{
-    margin: 0.5rem 0;
+    // margin: 0.5rem 0;
     }
 
     .checkboxes div:first-of-type {
@@ -3399,24 +3421,23 @@ textarea {
         font-weight: 700;
     } 
     .code {
-        margin-top: 0.25rem;
+        margin: 0.25rem 0 1rem;
         padding: 0.6rem;
         font-size: 0.8rem;
         font-weight: 500;
         background-color: var(--offwhite);
-        min-height: 9em;
+
         code {
-        // font-family: 'Recursive', monospace;
-        background-color: transparent !important;
-        font-family: "Recursive";
-        font-variation-settings: "MONO" 1;
-        overflow-wrap: break-word;
+            background-color: transparent !important;
+            font-family: "Recursive";
+            font-variation-settings: "MONO" 1;
+            word-break: break-all;
         }
     }
     } 
 
     .code--bold {
-    font-weight: 600;
+    font-weight: 800;
     }
 
 

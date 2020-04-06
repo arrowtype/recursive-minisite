@@ -3,19 +3,24 @@
 </button>
 <div id="api-config-drawer" class="drawer-hidden">
   <div id="customize-sidebar">
-      <div id="controls">
       <div class="sidebar-header">
-        <h2>Embed from Google Fonts</h2>
+        <h2>Google Fonts Embed</h2>
+        <a target="_blank" href="https://github.com/arrowtype/recursive/releases">Download ↗</a>
         <button id="close-sidebar">×</button>
       </div>
 
-      <h3>Variable Axes</h3>
+      <div id="controls">
+
+      <h3>Customize</h3>
+      <p>Subset Recursive’s variable axes and language support to reduce download size.</p>
+
+      <!-- <h4>Variable Axes</h4> -->
 
       <div class="axis-controls">
 
       <div id="wght-control" class="axis-control">
         <div class="axis__header">
-          <h4>Weight</h4>
+          <h5>Weight</h5>
 
 
           <div class="subset-type">
@@ -73,7 +78,7 @@
       <!-- slnt AXIS CONTROLS -->
       <div id="slnt-control" class="axis-control">
         <div class="axis__header">
-          <h4>Slant</h4>
+          <h5>Slant</h5>
           
           <div class="subset-type">
             <input type="radio" id="slnt_subset__range"
@@ -127,7 +132,7 @@
       <!-- ital AXIS CONTROLS -->
       <div id="ital-control" class="axis-control">
         <div class="axis__header">
-        <h4>Italic</h4>
+        <h5>Italic</h5>
           <div class="subset-type">
             <input type="radio" id="ital_subset__range"
           name="ital-subset-type" value="range" checked>
@@ -181,7 +186,7 @@
         <!-- MONO AXIS CONTROLS -->
       <div id="MONO-control" class="axis-control">
         <div class="axis__header">
-        <h4>Monospace</h4>
+        <h5>Monospace</h5>
           <div class="subset-type">
             <input type="radio" id="MONO_subset__range"
           name="MONO-subset-type" value="range" checked>
@@ -236,7 +241,7 @@
       <!-- CASL AXIS CONTROLS -->
       <div id="CASL-control" class="axis-control">
         <div class="axis__header">
-        <h4>Casual</h4>
+        <h5>Casual</h5>
           <div class="subset-type">
             <input type="radio" id="CASL_subset__range"
           name="CASL-subset-type" value="range" checked>
@@ -289,7 +294,7 @@
       </div>
       </div> <!-- END axis controls -->
       <div id="languages">
-        <h3>Languages</h3>
+        <h4>Languages</h4>
         <div class="checkboxes">
           <div>
             <input type="checkbox" id="latin-basic" name="latin-basic" checked>
@@ -312,7 +317,8 @@
       </div>
 
       <div id="embed">
-        <h2>Embed</h2>
+        <h3>Embed</h3>
+        <p id="howto--html-embed">To embed Recursive into a webpage, copy this code into the &lt;head&gt; of your HTML.</p>
         <div class="embed-type" data-embed-type="html">
             <input type="radio" id="embed_type__html" name="embed-type-type" value="html" checked>
             <label for="embed_type__html">HTML Link</label>
@@ -323,7 +329,11 @@
         <div class="code">
           <code id="api-call" ></code>
         </div>
-        <p id="howto--html-embed">To embed your selected fonts into a webpage, copy this code into the &lt;head&gt; of your HTML document.</p>
+        <hr/>
+        <p>CSS declaration to specify Recursive:</p>
+        <div class="code">
+          <code id="api-call" >font-family: 'Recursive', monospace;</code>
+        </div>
       </div>
 
     </div>

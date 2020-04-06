@@ -96,8 +96,10 @@ function setUrl() {
     `
   } else {
     api_call.innerHTML = `
-    &lt;style&gt;<br>
+    &lt;style&gt;
+    <br>
     @import url('${urlString}');
+    <br>
     &lt;/style&gt;
     `
   }
