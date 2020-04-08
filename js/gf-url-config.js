@@ -8,6 +8,8 @@ const getRecButton = document.querySelector("#get-rec-button");
 const closeDrawerButton = document.querySelector("#close-sidebar");
 const drawerScrim = document.querySelector("#sidebar--scrim");
 const apiConfigDrawer = document.querySelector("#api-config-drawer");
+const pageBody = document.body;
+let pageScrollY = 0;
 
 getRecButton.addEventListener("click", toggleDrawer)
 closeDrawerButton.addEventListener("click", toggleDrawer)
@@ -25,11 +27,19 @@ function toggleDrawer() {
   apiConfigDrawer.classList.toggle("drawer-hidden")
   drawerScrim.classList.toggle("scrim-hidden")
 
-  // if (drawerIsOpen) {
-  //   enableBodyScroll(targetElement);
-  // } else {
-  //   disableBodyScroll(targetElement);
-  // }
+  // if opening drawer
+  if (!drawerIsOpen) {
+    const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
+    pageBody.style.position = 'fixed';
+    pageBody.style.top = `-${scrollY}`;
+  }
+  // if closing drawer 
+  else {
+    const scrollY = pageBody.style.top;
+    pageBody.style.position = '';
+    pageBody.style.top = '';
+    window.scrollTo(0, parseInt(scrollY || '0') * -1);
+  }
 
   drawerIsOpen = !drawerIsOpen;
 
@@ -49,6 +59,12 @@ function fitWindowHeight() {
 window.onload = fitWindowHeight()
 
 window.addEventListener('resize', fitWindowHeight)
+
+// get window scroll to prevent scroll behind modal
+
+window.addEventListener('scroll', () => {
+  document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
+});
 
 // ----------------------------------
 

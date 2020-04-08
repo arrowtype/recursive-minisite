@@ -165,9 +165,11 @@ window.onscroll = function(){
     for (let i=0;i<document.getElementsByTagName("iframe").length;i++){
         let fr = document.getElementsByTagName("iframe")[i];
         if (isElementXPercentInViewport(fr, 5)) {            
-            fr.contentDocument.getElementsByTagName("body")[0].classList.add("inViewport");
+            // fr.contentDocument.getElementsByTagName("body")[0].classList.add("inViewport");
+            fr.classList.add("inViewport");
         } else {
-            fr.contentDocument.getElementsByTagName("body")[0].classList.remove("inViewport");
+            // fr.contentDocument.getElementsByTagName("body")[0].classList.remove("inViewport");
+            fr.classList.remove("inViewport");
         }
     }
 
