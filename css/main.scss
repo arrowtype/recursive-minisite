@@ -3208,6 +3208,7 @@ textarea {
     .sidebar--main {
         overflow-y: auto;
         max-height: calc(100vh - var(--nav_height) );
+        overscroll-behavior: contain;
     }
     
     p {
