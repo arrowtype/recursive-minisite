@@ -8,7 +8,7 @@ title: Recursive
 
 ## A highly-flexible new variable font.
 
-Built to maximize versatility, control, and performance, Recursive is a five-axis variable font. This enables you to choose from a wide range of predefined styles, or dial in exactly what you want for each of its axes: *Monospace, Casual, Weight, Slant, and Italic*. Taking full advantage of variable font technology, Recursive offers an unprecedented level of flexibility, all from a single font file.ile.
+Built to maximize versatility, control, and performance, Recursive is a five-axis variable font. This enables you to choose from a wide range of predefined styles, or dial in exactly what you want for each of its axes: *Monospace, Casual, Weight, Slant, and Cursive*. Taking full advantage of variable font technology, Recursive offers an unprecedented level of flexibility, all from a single font file.ile.
 
 <div class="my-4" id="singleFile">
 {% include singlefile2.html %}
@@ -38,7 +38,7 @@ Of course, vertical metrics such as line height, cap height, and x-height are sh
 
 ### A Sans for more robust layouts.
 
-The characters within both subfamilies, Sans & Mono, maintain the exact same width across all font styles, independently of the values set on the *Weight, Casual, Slant, and Italic* axes. You can therefore use Recursive to create animated font transitions without breaking the layout of UI elements like menus and buttons.
+The characters within both subfamilies, Sans & Mono, maintain the exact same width across all font styles, independently of the values set on the *Weight, Casual, Slant, and Cursive* axes. You can therefore use Recursive to create animated font transitions without breaking the layout of UI elements like menus and buttons.
 
 <div id="robustLayouts" class="robustLayoutsSm clearfix my-4">
         <div class="bad" id="bad"><ul class="d-inline-block">
