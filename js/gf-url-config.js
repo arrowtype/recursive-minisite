@@ -26,6 +26,23 @@ function toggleDrawer() {
   drawerIsOpen = !drawerIsOpen;
 }
 
+// set max-height on window resize to fit iOS safari
+
+const drawerMain = document.querySelector(".sidebar--main");
+const drawerHeader = document.querySelector(".sidebar--header");
+const navHeight = drawerHeader.offsetHeight;
+
+function fitWindowHeight() {
+  // size to window.innerHeight – var(--nav_height)
+  drawerMain.style.maxHeight = `${window.innerHeight - navHeight}px`
+}
+
+window.onload = fitWindowHeight()
+
+window.addEventListener('resize', fitWindowHeight)
+
+// ----------------------------------
+
 let selectedSources = [300, 1000]
 let selectedLanguages = []
 // let wght = 400
@@ -393,8 +410,8 @@ function addSubsetListeners() {
 addSubsetListeners()
 
 
-console.log(languageControls)
-console.log(checkSelectedLanguages())
+// console.log(languageControls)
+// console.log(checkSelectedLanguages())
 
 
 
