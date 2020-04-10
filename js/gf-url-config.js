@@ -8,6 +8,7 @@ const getRecButton = document.querySelector("#get-rec-button");
 const closeDrawerButton = document.querySelector("#close-sidebar");
 const drawerScrim = document.querySelector("#sidebar--scrim");
 const apiConfigDrawer = document.querySelector("#api-config-drawer");
+const pageHtml = document.querySelector('html');
 const pageBody = document.body;
 let pageScrollY = 0;
 
@@ -32,6 +33,7 @@ function toggleDrawer() {
     const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
     pageBody.style.position = 'fixed';
     pageBody.style.top = `-${scrollY}`;
+    pageHtml.style.scrollBehavior = 'auto';
   }
   // if closing drawer 
   else {
@@ -39,6 +41,7 @@ function toggleDrawer() {
     pageBody.style.position = '';
     pageBody.style.top = '';
     window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    pageHtml.style.scrollBehavior = 'smooth';
   }
 
   drawerIsOpen = !drawerIsOpen;
