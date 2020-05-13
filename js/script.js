@@ -72,11 +72,7 @@ function currentStyles() {
 
 document.getElementById("chooseInstance").onchange = function(){
     document.getElementsByTagName("select")[0].style.fontFamily = "'RecVF', sans-serif";   
-    // let wght = this.selectedOptions[0].getAttribute('data-wght');
-    // let mono = this.selectedOptions[0].getAttribute('data-mono');
-    // let casl = this.selectedOptions[0].getAttribute('data-casl');
-    // let slnt = this.selectedOptions[0].getAttribute('data-slnt');
-    // let crsv = this.selectedOptions[0].getAttribute('data-crsv');
+    
     CodeMirrorMono = this.selectedOptions[0].getAttribute('data-mono');
     CodeMirrorCasl = this.selectedOptions[0].getAttribute('data-casl');
     CodeMirrorWght = this.selectedOptions[0].getAttribute('data-wght');
@@ -91,7 +87,6 @@ document.getElementById("chooseInstance").onchange = function(){
     document.getElementById('globalWghtSlider').value = CodeMirrorCasl;
     document.getElementById('globalSlntSlider').value = CodeMirrorWght;
     document.getElementById('globalMonoSlider').value = CodeMirrorSlnt;
-    // styles = "'MONO' " + mono + ", 'wght' " + wght + ", 'CASL' " + casl + ", 'slnt' " + slnt + ", 'CRSV' " + crsv;
     styles = currentStyles()
     // for (const codemirrors of document.getElementsByClassName("CodeMirror-lines")){codemirrors.style = styles};
     // document.getElementsByClassName("mobile-version")[0].style = styles;
@@ -128,7 +123,12 @@ function hiderShower(trigger, drawer, closestId, activeClass) {
 
 function changeSettings(str){
         
-    document.querySelector('#mdContainer').style = str
+    document.documentElement.style = str
+
+    // TODO: set grid iFrame styles, if possible
+    // let gridIframe = document.querySelector('[title="Languages"]')
+    // gridIframe.body.innerHTML = gridIframe.body.innerHTML + `<style>${str}</style>`
+
     
     for (const head of document.getElementsByClassName("cm-header")){
         head.style = str;
@@ -154,13 +154,8 @@ function globalSlider(id, targetId, index){
         CodeMirrorSlnt = CodeMirrorFontVarSet[3]
         // CodeMirrorCrsv = CodeMirrorFontVarSet[4]
         
-        styles = `
-            --cm-mono: ${CodeMirrorMono}; 
-            --cm-casl: ${CodeMirrorCasl}; 
-            --cm-wght: ${CodeMirrorWght}; 
-            --cm-slnt: ${CodeMirrorSlnt}; 
-            --cm-crsv: ${CodeMirrorCrsv}
-            `;
+        styles = currentStyles()
+
         changeSettings(styles);
         document.getElementById(targetId).innerHTML = CodeMirrorFontVarSet[index];
     })
@@ -174,13 +169,8 @@ function globalRadio(id, value){
         
         document.getElementById("globalCrsv").innerHTML = CodeMirrorCrsv;
 
-        styles = `
-            --cm-mono: ${CodeMirrorMono}; 
-            --cm-casl: ${CodeMirrorCasl}; 
-            --cm-wght: ${CodeMirrorWght}; 
-            --cm-slnt: ${CodeMirrorSlnt}; 
-            --cm-crsv: ${CodeMirrorCrsv}
-            `;
+        styles = currentStyles()
+
         changeSettings(styles);
 }
 
