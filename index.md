@@ -168,9 +168,9 @@ In Recursive, slant and cursive letterforms can be controlled separately. The *S
 Recursive’s cursive letterforms (`CRSV 1`) replace familiar “roman” letterforms with cursive alternates like the single-story “a” and “g”. By default, Recursive will automatically apply these cursive alternates when setting the *Slant* axis (`slnt`) beyond `-14`. This allows smooth, animated transitions from normal to oblique type up to 13.99° of slope, but also a “true italic” style with cursive letterforms at 14°. It is also possible to use sloped romans (`slnt -15, CRSV 0`), upright italics (`slnt 0, CRSV 1`), or set custom values on both axes for more options to play with.
 
 <div class="scroll-on-sm my-4" id="truerItalicsSm">
-    <div class="x-axis">slnt: <span id="truerItalics__italVal">600</span></div>
+    <div class="x-axis">slnt: <span id="truerItalics__crsvVal">600</span></div>
     <div class="y-axis"><span>ital: 0 (off)</span><span>ital: 0.5 (auto)</span><span>ital: 1 (on)</span></div>
-    <div class="content" id="truerItalics__content"><span class="ital-gsub" id="truerItalics__ital0">&#x200a;g&#x200a;</span><span class="ital-gsub" id="truerItalics__ital1">&#x200a;g&#x200a;</span><span class="ital-gsub" id="truerItalics__ital2">&#x200a;g&#x200a;</span></div>
+    <div class="content" id="truerItalics__content"><span class="ital-gsub" id="truerItalics__crsv0">&#x200a;g&#x200a;</span><span class="ital-gsub" id="truerItalics__crsv1">&#x200a;g&#x200a;</span><span class="ital-gsub" id="truerItalics__crsv2">&#x200a;g&#x200a;</span></div>
 </div>
 
 ## Powerful, yet simple to use.

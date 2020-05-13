@@ -1,6 +1,14 @@
 ---
 ---
 
+:root {
+    --cm-wght: 400;
+    --cm-mono: 0;
+    --cm-casl: 0.0;
+    --cm-slnt: 0;
+    --cm-crsv: 0.5;
+}
+
 @import 'bootstrap/bootstrap';
 
 .three-container {
@@ -163,7 +171,7 @@ body.inverse {
     .toolbar{
         border-bottom: 1px solid white;
         border-top: 1px solid white;
-        #globalMono,#globalXprn,#globalWght,#globalItal,#globalSlnt{
+        #globalMono,#globalCasl,#globalWght,#globalCrsv,#globalSlnt{
             color:white;
         } 
     }
@@ -244,7 +252,7 @@ body.inverse {
 #globalApplySans{color:grey;}
 #globalApplyMono{color:black;}
 
-#globalMono, #globalWght, #globalXprn, #globalItal, #globalSlnt{
+#globalMono, #globalWght, #globalCasl, #globalCrsv, #globalSlnt{
     color:black;
     margin-right:7px;
 }
@@ -481,11 +489,20 @@ h2{
     padding-bottom:50px;
 }
 
+.cm-em, .cm-header, .CodeMirror-line span {
+    font-variation-settings: 
+        'MONO' var(--cm-mono), 
+        'CASL' var(--cm-casl),
+        'wght' var(--cm-wght),
+        'slnt' var(--cm-slnt),
+        'CRSV' var(--cm-crsv)        
+        ;
+}
+
 #mdContainer{
     position:relative;
 }
 
-// .CodeMirror-lines:before{
 #mdContainer:before{
     content:'';
     height:100%;
@@ -510,7 +527,8 @@ h2{
 
 .CodeMirror .CodeMirror-line .cm-comment, code{
     background:transparent;
-    font-variation-settings: "MONO" 1, "CASL" 1 !important;
+    --cm-mono: 1;
+    --cm-casl: 1;
 }
 
 span span.cm-comment:not(.cm-formatting), code{
@@ -527,7 +545,7 @@ span.cm-comment{
     color: #414545;
     // color:#7e7e7e;
     font-weight:400 !important;
-    font-variation-settings: "MONO" 1 !important;
+    --cm-mono: 1;
 }
 
 .CodeMirror-line:before{
@@ -541,7 +559,11 @@ span.cm-comment{
     padding-right:6px;
     background-color:white;
     text-align:right;
-    font-variation-settings: "MONO" 1, "CASL" 0, "wght" 400, "CRSV" 0, "slnt" 0 !important;
+    --cm-wght: 400;
+    --cm-mono: 1;
+    --cm-casl: 0.0;
+    --cm-slnt: 0;
+    --cm-crsv: 0;
     font-size:15px !important;
 }
 
@@ -586,9 +608,10 @@ span.cm-formatting.cm-formatting-header.cm-formatting-header-6.cm-header.cm-head
 .CodeMirror .CodeMirror-code .cm-header-6, h6{
     line-height: inherit;
     font-family: 'RecVF', sans-serif;
-    font-weight:800;
     position: relative;
-    font-variation-settings: "MONO" 0, "CASL" 1;
+    --cm-mono: 0;
+    --cm-casl: 1;
+    --cm-wght: 800;
 }
 .CodeMirror .CodeMirror-code .cm-header-6{
     font-size: 1.5rem;
@@ -631,7 +654,8 @@ span.cm-formatting.cm-formatting-header.cm-formatting-header-2.cm-header.cm-head
     font-weight:normal;
     color:$primary;
     font-style:normal; //italic
-    font-variation-settings: "wght" 425, "CRSV" 1; //"slnt" -9
+    --cm-wght: 425;
+    --cm-crsv: 1;
 }
 .cm-strong{
     color:$primary;
