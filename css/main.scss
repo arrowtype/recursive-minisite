@@ -490,12 +490,12 @@ h2{
 }
 
 .cm-em, .cm-header, .CodeMirror-line span {
-    font-variation-settings: 
-        'MONO' var(--cm-mono), 
+    font-variation-settings:
+        'MONO' var(--cm-mono),
         'CASL' var(--cm-casl),
         'wght' var(--cm-wght),
         'slnt' var(--cm-slnt),
-        'CRSV' var(--cm-crsv)        
+        'CRSV' var(--cm-crsv)
         ;
 }
 
@@ -2246,6 +2246,13 @@ div#truerItalics {
         padding-top:24px;
         font-family:'RecVF';
         position:relative;
+        font-variation-settings:
+            'MONO' var(--cm-mono),
+            'CASL' var(--cm-casl),
+            'wght' var(--cm-wght),
+            'slnt' var(--cm-slnt),
+            'CRSV' var(--cm-crsv)
+            ;
     }
     span.complete{
         color:$primary;
@@ -2622,9 +2629,7 @@ ul.casual .rw{--casl: 1}
         padding-top: 0px;
         line-height: 15vw;
     }
-    // .grid span .detail:active{
-    //     display:none;
-    // }
+    
     .grid .detail{
         width: calc(36.9vw + 1px);
         height: calc(45vw - 1px);
