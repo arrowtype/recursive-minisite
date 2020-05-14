@@ -62,8 +62,6 @@ document.getElementsByTagName("select")[0].onmousedown = function(){
     this.style.fontFamily = "sans-serif";
 }
 
-
-
 function currentStyles() {
     styles = `
             --cm-mono: ${CodeMirrorMono}; 
@@ -154,7 +152,13 @@ function changeSettings(str){
     for (const crsv of document.querySelectorAll("em, code")){
         crsv.style = str;
     }
+    
+    // mobile style updates
+    for (const crsv of document.querySelectorAll(".mobile-version, .mobile-version h2")){
+        crsv.style = str;
+    }
 
+    // charset styles
     charsetIframe = document.querySelector('[data-src="/languages"]').contentDocument
     charsetIframe.body.style = str;
 }
