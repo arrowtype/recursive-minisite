@@ -128,7 +128,6 @@ function changeSettings(str){
     // TODO: set grid iFrame styles, if possible
     // let gridIframe = document.querySelector('[title="Languages"]')
     // gridIframe.body.innerHTML = gridIframe.body.innerHTML + `<style>${str}</style>`
-
     
     for (const head of document.getElementsByClassName("cm-header")){
         head.style = str;
@@ -161,6 +160,7 @@ function globalSlider(id, targetId, index){
 
         changeSettings(styles);
         document.getElementById(targetId).innerHTML = CodeMirrorFontVarSet[index];
+        document.querySelector('#chooseInstance').value = "--axes--"
     })
 }
 
@@ -175,6 +175,7 @@ function globalRadio(id, value){
         styles = currentStyles()
 
         changeSettings(styles);
+        document.querySelector('#chooseInstance').value = "--axes--"
 }
 
 globalSlider("globalMonoSlider", "globalMono", 0);
