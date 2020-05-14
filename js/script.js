@@ -59,9 +59,7 @@ document.getElementById("navbarToggler").onclick = function(){
 }
 
 document.getElementsByTagName("select")[0].onmousedown = function(){
-    // console.log("hello");
     this.style.fontFamily = "sans-serif";
-    // console.log(this.style);
 }
 
 
@@ -78,7 +76,7 @@ function currentStyles() {
 }
 
 document.getElementById("chooseInstance").onchange = function(){
-    console.log(this)
+
     selectedValue = this.selectedOptions[0].value
 
     if (selectedValue === "default") {
@@ -147,10 +145,6 @@ function setDefaultStyles() {
 function changeSettings(str){
         
     document.documentElement.style = str
-
-    // TODO: set grid iFrame styles, if possible
-    // let gridIframe = document.querySelector('[title="Languages"]')
-    // gridIframe.body.innerHTML = gridIframe.body.innerHTML + `<style>${str}</style>`
     
     for (const head of document.getElementsByClassName("cm-header")){
         head.style = str;
@@ -161,12 +155,9 @@ function changeSettings(str){
     for (const crsv of document.querySelectorAll("em, code")){
         crsv.style = str;
     }
-    for (let i=0;i<document.getElementsByTagName("iframe").length;i++){
-        if (document.getElementsByTagName("iframe")[i].getAttribute("src") == "/languages"){
-            let iframe = document.getElementsByTagName("iframe")[i];
-            iframe.contentDocument.getElementById("grid").style.fontVariationSettings = str;
-        }
-    }
+
+    charsetIframe = document.querySelector('[data-src="/languages"]').contentDocument
+    charsetIframe.body.style = str;
 }
 
 function globalSlider(id, targetId, index){
