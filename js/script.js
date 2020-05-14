@@ -136,6 +136,9 @@ function changeSettings(str){
     for (const crsv of document.getElementsByClassName("cm-em")){
         crsv.style = str;
     }
+    for (const crsv of document.querySelectorAll("em, code")){
+        crsv.style = str;
+    }
     for (let i=0;i<document.getElementsByTagName("iframe").length;i++){
         if (document.getElementsByTagName("iframe")[i].getAttribute("src") == "/languages"){
             let iframe = document.getElementsByTagName("iframe")[i];
