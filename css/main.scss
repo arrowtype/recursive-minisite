@@ -859,7 +859,7 @@ div#pickVariability, #pickFontSize {
     z-index: 2;
     background-color: white;
     left: -2px;
-    top: 40px;
+    top: calc(40px - 1px); // otherwise, is 1px off
     padding: 0px 16px 8px;
     border: 1px solid black;
     border-top: 0px;
