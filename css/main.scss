@@ -2850,12 +2850,16 @@ ul.casual .rw{--casl: 1}
     }
     em{
         color: $primary;
-        font-variation-settings: 'CRSV' 1, 'slnt' -5;
+        --cm-slnt: -9;
+        --cm-crsv: 1;
+        // font-variation-settings: 'CRSV' 1, 'slnt' -5;
     }
     code{
         color:#7e7e7e;
         font-family: 'RecVF', 'Courier New', Courier, monospace;
-        font-variation-settings: 'wght' 400, 'MONO' 1;
+        --cm-mono: 1;
+        --cm-wght: 400;
+        // font-variation-settings: 'wght' 400, 'MONO' 1;
     }
 
  }
@@ -3001,6 +3005,14 @@ ul.casual .rw{--casl: 1}
 .mobile-version{
     padding:20px;
     padding-bottom: 0px;
+    
+    font-variation-settings:
+        'MONO' var(--cm-mono),
+        'CASL' var(--cm-casl),
+        'wght' var(--cm-wght),
+        'slnt' var(--cm-slnt),
+        'CRSV' var(--cm-crsv)
+        ;
 }
 
 @media (max-width: 960px) {
