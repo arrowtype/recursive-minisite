@@ -3006,13 +3006,16 @@ ul.casual .rw{--casl: 1}
     padding:20px;
     padding-bottom: 0px;
     
-    font-variation-settings:
+
+    h1, h2, h3, h4, p, span, em, code {
+        font-variation-settings:
         'MONO' var(--cm-mono),
         'CASL' var(--cm-casl),
         'wght' var(--cm-wght),
         'slnt' var(--cm-slnt),
         'CRSV' var(--cm-crsv)
         ;
+    }
 }
 
 @media (max-width: 960px) {

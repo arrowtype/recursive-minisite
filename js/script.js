@@ -82,26 +82,25 @@ document.getElementById("chooseInstance").onchange = function(){
     if (selectedValue === "default") {
         setDefaultStyles()
     } else {
-
         document.getElementsByTagName("select")[0].style.fontFamily = "'RecVF', sans-serif";   
         
         CodeMirrorMono = this.selectedOptions[0].getAttribute('data-mono');
-    CodeMirrorCasl = this.selectedOptions[0].getAttribute('data-casl');
-    CodeMirrorWght = this.selectedOptions[0].getAttribute('data-wght');
-    CodeMirrorSlnt = this.selectedOptions[0].getAttribute('data-slnt');
-    CodeMirrorCrsv = this.selectedOptions[0].getAttribute('data-crsv');
-    document.getElementById("globalMono").innerHTML = CodeMirrorMono;
-    document.getElementById("globalCasl").innerHTML = CodeMirrorCasl;
-    document.getElementById("globalWght").innerHTML = CodeMirrorWght;
-    document.getElementById("globalSlnt").innerHTML = CodeMirrorSlnt;
-    document.getElementById("globalCrsv").innerHTML = CodeMirrorCrsv;
-    document.getElementById('globalCaslSlider').value = CodeMirrorMono;
-    document.getElementById('globalWghtSlider').value = CodeMirrorCasl;
-    document.getElementById('globalSlntSlider').value = CodeMirrorWght;
-    document.getElementById('globalMonoSlider').value = CodeMirrorSlnt;
-    styles = currentStyles()
-    
-    changeSettings(styles);
+        CodeMirrorCasl = this.selectedOptions[0].getAttribute('data-casl');
+        CodeMirrorWght = this.selectedOptions[0].getAttribute('data-wght');
+        CodeMirrorSlnt = this.selectedOptions[0].getAttribute('data-slnt');
+        CodeMirrorCrsv = this.selectedOptions[0].getAttribute('data-crsv');
+        document.getElementById("globalMono").innerHTML = CodeMirrorMono;
+        document.getElementById("globalCasl").innerHTML = CodeMirrorCasl;
+        document.getElementById("globalWght").innerHTML = CodeMirrorWght;
+        document.getElementById("globalSlnt").innerHTML = CodeMirrorSlnt;
+        document.getElementById("globalCrsv").innerHTML = CodeMirrorCrsv;
+        document.getElementById('globalCaslSlider').value = CodeMirrorMono;
+        document.getElementById('globalWghtSlider').value = CodeMirrorCasl;
+        document.getElementById('globalSlntSlider').value = CodeMirrorWght;
+        document.getElementById('globalMonoSlider').value = CodeMirrorSlnt;
+        styles = currentStyles()
+        
+        changeSettings(styles);
     }
 };
 
