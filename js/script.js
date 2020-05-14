@@ -1,16 +1,21 @@
 const triggers = Array.from(document.querySelectorAll('[data-toggle="collapse"]'));
-// let wght = 400;
-// let mono = 0;
-// let casl = 0.0;
-// let slnt = 0;
-// let crsv = 0.5;
-// let fontVarSet = [mono, wght, casl, slnt, crsv];
+
+// const dfltMono = 0;
+// const dfltCasl = 0.0;
+// const dfltWght = 400;
+// const dfltSlnt = 0;
+// const dfltCrsv = 0.5;
+
+
+
 var CodeMirrorMono = 0;
 var CodeMirrorCasl = 0.0;
 var CodeMirrorWght = 400;
 var CodeMirrorSlnt = 0;
 var CodeMirrorCrsv = 0.5;
 var CodeMirrorFontVarSet = [CodeMirrorMono, CodeMirrorCasl, CodeMirrorWght, CodeMirrorSlnt];
+
+
 
 let labelHeight = Math.min(window.innerWidth*0.5 / Math.sqrt(3) + window.innerHeight * 0.45, window.innerHeight * 0.9 - 120);
 
@@ -54,10 +59,10 @@ document.getElementById("navbarToggler").onclick = function(){
 }
 
 document.getElementsByTagName("select")[0].onmousedown = function(){
-    // console.log("hello");
     this.style.fontFamily = "sans-serif";
-    // console.log(this.style);
 }
+
+
 
 function currentStyles() {
     styles = `
@@ -71,27 +76,32 @@ function currentStyles() {
 }
 
 document.getElementById("chooseInstance").onchange = function(){
-    document.getElementsByTagName("select")[0].style.fontFamily = "'RecVF', sans-serif";   
-    
-    CodeMirrorMono = this.selectedOptions[0].getAttribute('data-mono');
-    CodeMirrorCasl = this.selectedOptions[0].getAttribute('data-casl');
-    CodeMirrorWght = this.selectedOptions[0].getAttribute('data-wght');
-    CodeMirrorSlnt = this.selectedOptions[0].getAttribute('data-slnt');
-    CodeMirrorCrsv = this.selectedOptions[0].getAttribute('data-crsv');
-    document.getElementById("globalMono").innerHTML = CodeMirrorMono;
-    document.getElementById("globalCasl").innerHTML = CodeMirrorCasl;
-    document.getElementById("globalWght").innerHTML = CodeMirrorWght;
-    document.getElementById("globalSlnt").innerHTML = CodeMirrorSlnt;
-    document.getElementById("globalCrsv").innerHTML = CodeMirrorCrsv;
-    document.getElementById('globalCaslSlider').value = CodeMirrorMono;
-    document.getElementById('globalWghtSlider').value = CodeMirrorCasl;
-    document.getElementById('globalSlntSlider').value = CodeMirrorWght;
-    document.getElementById('globalMonoSlider').value = CodeMirrorSlnt;
-    styles = currentStyles()
-    // for (const codemirrors of document.getElementsByClassName("CodeMirror-lines")){codemirrors.style = styles};
-    // document.getElementsByClassName("mobile-version")[0].style = styles;
-    // for (const header of document.querySelectorAll("h1, h2, h3, h4, h5, h6, em")){header.style = styles;}
-    changeSettings(styles);
+
+    selectedValue = this.selectedOptions[0].value
+
+    if (selectedValue === "default") {
+        setDefaultStyles()
+    } else {
+        document.getElementsByTagName("select")[0].style.fontFamily = "'RecVF', sans-serif";   
+        
+        CodeMirrorMono = this.selectedOptions[0].getAttribute('data-mono');
+        CodeMirrorCasl = this.selectedOptions[0].getAttribute('data-casl');
+        CodeMirrorWght = this.selectedOptions[0].getAttribute('data-wght');
+        CodeMirrorSlnt = this.selectedOptions[0].getAttribute('data-slnt');
+        CodeMirrorCrsv = this.selectedOptions[0].getAttribute('data-crsv');
+        document.getElementById("globalMono").innerHTML = CodeMirrorMono;
+        document.getElementById("globalCasl").innerHTML = CodeMirrorCasl;
+        document.getElementById("globalWght").innerHTML = CodeMirrorWght;
+        document.getElementById("globalSlnt").innerHTML = CodeMirrorSlnt;
+        document.getElementById("globalCrsv").innerHTML = CodeMirrorCrsv;
+        document.getElementById('globalCaslSlider').value = CodeMirrorMono;
+        document.getElementById('globalWghtSlider').value = CodeMirrorCasl;
+        document.getElementById('globalSlntSlider').value = CodeMirrorWght;
+        document.getElementById('globalMonoSlider').value = CodeMirrorSlnt;
+        styles = currentStyles()
+        
+        changeSettings(styles);
+    }
 };
 
 function hiderShower(trigger, drawer, closestId, activeClass) {
@@ -121,13 +131,19 @@ function hiderShower(trigger, drawer, closestId, activeClass) {
     });
 };
 
+function setDefaultStyles() {
+    CodeMirrorMono = 0;
+    CodeMirrorCasl = 0.0;
+    CodeMirrorWght = 400;
+    CodeMirrorSlnt = 0;
+    CodeMirrorCrsv = 0.5;
+
+    changeSettings("");
+}
+
 function changeSettings(str){
         
     document.documentElement.style = str
-
-    // TODO: set grid iFrame styles, if possible
-    // let gridIframe = document.querySelector('[title="Languages"]')
-    // gridIframe.body.innerHTML = gridIframe.body.innerHTML + `<style>${str}</style>`
     
     for (const head of document.getElementsByClassName("cm-header")){
         head.style = str;
@@ -138,12 +154,9 @@ function changeSettings(str){
     for (const crsv of document.querySelectorAll("em, code")){
         crsv.style = str;
     }
-    for (let i=0;i<document.getElementsByTagName("iframe").length;i++){
-        if (document.getElementsByTagName("iframe")[i].getAttribute("src") == "/languages"){
-            let iframe = document.getElementsByTagName("iframe")[i];
-            iframe.contentDocument.getElementById("grid").style.fontVariationSettings = str;
-        }
-    }
+
+    charsetIframe = document.querySelector('[data-src="/languages"]').contentDocument
+    charsetIframe.body.style = str;
 }
 
 function globalSlider(id, targetId, index){
