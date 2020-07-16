@@ -1,5 +1,5 @@
-<button id="get-rec-button">
-  Get Recursive
+<button id="get-rec-button" class="notice-me-plz">
+  Now on Google Fonts!
 </button>
 <div id="sidebar--scrim" class="scrim-hidden"></div>
 <div id="api-config-drawer" class="drawer-hidden">
@@ -27,11 +27,11 @@
 
 
           <div class="subset-type">
-            <input type="radio" id="wght_subset__range" name="wght-subset-type" value="range" checked>
-            <label for="wght_subset__range">Range</label>
-
-            <input type="radio" id="wght_subset__pinned" name="wght-subset-type" value="pinned" >
+            <input type="radio" id="wght_subset__pinned" name="wght-subset-type" value="pinned" checked>
             <label for="wght_subset__pinned">Pinned</label>
+
+            <input type="radio" id="wght_subset__range" name="wght-subset-type" value="range">
+            <label for="wght_subset__range">Range</label>
           </div>
           <details class="details-reset details-with-dialog mt-4">
             <summary class="casl"></summary>
@@ -59,7 +59,7 @@
           </details>
         </div>
 
-        <div class="subset-controls" data-subset-type="range">
+        <div class="subset-controls" data-subset-type="pinned">
           <div id="wght__range" class="range-controls">
 
             <div class="range-selector" data-wght-src="300" data-selected="true">300</div>
@@ -81,13 +81,12 @@
         <div class="axis__header">
         <h5>Monospace</h5>
           <div class="subset-type">
-            <input type="radio" id="MONO_subset__range"
-          name="MONO-subset-type" value="range" checked>
+            <input type="radio" id="MONO_subset__pinned"name="MONO-subset-type" value="pinned" checked>
+            <label for="MONO_subset__pinned">Pinned</label>
+
+            <input type="radio" id="MONO_subset__range" name="MONO-subset-type" value="range">
             <label for="MONO_subset__range">Range</label>
 
-            <input type="radio" id="MONO_subset__pinned"
-          name="MONO-subset-type" value="pinned" >
-            <label for="MONO_subset__pinned">Pinned</label>
           </div>
           <!-- HEADER WITH DETAILS -->
           <details class="details-reset details-with-dialog mt-4">
@@ -115,7 +114,7 @@
           <!-- END -- HEADER WITH DETAILS -->
         </div>
 
-        <div class="subset-controls" data-subset-type="range">
+        <div class="subset-controls" data-subset-type="pinned">
           <div id="MONO__range" class="range-controls basic-range">
             <div class="range-selector" data-wght-src="0" data-selected="true">0</div>
             <div class="range-gap" data-active="true">
@@ -125,7 +124,7 @@
           </div>
 
           <div id="MONO--pinned" class="pinned-controls">
-            <input type="range" id="MONO--pinned__slider" name="MONO-pinned" min="0" max="1" value="0" step="1">
+            <input type="range" id="MONO--pinned__slider" name="MONO-pinned" min="0" max="1" value="0" step="0.25">
             <label id="MONO--pinned__label" for="wght-pinned">0</label>
           </div>
         </div>
@@ -136,13 +135,11 @@
         <div class="axis__header">
         <h5>Casual</h5>
           <div class="subset-type">
-            <input type="radio" id="CASL_subset__range"
-          name="CASL-subset-type" value="range" checked>
-            <label for="CASL_subset__range">Range</label>
-
-            <input type="radio" id="CASL_subset__pinned"
-          name="CASL-subset-type" value="pinned" >
+            <input type="radio" id="CASL_subset__pinned" name="CASL-subset-type" value="pinned" checked>
             <label for="CASL_subset__pinned">Pinned</label>
+
+            <input type="radio" id="CASL_subset__range" name="CASL-subset-type" value="range" >
+            <label for="CASL_subset__range">Range</label>
           </div>
           <!-- HEADER WITH DETAILS -->
           <details class="details-reset details-with-dialog mt-4">
@@ -170,7 +167,7 @@
           <!-- END -- HEADER WITH DETAILS -->
         </div>
 
-        <div class="subset-controls" data-subset-type="range">
+        <div class="subset-controls" data-subset-type="pinned">
           <div id="CASL__range" class="range-controls basic-range">
             <div class="range-selector" data-wght-src="0" data-selected="true">0</div>
             <div class="range-gap" data-active="true">
@@ -180,7 +177,7 @@
           </div>
 
           <div id="CASL--pinned" class="pinned-controls">
-            <input type="range" id="CASL--pinned__slider" name="CASL-pinned" min="0" max="1" value="0" step="1">
+            <input type="range" id="CASL--pinned__slider" name="CASL-pinned" min="0" max="1" value="0" step="0.25">
             <label id="CASL--pinned__label" for="wght-pinned">0</label>
           </div>
         </div>
@@ -192,13 +189,11 @@
           <h5>Slant</h5>
           
           <div class="subset-type">
-            <input type="radio" id="slnt_subset__range"
-          name="slnt-subset-type" value="range" checked>
-            <label for="slnt_subset__range">Range</label>
-
-            <input type="radio" id="slnt_subset__pinned"
-          name="slnt-subset-type" value="pinned" >
+            <input type="radio" id="slnt_subset__pinned" name="slnt-subset-type" value="pinned" checked>
             <label for="slnt_subset__pinned">Pinned</label>
+
+            <input type="radio" id="slnt_subset__range" name="slnt-subset-type" value="range" >
+            <label for="slnt_subset__range">Range</label>
           </div>
 
           <!-- HEADER WITH DETAILS - based on https://github.com/github/details-dialog-element -->
@@ -224,7 +219,7 @@
           <!-- END -- HEADER WITH DETAILS -->
         </div>
 
-        <div class="subset-controls" data-subset-type="range">
+        <div class="subset-controls" data-subset-type="pinned">
           <div id="slnt__range" class="range-controls basic-range">
             <div class="range-selector" data-wght-src="0" data-selected="true">-15</div>
             <div class="range-gap" data-active="true">
@@ -245,13 +240,11 @@
         <div class="axis__header">
         <h5>Cursive</h5>
           <div class="subset-type">
-            <input type="radio" id="CRSV_subset__range"
-          name="CRSV-subset-type" value="range" checked>
-            <label for="CRSV_subset__range">Range</label>
-
-            <input type="radio" id="CRSV_subset__pinned"
-          name="CRSV-subset-type" value="pinned" >
+            <input type="radio" id="CRSV_subset__pinned" name="CRSV-subset-type" value="pinned" checked>
             <label for="CRSV_subset__pinned">Pinned</label>
+
+            <input type="radio" id="CRSV_subset__range" name="CRSV-subset-type" value="range" >
+            <label for="CRSV_subset__range">Range</label>
           </div>
           <!-- HEADER WITH DETAILS -->
           <details class="details-reset details-with-dialog mt-4">
@@ -278,7 +271,7 @@
           <!-- END -- HEADER WITH DETAILS -->
         </div>
 
-        <div class="subset-controls" data-subset-type="range">
+        <div class="subset-controls" data-subset-type="pinned">
           <div id="CRSV__range" class="range-controls basic-range">
             <div class="range-selector" data-wght-src="0" data-selected="true">0</div>
             <div class="range-gap" data-active="true">
