@@ -1,385 +1,384 @@
 - name: Mono Casual Light
   MONO: 1
   CASL: 1
-  ital: 0.5
+  CRSV: 0.5
   slnt: 0
   wght: 300
 - name: Mono Casual Light Italic
   MONO: 1
   CASL: 1
-  ital: 1
+  CRSV: 1
   slnt: -15
   wght: 300
 - name: Mono Casual Regular
   MONO: 1
   CASL: 1
-  ital: 0.5
+  CRSV: 0.5
   slnt: 0
   wght: 400
 - name: Mono Casual Italic
   MONO: 1
   CASL: 1
-  ital: 1
+  CRSV: 1
   slnt: -15
   wght: 400
 - name: Mono Casual Medium
   MONO: 1
   CASL: 1
-  ital: 0.5
+  CRSV: 0.5
   slnt: 0
   wght: 500
 - name: Mono Casual Medium Italic
   MONO: 1
   CASL: 1
-  ital: 1
+  CRSV: 1
   slnt: -15
   wght: 500
 - name: Mono Casual SemiBold
   MONO: 1
   CASL: 1
-  ital: 0.5
+  CRSV: 0.5
   slnt: 0
   wght: 600
 - name: Mono Casual SemiBold Italic
   MONO: 1
   CASL: 1
-  ital: 1
+  CRSV: 1
   slnt: -15
   wght: 600
 - name: Mono Casual Bold
   MONO: 1
   CASL: 1
-  ital: 0.5
+  CRSV: 0.5
   slnt: 0
   wght: 700
 - name: Mono Casual Bold Italic
   MONO: 1
   CASL: 1
-  ital: 1
+  CRSV: 1
   slnt: -15
   wght: 700
 - name: Mono Casual ExtraBold
   MONO: 1
   CASL: 1
-  ital: 0.5
+  CRSV: 0.5
   slnt: 0
   wght: 800
 - name: Mono Casual ExtraBold Italic
   MONO: 1
   CASL: 1
-  ital: 1
+  CRSV: 1
   slnt: -15
   wght: 800
 - name: Mono Casual Black
   MONO: 1
   CASL: 1
-  ital: 0.5
+  CRSV: 0.5
   slnt: 0
   wght: 900
 - name: Mono Casual Black Italic
   MONO: 1
   CASL: 1
-  ital: 1
+  CRSV: 1
   slnt: -15
   wght: 900
 - name: Mono Casual ExtraBlack
   MONO: 1
   CASL: 1
-  ital: 0.5
+  CRSV: 0.5
   slnt: 0
   wght: 1000
 - name: Mono Casual ExtraBlack Italic
   MONO: 1
   CASL: 1
-  ital: 1
+  CRSV: 1
   slnt: -15
   wght: 1000
 - name: Mono Linear Light
   MONO: 1
   CASL: 0
-  ital: 0.5
+  CRSV: 0.5
   slnt: 0
   wght: 300
 - name: Mono Linear Light Italic
   MONO: 1
   CASL: 0
-  ital: 1
+  CRSV: 1
   slnt: -15
   wght: 300
 - name: Mono Linear Regular
   MONO: 1
   CASL: 0
-  ital: 0.5
+  CRSV: 0.5
   slnt: 0
   wght: 400
 - name: Mono Linear Italic
   MONO: 1
   CASL: 0
-  ital: 1
+  CRSV: 1
   slnt: -15
   wght: 400
 - name: Mono Linear Medium
   MONO: 1
   CASL: 0
-  ital: 0.5
+  CRSV: 0.5
   slnt: 0
   wght: 500
 - name: Mono Linear Medium Italic
   MONO: 1
   CASL: 0
-  ital: 1
+  CRSV: 1
   slnt: -15
   wght: 500
 - name: Mono Linear SemiBold
   MONO: 1
   CASL: 0
-  ital: 0.5
+  CRSV: 0.5
   slnt: 0
   wght: 600
 - name: Mono Linear SemiBold Italic
   MONO: 1
   CASL: 0
-  ital: 1
+  CRSV: 1
   slnt: -15
   wght: 600
 - name: Mono Linear Bold
   MONO: 1
   CASL: 0
-  ital: 0.5
+  CRSV: 0.5
   slnt: 0
   wght: 700
 - name: Mono Linear Bold Italic
   MONO: 1
   CASL: 0
-  ital: 1
+  CRSV: 1
   slnt: -15
   wght: 700
 - name: Mono Linear ExtraBold
   MONO: 1
   CASL: 0
-  ital: 0.5
+  CRSV: 0.5
   slnt: 0
   wght: 800
 - name: Mono Linear ExtraBold Italic
   MONO: 1
   CASL: 0
-  ital: 1
+  CRSV: 1
   slnt: -15
   wght: 800
 - name: Mono Linear Black
   MONO: 1
   CASL: 0
-  ital: 0.5
+  CRSV: 0.5
   slnt: 0
   wght: 900
 - name: Mono Linear Black Italic
   MONO: 1
   CASL: 0
-  ital: 1
+  CRSV: 1
   slnt: -15
   wght: 900
 - name: Mono Linear ExtraBlack
   MONO: 1
   CASL: 0
-  ital: 0.5
+  CRSV: 0.5
   slnt: 0
   wght: 1000
 - name: Mono Linear ExtraBlack Italic
   MONO: 1
   CASL: 0
-  ital: 1
+  CRSV: 1
   slnt: -15
   wght: 1000
 - name: Sans Casual Light
   MONO: 0
   CASL: 1
-  ital: 0.5
+  CRSV: 0.5
   slnt: 0
   wght: 300
 - name: Sans Casual Light Italic
   MONO: 0
   CASL: 1
-  ital: 1
+  CRSV: 1
   slnt: -15
   wght: 300
 - name: Sans Casual Regular
   MONO: 0
   CASL: 1
-  ital: 0.5
+  CRSV: 0.5
   slnt: 0
   wght: 400
 - name: Sans Casual Italic
   MONO: 0
   CASL: 1
-  ital: 1
+  CRSV: 1
   slnt: -15
   wght: 400
 - name: Sans Casual Medium
   MONO: 0
   CASL: 1
-  ital: 0.5
+  CRSV: 0.5
   slnt: 0
   wght: 500
 - name: Sans Casual Medium Italic
   MONO: 0
   CASL: 1
-  ital: 1
+  CRSV: 1
   slnt: -15
   wght: 500
 - name: Sans Casual SemiBold
   MONO: 0
   CASL: 1
-  ital: 0.5
+  CRSV: 0.5
   slnt: 0
   wght: 600
 - name: Sans Casual SemiBold Italic
   MONO: 0
   CASL: 1
-  ital: 1
+  CRSV: 1
   slnt: -15
   wght: 600
 - name: Sans Casual Bold
   MONO: 0
   CASL: 1
-  ital: 0.5
+  CRSV: 0.5
   slnt: 0
   wght: 700
 - name: Sans Casual Bold Italic
   MONO: 0
   CASL: 1
-  ital: 1
+  CRSV: 1
   slnt: -15
   wght: 700
 - name: Sans Casual ExtraBold
   MONO: 0
   CASL: 1
-  ital: 0.5
+  CRSV: 0.5
   slnt: 0
   wght: 800
 - name: Sans Casual ExtraBold Italic
   MONO: 0
   CASL: 1
-  ital: 1
+  CRSV: 1
   slnt: -15
   wght: 800
 - name: Sans Casual Black
   MONO: 0
   CASL: 1
-  ital: 0.5
+  CRSV: 0.5
   slnt: 0
   wght: 900
 - name: Sans Casual Black Italic
   MONO: 0
   CASL: 1
-  ital: 1
+  CRSV: 1
   slnt: -15
   wght: 900
 - name: Sans Casual ExtraBlack
   MONO: 0
   CASL: 1
-  ital: 0.5
+  CRSV: 0.5
   slnt: 0
   wght: 1000
 - name: Sans Casual ExtraBlack Italic
   MONO: 0
   CASL: 1
-  ital: 1
+  CRSV: 1
   slnt: -15
   wght: 1000
 - name: Sans Linear Light
   MONO: 0
   CASL: 0
-  ital: 0.5
+  CRSV: 0.5
   slnt: 0
   wght: 300
 - name: Sans Linear Light Italic
   MONO: 0
   CASL: 0
-  ital: 1
+  CRSV: 1
   slnt: -15
   wght: 300
 - name: Sans Linear Regular
   MONO: 0
   CASL: 0
-  ital: 0.5
+  CRSV: 0.5
   slnt: 0
   wght: 400
-  selected: true
 - name: Sans Linear Italic
   MONO: 0
   CASL: 0
-  ital: 1
+  CRSV: 1
   slnt: -15
   wght: 400
 - name: Sans Linear Medium
   MONO: 0
   CASL: 0
-  ital: 0.5
+  CRSV: 0.5
   slnt: 0
   wght: 500
 - name: Sans Linear Medium Italic
   MONO: 0
   CASL: 0
-  ital: 1
+  CRSV: 1
   slnt: -15
   wght: 500
 - name: Sans Linear SemiBold
   MONO: 0
   CASL: 0
-  ital: 0.5
+  CRSV: 0.5
   slnt: 0
   wght: 600
 - name: Sans Linear SemiBold Italic
   MONO: 0
   CASL: 0
-  ital: 1
+  CRSV: 1
   slnt: -15
   wght: 600
 - name: Sans Linear Bold
   MONO: 0
   CASL: 0
-  ital: 0.5
+  CRSV: 0.5
   slnt: 0
   wght: 700
 - name: Sans Linear Bold Italic
   MONO: 0
   CASL: 0
-  ital: 1
+  CRSV: 1
   slnt: -15
   wght: 700
 - name: Sans Linear ExtraBold
   MONO: 0
   CASL: 0
-  ital: 0.5
+  CRSV: 0.5
   slnt: 0
   wght: 800
 - name: Sans Linear ExtraBold Italic
   MONO: 0
   CASL: 0
-  ital: 1
+  CRSV: 1
   slnt: -15
   wght: 800
 - name: Sans Linear Black
   MONO: 0
   CASL: 0
-  ital: 0.5
+  CRSV: 0.5
   slnt: 0
   wght: 900
 - name: Sans Linear Black Italic
   MONO: 0
   CASL: 0
-  ital: 1
+  CRSV: 1
   slnt: -15
   wght: 900
 - name: Sans Linear ExtraBlack
   MONO: 0
   CASL: 0
-  ital: 0.5
+  CRSV: 0.5
   slnt: 0
   wght: 1000
 - name: Sans Linear ExtraBlack Italic
   MONO: 0
   CASL: 0
-  ital: 1
+  CRSV: 1
   slnt: -15
   wght: 1000
