@@ -3109,6 +3109,7 @@ textarea {
     // typographic
     --MONO: 0;
     --CASL: 0;
+    --slnt: 0;
     --cap-spacing: 0.025em;
   }
 
@@ -3125,7 +3126,9 @@ textarea {
     cursor: pointer;
     z-index: 9998;
     box-sizing: border-box;
-    border: transparent 1px solid;
+    border: transparent 2px solid;
+    transition: 0.25s ease;
+    font-variation-settings: 'CASL' var(--CASL), 'slnt' var(--slnt);
 
     @media screen and (max-width: 768px){
         right: 1.5rem;
@@ -3138,6 +3141,42 @@ textarea {
         outline: none;
         border: var(--mainBackground) 1px solid;
     }
+
+    &:hover {
+        background: #4680FF;
+        border: 2px solid white;
+        --CASL: 1;
+        --slnt: -12;
+    }
+}
+
+#get-rec-button.notice-me-plz {
+    animation: wiggle 8s 4s linear 8;
+}
+  
+/* Keyframes */
+@keyframes wiggle {
+0%, 1.75% {
+    transform: rotateZ(0);
+}
+3.75% {
+    transform: rotateZ(-15deg);
+}
+5% {
+    transform: rotateZ(10deg);
+}
+6.25% {
+    transform: rotateZ(-10deg);
+}
+7.5% {
+    transform: rotateZ(6deg);
+}
+8.75% {
+    transform: rotateZ(-4deg);
+}
+10%, 100% {
+    transform: rotateZ(0);
+}
 }
 
 #api-config-drawer {
