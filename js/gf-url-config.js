@@ -72,7 +72,6 @@ window.addEventListener('scroll', () => {
 // ----------------------------------
 
 let selectedSources = [300, 1000]
-let selectedLanguages = []
 // let wght = 400
 // let MONO = 0
 
@@ -130,7 +129,6 @@ function setUrl() {
     CRSVResult = CRSV
   }
 
-  // urlString = `https://fonts.sandbox.google.com/css2?family=<span class="code--bold">Recursive:ital,slnt,wght,CASL,MONO@${italResult},${slntResult},${wghtResult},${CASLResult},${MONOResult}</span>&display=swap${languages}`
   let urlString = `https://fonts.sandbox.google.com/css2?family=<span class="code--bold">Recursive:slnt,wght,CASL,CRSV,MONO@${slntResult},${wghtResult},${CASLResult},${CRSVResult},${MONOResult}</span>&display=swap`
 
   const howToHTML = document.querySelector('#howto--html-embed')
@@ -395,38 +393,6 @@ CRSV_pinned_slider.addEventListener('input', (e) => {
   CRSV_pinned_val.innerHTML = e.target.value;
   setUrl()
 });
-
-// language subsetting
-
-const languageControls = document.querySelectorAll('#languages input')
-
-function checkSelectedLanguages() {
-  selectedLanguages = []
-  // check what Languages are selected
-  for (var language of languageControls) {
-    if (language.checked && language.name !== "latin-basic") {
-      selectedLanguages.push(language.name)
-    }
-  }
-  return selectedLanguages
-}
-
-function setLanguages() {
-  selectedLanguages = checkSelectedLanguages()
-  setUrl()
-}
-
-function addSubsetListeners() {
-  for (var selector of languageControls) {
-    selector.addEventListener('input', setLanguages)
-  }
-}
-
-addSubsetListeners()
-
-
-// console.log(languageControls)
-// console.log(checkSelectedLanguages())
 
 
 

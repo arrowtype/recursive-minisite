@@ -1339,7 +1339,7 @@ $randomNumber: random(2);
         left:-1000vw;
     }
     #inputMono, #inputMonoSpans{
-        font-family: 'RecVF', monospace;
+        font-family: 'RecVF', SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
         font-size: 275.2px;
         height:350px;
         font-weight:800;
@@ -1625,7 +1625,7 @@ $randomNumber: random(2);
     };
     .dollar{
         position:absolute;
-        // font-family: 'RecVF', monospace;
+        // font-family: 'RecVF', SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
         font-size: 96px;
         line-height: 96px;
         color: $primary;
@@ -2094,7 +2094,7 @@ div#truerItalics {
         position:absolute;
         font-size:175px;
         line-height:100px;
-        font-family: 'RecVF', monospace;
+        font-family: 'RecVF', SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
         span{margin-right:20px;}
     }
     .grs-bottom{
@@ -2176,7 +2176,7 @@ div#truerItalics {
         position:relative;
 
         .text{
-            font-family: 'RecVF', monospace;
+            font-family: 'RecVF', SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
             font-variation-settings: 'CASL' 0;
             font-size: 12px;
             line-height: 16px;
@@ -2364,7 +2364,7 @@ ul.sans .rw{
 }
 
 ul.mono .rw{
-    font-family: 'RecVF', monospace;
+    font-family: 'RecVF', SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
     --mono: 1;
 }
 ul .rw{
@@ -2533,7 +2533,7 @@ ul.casual .rw{--casl: 1}
 
     .x-axis, .y-axis{
         font-size:11.5px;
-        font-family:'RecVF', monospace;
+        font-family:'RecVF', SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
         font-weight:500;
     }
     .x-axis{
@@ -2858,9 +2858,9 @@ ul.casual .rw{--casl: 1}
         --cm-crsv: 1;
         // font-variation-settings: 'CRSV' 1, 'slnt' -5;
     }
-    code{
+    code {
         color:#7e7e7e;
-        font-family: 'RecVF', 'Courier New', Courier, monospace;
+        font-family: 'RecVF', SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
         --cm-mono: 1;
         --cm-wght: 400;
         // font-variation-settings: 'wght' 400, 'MONO' 1;
@@ -3323,7 +3323,7 @@ textarea {
     }
 
     code {
-    font-family: "Recursive";
+    font-family: 'RecVF', SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
     --MONO: 1;
     padding: 0.25em 0.25em;
     background-color: var(--darkTransp) !important;
