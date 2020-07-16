@@ -83,11 +83,11 @@ function setUrl() {
   }
   let result = ``
 
-  let wghtResult = `300..1000`
-  let MONOResult = `0..1`
-  let CASLResult = `0..1`
-  let slntResult = `-15..0`
-  let CRSVResult = `0..1`
+  let wghtResult = `400`
+  let MONOResult = `0`
+  let CASLResult = `0`
+  let slntResult = `0`
+  let CRSVResult = `0`
 
 
   if (wghtSubsetControls.dataset.subsetType === "range") {
@@ -129,7 +129,44 @@ function setUrl() {
     CRSVResult = CRSV
   }
 
-  let urlString = `https://fonts.sandbox.google.com/css2?family=<span class="code--bold">Recursive:slnt,wght,CASL,CRSV,MONO@${slntResult},${wghtResult},${CASLResult},${CRSVResult},${MONOResult}</span>&display=swap`
+  let axesRequested = []
+  let valsRequested = []
+
+  if (slntResult != "0") {
+    axesRequested.push('slnt')
+    valsRequested.push(slntResult)
+  }
+  if (wghtResult != "400") {
+    axesRequested.push('wght')
+    valsRequested.push(wghtResult)
+  }
+  if (CASLResult != "0") {
+    axesRequested.push('CASL')
+    valsRequested.push(CASLResult)
+  }
+  if (CRSVResult != "0") {
+    axesRequested.push('CRSV')
+    valsRequested.push(CRSVResult)
+  }
+  if (MONOResult != "0") {
+    axesRequested.push('MONO')
+    valsRequested.push(MONOResult)
+  }
+
+  // make array of axes
+  // make array of vals
+  let urlString = `https://fonts.sandbox.google.com/css2?family=<span class="code--bold">Recursive</span>&display=swap`
+
+  if (axesRequested.length > 0) {
+    let axesQuery = axesRequested.join(',')
+    let valsQuery = valsRequested.join(',')
+
+    urlString = `https://fonts.sandbox.google.com/css2?family=<span class="code--bold">Recursive:${axesQuery}@${valsQuery}</span>&display=swap`
+  } else {
+    urlString = `https://fonts.sandbox.google.com/css2?family=<span class="code--bold">Recursive</span>&display=swap`
+  }
+
+  // let urlString = `https://fonts.sandbox.google.com/css2?family=<span class="code--bold">Recursive:slnt,wght,CASL,CRSV,MONO@${slntResult},${wghtResult},${CASLResult},${CRSVResult},${MONOResult}</span>&display=swap`
 
   const howToHTML = document.querySelector('#howto--html-embed')
   const howToCSS = document.querySelector('#howto--css-embed')
@@ -170,10 +207,12 @@ const wghtSubsetControls = document.querySelector('#wght-control .subset-control
 
 document.getElementById("wght_subset__range").addEventListener('input', () => {  
   wghtSubsetControls.dataset.subsetType = "range"
+  setUrl()
 });
 
 document.getElementById("wght_subset__pinned").addEventListener('input', () => {
   wghtSubsetControls.dataset.subsetType = "pinned"
+  setUrl()
 });
 
 // wght - axis range selector
