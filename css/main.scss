@@ -3194,8 +3194,13 @@ textarea {
     transform: translateX(100%);
 }
 
-#controls, #embed, #preview {
-    padding: 1.5rem 1rem 2rem;
+.sidebar--main {
+    padding: 1.5rem 1rem;
+
+}
+#learn-more {
+    padding: 1.5rem 0 3rem;
+    color: var(--gray1);
 }
 
 #sidebar--scrim {
@@ -3215,6 +3220,11 @@ textarea {
     transform: translateX(100%);
     background-color: rgba(0,0,0,0);
     pointer-events: none;
+}
+
+.simple-link {
+    color: inherit;
+    text-decoration: underline;
 }
 
 #customize-sidebar {
@@ -3249,8 +3259,9 @@ textarea {
     }
     
     .sidebar--header {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: auto auto 1fr;
+        grid-gap: 2rem;
         align-items: center;
         padding: 0.25rem 1rem;
         height: var(--nav_height);
@@ -3259,9 +3270,16 @@ textarea {
         h2 {
             font-size: 1rem;
             margin: 0;
+            font-weight: 800;
+            font-variation-settings: 'CASL' 1;
+        }
+
+        a {
+            color: inherit;
         }
 
         button {
+            justify-self: end;
             font-size: 2rem;
             line-height: 0.6rem;
             font-weight: 300;
@@ -3296,8 +3314,9 @@ textarea {
     }
 
     h3, .header3 {
+    font-weight: 800;
     font-variation-settings: "CASL" 1;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     margin: 0 0 1rem;
     }
     h4, .header4 {
@@ -3305,7 +3324,7 @@ textarea {
     letter-spacing: var(--cap-spacing);
     color: var(--gray1);
     font-size: 1rem;
-    margin: 0;
+    margin: 0 0 1.5rem;
     padding-bottom: 0.25rem;
     border-bottom: var(--gray4) solid 1px;
     }
@@ -3340,7 +3359,6 @@ textarea {
 
     .axis-control {
     padding: 0 0 1rem;
-    border-top: var(--gray4) solid 1px;
     }
 
     .axis-control input[type="radio"] {
@@ -3359,9 +3377,7 @@ textarea {
     width: 100%;
     display: grid;
     align-items: center;
-    // grid-template-columns: 1fr max-content 2rem;
     grid-template-columns: 1fr max-content; // TEMPORARY
-    padding: 1rem 0 0.5rem;
     justify-content: space-between;
     }
 
@@ -3398,7 +3414,7 @@ textarea {
 
     .range-selector {
         // padding: 0.25rem 0.75rem;
-        padding: 0.125rem 0.75rem;
+        padding: 0 0.75rem;
         // height: 2rem;
         border-radius: 999px;
         border: 2px solid transparent;
@@ -3531,7 +3547,7 @@ textarea {
         font-weight: 700;
     } 
     .code {
-        margin: 0.25rem 0 1rem;
+        margin: 0.25rem 0 1.5rem;
         padding: 0.6rem;
         font-size: 0.8rem;
         font-weight: 500;
