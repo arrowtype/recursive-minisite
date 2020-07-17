@@ -12,8 +12,10 @@
 
       <div class="sidebar--main">
       
-      <h3>From Google Fonts</h3>
-      <p>Get the <a class="simple-link" target="_blank" href="https://fonts.google.com/specimen/Recursive">partial family on Google Fonts</a> or the full family via the Google Fonts API:</p>
+      <div id="sidebar-intro">
+        <h3>From Google Fonts</h3>
+        <p>Get the <a class="simple-link" target="_blank" href="https://fonts.google.com/specimen/Recursive">partial family on Google Fonts</a> or the full family via the Google Fonts API:</p>
+      </div>
 
       <div id="controls">
 
@@ -34,30 +36,6 @@
             <input type="radio" id="wght_subset__range" name="wght-subset-type" value="range">
             <label for="wght_subset__range">Range</label>
           </div>
-          <details class="details-reset details-with-dialog mt-4">
-            <summary class="casl"></summary>
-            <div class="details-dialog anim-fade-in fast wide" aria-label="Dialog">
-              <div class="Box d-flex flex-column">
-                <div class="Box-header header4">
-                  Weight <code>wght</code>
-                </div>
-                <div class="Box-body overflow-auto">
-                  <p>
-                    Controls how light or bold the font is.
-                  </p>
-                  <p>
-                    Use the full axis range, or subset it to <code>300–800</code> or <code>800–1000</code> for a smaller font file size.
-                  </p>
-                  <p>
-                    To use just a single weight, pin it on a 100-unit value (e.g. <code>300</code>, <code>400</code>, <code>500</code>, etc).
-                  </p>
-                </div>
-                <!-- <div class="Box-footer">
-                  <button type="button" class="btn btn-block" data-close-dialog>Close</button>
-                </div> -->
-              </div>
-            </div>
-          </details>
         </div>
 
         <div class="subset-controls" data-subset-type="pinned">
@@ -89,30 +67,6 @@
             <label for="MONO_subset__range">Range</label>
 
           </div>
-          <!-- HEADER WITH DETAILS -->
-          <details class="details-reset details-with-dialog mt-4">
-            <summary class="casl"></summary>
-            <div class="details-dialog anim-fade-in fast wide" aria-label="Dialog">
-              <div class="Box d-flex flex-column">
-                <div class="Box-header header4">
-                  Monospace <code>MONO</code>
-                </div>
-                <div class="Box-body overflow-auto">
-                  <p>
-                    Controls whether letters have a natural width (“Sans”) or fixed width (“Mono”). 
-                    <!-- 0 is “Sans” or natural-width (for general text & UI), and 1 is “Mono” or fixed-width (for code & high-legibility text). -->
-                  </p>
-                  <p>
-                    Use the full axis range, or pin it at <code>0</code> for a Sans-only font or <code>1</code> for an Mono-only font.
-                  </p>
-                </div>
-                <!-- <div class="Box-footer">
-                  <button type="button" class="btn btn-block" data-close-dialog>Close</button>
-                </div> -->
-              </div>
-            </div>
-          </details>
-          <!-- END -- HEADER WITH DETAILS -->
         </div>
 
         <div class="subset-controls" data-subset-type="pinned">
@@ -142,30 +96,6 @@
             <input type="radio" id="CASL_subset__range" name="CASL-subset-type" value="range" >
             <label for="CASL_subset__range">Range</label>
           </div>
-          <!-- HEADER WITH DETAILS -->
-          <details class="details-reset details-with-dialog mt-4">
-            <summary class="casl"></summary>
-            <div class="details-dialog anim-fade-in fast wide" aria-label="Dialog">
-              <div class="Box d-flex flex-column">
-                <div class="Box-header header4">
-                  Casual <code>CASL</code>
-                </div>
-                <div class="Box-body overflow-auto">
-                  <p>
-                    Controls how “brushy” letters look. 
-                    <!-- 0 is “Linear” or normal-looking, while 1 is “Casual” or brushy (based on single-stroke casual signpainting). -->
-                  </p>
-                  <p>
-                    Use the full axis range, or pin it at <code>0</code> for a Linear-only font or <code>1</code> for an Casual-only font.
-                  </p>
-                </div>
-                <!-- <div class="Box-footer">
-                  <button type="button" class="btn btn-block" data-close-dialog>Close</button>
-                </div> -->
-              </div>
-            </div>
-          </details>
-          <!-- END -- HEADER WITH DETAILS -->
         </div>
 
         <div class="subset-controls" data-subset-type="pinned">
@@ -196,28 +126,6 @@
             <input type="radio" id="slnt_subset__range" name="slnt-subset-type" value="range" >
             <label for="slnt_subset__range">Range</label>
           </div>
-
-          <!-- HEADER WITH DETAILS - based on https://github.com/github/details-dialog-element -->
-          <details class="details-reset details-with-dialog mt-4">
-            <summary class="casl"></summary>
-            <div class="details-dialog anim-fade-in fast wide" aria-label="Dialog">
-              <div class="Box d-flex flex-column">
-                <div class="Box-header header4">
-                  Slant <code>slnt</code>
-                </div>
-                <div class="Box-body overflow-auto">
-                  <p>
-                    The Slant axis controls the slope of letters.
-                  </p>
-                  <p>
-                    Use the full axis range, or pin it at <code>0</code> for an upright-only font or <code>-15</code> for a slanted-only font.
-                    <!-- But wait, should this be able to send any integer between 0 and -15? -->
-                  </p>
-                </div>
-              </div>
-            </details-dialog>
-          </details>
-          <!-- END -- HEADER WITH DETAILS -->
         </div>
 
         <div class="subset-controls" data-subset-type="pinned">
@@ -247,29 +155,6 @@
             <input type="radio" id="CRSV_subset__range" name="CRSV-subset-type" value="range" >
             <label for="CRSV_subset__range">Range</label>
           </div>
-          <!-- HEADER WITH DETAILS -->
-          <details class="details-reset details-with-dialog mt-4">
-            <summary class="casl"></summary>
-            <div class="details-dialog anim-fade-in fast wide" aria-label="Dialog">
-              <div class="Box d-flex flex-column">
-                <div class="Box-header header4">
-                  Cursive <code>CRSV</code>
-                </div>
-                <div class="Box-body overflow-auto">
-                  <p>
-                    Controls how “cursive” letters look.
-                  </p>
-                  <p>
-                    Use the full axis range, or pin it at <code>0</code> for a Normal-only font or <code>1</code> for an Cursive-only font.
-                  </p>
-                </div>
-                <!-- <div class="Box-footer">
-                  <button type="button" class="btn btn-block" data-close-dialog>Close</button>
-                </div> -->
-              </div>
-            </div>
-          </details>
-          <!-- END -- HEADER WITH DETAILS -->
         </div>
 
         <div class="subset-controls" data-subset-type="pinned">
@@ -289,26 +174,6 @@
       </div>
 
       </div> <!-- END axis controls -->
-      <!-- <div id="languages">
-        <h4>Languages</h4>
-        <div class="checkboxes">
-          <div>
-            <input type="checkbox" id="latin-basic" name="latin-basic" checked>
-            <label for="latin-basic">Latin Basic<span class="subset--description"> (Required)</span></label> 
-          </div>
-
-          <div>
-            <input type="checkbox" id="latin-ext" name="latin-ext">
-            <label for="latin-ext">Latin Extended</label>
-          </div>
-
-          <div>
-            <input type="checkbox" id="vietnamese" name="vietnamese">
-            <label for="vietnamese">Vietnamese</label>
-          </div>
-        </div>
-      </div> -->
-
       
       </div>
 
