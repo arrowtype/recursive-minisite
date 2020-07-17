@@ -3091,6 +3091,7 @@ textarea {
 
 :root {
     --blue: hsl(220,100%,50%); //hsl(220,100%,50%);
+    --blue0: hsl(220, 100%, 40%); // for text on blue4 background
     --blue1: hsl(220,100%,60%);
     --blue2: hsl(220,100%,70%);
     --blue3: hsl(220,100%,80%);
@@ -3470,17 +3471,16 @@ textarea {
         grid-template-columns: min-content 1fr min-content;
         width: 100%;
 
-        .range-selector {
+        .range-selector, .range-gap {
             background: var(--blue4);
             pointer-events: none;
-            color: var(--blue1);
+            color: var(--blue0);
         }
         .range-gap {
-            background: var(--offwhite);
             text-align: center;
             text-transform: uppercase;
             letter-spacing: var(--cap-spacing);
-            font-size: 0.875rem;
+            font-size: 0.75rem;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -3488,7 +3488,7 @@ textarea {
 
             p {
             margin: 0;
-            color: var(--gray1);
+            --CASL: 1;
             }
         }
     }
