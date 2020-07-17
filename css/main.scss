@@ -3102,6 +3102,7 @@ textarea {
     --gray3: hsl(220,005%,80%);
     --gray4: hsl(220,005%,90%);
     --offwhite: hsl(220,005%,95%);
+    --offwhite1: hsl(220,005%,90%);
     --mainBackground: #fff;
     --mainText: #000;
     --darkTransp: rgba(0,0,0,0.25);
@@ -3363,6 +3364,7 @@ textarea {
 
     label {
         margin-bottom: 0;
+        font-size: 0.875rem;
     }
 
     // .axis-controls .axis-control:first-of-type {
@@ -3502,7 +3504,7 @@ textarea {
     [data-subset-type="pinned"] .pinned-controls {
         width: 100%;
         display: grid;
-        grid-template-columns: 1fr 4ch;
+        grid-template-columns: 1fr 4.5ch;
         text-align: right;
     }
 
@@ -3553,6 +3555,9 @@ textarea {
     // SLIDERS
     // =========================================================================================
 
+    --trackHeight: 22px;
+    --thumbTouchHeight: 26px;
+
 
     input[type="text"]{
         font-size:230px;
@@ -3572,10 +3577,7 @@ textarea {
 
     input[type=range] {
         -webkit-appearance: none;
-        margin: calc(1em - var(--thumbTouchHeight)/2);
-        margin-left: calc(-1 * var(--thumbTouchHeight)/2);
-        margin-right: calc(-1 * var(--thumbTouchHeight)/2);
-        width: calc(100% + var(--thumbTouchHeight)/2);
+        width: 100%;
         max-width: 400px;
         background: transparent; /* necessary for firefox */
       }
@@ -3592,15 +3594,12 @@ textarea {
         width: 100%;
         height: var(--trackHeight);
         cursor: pointer;
-        background: transparent;
-        background-image: linear-gradient(to right, transparent, transparent calc(var(--thumbTouchHeight)/2), var(--trackBg) calc(var(--thumbTouchHeight)/2),  var(--trackBg) 50%, transparent 50%),
-                    linear-gradient(to left, transparent, transparent calc(var(--thumbTouchHeight)/2), var(--trackBg) calc(var(--thumbTouchHeight)/2), var(--trackBg) 50%, transparent 50%);
-        border-radius: 1px; /* weidly, this property must be here */
+        background: var(--offwhite1);
+        border-radius: 999px; /* weidly, this property must be here */
       }
     input[type=range]:focus::-webkit-slider-runnable-track {
         outline: none;
-        background-image: linear-gradient(to right,  transparent,  transparent calc(var(--thumbTouchHeight)/2), var(--trackFocus) calc(var(--thumbTouchHeight)/2),  var(--trackFocus) 50%, transparent 50%),
-                    linear-gradient(to left,  transparent,  transparent calc(var(--thumbTouchHeight)/2), var(--trackFocus) calc(var(--thumbTouchHeight)/2), var(--trackFocus) 50%, transparent 50%);
+        background: var(--trackFocus);
       }
     input[type=range]::-webkit-slider-thumb {
         height: var(--thumbTouchHeight);
@@ -3617,15 +3616,12 @@ textarea {
     input[type=range]::-moz-range-track {
         width: 100%;
         height: var(--trackHeight);
-        border-radius:1px;
+        border-radius:999px;
         cursor: pointer;
-        background-color: red;
-        background-image: linear-gradient(to right,  var(--sliderComponentBg),  var(--sliderComponentBg) 20px, var(--trackBg) 20px,  var(--trackBg) 50%, transparent 50%),
-                    linear-gradient(to left,  var(--sliderComponentBg),  var(--sliderComponentBg) 20px, var(--trackBg) 20px, var(--trackBg) 50%, transparent 50%);
+        background-color: var(--offwhite1);
       }
     input[type=range]:focus::-moz-range-track {
-        background-image: linear-gradient(to right,  var(--sliderComponentBg),  var(--sliderComponentBg) 20px, var(--trackFocus) 20px,  var(--trackFocus) 50%, transparent 50%),
-                    linear-gradient(to left,  var(--sliderComponentBg),  var(--sliderComponentBg) 20px, var(--trackFocus) 20px, var(--trackFocus) 50%, transparent 50%);
+        background: var(--trackFocus);
       }
     input[type=range]::-moz-focus-outer {
         border: 0;
@@ -3635,8 +3631,7 @@ textarea {
         width: var(--thumbTouchHeight);
         border:none;
         border-radius: var(--thumbTouchHeight);
-        background: none; /* necessary for iOS Safari */
-        background-image: radial-gradient(var(--blue1) calc(var(--thumbHeight)/2), transparent calc(var(--thumbHeight)/2), transparent);
+        background: var(--blue); /* necessary for iOS Safari */
         cursor: pointer;
         }
           
@@ -3658,7 +3653,7 @@ textarea {
         margin-left:  calc(var(--thumbTouchHeight)/2);
         margin-right: calc(var(--thumbTouchHeight)/2);
         border-radius: 999px;
-        background-color: #222;
+        background-color: var(--blue);
         cursor: pointer;
       }
       input[type=range]:focus::-ms-fill-lower {
