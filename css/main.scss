@@ -3451,9 +3451,9 @@ textarea {
             // height: 1px;
             height: 100%;
         }
-        // [data-active="true"].range-gap {
-        //     // background: var(--blue4);
-        // }
+        [data-active="true"].range-gap {
+            background: var(--blue4);
+        }
     }
 
     // @keyframes pulse {
@@ -3470,26 +3470,27 @@ textarea {
         grid-template-columns: min-content 1fr min-content;
         width: 100%;
 
-    .range-selector {
-        background: var(--gray1);
-        pointer-events: none;
-    }
-    .range-gap {
-        background: var(--offwhite);
-        text-align: center;
-        text-transform: uppercase;
-        letter-spacing: var(--cap-spacing);
-        font-size: 0.875rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        // font-feature-settings: "case" 1; // doesn't work with google fonts :(
-
-        p {
-        margin: 0;
-        color: var(--gray1);
+        .range-selector {
+            background: var(--blue4);
+            pointer-events: none;
+            color: var(--blue1);
         }
-    }
+        .range-gap {
+            background: var(--offwhite);
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: var(--cap-spacing);
+            font-size: 0.875rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            // font-feature-settings: "case" 1; // doesn't work with google fonts :(
+
+            p {
+            margin: 0;
+            color: var(--gray1);
+            }
+        }
     }
 
     .pinned-controls {
@@ -3545,6 +3546,188 @@ textarea {
     #learn-more {
         padding: 1rem 0 3rem;
         color: var(--gray0);
+    }
+
+    // =========================================================================================
+    // =========================================================================================
+    // SLIDERS
+    // =========================================================================================
+
+
+    input[type="text"]{
+        font-size:230px;
+        font-weight:800;
+        border:0px;
+        height:375px;
+        font-weight: 800;
+        font-variation-settings: "MONO" 1, "CASL" 0, "slnt" 0, "CRSV" 0, "wght" 800;
+        text-align:center;
+        width:100%;
+    }
+
+    input[type="text"]:focus{
+        outline:none;
+    }
+
+
+    input[type=range] {
+        -webkit-appearance: none;
+        margin: calc(1em - var(--thumbTouchHeight)/2);
+        margin-left: calc(-1 * var(--thumbTouchHeight)/2);
+        margin-right: calc(-1 * var(--thumbTouchHeight)/2);
+        width: calc(100% + var(--thumbTouchHeight)/2);
+        max-width: 400px;
+        background: transparent; /* necessary for firefox */
+      }
+
+    input[type=range]:focus {
+        outline: none;
+        color: transparent;
+        text-shadow: 0 0 0 #000;
+      }
+
+    
+
+    input[type=range]::-webkit-slider-runnable-track {
+        width: 100%;
+        height: var(--trackHeight);
+        cursor: pointer;
+        background: transparent;
+        background-image: linear-gradient(to right, transparent, transparent calc(var(--thumbTouchHeight)/2), var(--trackBg) calc(var(--thumbTouchHeight)/2),  var(--trackBg) 50%, transparent 50%),
+                    linear-gradient(to left, transparent, transparent calc(var(--thumbTouchHeight)/2), var(--trackBg) calc(var(--thumbTouchHeight)/2), var(--trackBg) 50%, transparent 50%);
+        border-radius: 1px; /* weidly, this property must be here */
+      }
+    input[type=range]:focus::-webkit-slider-runnable-track {
+        outline: none;
+        background-image: linear-gradient(to right,  transparent,  transparent calc(var(--thumbTouchHeight)/2), var(--trackFocus) calc(var(--thumbTouchHeight)/2),  var(--trackFocus) 50%, transparent 50%),
+                    linear-gradient(to left,  transparent,  transparent calc(var(--thumbTouchHeight)/2), var(--trackFocus) calc(var(--thumbTouchHeight)/2), var(--trackFocus) 50%, transparent 50%);
+      }
+    input[type=range]::-webkit-slider-thumb {
+        height: var(--thumbTouchHeight);
+        width: var(--thumbTouchHeight);
+        border-radius: var(--thumbTouchHeight);
+        border: none;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: calc(-1 * (var(--thumbTouchHeight) / 2) + (var(--trackHeight) / 2 ));
+        background: none; /* necessary for iOS Safari */
+        background-image: radial-gradient(var(--blue1) calc(var(--thumbHeight)/2), transparent calc(var(--thumbHeight)/2), transparent);
+      }
+    
+    input[type=range]::-moz-range-track {
+        width: 100%;
+        height: var(--trackHeight);
+        border-radius:1px;
+        cursor: pointer;
+        background-color: red;
+        background-image: linear-gradient(to right,  var(--sliderComponentBg),  var(--sliderComponentBg) 20px, var(--trackBg) 20px,  var(--trackBg) 50%, transparent 50%),
+                    linear-gradient(to left,  var(--sliderComponentBg),  var(--sliderComponentBg) 20px, var(--trackBg) 20px, var(--trackBg) 50%, transparent 50%);
+      }
+    input[type=range]:focus::-moz-range-track {
+        background-image: linear-gradient(to right,  var(--sliderComponentBg),  var(--sliderComponentBg) 20px, var(--trackFocus) 20px,  var(--trackFocus) 50%, transparent 50%),
+                    linear-gradient(to left,  var(--sliderComponentBg),  var(--sliderComponentBg) 20px, var(--trackFocus) 20px, var(--trackFocus) 50%, transparent 50%);
+      }
+    input[type=range]::-moz-focus-outer {
+        border: 0;
+        }
+    input[type=range]::-moz-range-thumb {
+        height: var(--thumbTouchHeight);
+        width: var(--thumbTouchHeight);
+        border:none;
+        border-radius: var(--thumbTouchHeight);
+        background: none; /* necessary for iOS Safari */
+        background-image: radial-gradient(var(--blue1) calc(var(--thumbHeight)/2), transparent calc(var(--thumbHeight)/2), transparent);
+        cursor: pointer;
+        }
+          
+
+    input[type=range]::-ms-track {
+        width: calc(100%- var(--thumbTouchHeight));
+        margin-left: calc(var(--thumbTouchHeight)/2);
+        height:var(--trackHeight);
+        cursor: pointer;
+      }
+      input[type=range]::-ms-fill-lower {
+         background-color: #777;
+      }
+      input[type=range]::-ms-fill-upper {
+         background: #777;
+      }
+      input[type=range]::-ms-thumb {
+        width: var(--thumbHeight); 
+        margin-left:  calc(var(--thumbTouchHeight)/2);
+        margin-right: calc(var(--thumbTouchHeight)/2);
+        border-radius: 999px;
+        background-color: #222;
+        cursor: pointer;
+      }
+      input[type=range]:focus::-ms-fill-lower {
+        background: blue;
+      }
+      input[type=range]:focus::-ms-fill-upper {
+        background: blue;
+      }
+
+
+    .controls{
+        background-color: #fff;
+        width:100%;
+        font-weight:450;
+        padding:30px;
+        
+
+        .css{
+            width:200px;
+        }
+
+        .css, .inputs{
+            display:inline-block;
+        }
+        .inputs{
+            position: relative;
+            top: -4px;
+            margin-right:40px;
+        }
+
+        .radio{
+            border:1px solid #bdbdbd;
+            width:12px;
+            height:12px;
+            border-radius:12px;
+            display:inline-block;
+            cursor:pointer;
+        }
+        .radio.active{
+            background-color:#bdbdbd;
+        }
+
+        ul{
+            list-style-type: none;
+            position: relative;
+            left: 180px;
+        }
+
+        .property{
+            color: rgb(194, 64, 76);
+        }
+
+        .custom-prop{
+            color:rgb(31, 168, 122);
+        }
+        .value{
+            color: rgb(73, 73, 73);
+        }
+        .string{
+            color: rgb(0, 80, 255);
+        }
+        span.comment:not(.not-aligned){
+            position: absolute;
+            left: 500px;
+        }
+        span.comment{
+            // font-style:italic; // doesn't work in current browsers
+            color:#858585;
+        }
     }
 
 }
