@@ -504,8 +504,21 @@ CRSV_pinned_slider.addEventListener('input', (e) => {
 // update slider widths to position slider thumb labels
 
 function updateSliderWidths() {
-  console.log(wght_pinned_parent.offsetWidth)
-  wght_pinned_parent.style.setProperty('--trackWidth', wght_pinned_parent.offsetWidth)
+  if (MONOSubsetControls.dataset.subsetType === "pinned") {
+    MONO_pinned_parent.style.setProperty('--trackWidth', MONO_pinned_parent.offsetWidth)
+  }
+  if (CASLSubsetControls.dataset.subsetType === "pinned") {
+    CASL_pinned_parent.style.setProperty('--trackWidth', CASL_pinned_parent.offsetWidth)
+  }
+  if (wghtSubsetControls.dataset.subsetType === "pinned") {
+    wght_pinned_parent.style.setProperty('--trackWidth', wght_pinned_parent.offsetWidth)
+  }
+  if (slntSubsetControls.dataset.subsetType === "pinned") {
+    slnt_pinned_parent.style.setProperty('--trackWidth', slnt_pinned_parent.offsetWidth)
+  }
+  if (CRSVSubsetControls.dataset.subsetType === "pinned") {
+    CRSV_pinned_parent.style.setProperty('--trackWidth', CRSV_pinned_parent.offsetWidth)
+  }
 }
 
 window.addEventListener('resize', updateSliderWidths)
