@@ -3633,7 +3633,7 @@ textarea {
       }
     input[type=range]::-webkit-slider-thumb {
         height: var(--thumbTouchHeight);
-        width: var(--thumbTouchHeight);
+        width: calc(var(--thumbTouchHeight));
         border-radius: var(--thumbTouchHeight);
         border: none;
         cursor: pointer;
@@ -3658,7 +3658,8 @@ textarea {
         }
     input[type=range]::-moz-range-thumb {
         height: var(--thumbTouchHeight);
-        width: var(--thumbTouchHeight);
+        // width: var(--thumbTouchHeight);
+        width: 6ch;
         border:none;
         border-radius: var(--thumbTouchHeight);
         background: var(--blue); /* necessary for iOS Safari */

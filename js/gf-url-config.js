@@ -150,7 +150,7 @@ function setUrl() {
     axesRequested.push('CASL')
     valsRequested.push(CASLResult)
   }
-  if (CRSVResult != "0") {
+  if (CRSVResult != "0.5") {
     axesRequested.push('CRSV')
     valsRequested.push(CRSVResult)
   }
