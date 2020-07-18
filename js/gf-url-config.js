@@ -4,7 +4,8 @@
 // open & close drawer with config controls
 
 
-const getRecButton = document.querySelector("#get-rec-button");
+const getRecButton = document.querySelector("#get-rec-1");
+const getRecButton2 = document.querySelector("#get-rec-2");
 const closeDrawerButton = document.querySelector("#close-sidebar");
 const drawerScrim = document.querySelector("#sidebar--scrim");
 const apiConfigDrawer = document.querySelector("#api-config-drawer");
@@ -13,6 +14,7 @@ const pageBody = document.body;
 let pageScrollY = 0;
 
 getRecButton.addEventListener("click", toggleDrawer)
+getRecButton2.addEventListener("click", toggleDrawer)
 closeDrawerButton.addEventListener("click", toggleDrawer)
 drawerScrim.addEventListener("click", toggleDrawer)
 
