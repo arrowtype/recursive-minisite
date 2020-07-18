@@ -3164,8 +3164,10 @@ textarea {
     }
 }
 
-#get-rec-button.notice-me-plz {
-    animation: wiggle 8s 4s linear 8;
+@media screen and (prefers-reduced-motion: no-preference) { 
+    #get-rec-button.notice-me-plz {
+        animation: wiggle 8s 4s linear 4;
+    }
 }
   
 /* Keyframes */
