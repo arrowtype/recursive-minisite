@@ -72,8 +72,6 @@ window.addEventListener('scroll', () => {
 // ----------------------------------
 
 let selectedSources = [300, 1000]
-// let wght = 400
-// let MONO = 0
 
 function setUrl() {  
   const api_call = document.querySelector("#api-call");
@@ -366,9 +364,12 @@ addRangeListeners()
 const wght_pinned_slider = document.querySelector("#wght--pinned__slider");
 const wght_pinned_val = document.querySelector("#wght--pinned__label");
 wght_pinned_val.innerHTML = wght_pinned_slider.value
+const wght_pinned_parent = wght_pinned_slider.parentNode
+
 
 wght_pinned_slider.addEventListener('input', (e) => {
   wght_pinned_val.innerHTML = e.target.value;
+  wght_pinned_parent.style.setProperty('--val', e.target.value)
   setUrl()
 })
 
@@ -395,10 +396,14 @@ const MONO_pinned_slider = document.querySelector("#MONO--pinned__slider");
 const MONO_pinned_val = document.querySelector("#MONO--pinned__label");
 MONO_pinned_val.innerHTML = MONO_pinned_slider.value
 
+const MONO_pinned_parent = MONO_pinned_slider.parentNode
+
 MONO_pinned_slider.addEventListener('input', (e) => {
   MONO_pinned_val.innerHTML = e.target.value;
+  MONO_pinned_parent.style.setProperty('--val', e.target.value)
   setUrl()
-});
+})
+
 
 
 
@@ -423,10 +428,14 @@ const CASL_pinned_slider = document.querySelector("#CASL--pinned__slider");
 const CASL_pinned_val = document.querySelector("#CASL--pinned__label");
 CASL_pinned_val.innerHTML = CASL_pinned_slider.value
 
+const CASL_pinned_parent = CASL_pinned_slider.parentNode
+
 CASL_pinned_slider.addEventListener('input', (e) => {
   CASL_pinned_val.innerHTML = e.target.value;
+  CASL_pinned_parent.style.setProperty('--val', e.target.value)
   setUrl()
-});
+})
+
 
 // -----------------------------------------------------------------------------
 // slnt subset type
@@ -449,10 +458,14 @@ const slnt_pinned_slider = document.querySelector("#slnt--pinned__slider");
 const slnt_pinned_val = document.querySelector("#slnt--pinned__label");
 slnt_pinned_val.innerHTML = slnt_pinned_slider.value
 
+const slnt_pinned_parent = slnt_pinned_slider.parentNode
+
 slnt_pinned_slider.addEventListener('input', (e) => {
   slnt_pinned_val.innerHTML = e.target.value;
+  slnt_pinned_parent.style.setProperty('--val', e.target.value)
   setUrl()
-});
+})
+
 
 
 // -----------------------------------------------------------------------------
@@ -476,10 +489,26 @@ const CRSV_pinned_slider = document.querySelector("#CRSV--pinned__slider");
 const CRSV_pinned_val = document.querySelector("#CRSV--pinned__label");
 CRSV_pinned_val.innerHTML = CRSV_pinned_slider.value
 
+const CRSV_pinned_parent = CRSV_pinned_slider.parentNode
+
 CRSV_pinned_slider.addEventListener('input', (e) => {
   CRSV_pinned_val.innerHTML = e.target.value;
+  CRSV_pinned_parent.style.setProperty('--val', e.target.value)
   setUrl()
-});
+})
+
+
+// -----------------------------------------------------------------
+// update slider widths to position slider thumb labels
+
+function updateSliderWidths() {
+  console.log(wght_pinned_parent.offsetWidth)
+  wght_pinned_parent.style.setProperty('--trackWidth', wght_pinned_parent.offsetWidth)
+}
+
+window.addEventListener('resize', updateSliderWidths)
+
+updateSliderWidths() // update on load
 
 
 

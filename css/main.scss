@@ -3098,8 +3098,6 @@ textarea {
 // ==========================================================================================
 // ==========================================================================================
 
-@import url("https://fonts.sandbox.google.com/css2?family=Recursive:ital,slnt,wght,CASL,MONO@0..1,-15..0,300..1000,0..1,0..1");
-
 :root {
     --blue: hsl(220,100%,50%); //hsl(220,100%,50%);
     --blue0: hsl(220, 100%, 40%); // for text on blue4 background
@@ -3426,8 +3424,7 @@ textarea {
         }
 
         .range-selector {
-            // padding: 0.25rem 0.75rem;
-            padding: 0 0.75rem;
+            padding: 0 0.6rem 0.05em; // match padding in slider thumbs
             // height: 2rem;
             border-radius: 999px;
             border: 2px solid transparent;
@@ -3511,14 +3508,13 @@ textarea {
 
     .pinned-controls {
         display: none;
-        font-weight: 700;
+        font-weight: 500;
         color: var(--blue);
     }
 
     [data-subset-type="pinned"] .pinned-controls {
         width: 100%;
-        display: grid;
-        grid-template-columns: 1fr 4.5ch;
+        display: block;
         text-align: right;
     }
 
@@ -3585,30 +3581,29 @@ textarea {
     --thumbTouchHeight: 26px;
 
     .slider-label {
-        font-size: 1rem;
+        // font-size: 1rem;
     }
 
 
-    input[type="text"]{
-        font-size:230px;
-        font-weight:800;
-        border:0px;
-        height:375px;
-        font-weight: 800;
-        font-variation-settings: "MONO" 1, "CASL" 0, "slnt" 0, "CRSV" 0, "wght" 800;
-        text-align:center;
-        width:100%;
-    }
+    // input[type="text"]{
+    //     font-size:230px;
+    //     font-weight:800;
+    //     border:0px;
+    //     height:375px;
+    //     font-weight: 800;
+    //     font-variation-settings: "MONO" 1, "CASL" 0, "slnt" 0, "CRSV" 0, "wght" 800;
+    //     text-align:center;
+    //     width:100%;
+    // }
 
-    input[type="text"]:focus{
-        outline:none;
-    }
+    // input[type="text"]:focus{
+    //     outline:none;
+    // }
 
 
     input[type=range] {
         -webkit-appearance: none;
         width: 100%;
-        max-width: 400px;
         background: transparent; /* necessary for firefox */
       }
 
@@ -3618,81 +3613,172 @@ textarea {
         text-shadow: 0 0 0 #000;
       }
 
+    --trackWidth: 318;
+
+    $track-w: var(--trackWidth);
+    $track-h: 26px;
+    $thumb-w: 56px;
+    $thumb-h: 28px;
+    $dist: calc(var(--trackWidth) * 1px) - $thumb-w; // TODO: get current width with JS & use via custom property
+
+    @mixin track() {
+        box-sizing: border-box;
+        border: none;
+        width: 100%; 
+        height: $track-h;
+        border-radius: 999px;
+        background: var(--offwhite1);
+        background-image: none;
+        cursor: pointer;
+        margin: none;
+    }
+
+    @mixin thumb() {
+        box-sizing: border-box;
+        border: none;
+        width: $thumb-w; 
+        height: $thumb-h;
+        border-radius: 999px;
+        background: var(--blue);
+    }
+
+    .pinned-controls {
+        align-items: center;
+        position: relative;
+        width: 100%; 
+        overflow: hidden;
+        height: $thumb-h;
+        font-size: 0.875rem;
+    }
+
+    [type='range'] {
+	&, &::-webkit-slider-thumb {
+		-webkit-appearance: none
+	}
+	
+	flex: 1;
+	margin: 0;
+	padding: 0;
+	min-height: $thumb-h;
+	background: transparent;
+	font: inherit;
+	
+	&::-webkit-slider-runnable-track {
+		@include track()
+	}
+	&::-moz-range-track { @include track }
+	&::-ms-track { @include track }
+	
+	&::-webkit-slider-thumb {
+		margin-top: .5*($track-h - $thumb-h);
+		@include thumb
+	}
+	&::-moz-range-thumb { @include thumb }
+	&::-ms-thumb {
+		margin-top: 0;
+		@include thumb
+	}
+	
+	&::-ms-tooltip { display: none }
+	
+	~ output {
+        pointer-events: none;
+        display: block;
+        position: absolute;
+        left: .5*$thumb-w; 
+        top: 0;
+        padding: .25em .5em;
+        border-radius: 3px;
+        transform: translate(calc((var(--val) - var(--min))/(var(--max) - var(--min))* (1px * var(--trackWidth) - #{$thumb-w}) - 50%));
+        color: #fff;
+        line-height: 1.4;
+		}
+}
+
+input[type="range"]:focus,
+input[type="range"]:focus::-webkit-slider-runnable-track,
+input[type="range"]:focus::-moz-range-track,
+input[type="range"]:focus::-ms-track{
+	outline: 0;
+	border: 0;
+    background: var(--offwhite2);
+}
+
     
 
-    input[type=range]::-webkit-slider-runnable-track {
-        width: 100%;
-        height: var(--trackHeight);
-        cursor: pointer;
-        background: var(--offwhite1);
-        border-radius: 999px; /* weidly, this property must be here */
-      }
-    input[type=range]:focus::-webkit-slider-runnable-track {
-        outline: none;
-        background: var(--offwhite2);
-      }
-    input[type=range]::-webkit-slider-thumb {
-        height: var(--thumbTouchHeight);
-        width: calc(var(--thumbTouchHeight));
-        border-radius: var(--thumbTouchHeight);
-        border: none;
-        cursor: pointer;
-        -webkit-appearance: none;
-        margin-top: calc(-1 * (var(--thumbTouchHeight) / 2) + (var(--trackHeight) / 2 ));
-        border-radius: var(--thumbTouchHeight);
-        background: var(--blue);
-      }
+    // input[type=range]::-webkit-slider-runnable-track {
+    //     width: 100%;
+    //     height: var(--trackHeight);
+    //     cursor: pointer;
+    //     background: var(--offwhite1);
+    //     border-radius: 999px; /* weidly, this property must be here */
+    //   }
+    // input[type=range]:focus::-webkit-slider-runnable-track {
+    //     outline: none;
+    //     background: var(--offwhite2);
+    //   }
+    // input[type=range]::-webkit-slider-thumb {
+    //     height: var(--thumbTouchHeight);
+    //     width: calc(var(--thumbTouchHeight));
+    //     border-radius: var(--thumbTouchHeight);
+    //     border: none;
+    //     cursor: pointer;
+    //     -webkit-appearance: none;
+    //     margin-top: calc(-1 * (var(--thumbTouchHeight) / 2) + (var(--trackHeight) / 2 ));
+    //     border-radius: var(--thumbTouchHeight);
+    //     background: var(--blue);
+    //   }
     
-    input[type=range]::-moz-range-track {
-        width: 100%;
-        height: var(--trackHeight);
-        border-radius:999px;
-        cursor: pointer;
-        background-color: var(--offwhite1);
-      }
-    input[type=range]:focus::-moz-range-track {
-        background: var(--offwhite2);
-      }
-    input[type=range]::-moz-focus-outer {
-        border: 0;
-        }
-    input[type=range]::-moz-range-thumb {
-        height: var(--thumbTouchHeight);
-        // width: var(--thumbTouchHeight);
-        width: 6ch;
-        border:none;
-        border-radius: var(--thumbTouchHeight);
-        background: var(--blue); /* necessary for iOS Safari */
-        cursor: pointer;
-        }
+    // input[type=range]::-moz-range-track {
+    //     width: 100%;
+    //     height: var(--trackHeight);
+    //     border-radius:999px;
+    //     cursor: pointer;
+    //     background-color: var(--offwhite1);
+    //   }
+    // input[type=range]:focus::-moz-range-track {
+    //     background: var(--offwhite2);
+    //   }
+    // input[type=range]::-moz-focus-outer {
+    //     border: 0;
+    //     }
+    // input[type=range]::-moz-range-thumb {
+    //     height: var(--thumbTouchHeight);
+    //     // width: var(--thumbTouchHeight);
+    //     width: 6ch;
+    //     border:none;
+    //     border-radius: var(--thumbTouchHeight);
+    //     background: var(--blue); /* necessary for iOS Safari */
+    //     cursor: pointer;
+    //     }
           
 
-    input[type=range]::-ms-track {
-        width: calc(100%- var(--thumbTouchHeight));
-        margin-left: calc(var(--thumbTouchHeight)/2);
-        height:var(--trackHeight);
-        cursor: pointer;
-      }
-      input[type=range]::-ms-fill-lower {
-         background-color: #777;
-      }
-      input[type=range]::-ms-fill-upper {
-         background: #777;
-      }
-      input[type=range]::-ms-thumb {
-        width: var(--thumbHeight); 
-        margin-left:  calc(var(--thumbTouchHeight)/2);
-        margin-right: calc(var(--thumbTouchHeight)/2);
-        border-radius: 999px;
-        background-color: var(--blue);
-        cursor: pointer;
-      }
-      input[type=range]:focus::-ms-fill-lower {
-        background: var(--offwhite1);
-    }
-    input[type=range]:focus::-ms-fill-upper {
-        background: var(--offwhite1);
-      }
+    // input[type=range]::-ms-track {
+    //     width: calc(100%- var(--thumbTouchHeight));
+    //     margin-left: calc(var(--thumbTouchHeight)/2);
+    //     height:var(--trackHeight);
+    //     cursor: pointer;
+    //   }
+    //   input[type=range]::-ms-fill-lower {
+    //      background-color: #777;
+    //   }
+    //   input[type=range]::-ms-fill-upper {
+    //      background: #777;
+    //   }
+    //   input[type=range]::-ms-thumb {
+    //     width: var(--thumbHeight); 
+    //     margin-left:  calc(var(--thumbTouchHeight)/2);
+    //     margin-right: calc(var(--thumbTouchHeight)/2);
+    //     border-radius: 999px;
+    //     background-color: var(--blue);
+    //     cursor: pointer;
+    //   }
+    //   input[type=range]:focus::-ms-fill-lower {
+    //     background: var(--offwhite1);
+    // }
+    // input[type=range]:focus::-ms-fill-upper {
+    //     background: var(--offwhite1);
+    //   }
 
 
     .controls{
