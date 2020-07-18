@@ -77,11 +77,6 @@ let selectedSources = [300, 1000]
 
 function setUrl() {  
   const api_call = document.querySelector("#api-call");
-  
-  function updateUrl(result) {
-    api_call.innerHTML = result
-  }
-  let result = ``
 
   let wghtResult = `400`
   let MONOResult = `0`
@@ -89,45 +84,56 @@ function setUrl() {
   let slntResult = `0`
   let CRSVResult = `0`
 
-
-  if (wghtSubsetControls.dataset.subsetType === "range") {
-    selectedSources = checkSelectedSources()
-    let wghtMin = selectedSources[0]
-    let wghtMax = selectedSources[selectedSources.length - 1]
-    
-    wghtResult = `${wghtMin}..${wghtMax}`
-  } else {
-    wght = wght_pinned_slider.value
-    wghtResult = `${wght}`
-  }
-
-  if (MONOSubsetControls.dataset.subsetType === "range") {
-    MONOResult = `0..1`
-  } else {
-    MONO = MONO_pinned_slider.value
-    MONOResult = MONO
-  }
-
-  if (CASLSubsetControls.dataset.subsetType === "range") {
-    CASLResult = `0..1`
-  } else {
-    CASL = CASL_pinned_slider.value
-    CASLResult = CASL
-  }
+  // used later to calc approx filesize
+  let rangesRequested = []
 
   if (slntSubsetControls.dataset.subsetType === "range") {
     slntResult = `-15..0`
+    rangesRequested.push('slnt')
   } else {
     slnt = slnt_pinned_slider.value
     slntResult = slnt
   }
 
+  if (wghtSubsetControls.dataset.subsetType === "range") {
+    // selectedSources = checkSelectedSources()
+    // let wghtMin = selectedSources[0]
+    // let wghtMax = selectedSources[selectedSources.length - 1]
+    
+    // wghtResult = `${wghtMin}..${wghtMax}`
+
+    wghtResult = `300..1000`
+
+    rangesRequested.push('wght')
+  } else {
+    wght = wght_pinned_slider.value
+    wghtResult = `${wght}`
+  }
+  
+  if (CASLSubsetControls.dataset.subsetType === "range") {
+    CASLResult = `0..1`
+    rangesRequested.push('CASL')
+  } else {
+    CASL = CASL_pinned_slider.value
+    CASLResult = CASL
+  }
+
   if (CRSVSubsetControls.dataset.subsetType === "range") {
     CRSVResult = `0..1`
+    // rangesRequested.push('CRSV') // doesn’t effect filesize, so leave it out
   } else {
     CRSV = CRSV_pinned_slider.value
     CRSVResult = CRSV
   }
+
+  if (MONOSubsetControls.dataset.subsetType === "range") {
+    MONOResult = `0..1`
+    rangesRequested.push('MONO')
+  } else {
+    MONO = MONO_pinned_slider.value
+    MONOResult = MONO
+  }
+  
 
   let axesRequested = []
   let valsRequested = []
@@ -153,20 +159,62 @@ function setUrl() {
     valsRequested.push(MONOResult)
   }
 
+  // -----------------------------------------------------------
+  // compute approximate VF filesize
+
+  // active range(s): resulting kb
+  const filesizes = {
+    "": 27,
+    "MONO": 38,
+    "slnt": 46,
+    "CASL": 48,
+    "slnt_MONO":61,
+    "CASL_MONO":63,
+    "wght": 73,
+    "slnt_CASL": 78,
+    "wght_MONO": 95,
+    "slnt_CASL_MONO": 103,
+    "slnt_wght": 121,
+    "wght_CASL": 129,
+    "slnt_wght_MONO": 159,
+    "wght_CASL_MONO": 167,
+    "slnt_wght_CASL": 213,
+    "slnt_wght_CASL_MONO": 280 // artifically reduced by 1 to let CRSV appear as active
+  }
+
+  // TODO: add permutations with wght half vs wght full
+
+  let filesize = filesizes[rangesRequested.join('_')]
+
+  // if CRSV makes no difference as a range, it looks broken. So, this adds "1 kb"
+  if (CRSVResult.includes('..')) {
+    filesize += 1
+  }
+
+  let sizeLabel = document.querySelector("#approx-filesize span")
+
+  sizeLabel.innerHTML = filesize
+
+
+
+  // -----------------------------------------------------------
+  // make query URL
+  
   // make array of axes
   // make array of vals
   let urlString = `https://fonts.sandbox.google.com/css2?family=<span class="code--bold">Recursive</span>&display=swap`
-
+  
   if (axesRequested.length > 0) {
     let axesQuery = axesRequested.join(',')
     let valsQuery = valsRequested.join(',')
-
+    
     urlString = `https://fonts.sandbox.google.com/css2?family=<span class="code--bold">Recursive:${axesQuery}@${valsQuery}</span>&display=swap`
   } else {
     urlString = `https://fonts.sandbox.google.com/css2?family=<span class="code--bold">Recursive</span>&display=swap`
   }
-
-  // let urlString = `https://fonts.sandbox.google.com/css2?family=<span class="code--bold">Recursive:slnt,wght,CASL,CRSV,MONO@${slntResult},${wghtResult},${CASLResult},${CRSVResult},${MONOResult}</span>&display=swap`
+  
+  // -----------------------------------------------------------
+  // show embed code
 
   const howToHTML = document.querySelector('#howto--html-embed')
   const howToCSS = document.querySelector('#howto--css-embed')

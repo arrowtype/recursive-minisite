@@ -24,36 +24,6 @@
 
       <div class="axis-controls">
 
-      <div id="wght-control" class="axis-control">
-        <div class="axis__header">
-          <h5>Weight</h5>
-
-
-          <div class="subset-type">
-            <input type="radio" id="wght_subset__pinned" name="wght-subset-type" value="pinned" checked>
-            <label for="wght_subset__pinned">Pinned Value</label>
-
-            <input type="radio" id="wght_subset__range" name="wght-subset-type" value="range">
-            <label for="wght_subset__range">Range</label>
-          </div>
-        </div>
-
-        <div class="subset-controls" data-subset-type="pinned">
-          <div id="wght__range" class="range-controls">
-
-            <div class="range-selector" data-wght-src="300" data-selected="true">300</div>
-            <div class="range-gap" data-active="true" data-wght-range="300-800"></div>
-            <div class="range-selector" data-wght-src="800" data-selected="true">800</div>
-            <div class="range-gap" data-active="true" data-wght-range="800-1000"></div>
-            <div class="range-selector" data-wght-src="1000" data-selected="true">1000</div>
-          </div>
-
-          <div id="wght--pinned" class="pinned-controls">
-            <input type="range" id="wght--pinned__slider" name="wght-pinned" min="300" max="1000" value="400" step="5">
-            <label id="wght--pinned__label" for="wght-pinned">400</label>
-          </div>
-        </div>
-      </div>
 
         <!-- MONO AXIS CONTROLS -->
       <div id="MONO-control" class="axis-control">
@@ -61,7 +31,7 @@
         <h5>Monospace</h5>
           <div class="subset-type">
             <input type="radio" id="MONO_subset__pinned"name="MONO-subset-type" value="pinned" checked>
-            <label for="MONO_subset__pinned">Pinned Value</label>
+            <label for="MONO_subset__pinned">Static</label>
 
             <input type="radio" id="MONO_subset__range" name="MONO-subset-type" value="range">
             <label for="MONO_subset__range">Range</label>
@@ -73,14 +43,14 @@
           <div id="MONO__range" class="range-controls basic-range">
             <div class="range-selector" data-wght-src="0" data-selected="true">0</div>
             <div class="range-gap" data-active="true">
-              <p>Range not subsettable</p>
+              <!-- <p>Range not currently subsettable</p> -->
             </div>
             <div class="range-selector" data-wght-src="1" data-selected="true">1</div>
           </div>
 
           <div id="MONO--pinned" class="pinned-controls">
             <input type="range" id="MONO--pinned__slider" name="MONO-pinned" min="0" max="1" value="0" step="0.25">
-            <label id="MONO--pinned__label" for="wght-pinned">0</label>
+            <label class="slider-label" id="MONO--pinned__label" for="wght-pinned">0</label>
           </div>
         </div>
       </div>
@@ -91,7 +61,7 @@
         <h5>Casual</h5>
           <div class="subset-type">
             <input type="radio" id="CASL_subset__pinned" name="CASL-subset-type" value="pinned" checked>
-            <label for="CASL_subset__pinned">Pinned Value</label>
+            <label for="CASL_subset__pinned">Static</label>
 
             <input type="radio" id="CASL_subset__range" name="CASL-subset-type" value="range" >
             <label for="CASL_subset__range">Range</label>
@@ -102,14 +72,55 @@
           <div id="CASL__range" class="range-controls basic-range">
             <div class="range-selector" data-wght-src="0" data-selected="true">0</div>
             <div class="range-gap" data-active="true">
-              <p>Range not subsettable</p>
+              <!-- <p>Range not currently subsettable</p> -->
             </div>
             <div class="range-selector" data-wght-src="1" data-selected="true">1</div>
           </div>
 
           <div id="CASL--pinned" class="pinned-controls">
             <input type="range" id="CASL--pinned__slider" name="CASL-pinned" min="0" max="1" value="0" step="0.25">
-            <label id="CASL--pinned__label" for="wght-pinned">0</label>
+            <label class="slider-label" id="CASL--pinned__label" for="wght-pinned">0</label>
+          </div>
+        </div>
+      </div>
+
+      <div id="wght-control" class="axis-control">
+        <div class="axis__header">
+          <h5>Weight</h5>
+
+
+          <div class="subset-type">
+            <input type="radio" id="wght_subset__pinned" name="wght-subset-type" value="pinned" checked>
+            <label for="wght_subset__pinned">Static</label>
+
+            <input type="radio" id="wght_subset__range" name="wght-subset-type" value="range">
+            <label for="wght_subset__range">Range</label>
+          </div>
+        </div>
+
+        <div class="subset-controls" data-subset-type="pinned">
+          
+          <!-- split range -->
+          <!-- <div id="wght__range" class="range-controls">
+            <div class="range-selector" data-wght-src="300" data-selected="true">300</div>
+            <div class="range-gap" data-active="true" data-wght-range="300-800"></div>
+            <div class="range-selector" data-wght-src="800" data-selected="true">800</div>
+            <div class="range-gap" data-active="true" data-wght-range="800-1000"></div>
+            <div class="range-selector" data-wght-src="1000" data-selected="true">1000</div>
+          </div> -->
+
+          <!-- full range only -->
+          <div id="MONO__range" class="range-controls basic-range">
+            <div class="range-selector" data-wght-src="300" data-selected="true">300</div>
+            <div class="range-gap" data-active="true">
+              <!-- <p>Range not currently subsettable</p> -->
+            </div>
+            <div class="range-selector" data-wght-src="1000" data-selected="true">1000</div>
+          </div>
+
+          <div id="wght--pinned" class="pinned-controls">
+            <input type="range" id="wght--pinned__slider" name="wght-pinned" min="300" max="1000" value="400" step="5">
+            <label class="slider-label" id="wght--pinned__label" for="wght-pinned">400</label>
           </div>
         </div>
       </div>
@@ -121,7 +132,7 @@
           
           <div class="subset-type">
             <input type="radio" id="slnt_subset__pinned" name="slnt-subset-type" value="pinned" checked>
-            <label for="slnt_subset__pinned">Pinned Value</label>
+            <label for="slnt_subset__pinned">Static</label>
 
             <input type="radio" id="slnt_subset__range" name="slnt-subset-type" value="range" >
             <label for="slnt_subset__range">Range</label>
@@ -132,14 +143,14 @@
           <div id="slnt__range" class="range-controls basic-range">
             <div class="range-selector" data-wght-src="0" data-selected="true">-15</div>
             <div class="range-gap" data-active="true">
-              <p>Range not subsettable</p>
+              <!-- <p>Range not currently subsettable</p> -->
             </div>
-            <div class="range-selector" data-wght-src="1" data-selected="true">0</div>
+            <div class="range-selector" data-wght-src="1" data-selected="true">&nbsp;&nbsp;0</div>
           </div>
 
           <div id="slnt--pinned" class="pinned-controls">
             <input type="range" id="slnt--pinned__slider" name="slnt-pinned" min="-15" max="0" value="0" step="1">
-            <label id="slnt--pinned__label" for="wght-pinned">0</label>
+            <label class="slider-label" id="slnt--pinned__label" for="wght-pinned">0</label>
           </div>
         </div>
       </div>
@@ -150,7 +161,7 @@
         <h5>Cursive</h5>
           <div class="subset-type">
             <input type="radio" id="CRSV_subset__pinned" name="CRSV-subset-type" value="pinned" checked>
-            <label for="CRSV_subset__pinned">Pinned Value</label>
+            <label for="CRSV_subset__pinned">Static</label>
 
             <input type="radio" id="CRSV_subset__range" name="CRSV-subset-type" value="range" >
             <label for="CRSV_subset__range">Range</label>
@@ -161,14 +172,14 @@
           <div id="CRSV__range" class="range-controls basic-range">
             <div class="range-selector" data-wght-src="0" data-selected="true">0</div>
             <div class="range-gap" data-active="true">
-              <p>Range not subsettable</p>
+              <!-- <p>Range not currently subsettable</p> -->
             </div>
             <div class="range-selector" data-wght-src="1" data-selected="true">1</div>
           </div>
 
           <div id="CRSV--pinned" class="pinned-controls">
             <input type="range" id="CRSV--pinned__slider" name="CRSV-pinned" min="0" max="1" value="0" step="1">
-            <label id="CRSV--pinned__label" for="wght-pinned">0</label>
+            <label class="slider-label" id="CRSV--pinned__label" for="wght-pinned">0</label>
           </div>
         </div>
       </div>
@@ -178,7 +189,9 @@
       </div>
 
       <div id="embed">
-        <h4>Embed</h4>
+
+          <h4 id="embed-label">Embed <span id="approx-filesize">≈<span></span>kb</span></h4>
+
         <p id="howto--html-embed">To embed Recursive into a webpage, copy this code into the &lt;head&gt; of your HTML.</p>
         <div class="embed-type" data-embed-type="html">
             <input type="radio" id="embed_type__html" name="embed-type-type" value="html" checked>

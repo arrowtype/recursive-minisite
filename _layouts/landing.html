@@ -97,189 +97,190 @@
 		</div>
 		<div id="phantomToolbar" class="d-none"></div>
 
-		<div class="toolbar clearfix" id="toolbar">
-			<select class="toolbar__item" id="chooseInstance">
-				<option value="--axes--" disabled="">[Custom Styles]</option>
-				<option value="default" selected="selected">Default Styles</option>
-				{% for instance in site.data.instances %}
-				<option
-					{%
-					if
-					instance.selected%}
-					selected="selected"
-					{%
-					endif
-					%}data-mono="{{ instance.MONO }}"
-					data-casl="{{ instance.CASL }}"
-					data-crsv="{{ instance.CRSV }}"
-					data-slnt="{{ instance.slnt }}"
-					data-wght="{{ instance.wght }}"
-					>{{ instance.name }}</option
-				>
-				{% endfor %}
-			</select>
-			<div class="toolbar__item" id="collapseSize">
-				<a
-					data-toggle="collapse"
-					data-target="#pickFontSize"
-					data-text="Collapse"
-				>
-					<span id="changeFontSize">15</span>pt
-					<svg
-						style="pointer-events:none"
-						class="arrow"
-						width="12"
-						height="8"
-						viewBox="0 0 12 8"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
+		<div class="toolbar" id="toolbar">
+				<select class="toolbar__item" id="chooseInstance">
+					<option value="--axes--" disabled="">[Custom Styles]</option>
+					<option value="default" selected="selected">Default Styles</option>
+					{% for instance in site.data.instances %}
+					<option
+						{%
+						if
+						instance.selected%}
+						selected="selected"
+						{%
+						endif
+						%}data-mono="{{ instance.MONO }}"
+						data-casl="{{ instance.CASL }}"
+						data-crsv="{{ instance.CRSV }}"
+						data-slnt="{{ instance.slnt }}"
+						data-wght="{{ instance.wght }}"
+						>{{ instance.name }}</option
 					>
-						<path
-							d="M1.41 0.589844L6 5.16984L10.59 0.589844L12 1.99984L6 7.99984L0 1.99984L1.41 0.589844Z"
-							fill="black"
-						/>
-					</svg>
-				</a>
-				<div class="collapse" id="pickFontSize">
-					<ul>
-						<li>
-							<input
-								id="globalFontSizeSlider"
-								min="6"
-								max="60"
-								step="1"
-								value="15"
-								type="range"
+					{% endfor %}
+				</select>
+				<div class="toolbar__item" id="collapseSize">
+					<a
+						data-toggle="collapse"
+						data-target="#pickFontSize"
+						data-text="Collapse"
+					>
+						<span id="changeFontSize">15</span>pt
+						<svg
+							style="pointer-events:none"
+							class="arrow"
+							width="12"
+							height="8"
+							viewBox="0 0 12 8"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M1.41 0.589844L6 5.16984L10.59 0.589844L12 1.99984L6 7.99984L0 1.99984L1.41 0.589844Z"
+								fill="black"
 							/>
-						</li>
-					</ul>
+						</svg>
+					</a>
+					<div class="collapse" id="pickFontSize">
+						<ul>
+							<li>
+								<input
+									id="globalFontSizeSlider"
+									min="6"
+									max="60"
+									step="1"
+									value="15"
+									type="range"
+								/>
+							</li>
+						</ul>
+					</div>
 				</div>
-			</div>
-			<div
-				class="toolbar__item settings d-none d-md-block"
-				id="collapseSettings"
-			>
-				<a
-					data-toggle="collapse"
-					data-target="#pickVariability"
-					data-text="Collapse"
+				<div
+					class="toolbar__item settings d-none d-md-block"
+					id="collapseSettings"
 				>
-					<span class="grey">MONO </span>
-					<span id="globalMono">0.00</span>
-					<span class="grey"> CASL </span>
-					<span id="globalCasl">0.00</span>
-					<span class="grey"> wght </span>
-					<span id="globalWght">400</span>
-					<span class="grey"> slnt </span>
-					<span id="globalSlnt">0.00</span>
-					<span class="grey"> CRSV </span>
-					<span id="globalCrsv">0</span>
-				</a>
-				<div class="collapse" id="pickVariability">
-					<ul>
-						<li>
-							<span class="collapse__label">MONO</span
-							><span class="inputs d-inline-block"
+					<a
+						data-toggle="collapse"
+						data-target="#pickVariability"
+						data-text="Collapse"
+					>
+						<span class="grey">MONO </span>
+						<span id="globalMono">0.00</span>
+						<span class="grey"> CASL </span>
+						<span id="globalCasl">0.00</span>
+						<span class="grey"> wght </span>
+						<span id="globalWght">400</span>
+						<span class="grey"> slnt </span>
+						<span id="globalSlnt">0.00</span>
+						<span class="grey"> CRSV </span>
+						<span id="globalCrsv">0</span>
+					</a>
+					<div class="collapse" id="pickVariability">
+						<ul>
+							<li>
+								<span class="collapse__label">MONO</span
+								><span class="inputs d-inline-block"
+									><input
+										id="globalMonoSlider"
+										min="0.00"
+										max="1.00"
+										value="0.00"
+										step="0.01"
+										type="range"
+								/></span>
+							</li>
+							<li>
+								<span class="collapse__label">CASL</span
 								><input
-									id="globalMonoSlider"
+									id="globalCaslSlider"
 									min="0.00"
 									max="1.00"
 									value="0.00"
 									step="0.01"
 									type="range"
-							/></span>
-						</li>
-						<li>
-							<span class="collapse__label">CASL</span
-							><input
-								id="globalCaslSlider"
-								min="0.00"
-								max="1.00"
-								value="0.00"
-								step="0.01"
-								type="range"
-							/>
-						</li>
+								/>
+							</li>
 
-						<li>
-							<span class="collapse__label">wght</span
-							><input
-								id="globalWghtSlider"
-								min="300"
-								max="1000"
-								value="400"
-								step="1"
-								type="range"
-							/>
-						</li>
+							<li>
+								<span class="collapse__label">wght</span
+								><input
+									id="globalWghtSlider"
+									min="300"
+									max="1000"
+									value="400"
+									step="1"
+									type="range"
+								/>
+							</li>
 
-						<li>
-							<span class="collapse__label">slnt</span
-							><input
-								id="globalSlntSlider"
-								min="-15.00"
-								max="00.00"
-								value="00.00"
-								step="0.01"
-								type="range"
-							/>
-						</li>
+							<li>
+								<span class="collapse__label">slnt</span
+								><input
+									id="globalSlntSlider"
+									min="-15.00"
+									max="00.00"
+									value="00.00"
+									step="0.01"
+									type="range"
+								/>
+							</li>
 
-						<li>
-							<span class="collapse__label">CRSV</span>
-							<span class="inputs d-inline-block">
-								<span class="collapse__label">
-									<span
-										class="radio radio-crsv"
-										id="globalCrsvOff"
-									></span>
-									Off</span
+							<li>
+								<span class="collapse__label">CRSV</span>
+								<span class="inputs d-inline-block">
+									<span class="collapse__label">
+										<span
+											class="radio radio-crsv"
+											id="globalCrsvOff"
+										></span>
+										Off</span
+									>
+									<span class="collapse__label"
+										><span
+											class="radio active radio-crsv"
+											id="globalCrsvAuto"
+										></span>
+										Auto</span
+									>
+									<span class="collapse__label">
+										<span
+											class="radio radio-crsv"
+											id="globalCrsvOn"
+										></span>
+										On</span
+									></span
 								>
-								<span class="collapse__label"
-									><span
-										class="radio active radio-crsv"
-										id="globalCrsvAuto"
-									></span>
-									Auto</span
-								>
-								<span class="collapse__label">
-									<span
-										class="radio radio-crsv"
-										id="globalCrsvOn"
-									></span>
-									On</span
-								></span
-							>
-						</li>
-					</ul>
+							</li>
+						</ul>
+					</div>
 				</div>
-			</div>
-			<div class="toolbar__item d-none d-md-block">
-				<a id="inversePage">
-					<svg
-						id="inverseSVG"
-						style="pointer-events:none"
-						width="16"
-						height="16"
-						viewBox="0 0 16 16"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<circle
-							cx="8"
-							cy="8"
-							r="7.5"
-							fill="white"
-							stroke="black"
-						/>
-						<path
-							d="M15.4836 7.5H0.516402C0.773695 3.59098 4.02588 0.5 8 0.5C11.9741 0.5 15.2263 3.59098 15.4836 7.5Z"
-							fill="black"
-							stroke="black"
-						/>
-					</svg>
-				</a>
-			</div>
+				<!-- not working with iframes -->
+				<!-- <div class="toolbar__item d-none d-md-block">
+					<a id="inversePage">
+						<svg
+							id="inverseSVG"
+							style="pointer-events:none"
+							width="16"
+							height="16"
+							viewBox="0 0 16 16"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<circle
+								cx="8"
+								cy="8"
+								r="7.5"
+								fill="white"
+								stroke="black"
+							/>
+							<path
+								d="M15.4836 7.5H0.516402C0.773695 3.59098 4.02588 0.5 8 0.5C11.9741 0.5 15.2263 3.59098 15.4836 7.5Z"
+								fill="black"
+								stroke="black"
+							/>
+						</svg>
+					</a>
+				</div> -->
 		</div>
 
 		<div class="container-fluid d-none d-md-block" id="mdContainer">
