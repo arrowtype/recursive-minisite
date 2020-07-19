@@ -3617,6 +3617,7 @@ textarea {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
         margin-bottom: 0.25rem;
+        margin-top: 1.25rem;
 
         div {
             height: 100%;
@@ -3700,7 +3701,8 @@ textarea {
     }
 
     #learn-more {
-        padding: 1rem 0 3rem;
+        border-top: var(--gray4) solid 1px; 
+        padding: 1rem 0 4rem;
         color: var(--gray0);
     }
 
