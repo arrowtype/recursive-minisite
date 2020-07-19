@@ -3281,6 +3281,9 @@ textarea {
 .sidebar--main {
     padding: 1.5rem 1rem;
 
+    &>div {
+        padding-bottom: 1rem;
+    }
 }
 
 #sidebar--scrim {
@@ -3383,10 +3386,6 @@ textarea {
         max-height: calc(100vh - var(--nav_height) );
         overscroll-behavior: contain;
     }
-
-    #sidebar-intro {
-        margin: 0.5rem 0 2rem;
-    }
     
     p {
         line-height: 1.5;
@@ -3403,7 +3402,7 @@ textarea {
         letter-spacing: var(--cap-spacing);
         color: var(--gray1);
         font-size: 1rem;
-        margin: 0 0 1.5rem;
+        margin: 0 0 1rem;
         padding-bottom: 0.25rem;
         border-bottom: var(--gray4) solid 1px;
     }
@@ -3437,7 +3436,7 @@ textarea {
     }
 
     .axis-control {
-        padding: 0 0 1rem;
+        padding: 0 0 0.5rem;
     }
 
     .axis-control input[type="radio"] {
@@ -3496,6 +3495,7 @@ textarea {
             border: 2px solid transparent;
             z-index: 10;
             pointer-events: none;
+            transition: 0.25s;
 
             &.clickable {
                 cursor: pointer;
@@ -3506,14 +3506,12 @@ textarea {
         [data-selected="true"] {
             background: var(--blue);
             color: var(--mainBackground);
-            transition: 0.25s;
+            
 
             &.clickable {
-                // border: 2px solid var(--blue0);
-
                 @media (hover: hover) {
                     &:hover {
-                        background: var(--blue2);
+                        background: var(--blue1);
                         border: 2px solid transparent;
                     }
                 }
@@ -3529,8 +3527,8 @@ textarea {
             &.clickable {
                 @media (hover: hover) {
                     &:hover {
-                        background: var(--blue2);
-                        color: var(--mainBackground);
+                        background: var(--blue4);
+                        // color: var(--mainBackground);
                         border: 2px solid var(--blue);
                     }
                 }
@@ -3711,48 +3709,27 @@ textarea {
     // SLIDERS
     // =========================================================================================
 
-    --trackHeight: 22px;
-    --thumbTouchHeight: 26px;
-
-    .slider-label {
-        // font-size: 1rem;
-    }
-
-
-    // input[type="text"]{
-    //     font-size:230px;
-    //     font-weight:800;
-    //     border:0px;
-    //     height:375px;
-    //     font-weight: 800;
-    //     font-variation-settings: "MONO" 1, "CASL" 0, "slnt" 0, "CRSV" 0, "wght" 800;
-    //     text-align:center;
-    //     width:100%;
-    // }
-
-    // input[type="text"]:focus{
-    //     outline:none;
-    // }
-
-
+    
     input[type=range] {
         -webkit-appearance: none;
         width: 100%;
         background: transparent; /* necessary for firefox */
       }
-
-    input[type=range]:focus {
-        outline: none;
-        color: transparent;
-        text-shadow: 0 0 0 #000;
-      }
-
+      
+      input[type=range]:focus {
+          outline: none;
+          color: transparent;
+          text-shadow: 0 0 0 #000;
+        }
+        
     --trackWidth: 318;
-
+    --trackHeight: 24px;
+    --thumbTouchHeight: 26px;
+        
     $track-w: var(--trackWidth);
-    $track-h: 26px;
+    $track-h: 24px;
     $thumb-w: 56px;
-    $thumb-h: 28px;
+    $thumb-h: 26px;
     $dist: calc(var(--trackWidth) * 1px) - $thumb-w; // TODO: get current width with JS & use via custom property
 
     @mixin track() {
