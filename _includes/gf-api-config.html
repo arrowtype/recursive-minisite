@@ -40,7 +40,7 @@
         </div>
 
         <div class="subset-controls" data-subset-type="pinned">
-          <div id="wght__range" class="range-controls basic-range">
+          <div id="MONO__range" class="range-controls basic-range">
             <div class="range-selector" data-wght-src="0" data-selected="true">0</div>
             <div class="range-gap" data-active="true">
               <!-- <p>Range not currently subsettable</p> -->
@@ -101,22 +101,21 @@
         <div class="subset-controls" data-subset-type="pinned">
           
           <!-- split range -->
-          <!-- <div id="wght__range" class="range-controls">
+          <div id="wght__range" class="range-controls">
             <div class="range-selector" data-wght-src="300" data-selected="true">300</div>
             <div class="range-gap" data-active="true" data-wght-range="300-800"></div>
             <div class="range-selector" data-wght-src="800" data-selected="true">800</div>
-            <div class="range-gap" data-active="true" data-wght-range="800-1000"></div>
-            <div class="range-selector" data-wght-src="1000" data-selected="true">1000</div>
-          </div> -->
+            <div class="range-gap toggleable" data-active="false" data-wght-range="800-1000"></div>
+            <div id="wght-1000" class="range-selector clickable" data-wght-src="1000" data-selected="false">1000</div>
+          </div>
 
           <!-- full range only -->
-          <div id="wght__range" class="range-controls basic-range">
+          <!-- <div id="wght__range" class="range-controls basic-range">
             <div class="range-selector" data-wght-src="300" data-selected="true">300</div>
             <div class="range-gap" data-active="true">
-              <!-- <p>Range not currently subsettable</p> -->
             </div>
             <div class="range-selector" data-wght-src="1000" data-selected="true">1000</div>
-          </div>
+          </div> -->
 
           <div id="wght--pinned" class="pinned-controls" style="--min: 300; --max: 1000; --val: 400; --trackWidth: 318;">
             <input type="range" id="wght--pinned__slider" name="wght-pinned" min="300" max="1000" value="400" step="5">

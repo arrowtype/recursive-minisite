@@ -842,8 +842,10 @@ nav.navbar{
         ul{
             padding-top:10px;
             margin:0px;
-            li{
+
+            li {
                 padding:3px 0px;
+                display: flex;
             }
         }
         .collapse{
@@ -3485,10 +3487,6 @@ textarea {
         &.active {
         background: var(--offwhite);
 
-        .range-selector:not([data-selected="true"]) {
-            // border: 1px solid var(--blue);
-            // animation: pulse 0.5s alternate infinite;
-        }
         }
 
         .range-selector {
@@ -3497,45 +3495,67 @@ textarea {
             border-radius: 999px;
             border: 2px solid transparent;
             z-index: 10;
+            pointer-events: none;
+
+            &.clickable {
+                cursor: pointer;
+                pointer-events: all;
+            }
         }
+
         [data-selected="true"] {
             background: var(--blue);
             color: var(--mainBackground);
             transition: 0.25s;
 
-            @media (hover: hover) {
-            &:hover {
-                background: var(--blue2);
-                border: 2px solid transparent;
-                cursor: pointer;
-            }
+            &.clickable {
+                // border: 2px solid var(--blue0);
+
+                @media (hover: hover) {
+                    &:hover {
+                        background: var(--blue2);
+                        border: 2px solid transparent;
+                    }
+                }
             }
         }
+
         [data-selected="false"] {
             background: var(--mainBackground);
-            border: 2px solid var(--offwhite);
+            border: 2px solid var(--gray2);
             color: var(--gray0);
             transition: 0.25s;
 
-            @media (hover: hover) {
-            &:hover {
-                background: var(--blue2);
-                color: var(--mainBackground);
-                border: 2px solid var(--blue);
-                cursor: pointer;
-            }
+            &.clickable {
+                @media (hover: hover) {
+                    &:hover {
+                        background: var(--blue2);
+                        color: var(--mainBackground);
+                        border: 2px solid var(--blue);
+                    }
+                }
             }
         }
         .range-gap {
             margin-left: -1rem;
             margin-right: -1rem;
-            background: var(--offwhite);
-            // height: 1px;
+            background: var(--offwhite1);
             height: 100%;
         }
         [data-active="true"].range-gap {
             background: var(--blue);
         }
+        [data-active="false"].range-gap,
+        .range-gap.toggleable {
+            height: var(--trackHeight);
+        }
+        [data-active="true"].range-gap.toggleable {
+            background: var(--blue2);
+        }
+    }
+
+    #wght__range {
+        grid-template-columns: auto 9fr auto 1fr auto;
     }
 
     // @keyframes pulse {

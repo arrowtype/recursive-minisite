@@ -96,13 +96,13 @@ function setUrl() {
   }
 
   if (wghtSubsetControls.dataset.subsetType === "range") {
-    // selectedSources = checkSelectedSources()
-    // let wghtMin = selectedSources[0]
-    // let wghtMax = selectedSources[selectedSources.length - 1]
+    selectedSources = checkSelectedSources()
+    let wghtMin = selectedSources[0]
+    let wghtMax = selectedSources[selectedSources.length - 1]
     
-    // wghtResult = `${wghtMin}..${wghtMax}`
+    wghtResult = `${wghtMin}..${wghtMax}`
 
-    wghtResult = `300..1000`
+    // wghtResult = `300..1000`
 
     rangesRequested.push('wght')
   } else {
@@ -265,19 +265,18 @@ document.getElementById("wght_subset__pinned").addEventListener('input', () => {
 
 // wght - axis range selector
 
-// similar to a calendar date-range picker: https://fetrarij.github.io/ngx-daterangepicker-material/simple
+// simplified to match requirement of FontTools Instancer of having default (300) in partial font, and align other stops to master values
+// e.g. "1000" is basically just a checkbox saying whether the range should extend past 800
 
-function toggleSelectionState(e) {
-  // console.log(e.target)
-  // console.log(e.target.dataset.selected)
-  if (e.target.dataset.selected === "true") {
-    // console.log("it's true")
-    e.target.dataset.selected = "false"
-  } else {
-    // console.log("it's a nope")
-    e.target.dataset.selected = "true"
-  }
-}
+wght1000checkbox = document.querySelector("#wght-1000")
+wght1000range = document.querySelector('[data-wght-range="800-1000"]')
+
+// set/unset wght 1000 in range
+wght1000checkbox.addEventListener('click', (e) => {
+  wght1000range.dataset.active == "false" ? wght1000range.dataset.active = "true" : wght1000range.dataset.active = "false";
+  wght1000checkbox.dataset.selected == "false" ? wght1000checkbox.dataset.selected = "true" : wght1000checkbox.dataset.selected = "false";
+  setUrl()
+});
 
 const rangeSelectorControl = document.querySelector('#wght__range') 
 // console.log(rangeSelectorControl)
@@ -290,75 +289,6 @@ function checkSelectedSources() {
 
   return selectedSources
 }
-
-function selectRange(e) {
-  rangeSelectorControl.classList.add("active")
-  // console.log("first click on selector", e.target)
-
-  // if a user clicks any of the selectors, all get set to false 
-  for (var selector of rangeSelectorNodes) {selector.dataset.selected = "false"}
-  // and then the clicked selector gets set to true
-  e.target.dataset.selected = "true"
-
-  // temporarily removes the click 
-  for (var selector of rangeSelectorNodes) {selector.removeEventListener('click', selectRange)}
-
-  // listen for user to click on next target
-  document.addEventListener('mousedown', function nextClick(e) {
-    function resetControls() {
-      for (var selector of rangeSelectorNodes) {selector.dataset.selected = "true"}
-      rangeSelectorControl.classList.remove("active")
-      document.removeEventListener('mousedown',nextClick)
-    }
-    // console.log("click")
-    // console.log("closest is ", e.target.closest('#wght__range'))
-    // if user clicks outside of controller, reset to previous state
-    if (e.target.matches('.range-selector') === false) {
-      // console.log("click outside!")
-      resetControls()
-      }
-    // if user clicks the same selector a second time
-    else if (e.target.dataset.selected === "true") {
-      // console.log("click on same selector!")
-      resetControls()
-    }
-    // if user clicks a different selector 
-    else {
-      // console.log("click on selector!")
-      e.target.dataset.selected = "true"
-      rangeSelectorControl.classList.remove("active")
-      document.removeEventListener('mousedown',nextClick)
-    }
-    
-    // check what sources are selected
-    // selectedSources = []
-    // for (var selector of rangeSelectorNodes) {if (selector.dataset.selected === "true") {selectedSources.push(parseInt(selector.dataset.wghtSrc))}}
-    selectedSources = checkSelectedSources()
-
-    // if 300 and 1000 are selected, also set 800 to "true"
-    if (selectedSources.includes(300) && selectedSources.includes(1000)) {
-      document.querySelector('[data-wght-src="800"]').dataset.selected = "true"
-    }
-
-    setUrl()
-
-    // re-add listeners after delay, or the setting won't stick
-    window.setTimeout(function() {
-      // console.log("adding listeners")
-      addRangeListeners();
-    }, 500);
-  })
-
-}
-
-function addRangeListeners() {
-  for (var selector of rangeSelectorNodes) {
-    selector.addEventListener('click', selectRange)
-  }
-}
-
-addRangeListeners()
-
 
 // -----------------------------------------------------------------------------
 // wght - pinned slider
@@ -524,8 +454,6 @@ function updateSliderWidths() {
 window.addEventListener('resize', updateSliderWidths)
 
 updateSliderWidths() // update on load
-
-
 
 // cue URL
 
