@@ -188,7 +188,7 @@ function setUrl() {
     "slnt_CASL_MONO": 103,
     "slnt_wght1000": 121,
     "wght1000_CASL": 129,
-    "slnt_wght_MONO": 159,
+    "slnt_wght1000_MONO": 159,
     "wght1000_CASL_MONO": 167,
     "slnt_wght1000_CASL": 213,
     "slnt_wght1000_CASL_MONO": 280, // artifically reduced by 1 to let CRSV appear as active
@@ -209,8 +209,20 @@ function setUrl() {
   }
 
   let sizeLabel = document.querySelector("#approx-filesize span")
-
+  
   sizeLabel.innerHTML = filesize
+  
+  let possibleSizeLabel = document.querySelector("#max-filesize span")
+  possibleSizeLabel.innerHTML = filesizes["slnt_wght1000_CASL_MONO"] + 1
+
+  // barchart
+  
+  let percentageSize = filesize / (filesizes["slnt_wght1000_CASL_MONO"] + 1) * 100
+
+  let barchartFilled = document.querySelector("#filesize-filled")
+  let percentageDiff = Math.abs(percentageSize - barchartFilled.style.getPropertyValue("--percent"))
+  barchartFilled.style.setProperty("--percent", percentageSize)
+  barchartFilled.style.setProperty("--percentChange", percentageDiff)
 
 
 

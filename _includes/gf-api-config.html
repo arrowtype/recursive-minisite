@@ -184,12 +184,31 @@
       </div>
 
       </div> <!-- END axis controls -->
+
+      <div id="filesize">
+        <h4>Filesize</h4>
+        <div id="filesize-chart">
+          <div class="barchart">
+            <!-- total bar size -->
+            <div id="filesize-possible"></div>
+            <!-- active size within total -->
+            <div id="filesize-filled"></div>
+          </div>
+          <div class="labeling">
+            <output id="approx-filesize">≈<span></span>kb</output>
+            <span id="max-filesize" style="--percent:0; --percentChange:0;"><span></span>kb</span>
+          </div>
+        </div>
+        <p class="caption">Estimated size of woff2 font file as configured compared to estimated size with all axes fully active. Based on Recursive with a basic Latin character set. Actual results will vary.</p>
+
+      </div>
       
       </div>
 
       <div id="embed">
 
-          <h4 id="embed-label">Embed <span id="approx-filesize">≈<span></span>kb*</span></h4>
+          <!-- <h4 id="embed-label">Embed <span id="approx-filesize">≈<span></span>kb*</span></h4> -->
+          <h4 id="embed-label">Embed</h4>
 
         <p id="howto--html-embed">To embed Recursive into a webpage, copy this code into the &lt;head&gt; of your HTML.</p>
         <div class="embed-type" data-embed-type="html">
