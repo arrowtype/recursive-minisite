@@ -3648,7 +3648,7 @@ textarea {
     #approx-filesize {
         text-transform: lowercase;
         font-weight: 400;
-        font-variation-settings: "CASL" 1;
+        font-variation-settings: "CASL" 1, "MONO" 0;
     }
 
     .code--bold {

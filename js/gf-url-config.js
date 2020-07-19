@@ -168,23 +168,40 @@ function setUrl() {
     "MONO": 38,
     "slnt": 46,
     "CASL": 48,
+
+    // with weight limited to 300–800
+    "wght": 49,
+    "wght_MONO": 65,
+    "slnt_wght": 81,
+    "wght_CASL": 85,
+    "slnt_wght_MONO": 106,
+    "wght_CASL_MONO": 112,
+    "slnt_wght_CASL": 112,
+    "slnt_wght_CASL_MONO": 185, // artifically reduced by 1 to let CRSV appear as active
+
+    // with weight 300–1000
     "slnt_MONO":61,
     "CASL_MONO":63,
-    "wght": 73,
+    "wght1000": 73,
     "slnt_CASL": 78,
-    "wght_MONO": 95,
+    "wght1000_MONO": 95,
     "slnt_CASL_MONO": 103,
-    "slnt_wght": 121,
-    "wght_CASL": 129,
+    "slnt_wght1000": 121,
+    "wght1000_CASL": 129,
     "slnt_wght_MONO": 159,
-    "wght_CASL_MONO": 167,
-    "slnt_wght_CASL": 213,
-    "slnt_wght_CASL_MONO": 280 // artifically reduced by 1 to let CRSV appear as active
+    "wght1000_CASL_MONO": 167,
+    "slnt_wght1000_CASL": 213,
+    "slnt_wght1000_CASL_MONO": 280, // artifically reduced by 1 to let CRSV appear as active
+    
+    
   }
 
-  // TODO: add permutations with wght half vs wght full
-
   let filesize = filesizes[rangesRequested.join('_')]
+  if (wghtResult == '300..1000') {
+    let fullRangesRequested = rangesRequested.map(function(axis){return axis.replace('wght', 'wght1000');});
+    filesize = filesizes[fullRangesRequested.join('_')]
+  } 
+
 
   // if CRSV makes no difference as a range, it looks broken. So, this adds "1 kb"
   if (CRSVResult.includes('..')) {
