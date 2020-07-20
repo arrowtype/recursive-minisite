@@ -3220,7 +3220,7 @@ textarea {
     --mainText: #000;
     --darkTransp: rgba(0,0,0,0.25);
     --darkTransp1: rgba(0,0,0,0.125);
-    --scrim: rgba(0,0,0,0.5);
+    --scrim: rgba(0,0,0,0.75);
 
     // typographic
     --MONO: 0;
@@ -3381,7 +3381,7 @@ textarea {
         grid-template-columns: auto auto 1fr;
         grid-gap: 2rem;
         align-items: center;
-        padding: 0.25rem 1rem;
+        padding: 0 1rem;
         height: var(--nav_height);
         border-bottom: solid black 1px;
  
@@ -4070,7 +4070,9 @@ input[type="range"]:focus::-ms-track{
         color: black;
         --MONO: 1;
 
-        -webkit-text-stroke: 2px var(--blue);
+        animation: slowShift 8s linear 2;
+
+        -webkit-text-stroke: 1px var(--blue);
         color: var(--blue4);
 
         @media screen and (min-width: 1200px) {
@@ -4092,6 +4094,16 @@ input[type="range"]:focus::-ms-track{
         @media screen and (max-width: 850px) {
             font-size: 16.9vw;
             -webkit-text-stroke: 1px var(--blue);
+        }
+    }
+
+    @keyframes slowShift {
+        0% {
+            font-variation-settings: "MONO" 1, "CASL" 0;
+        } 50% {
+            font-variation-settings: "MONO" 1, "CASL" 1;
+        } 100% {
+            font-variation-settings: "MONO" 1, "CASL" 0;
         }
     }
 
