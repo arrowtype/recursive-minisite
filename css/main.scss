@@ -4059,6 +4059,7 @@ input[type="range"]:focus::-ms-track{
         max-width: 100vw;
         left: -0.02em;
         font-weight: 1000;
+        color: black;
         --MONO: 1;
         @media screen and (min-width: 1200px) {
             &::before {
@@ -4115,6 +4116,7 @@ input[type="range"]:focus::-ms-track{
         --slnt: -15;
         --CRSV: 1;
         color: inherit;
+        font-style: normal;
     }
 
     a {

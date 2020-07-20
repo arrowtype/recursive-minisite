@@ -53,20 +53,9 @@ if (parent.document.getElementById("inversePage") != null){
 hiderShower('#collapseSettings', '#pickVariability', 'collapseSettings', 'show');
 hiderShower('#collapseSize', '#pickFontSize', 'collapseSize', 'show');
 
-// hamburger on mobile
-function toggleNav() {
-    document.getElementById("navbarTogglerDemo03").classList.toggle("hideOnMobile");
-    document.getElementById("navbar-scrim").classList.toggle("hideOnMobile");
-}
 
-let navToggler = document.getElementById("navbarToggler")
-navToggler.addEventListener('click', toggleNav)
 
-let navScrim = document.getElementById("navbar-scrim")
-navScrim.addEventListener('click', toggleNav)
-
-let navLinks = document.querySelector("#navbarTogglerDemo03")
-navLinks.addEventListener('click', toggleNav)
+// style toolbar
 
 document.getElementsByTagName("select")[0].onmousedown = function(){
     this.style.fontFamily = "RecVF,sans-serif";
