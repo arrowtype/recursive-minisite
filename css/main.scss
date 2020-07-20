@@ -3998,16 +3998,53 @@ input[type="range"]:focus::-ms-track{
 // process article
 
 .article-container {
-    margin: auto;
-    padding:100px 20px 20px 20px;
-    width:100%;
-    max-width:42rem;
-    position:relative;
 
     --MONO: 0;   /* Monospace    */
     --CASL: 0;   /* Casual       */
     --slnt: 0;   /* Upright      */
     --CRSV: 0.5; /* Auto Cursive */
+    --text-column: 42rem;
+
+    width:100%;
+    position:relative;
+    padding: 4rem 0 6rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 4fr 1fr 1fr;
+
+    @media screen and (min-width: 1800px) {
+        grid-template-columns: 1fr 1fr var(--text-column) 1fr 1fr;
+    }
+    @media screen and (max-width: 1100px) {
+        grid-template-columns: 1fr var(--text-column) 1fr;
+    }
+    @media screen and (max-width: 800px) {
+        grid-template-columns: 1fr;
+        padding: 4rem 1.25rem 6rem;
+    }
+
+    h1, figure {
+        grid-column: 3 / 5;
+
+        @media screen and (max-width: 1100px) {
+            grid-column: 2 / 3;
+        }
+        @media screen and (max-width: 800px) {
+            grid-column: 1 / 2;
+        }
+        
+    } 
+    
+    h2, h3, h4, h5, p {
+        grid-column: 3 / 4;
+        @media screen and (max-width: 1100px) {
+            grid-column: 2 / 3;
+        }
+        @media screen and (max-width: 800px) {
+            grid-column: 1 / 2;
+        }
+    }
+
+    
 
     *{
         font-variation-settings: 
@@ -4016,13 +4053,17 @@ input[type="range"]:focus::-ms-track{
     }
 
     h1 {
-        font-size: 9vw;
+        font-size: 11.7vw;
         line-height: 0.9;
         width: 50vw;
         max-width: 100vw;
         left: -0.02em;
         font-weight: 1000;
         --MONO: 1;
+
+        @media screen and (min-width: 1800px) {
+            font-size: 8.5vw;
+        }
     }
 
     h2 {
@@ -4045,12 +4086,14 @@ input[type="range"]:focus::-ms-track{
 
     p {
         --CASL: 0.5;
+        max-width: 42rem;
     }
     
     p:first-of-type {
         font-size: 1.5rem;
         line-height: 1.375;
         --CASL: 1;
+        max-width: 50rem;
     }
     p em {
         --slnt: -15;
@@ -4070,11 +4113,19 @@ input[type="range"]:focus::-ms-track{
     }
 
     figure {
+        width: 100%;
         display: grid;
-        width: 130%;
-        grid-template-columns: 100fr 30fr;
+        grid-template-columns: 4fr 1fr;
         position: relative;
         margin: 2rem 0;
+
+        @media screen and (min-width: 1800px) {
+            grid-template-columns: var(--text-column) auto;
+        }
+
+        @media screen and (max-width: 600px) {
+            grid-template-columns: 1fr;
+        }
     }
 
     figure img {
@@ -4087,6 +4138,13 @@ input[type="range"]:focus::-ms-track{
         font-size: 0.625rem;
         line-height: 1.5;
         padding-left: 1rem;
+        max-width: 40ch;
+
+        @media screen and (max-width: 600px) {
+            padding-top: 1rem;
+            padding-left: 0rem;
+            font-size: 0.75rem;
+        }
     }
 
 }
