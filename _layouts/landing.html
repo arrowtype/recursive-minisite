@@ -2,21 +2,13 @@
 <html lang="en">
 	<head>
 		
+		<link rel="canonical" href="https://www.recursive.design/" />
 
-		<style>
-			html {
-				visibility: hidden;
-				opacity: 0;
-			}
-		</style>
-
+		<link rel="stylesheet" href="/css/simplemde.min.css?v=1.11.2"/>
 		{% include head.html %}
 		<script src="../js/lazysizes.min.js?v=5.2.0" async=""></script>
 
-		<link
-			rel="stylesheet"
-			href="/css/simplemde.min.css?v=1.11.2"
-		/>
+		
 	</head>
 	<body>
 		{% include navigation.html %}
@@ -314,6 +306,7 @@
 		</div>
 		<!-- For purge css to work it needs to see some of the codemirror classes. These SHOULD be here, but also MUST be commented out. Kind of messy, but ¯\_(ツ)_/¯ -->
 		<!-- <span class="cm-formatting cm-formatting-header cm-formatting-header-2 cm-header cm-header-2 CodeMirror cm-s-paper CodeMirror-wrap CodeMirror-scroll CodeMirror-sizer CodeMirror-lines"></span><div class="CodeMirror-code"><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span cm-text="">&#8203;</span></span></pre><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-formatting cm-formatting-header cm-formatting-header-2 cm-header cm-header-2"></span><span class="cm-header cm-header-2"></span></span></pre></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-formatting cm-formatting-header cm-formatting-header-2 cm-formatting-header-1 cm-formatting-header-3 cm-formatting-header-4 cm-formatting-header-5 cm-formatting-header-6 cm-header cm-header-2"></span><span class="cm-header cm-header-2"></span><span class="cm-formatting cm-formatting-code cm-comment cm-header cm-header-2"></span><span class="cm-comment cm-header cm-header-2"></span><span class="cm-formatting cm-formatting-code cm-comment cm-header cm-header-2 cm-header-3 cm-header-1 cm-header-4 cm-header-5 cm-header-6"></span></span></pre> -->
+
 
 		<div class="mobile-version d-md-none">
 			{{ content }}

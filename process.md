@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Recursive Process
+title: Designing Recursive
 ---
 
 # Designing Recursive
