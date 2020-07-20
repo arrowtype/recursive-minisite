@@ -26,7 +26,7 @@ There are many single-stroke casual fonts. It is a genre that lends itself to lo
   <figcaption>Examples of single-stroke casual fonts from the 1971 PhotoLettering “One Line” catalog, used with permission from House Industries</figcaption>
 </figure>
 
-Living in New York City, I come across striking works of casual lettering & fonts almost daily in the vernacular signage of diners, laundromats, bodegas, and commercial vehicles. Recursive is shaped by my love of these signs, as well as by lessons learned from classmates & teachers at TypeMedia, educators like John Downer, personal sketching, and technical experimentation.
+Living in New York City, I come across striking works of casual lettering & fonts almost daily in the vernacular signage of diners, laundromats, bodegas, and commercial vehicles. Recursive is shaped by my love of these signs, as well as by lessons learned from classmates [Gen Ramírez](https://genramirez.com/) & [Seán Donohoe](https://www.typefivestudio.dk/), teachers at TypeMedia, and educators like [John Downer](https://www.instagram.com/downervolt/), plus a lot of personal sketching and technical experimentation.
 
 <figure class="image">
   <img loading="lazy" src="../assets/process-img/brush-args-2.jpg" alt="Brush-painted letters showing the construction logic of Recursive">
@@ -118,7 +118,7 @@ These design decisions were based on my understanding of user needs: before movi
 
 Bringing a five-axis variable font to life sometimes seemed like a never-ending process. In a variable font, the number of drawings required for each glyph tends to go up with the addition of every axis. Between Casual, Monospace, Weight, Slant, & Italic axes, Recursive required 24 total source font files. Each character required *at least* 12 compatible drawings to cover Casual, Weight, and Slant variations – and characters with Monospace and Italic variations required even more drawings. All told, Recursive has 1,248 glyphs per source – and between its 24 sources, Recursive includes 29,952 total glyphs. Of course, a significant portion of these are composed from other glyphs (as is the case for most accented characters) or copied between sources (“normal-width” glyphs were copied from Mono to Sans sources), but there are still 6,804 hand-edited glyphs. This staggering amount of complexity made it critical to embrace scripting to automate parts of the process. This is also why it was so incredibly helpful to have the contribution of type designers Lisa Huang and Katja Schimmel and good software from many type-tool engineers.
 
-## A new design proofing tool
+## A new font testing tool, [Type-X](https://chrome.google.com/webstore/detail/type-x/bfnfnnicdjkkialkldogjjmmfeiopbin)
 
 While designing Recursive, it was important to search for typographic problems across all styles in order to fix them and improve the font. This process, called proofing, typically means physically printing pages to show a broad character set in all styles across a range of point sizes. Proofs are often typeset in realistic graphic layouts, then carefully examined and marked for revision. A concise proof may easily have two to four pages per style – so repeatedly proofing all 64 instances of Recursive wasn’t a good option. It wouldn’t have just been a waste of resources, but also a disregard of time constraints: most collaborative proofing sessions only have time to analyze a few pages in detail.
 
@@ -136,7 +136,7 @@ This process was useful, but it was also repetitive and time consuming. Worse, i
   <figcaption>Using Type-X to overriding fonts on websites (e.g. GatsbyJS.org) as one way of testing Recursive.</figcaption>
 </figure>
 
-In the past year, I worked with developer Roel Neiskens to redesign and rebuild this Chrome extension, in what we now call [*Type-X*](https://chrome.google.com/webstore/detail/type-x/bfnfnnicdjkkialkldogjjmmfeiopbin). Whereas my earlier tool was limited to a single, hard-coded font family, Type-X allows users to easily override websites with any font on their system. Font files can also be drag-and-dropped into the extension to activate advanced features like variable axis control. These new capabilities make Type-X far more powerful than a simple type-proofing tool: it is now useful to anyone wanting to better understand how different fonts look and feel in the context of the websites they use. Thanks to the sponsorship of Google Fonts, Type-X is now open source and available to anyone for free on the Chrome Web Store.
+In the past year, I worked with developer Roel Neiskens to redesign and rebuild this Chrome extension, in what we now call [*Type-X*](https://github.com/arrowtype/type-x). Whereas my earlier tool was limited to a single, hard-coded font family, Type-X allows users to easily override websites with any font on their system. Font files can also be drag-and-dropped into the extension to activate advanced features like variable axis control. These new capabilities make Type-X far more powerful than a simple type-proofing tool: it is now useful to anyone wanting to better understand how different fonts look and feel in the context of the websites they use. Thanks to the sponsorship of Google Fonts, Type-X is now open source and available to anyone for free on the Chrome Web Store.
 
 ## I couldn’t have done it alone
 
