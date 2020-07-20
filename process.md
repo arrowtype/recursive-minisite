@@ -19,7 +19,7 @@ One of my favorite styles of signwriting is a genre broadly referred to as *casu
 
 A foundational style for sign painters, single-stroke casual consists of just a few basic strokes which are assembled together to create letters. As a result, this style is highly practical, easy to learn, and (relatively) easy to paint. Its features are deliberately informal and “unbalanced”: letters are somewhat condensed and have curved stems, stroke connections are left visibly imperfect, and midpoints are low-slung. These qualities allow a sign painter to avoid some of the aspects of letter shaping that can be most challenging: perfectly straight lines, rigid symmetry, and optically-centered elements like the spine in of the letter ‘S’.
 
-There are many single-stroke casual fonts. It is a genre that lends itself to looking good in many different variations, or even stretched, slanted, and outlined. What could be a better foundation, then, for a variable font with a monospaced core and a wide range of styles?
+There are many single-stroke casual fonts. It is a genre that lends itself to looking good in many different stylistic variations – even stretched, slanted, or outlined. What could be a better foundation, then, for a variable font with a monospaced core and a wide range of styles?
 
 <figure class="image">
   <img loading="lazy" src="../assets/process-img/photolettering-oneline.jpg" alt="Examples of single-stroke casual fonts from the PhotoLettering One Line catalog">
