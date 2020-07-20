@@ -4019,7 +4019,7 @@ input[type="range"]:focus::-ms-track{
     }
     @media screen and (max-width: 800px) {
         grid-template-columns: 1fr;
-        padding: 4rem 1.25rem 6rem;
+        padding: 4rem 5vw 6rem;
     }
 
     h1, figure {
@@ -4046,7 +4046,7 @@ input[type="range"]:focus::-ms-track{
 
     
 
-    *{
+    *, *:before, *:after{
         font-variation-settings: 
             "MONO" var(--MONO), "CASL" var(--CASL),
             "slnt" var(--slnt), "CRSV" var(--CRSV);
@@ -4060,9 +4060,20 @@ input[type="range"]:focus::-ms-track{
         left: -0.02em;
         font-weight: 1000;
         --MONO: 1;
-
+        @media screen and (min-width: 1200px) {
+            &::before {
+                content: "→ ";
+                color: var(--blue);
+                position: absolute;
+                left: -1.5ch;
+                --MONO:0;
+            }
+        }
         @media screen and (min-width: 1800px) {
             font-size: 8.5vw;
+        }
+        @media screen and (max-width: 800px) {
+            font-size: 16.9vw;
         }
     }
 
@@ -4094,10 +4105,15 @@ input[type="range"]:focus::-ms-track{
         line-height: 1.375;
         --CASL: 1;
         max-width: 50rem;
+
+        @media screen and (max-width: 800px) {
+            font-size: 1.25rem;
+        }
     }
     p em {
         --slnt: -15;
         --CRSV: 1;
+        color: inherit;
     }
 
     a {
@@ -4117,7 +4133,7 @@ input[type="range"]:focus::-ms-track{
         display: grid;
         grid-template-columns: 4fr 1fr;
         position: relative;
-        margin: 2rem 0;
+        margin: 1rem 0 2rem;
 
         @media screen and (min-width: 1800px) {
             grid-template-columns: var(--text-column) auto;
