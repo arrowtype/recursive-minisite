@@ -440,10 +440,8 @@ ul{
 }
 
 .fixed-nav{
-    // position:absolute;
-    // top:-200px;
     top:0;
-    // left:0px;
+    position: fixed;
     z-index:2;
     width:100%;
     // transition: top 400ms;
@@ -669,6 +667,7 @@ span.cm-formatting.cm-formatting-header.cm-formatting-header-2.cm-header.cm-head
     font-style:normal; //italic
     --cm-wght: 425;
     --cm-crsv: 1;
+    --cm-slnt: -9;
 }
 .cm-strong{
     color:$primary;
@@ -1420,10 +1419,6 @@ $randomNumber: random(2);
         }
         .string{
             color: rgb(0, 80, 255);
-        }
-        span.comment:not(.not-aligned){
-            position: absolute;
-            left: 500px;
         }
         span.comment{
             // font-style:italic; // doesn't work in current browsers
@@ -2833,8 +2828,18 @@ ul.casual .rw{--casl: 1}
     .toolbar__item{
         width:100%;
     }
-    .nav-link {
+    nav.navbar .nav-link {
         padding: 0.5rem 1rem;
+        font-size: 3rem;
+        line-height: 1.5;
+        font-variation-settings: "CASL" 1, "slnt" 0, "CRSV" 0;
+        font-weight: 600;
+        transition: 0.25s;
+
+        &:hover {
+            font-variation-settings: "CASL" 1, "slnt" -15, "CRSV" 0;
+            font-weight: 600;
+        }
     }
     nav.navbar .nav-github-link {
         // margin: 4px 0px;
@@ -4003,7 +4008,8 @@ input[type="range"]:focus::-ms-track{
     --CASL: 0;   /* Casual       */
     --slnt: 0;   /* Upright      */
     --CRSV: 0.5; /* Auto Cursive */
-    --text-column: 42rem;
+    // --text-column: 42rem;
+    --text-column: 800px;
 
     width:100%;
     position:relative;
@@ -4017,7 +4023,7 @@ input[type="range"]:focus::-ms-track{
     @media screen and (max-width: 1100px) {
         grid-template-columns: 1fr var(--text-column) 1fr;
     }
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 850px) {
         grid-template-columns: 1fr;
         padding: 4rem 5vw 6rem;
     }
@@ -4028,7 +4034,7 @@ input[type="range"]:focus::-ms-track{
         @media screen and (max-width: 1100px) {
             grid-column: 2 / 3;
         }
-        @media screen and (max-width: 800px) {
+        @media screen and (max-width: 850px) {
             grid-column: 1 / 2;
         }
         
@@ -4039,7 +4045,7 @@ input[type="range"]:focus::-ms-track{
         @media screen and (max-width: 1100px) {
             grid-column: 2 / 3;
         }
-        @media screen and (max-width: 800px) {
+        @media screen and (max-width: 850px) {
             grid-column: 1 / 2;
         }
     }
@@ -4061,21 +4067,29 @@ input[type="range"]:focus::-ms-track{
         font-weight: 1000;
         color: black;
         --MONO: 1;
+
+        -webkit-text-stroke: 2px var(--blue);
+        color: var(--blue4);
+
         @media screen and (min-width: 1200px) {
             &::before {
                 content: "→ ";
-                color: var(--blue);
+                // color: var(--blue);
                 position: absolute;
                 left: -1.5ch;
                 --MONO:0;
                 --CASL:1;
+
+                -webkit-text-stroke: 0px;
+                color: var(--gray3);
             }
         }
         @media screen and (min-width: 1800px) {
             font-size: 8.5vw;
         }
-        @media screen and (max-width: 800px) {
+        @media screen and (max-width: 850px) {
             font-size: 16.9vw;
+            -webkit-text-stroke: 1px var(--blue);
         }
     }
 
@@ -4086,7 +4100,7 @@ input[type="range"]:focus::-ms-track{
         line-height: 1.25;
     }
 
-    h4 {
+    h4, h4 a {
         font-size: 1rem;
         font-weight: 700;
         text-transform: uppercase;
@@ -4099,7 +4113,7 @@ input[type="range"]:focus::-ms-track{
 
     p {
         --CASL: 0.5;
-        max-width: 42rem;
+        // max-width: 42rem;
     }
     
     p:first-of-type {
@@ -4108,7 +4122,7 @@ input[type="range"]:focus::-ms-track{
         --CASL: 1;
         max-width: 50rem;
 
-        @media screen and (max-width: 800px) {
+        @media screen and (max-width: 850px) {
             font-size: 1.25rem;
         }
     }
@@ -4158,6 +4172,7 @@ input[type="range"]:focus::-ms-track{
         line-height: 1.5;
         padding-left: 1rem;
         max-width: 40ch;
+        font-weight: 450;
 
         @media screen and (max-width: 600px) {
             padding-top: 1rem;
