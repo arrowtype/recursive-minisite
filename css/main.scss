@@ -949,7 +949,7 @@ div#pickVariability, #pickFontSize {
         font-variation-settings: "CASL" 0, "MONO" 1;
         font-weight: 1000;
         font-size: 8em;
-        line-height: 0.9;
+        line-height: 1.125;
         margin-bottom: 4rem;
         color: black;
 
@@ -1026,15 +1026,17 @@ div#pickVariability, #pickFontSize {
     font-family: 'RecVF', sans-serif;
     font-size: 15px;
     color: #FFFFFF;
-    margin-bottom:0px;
+    margin:0px;
     font-variation-settings:'CASL' 0.7, 'wght' 700, 'CRSV' 1, 'slnt' -15;
+    line-height: 1.5;
     }
     a{
         color:white;
         text-decoration:underline;
     }
     p{
-        margin-bottom:0px;
+        margin:0px;
+        line-height: 1.5;
     }
 }
 .footer-bottom{
