@@ -6,7 +6,7 @@ title: Recursive Process
 # Designing Recursive
 #### By Stephen Nixon, [@ArrowType](https://instagram.com/arrowtype)
 
-In 2018, I graduated with a Master’s Degree from TypeMedia, a 10-month immersion in type design at the Royal Academy of Art (KABK) in The Hague, Netherlands. For my thesis project, I created *Recursive*, a typeface exploring the intersection of sign painting, code, and the emerging technology of variable fonts. In 2019, Google Fonts commissioned me to complete the project for open-source distribution. Recursive is now the first release of my new type foundry, Arrow Type.
+In 2018, I graduated with an MA in Type Design from TypeMedia, a 10-month immersion in type at the Royal Academy of Art (KABK) in The Hague, Netherlands. For my thesis project, I created *Recursive*, a typeface exploring the intersection of sign painting, code, and the emerging technology of variable fonts. In 2019, Google Fonts commissioned me to complete the project for open-source distribution. Recursive is now the first release of my new type foundry, Arrow Type.
 
 ## An origin in painted letters
 
@@ -14,22 +14,46 @@ One of my favorite styles of signwriting is a genre broadly referred to as *casu
 
 <figure class="image">
   <img loading="lazy" src="../assets/process-img/tailor-sign-nyc.jpg" alt="Example of casual signpainting in NYC for expert tailoring">
-  <figcaption>Example of casual lettering in NYC (Painter unknown; Brooklyn, NY, near Myrtle & Wyckoff Aves; 2019)</figcaption>
+  <figcaption>Example of casual sign writing in NYC (Painter unknown; Brooklyn, NY, near Myrtle & Wyckoff Aves; 2019). Not the most technically “perfect” example, but one of my favorite signs for its energy & texture.</figcaption>
 </figure>
 
 A foundational style for sign painters, single-stroke casual consists of just a few basic strokes which are assembled together to create letters. As a result, this style is highly practical, easy to learn, and (relatively) easy to paint. Its features are deliberately informal and “unbalanced”: letters are somewhat condensed and have curved stems, stroke connections are left visibly imperfect, and midpoints are low-slung. These qualities allow a sign painter to avoid some of the aspects of letter shaping that can be most challenging: perfectly straight lines, rigid symmetry, and optically-centered elements like the spine in of the letter ‘S’.
+
+There are many single-stroke casual fonts. It is a genre that lends itself to looking good in many different variations, or even stretched, slanted, and outlined. What could be a better foundation, then, for a variable font with a monospaced core and a wide range of styles?
+
+<figure class="image">
+  <img loading="lazy" src="../assets/process-img/photolettering-oneline.jpg" alt="Examples of single-stroke casual fonts from the PhotoLettering One Line catalog">
+  <figcaption>Examples of single-stroke casual fonts from the 1971 PhotoLettering “One Line” catalog, used with permission from House Industries</figcaption>
+</figure>
+
+Living in New York City, I come across striking works of casual lettering & fonts almost daily in the vernacular signage of diners, laundromats, bodegas, and commercial vehicles. Recursive is shaped by my love of these signs, as well as by lessons learned from classmates & teachers at TypeMedia, educators like John Downer, personal sketching, and technical experimentation.
+
+<figure class="image">
+  <img loading="lazy" src="../assets/process-img/brush-args-2.jpg" alt="Brush-painted letters showing the construction logic of Recursive">
+  <figcaption>Brush-painted letters showing the underlying logic of Recursive. Clearly, I am not a real sign painter, but keeping the project rooted in the logic of brush strokes helped maintain visual consistency and guided me in inventing letterforms across styles.</figcaption>
+</figure>
+
+## Contemporary influences
+
+Along with sign painting, Recursive is also influenced by many modern-day typefaces. Flattened terminals come from my love/hate feelings towards Verdana when used at a large size on signage. It is a font meant for screens, so it looks both a little bit terrible and a little bit awesome in this odd context.
 
 <figure class="image">
   <img loading="lazy" src="../assets/process-img/verdana-wash.jpg" alt="Verdana used at inappropriately large scale in street signage. This inspired the flattened inner terminals of Recursive.">
   <figcaption>Verdana used at inappropriately large scale in street signage. This inspired the flattened terminals of Recursive, and subsequently enlarged inktrap details.</figcaption>
 </figure>
 
-Living in New York City, I come across striking works of casual lettering almost daily in the vernacular signage of diners, laundromats, and bodegas. Recursive is shaped by my love of these signs, as well as by lessons learned from classmates & teachers at TypeMedia, educators like John Downer, personal sketching, and technical experimentation.
+I especially love many of the fonts made for code, and if you have spent time with these, you will recognize their influence on Recursive: [Input](https://input.fontbureau.com) by DJR & Type Bureau, [Operator](https://www.typography.com/fonts/operator/overview/) by Andy Clymer & Hoefler&Co, [Covik](https://ohnotype.co/fonts/covik) by James Edmonson / OHno Type Co, [Space Mono](https://www.colophon-foundry.org/custom/spacemono/) by Colophon, [Fira Code](https://github.com/tonsky/FiraCode) by Nikita Prokopov & Mozilla / Carrois Studio, [SF Mono](https://developer.apple.com/fonts/) by Apple, [IBM Plex Mono](https://www.ibm.com/plex/) by Mike Abbink & Bold Monday, and the classic [Menlo / Vera Mono](https://en.wikipedia.org/wiki/Menlo_(typeface)) by Jim Lyles & Bitstream.
+
+I’m not seeking to replace any of these other code fonts with Recursive, but rather I find that they all have good ideas yet also leave room for more good ideas. After all, many coders spend many hours every day reading & writing monospace fonts in code editors and terminals. Just as there are many models of office chairs that serve different personal physical & aesthetic needs, different developers have different requirements which will be fit better by different fonts. I crafted Recursive to serve the range of needs & preferences I have, and I hope others will find it useful, as well.
 
 <figure class="image">
-  <img loading="lazy" src="../assets/process-img/brush-args-2.jpg" alt="Brush-painted letters showing the construction logic of Recursive">
-  <figcaption>Brush-painted letters showing the stroke logic of Recursive. Clearly, I am not a real sign painter, but keeping the project rooted in the logic brush strokes helped maintain visual consistency and guided me in inventing letterforms across styles.</figcaption>
+  <img loading="lazy" src="../assets/process-img/recursive-ot_features.png" alt="OpenType features in Recursive Sans & Mono.">
+  <figcaption>OpenType features in Recursive allow additional customization of specific letterforms to adapt the font to personal preferences or design requirements.</figcaption>
 </figure>
+
+(Side note: if the default letterforms of Recursive aren’t to your preference, many of these are [configurable via Stylistic Sets](https://github.com/arrowtype/recursive#opentype-features).)
+
+(Additional side note for the folks that like code ligatures: code ligatures exist in the core fonts of Recursive under the “discretionary ligatures” `dlig` OpenType feature, but releases also include versions specifically for code which have code ligatures activated by default and a few other hacks to make them work more seamlessly in more code environments.)
 
 ## Crafting a casual for code
 
@@ -53,7 +77,12 @@ In this project, I have given particular attention to adapting the key visual as
 
 Because the typeface was started from painted letters, it possessed a lot of personality. For it to work well in code and on screen, however, I knew I needed to temper its personality and improve its readability. Finding the exact right voice was challenging. From my own experience, I knew that developers have different typographic needs based on the task at hand. Some monospace fonts are drawn with attention-grabbing details, which lends them a strong visual impact for display settings like posters and signage, but can make them distracting to code with. Other monospace fonts are designed with only traditional legibility in mind, but this can give them a cold and monotonous tone when used in settings such as docs and blogs.
 
-This was a contradiction that I began to realize from my earliest sketches. Still, I wanted to make Recursive a monospace font that could be ideal in different contexts, from serious to casual. I soon had the idea to solve this issue with the addition of a variable axis, but knew that it would have clear design constraints. I needed to find two ends of a continuous spectrum that could be different enough to be striking counterparts while also both functioning well at the small sizes used for code. Finding the ends of this spectrum was a process of many rounds of trial and failure, but things gradually improved, helped greatly by a steady stream of critique from professors and visiting designers at TypeMedia.
+This was a contradiction that I began to realize from my earliest sketches. Still, I wanted to make Recursive a monospace font that could be ideal in different contexts, from serious to casual. I soon had the idea to solve this issue with the addition of a variable axis, but knew that it would have clear design constraints. I needed to find two ends of a continuous spectrum that could be different enough to be striking counterparts while also both functioning well at the small sizes used for code. Finding the ends of this spectrum was a process of many rounds of trial and failure, but things gradually improved, helped greatly by a steady stream of critique from professors and visiting designers at TypeMedia. Today, I often use the Casual styles in my terminal and the Linear style in code – or more often, a mix of both with a custom “Duotone” family (available in Recursive [releases](https://github.com/arrowtype/recursive/releases)) and a [code theme](https://github.com/arrowtype/recursive-theme) that supports italic syntax highlighting.
+
+<figure class="image">
+  <img loading="lazy" src="../assets/process-img/recursive-duotone.png" alt="Recursive Duotone in JavaScript.">
+  <figcaption>Recursive Mono Linear & Casual styles both work well in Code separately in code, or can even be used together in a theme that supports Italics.</figcaption>
+</figure>
 
 Adding a variable axe for stylistic range was not just a design challenge, but also a demanding technical endeavor. When adding the Casual axis, I had to draw for interpolation compatibility, making every glyph twice – first with brushy contours for the Casual end of the axis, then again with rectangular shaping for the Linear end of the axis. What made this difficult is that both versions of each glyph had to match in the number and order of contours, nodes, anchors, and more. This was to ensure that they would be compatible for the interpolation required to morph along this stylistic range.
 
@@ -66,18 +95,28 @@ Despite the challenge of production, a spectrum of expression within a single ty
 
 ## Expanding the possibilities to interactive design
 
-No matter how versatile, a monospace font is only truly suited for a particular set of tasks (especially those which benefit from characters that are tabular and non-ambiguous, such as code, financial data, passwords, receipts, license numbers, serial numbers, captions, and more). Because I intended Recursive for a wide range of use, I knew from early on that it needed a proportional counterpart. However, starting with a monospace design helped me find opportunities to make a Sans that could offer unique possibilities for interactive design. 
+No matter how versatile, a monospace font is only truly suited for a particular set of tasks (especially those which benefit from characters that are tabular and non-ambiguous, such as code, financial data, passwords, receipts, license numbers, serial numbers, captions, and more). Because I intended Recursive for a wide range of use, I knew from early on that it needed a proportional counterpart. However, starting with a monospace design helped me find opportunities to make a Sans that could offer unique possibilities for interactive design.
 
 Just as a monospace font maintains the same widths for letters between all weights and styles, I realized that my sans-serif could do the same: while all characters would have natural widths, each could keep its same width across all stylistic variations. I therefore built Recursive Sans as a *superplexed* family – all of its 32 instances have shared glyph width, kerning, and overall letterforms for every character. Of course, this also applies to in-between variations. The fact that characters within Recursive Sans have shared metrics ensures that line length is not affected when changing between its different font styles. This also allows smooth, animated transitions between any of the subfamily’s *Weight, Slant, & Casual* axes.
+
+<figure class="image">
+  <img loading="lazy" src="../assets/process-img/recursive-mono-styles.png" alt="Recursive Mono has shared widths across all letters & symbols.">
+  <figcaption>Like all monospace type, Recursive Mono has shared widths across letters, numbers, & symbols.</figcaption>
+</figure>
+
+<figure class="image">
+  <img loading="lazy" src="../assets/process-img/recursive-sans-superplexing.png" alt="Recursive hyphen in Casual and Linear styles, showing interpolation.">
+  <figcaption>Recursive Sans is superplexed: all sub-styles shared glyph width, kerning, and overall letterforms for each character, allowing one style to replace any other without changing line length.</figcaption>
+</figure>
 
 These design decisions were based on my understanding of user needs: before moving into type design, I worked as a visual designer for websites and software. In these past roles, my responsibility was to enhance the user experience of digital products, with a particular focus on  typographic clarity and *microinteractions* (subtle animations in digital user interfaces that respond to user interaction through visual changes such as color, size, and position). Through this, I found that most typefaces are terrible when used in animated transitions due to their shifting metrics and non-variable styles. With Recursive, I realized that I could find a way around these limitations.
 
 <figure class="image">
   <img loading="lazy" src="../assets/process-img/recursive-designspace.png" alt="The source files making up the designspace of Recursive.">
-  <figcaption>Variable fonts are created by drawing two or more source files that are compatible for interpolation. Recursive has 24 masters. In this diagram, the blue rectangles show Mono sources, while the white rectangles show Sans sources.</figcaption>
+  <figcaption>Variable fonts are created by drawing two or more source files that are compatible for interpolation. Recursive has 24 sources. In this diagram, the blue rectangles show Mono sources, while the white rectangles show Sans sources.</figcaption>
 </figure>
 
-Bringing a five-axis variable font to life sometimes seemed like a never-ending process. In a variable font, the number of drawings required for each glyph tends to go up with the addition of every axis. Between Casual, Monospace, Weight, Slant, & Italic axes, Recursive required 24 total source font files. Each character required *at least* 12 compatible drawings to cover Casual, Weight, and Slant variations – and characters with Monospace and Italic variations required even more drawings. All told, Recursive has 1,248 glyphs per source – and between its 24 masters, Recursive includes 29,952 total glyphs. Of course, a significant portion of these are composed from other glyphs (as is the case for most accented characters) or copied between masters (“normal-width” glyphs were copied from Mono to Sans masters), but there are still 6,804 hand-edited glyphs. This staggering amount of complexity made it critical to embrace scripting to automate parts of the process. This is also why it was so incredibly helpful to have the contribution of type designers Lisa Huang and Katja Schimmel and good software from many type-tool engineers.
+Bringing a five-axis variable font to life sometimes seemed like a never-ending process. In a variable font, the number of drawings required for each glyph tends to go up with the addition of every axis. Between Casual, Monospace, Weight, Slant, & Italic axes, Recursive required 24 total source font files. Each character required *at least* 12 compatible drawings to cover Casual, Weight, and Slant variations – and characters with Monospace and Italic variations required even more drawings. All told, Recursive has 1,248 glyphs per source – and between its 24 sources, Recursive includes 29,952 total glyphs. Of course, a significant portion of these are composed from other glyphs (as is the case for most accented characters) or copied between sources (“normal-width” glyphs were copied from Mono to Sans sources), but there are still 6,804 hand-edited glyphs. This staggering amount of complexity made it critical to embrace scripting to automate parts of the process. This is also why it was so incredibly helpful to have the contribution of type designers Lisa Huang and Katja Schimmel and good software from many type-tool engineers.
 
 ## A new design proofing tool
 
@@ -101,6 +140,6 @@ In the past year, I worked with developer Roel Neiskens to redesign and rebuild 
 
 ## I couldn’t have done it alone
 
-Designing Recursive has been a long but enriching (and fun!) process. It would not have been possible without the help of the many people who contributed their knowledge, critique, and time. I am especially grateful to Google Fonts for commissioning me to complete my thesis, to E Roon Kang, Bon Hae Koo, Minkyoung Kim, Talia Cotton, Irin Kim, and Noemi Stauffer for helping make the project look and sound so good, to Lisa Huang and Katja Schimmel for helping me to complete the drawing of it, to Ben Kiel for helping to master the final fonts, to Rafał Buchner, Erik van Blokland, Tal Lemming, and Frederik Berlaen (and many other type engineers) for making tools that made this design possible, to Gen Ramírez, Seán Donohoe, and John Downer for inspiration and lessons in sign painting, to the faculty and alumni of TypeMedia for their mentorship and guidance, and to all the other designers and developers who shared their insights along the way.
+Designing Recursive has been a long but enriching (and fun!) process. It would not have been possible without the help of the many people who contributed their knowledge, critique, and time. I am especially grateful to Google Fonts for commissioning me to complete my thesis, to E Roon Kang, Bon Hae Koo, Minkyoung Kim, Talia Cotton, Irin Kim, and Noemi Stauffer for helping make the project look and sound so good, to Lisa Huang and Katja Schimmel for helping me to complete the drawing of it, to Ben Kiel for helping to engineer the final fonts, to Rafał Buchner, Erik van Blokland, Tal Lemming, and Frederik Berlaen (and many other type engineers) for making tools that made this design possible, to Gen Ramírez, Seán Donohoe, and John Downer for inspiration and lessons in sign painting, to the faculty and alumni of TypeMedia for their mentorship and guidance, and to all the other designers and developers who shared their insights along the way.
 
-#### Thanks — Enjoy Recursive! ♥
+#### Thanks for reading — enjoy Recursive! ♥
