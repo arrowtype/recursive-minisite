@@ -86,15 +86,11 @@ This was a contradiction that I began to realize from my earliest sketches. Stil
 
 Adding a variable axe for stylistic range was not just a design challenge, but also a demanding technical endeavor. When adding the Casual axis, I had to draw for interpolation compatibility, making every glyph twice – first with brushy contours for the Casual end of the axis, then again with rectangular shaping for the Linear end of the axis. What made this difficult is that both versions of each glyph had to match in the number and order of contours, nodes, anchors, and more. This was to ensure that they would be compatible for the interpolation required to morph along this stylistic range.
 
-<figure class="image">
-  <img loading="lazy" src="../assets/process-img/recursive-interpolation.svg" alt="Recursive hyphen in Casual and Linear styles, showing interpolation.">
-  <figcaption>The hyphen in Casual versus Linear drawings shows how the point structure of each must closely match its counterpart to allow interpolation.</figcaption>
-</figure>
-
 Despite the challenge of production, a spectrum of expression within a single typeface has clear advantages for users. Some of the most compelling typographic layouts use multiple, complementary fonts. However, because different fonts usually have different metrics, such layouts can easily become a headache for visual design and technical implementation. Recursive, by contrast, provides multiple voices from a single, easy-to-use font file.
 
 <figure class="image">
   <video loading="lazy" loop autoplay>
+    <source src="../assets/process-img/recursive-interpolation.webm" type="video/webm">
     <source src="../assets/process-img/recursive-interpolation.mp4" type="video/mp4">
     [Sorry, your browser doesn't support embedded videos.]
   </video>
