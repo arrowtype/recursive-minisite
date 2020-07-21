@@ -46,14 +46,14 @@ I especially love many of the fonts made for code, and if you have spent time wi
 
 I’m not seeking to replace any of these other code fonts with Recursive, but rather I find that they all have good ideas yet also leave room for more good ideas. After all, many coders spend many hours every day reading & writing monospace fonts in code editors and terminals. Just as there are many models of office chairs that serve different personal physical & aesthetic needs, different developers have different requirements which will be fit better by different fonts. I crafted Recursive to serve the range of needs & preferences I have, and I hope others will find it useful, as well.
 
+(Side note: if the default letterforms of Recursive aren’t to your preference, many of these are [configurable via Stylistic Sets](https://github.com/arrowtype/recursive#opentype-features).)
+
+(Additional side note for the folks that like code ligatures: code ligatures exist in the core fonts of Recursive under the “discretionary ligatures” `dlig` OpenType feature, but releases also include versions specifically for code which have code ligatures activated by default and a few other hacks to make them work more seamlessly in more code environments.)
+
 <figure class="image">
   <img loading="lazy" src="../assets/process-img/recursive-ot_features.png" alt="OpenType features in Recursive Sans & Mono.">
   <figcaption>OpenType features in Recursive allow additional customization of specific letterforms to adapt the font to personal preferences or design requirements.</figcaption>
 </figure>
-
-(Side note: if the default letterforms of Recursive aren’t to your preference, many of these are [configurable via Stylistic Sets](https://github.com/arrowtype/recursive#opentype-features).)
-
-(Additional side note for the folks that like code ligatures: code ligatures exist in the core fonts of Recursive under the “discretionary ligatures” `dlig` OpenType feature, but releases also include versions specifically for code which have code ligatures activated by default and a few other hacks to make them work more seamlessly in more code environments.)
 
 ## Crafting a casual for code
 
@@ -61,12 +61,7 @@ Early on in the design process, one thing stood out about single-stroke casuals:
 
 <figure class="image">
   <img loading="lazy" src="../assets/process-img/recursive-early_sketch_1.jpg" alt="Brush-painted letters showing the construction logic of Recursive">
-  <figcaption>Recursive Mono, early explorations with paint.</figcaption>
-</figure>
-
-<figure class="image">
-  <img loading="lazy" src="../assets/process-img/recursive-early_sketch_2.jpg" alt="Brush-painted letters showing the construction logic of Recursive">
-  <figcaption>Recursive Mono, early sketch with marker.</figcaption>
+  <figcaption>Recursive Mono, early brush exploration of a “casual mono.” ≈ Feb 2018.</figcaption>
 </figure>
 
 Most typefaces with both sans-serif and monospace variants are first designed to be proportional and later adapted into a fixed-width alternative. With Recursive, I decided to design going in the other direction. Starting with a monospace and adapting it into a sans-serif was an unconventional approach, but because I was most curious to see how casual letters might look in code, it felt natural to follow this direction.
@@ -75,7 +70,12 @@ In this project, I have given particular attention to adapting the key visual as
 
 ## The need for multiple voices
 
-Because the typeface was started from painted letters, it possessed a lot of personality. For it to work well in code and on screen, however, I knew I needed to temper its personality and improve its readability. Finding the exact right voice was challenging. From my own experience, I knew that developers have different typographic needs based on the task at hand. Some monospace fonts are drawn with attention-grabbing details, which lends them a strong visual impact for display settings like posters and signage, but can make them distracting to code with. Other monospace fonts are designed with only traditional legibility in mind, but this can give them a cold and monotonous tone when used in settings such as docs and blogs.
+Because the typeface was started from painted letters, it had a lot of personality from the beginning. For it to work well in code and on screen, however, I knew I needed to temper its personality and improve its readability. Finding the exact right voice was challenging. From my own experience, I knew that developers have different typographic needs based on the task at hand. Some monospace fonts are drawn with attention-grabbing details, which lends them a strong visual impact for display settings like posters and signage, but can make them distracting to code with. Other monospace fonts are designed with only traditional legibility in mind, but this can give them a cold and monotonous tone when used in settings such as docs and blogs.
+
+<figure class="image">
+  <img loading="lazy" src="../assets/process-img/recursive-early_sketch_2.jpg" alt="Brush-painted letters showing the construction logic of Recursive">
+  <figcaption>Recursive Mono, early sketch with marker. ≈ Feb 2018.</figcaption>
+</figure>
 
 This was a contradiction that I began to realize from my earliest sketches. Still, I wanted to make Recursive a monospace font that could be ideal in different contexts, from serious to casual. I soon had the idea to solve this issue with the addition of a variable axis, but knew that it would have clear design constraints. I needed to find two ends of a continuous spectrum that could be different enough to be striking counterparts while also both functioning well at the small sizes used for code. Finding the ends of this spectrum was a process of many rounds of trial and failure, but things gradually improved, helped greatly by a steady stream of critique from professors and visiting designers at TypeMedia. Today, I often use the Casual styles in my terminal and the Linear style in code – or more often, a mix of both with a custom “Duotone” family (available in Recursive [releases](https://github.com/arrowtype/recursive/releases)) and a [code theme](https://github.com/arrowtype/recursive-theme) that supports italic syntax highlighting.
 
@@ -92,6 +92,14 @@ Adding a variable axe for stylistic range was not just a design challenge, but a
 </figure>
 
 Despite the challenge of production, a spectrum of expression within a single typeface has clear advantages for users. Some of the most compelling typographic layouts use multiple, complementary fonts. However, because different fonts usually have different metrics, such layouts can easily become a headache for visual design and technical implementation. Recursive, by contrast, provides multiple voices from a single, easy-to-use font file.
+
+<figure class="image">
+  <video loading="lazy" loop autoplay>
+    <source src="../assets/process-img/recursive-interpolation.mp4" type="video/mp4">
+    [Sorry, your browser doesn't support embedded videos.]
+  </video>
+  <figcaption>The ampersand of Recursive, animated between Casual & Linear at the ExtraBold weight, showing the basic way a font can shift between two source drawings.</figcaption>
+</figure>
 
 ## Expanding the possibilities to interactive design
 

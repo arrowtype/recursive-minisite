@@ -4015,14 +4015,23 @@ input[type="range"]:focus::-ms-track{
     // --text-column: 42rem;
     --text-column: 800px;
 
+    @media screen and (max-width: 1500px) {
+        --text-column: 700px;
+    }
+
     width:100%;
     position:relative;
     padding: calc(4rem + var(--nav_height)) 0 6rem;
     display: grid;
     grid-template-columns: 1fr 1fr var(--text-column) 1fr 1fr;
+    font-size: 1rem;
+    line-height: 1.5;
 
     @media screen and (min-width: 1800px) {
         grid-template-columns: 1fr 1fr var(--text-column) 1fr 1fr;
+    }
+    @media screen and (min-width: 1500px) {
+        font-size: 1.125rem;
     }
     @media screen and (max-width: 1100px) {
         grid-template-columns: 1fr var(--text-column) 1fr;
@@ -4046,11 +4055,18 @@ input[type="range"]:focus::-ms-track{
     
     h2, h3, h4, h5, p {
         grid-column: 3 / 4;
+        
+        // @media screen and (max-width: 1500px) {
+        //     width: 80%;
+        // }
         @media screen and (max-width: 1100px) {
             grid-column: 2 / 3;
         }
         @media screen and (max-width: 850px) {
             grid-column: 1 / 2;
+        }
+        @media screen and (max-width: 600px) {
+            width: 100%
         }
     }
 
@@ -4137,6 +4153,7 @@ input[type="range"]:focus::-ms-track{
         line-height: 1.375;
         --CASL: 1;
         max-width: 50rem;
+        width: 100%;
 
         @media screen and (max-width: 850px) {
             font-size: 1.25rem;
@@ -4174,13 +4191,25 @@ input[type="range"]:focus::-ms-track{
         position: relative;
         margin: 1rem 0 2rem;
 
+        video {
+            width: 100%;
+        }
+
         @media screen and (min-width: 1800px) {
             grid-template-columns: var(--text-column) auto;
+        }
+        @media screen and (min-width: 1100px) {
+            grid-template-columns: var(--text-column) auto;
+            margin: 2rem 0 3rem;
         }
 
         @media screen and (max-width: 600px) {
             grid-template-columns: 1fr;
         }
+    }
+
+    figure + figure {
+        margin-top: 0;
     }
 
     figure img {
