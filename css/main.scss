@@ -1,8 +1,6 @@
 ---
 ---
 
-$primary: hsl(220,100%,50%);
-
 :root {
     --nav_height: 3rem;
     --cm-wght: 400;
@@ -13,6 +11,8 @@ $primary: hsl(220,100%,50%);
 }
 
 @import 'bootstrap/bootstrap';
+// @import 'custom/_variables';
+// @import '_reboot';
 
 .three-container {
     display: grid;
@@ -4017,9 +4017,9 @@ input[type="range"]:focus::-ms-track{
 
     width:100%;
     position:relative;
-    padding: 4rem 0 6rem;
+    padding: calc(4rem + var(--nav_height)) 0 6rem;
     display: grid;
-    grid-template-columns: 1fr 1fr 4fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr var(--text-column) 1fr 1fr;
 
     @media screen and (min-width: 1800px) {
         grid-template-columns: 1fr 1fr var(--text-column) 1fr 1fr;
@@ -4029,7 +4029,7 @@ input[type="range"]:focus::-ms-track{
     }
     @media screen and (max-width: 850px) {
         grid-template-columns: 1fr;
-        padding: 4rem 5vw 6rem;
+        padding: calc(4rem + var(--nav_height)) 5vw 6rem;
     }
 
     h1, figure {
@@ -4102,9 +4102,9 @@ input[type="range"]:focus::-ms-track{
     @keyframes slowShift {
         0% {
             font-variation-settings: "MONO" 1, "CASL" 0;
-        } 50% {
+        } 40%, 50% {
             font-variation-settings: "MONO" 1, "CASL" 1;
-        } 100% {
+        } 90%, 100% {
             font-variation-settings: "MONO" 1, "CASL" 0;
         }
     }
@@ -4154,11 +4154,17 @@ input[type="range"]:focus::-ms-track{
         text-decoration: underline;
         --slnt: 0;
         transition: 0.25s;
+        text-rendering: optimizeSpeed; // turn off kerning or it will dirupt line length
 
         &:hover {
             color: var(--blue);
             --slnt: -12;
+            font-weight: 700;
         }
+    }
+
+    code {
+        color: var(--mainText);
     }
 
     figure {
