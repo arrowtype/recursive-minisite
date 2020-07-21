@@ -6,20 +6,20 @@ width=$2
 saveTo=$inputDir/resized
 mkdir -p $saveTo
 
-images=$(ls inputDir/*.{jpg,png,gif})
+images=$(ls $inputDir/*.{jpg,png,gif})
 
-for input in images; do
+echo $images
+
+for input in $images; do
     # https://stackoverflow.com/a/965069
     file=$(basename -- $input)
     name="${file%.*}"
     ext="${file##*.}"
-    output=$name@$width.$ext
-
-    outputPath=$saveTo/$output
+    output=$saveTo/$name@$width.$ext
 
     # method from https://www.smashingmagazine.com/2015/06/efficient-image-resizing-with-imagemagick/
-    convert $input -resize 1080 -quality 70 $saveTo/$output
+    convert $input -resize 1080 -quality 70 $output
 
-    echo Image converted to $outputPath
+    echo → $output saved
 done
 
