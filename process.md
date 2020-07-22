@@ -131,7 +131,7 @@ Adding a variable axe for stylistic range was not just a design challenge, but a
 Despite the challenge of production, a spectrum of expression within a single typeface has clear advantages for users. Some of the most compelling typographic layouts use multiple, complementary fonts. However, because different fonts usually have different metrics, such layouts can easily become a headache for visual design and technical implementation. Recursive, by contrast, provides multiple voices from a single, easy-to-use font file.
 
 <figure class="image">
-  <video loading="lazy" loop autoplay>
+  <video loading="lazy" loop autoplay playsinline>
     <source src="../assets/process-img/resized/recursive-interpolation@1080.webm" type="video/webm" media="all and (max-width: 800px)"> 
     <source src="../assets/process-img/resized/recursive-interpolation@1080.mp4" type="video/mp4" media="all and (max-width: 800px)"> 
     <source src="../assets/process-img/recursive-interpolation.webm" type="video/webm">
