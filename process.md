@@ -132,6 +132,8 @@ Despite the challenge of production, a spectrum of expression within a single ty
 
 <figure class="image">
   <video loading="lazy" loop autoplay>
+    <source src="../assets/process-img/resized/recursive-interpolation@1080.webm" type="video/webm" media="all and (max-width: 800px)"> 
+    <source src="../assets/process-img/resized/recursive-interpolation@1080.mp4" type="video/mp4" media="all and (max-width: 800px)"> 
     <source src="../assets/process-img/recursive-interpolation.webm" type="video/webm">
     <source src="../assets/process-img/recursive-interpolation.mp4" type="video/mp4">
     [Sorry, your browser doesn't support embedded videos.]

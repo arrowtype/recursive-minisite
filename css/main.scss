@@ -4192,6 +4192,11 @@ input[type="range"]:focus::-ms-track{
         position: relative;
         margin: 1rem 0 2rem;
 
+        // for chrome extension video speed controller
+        .vsc-controller {
+            display: none;
+        }
+
         video {
             width: 100%;
         }
