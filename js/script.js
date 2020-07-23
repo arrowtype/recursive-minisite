@@ -109,7 +109,7 @@ function hiderShower(trigger, drawer, closestId, activeClass) {
             return elem && (fn(elem) ? elem : closest(elem.parentNode, fn));
         };
 
-    // Listen clicks in the document
+    // Listen for clicks in the document
     document.addEventListener('click', function(e) {
         // Get the closest
         var closestEl = closest(e.target, function(elem) {
