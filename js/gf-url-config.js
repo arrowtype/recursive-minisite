@@ -231,15 +231,15 @@ function setUrl() {
   
   // make array of axes
   // make array of vals
-  let urlString = `https://fonts.sandbox.google.com/css2?family=<span class="code--bold">Recursive</span>&display=swap`
+  let urlString = `https://fonts.googleapis.com/css2?family=<span class="code--bold">Recursive</span>&display=swap`
   
   if (axesRequested.length > 0) {
     let axesQuery = axesRequested.join(',')
     let valsQuery = valsRequested.join(',')
     
-    urlString = `https://fonts.sandbox.google.com/css2?family=<span class="code--bold">Recursive:${axesQuery}@${valsQuery}</span>&display=swap`
+    urlString = `https://fonts.googleapis.com/css2?family=<span class="code--bold">Recursive:${axesQuery}@${valsQuery}</span>&display=swap`
   } else {
-    urlString = `https://fonts.sandbox.google.com/css2?family=<span class="code--bold">Recursive</span>&display=swap`
+    urlString = `https://fonts.googleapis.com/css2?family=<span class="code--bold">Recursive</span>&display=swap`
   }
   
   // -----------------------------------------------------------
