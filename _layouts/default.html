@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <link rel="canonical" href="https://www.recursive.design/process" />
+        
+        <link rel="stylesheet" href="/css/custom/default.css">
         {% include head.html %}
-          <link rel="stylesheet" href="/css/custom/default.css">
+
+        <style>
+          body {
+            background: white;
+          }
+        </style>
+          
     </head>
   <body>
     {% include navigation.html %}
-      <div class="default-page-container">
+    {% include gf-api-config.html %}
+      <article class="article-container">
         <!-- <div class="default-page-column"> -->
             {{ content }}
         <!-- </div> -->
-      </div>
+      </article>
     {% include footer.html %}
+    <script type="text/javascript" src="/js/gf-url-config.js"></script>
   </body>
 </html>

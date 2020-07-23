@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% include head.html %}
+          <link rel="stylesheet" href="/css/custom/default.css">
+    </head>
+    <body>
+      {% include navigation.html %}
+      {% include gf-api-config.html %}
+        <div class="default-page-container">
+            {{ content }}
+        </div>
+
+        <script type="text/javascript" src="/js/gf-url-config.js"></script>
+    </body>
+</html>

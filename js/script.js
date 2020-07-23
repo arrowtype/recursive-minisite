@@ -53,13 +53,12 @@ if (parent.document.getElementById("inversePage") != null){
 hiderShower('#collapseSettings', '#pickVariability', 'collapseSettings', 'show');
 hiderShower('#collapseSize', '#pickFontSize', 'collapseSize', 'show');
 
-// hamburger on mobile
-document.getElementById("navbarToggler").onclick = function(){
-    document.getElementById("navbarTogglerDemo03").classList.toggle("hideOnMobile");
-}
+
+
+// style toolbar
 
 document.getElementsByTagName("select")[0].onmousedown = function(){
-    this.style.fontFamily = "sans-serif";
+    this.style.fontFamily = "RecVF,sans-serif";
 }
 
 function currentStyles() {
@@ -80,7 +79,7 @@ document.getElementById("chooseInstance").onchange = function(){
     if (selectedValue === "default") {
         setDefaultStyles()
     } else {
-        document.getElementsByTagName("select")[0].style.fontFamily = "'RecVF', sans-serif";   
+        document.getElementsByTagName("select")[0].style.fontFamily = "RecVF, sans-serif";   
         
         CodeMirrorMono = this.selectedOptions[0].getAttribute('data-mono');
         CodeMirrorCasl = this.selectedOptions[0].getAttribute('data-casl');
@@ -222,9 +221,11 @@ window.onscroll = function(){
     for (let i=0;i<document.getElementsByTagName("iframe").length;i++){
         let fr = document.getElementsByTagName("iframe")[i];
         if (isElementXPercentInViewport(fr, 5)) {            
-            fr.contentDocument.getElementsByTagName("body")[0].classList.add("inViewport");
+            // fr.contentDocument.getElementsByTagName("body")[0].classList.add("inViewport");
+            fr.classList.add("inViewport");
         } else {
-            fr.contentDocument.getElementsByTagName("body")[0].classList.remove("inViewport");
+            // fr.contentDocument.getElementsByTagName("body")[0].classList.remove("inViewport");
+            fr.classList.remove("inViewport");
         }
     }
 

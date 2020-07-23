@@ -259,11 +259,15 @@
 </div>
 
 <script type="text/javascript">
+
+  // default values for type tester
   let wght2 = 800;
   let mono2 = 0;
   let casl2 = 0;
   let slnt2 = 0;
   let ital2 = 0.5;
+  
+  // handle font size
   document.getElementById("fontSizeSlider").addEventListener("input", function() {
     if (window.innerWidth > 767.98) {
       document.getElementById("controls-result").style.fontSize = document.getElementById("fontSizeSlider").value + "vw";
@@ -274,6 +278,7 @@
     }
   });
 
+  // handle Monospace axis
   document.getElementById("monoSlider").addEventListener("input", function() {
     mono2 = document.getElementById("monoSlider").value;
     document.getElementById(
@@ -282,13 +287,7 @@
     document.getElementById("monoResult").innerHTML = document.getElementById("monoSlider").value;
   });
 
-  document.getElementById("wghtSlider").addEventListener("input", function() {
-    wght2 = document.getElementById("wghtSlider").value;
-    document.getElementById(
-      "controls-result"
-    ).style.fontVariationSettings = `'wght' ${wght2}, 'CASL' ${casl2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'CRSV' ${ital2}`;
-    document.getElementById("wghtResult").innerHTML = document.getElementById("wghtSlider").value;
-  });
+  // handle Casual axis
   document.getElementById("caslSlider").addEventListener("input", function() {
     casl2 = document.getElementById("caslSlider").value;
     document.getElementById(
@@ -296,6 +295,17 @@
     ).style.fontVariationSettings = `'wght' ${wght2}, 'CASL' ${casl2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'CRSV' ${ital2}`;
     document.getElementById("caslResult").innerHTML = document.getElementById("caslSlider").value;
   });
+
+  // handle Weight axis
+  document.getElementById("wghtSlider").addEventListener("input", function() {
+    wght2 = document.getElementById("wghtSlider").value;
+    document.getElementById(
+      "controls-result"
+    ).style.fontVariationSettings = `'wght' ${wght2}, 'CASL' ${casl2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'CRSV' ${ital2}`;
+    document.getElementById("wghtResult").innerHTML = document.getElementById("wghtSlider").value;
+  });
+
+  // handle Slant axis
   document.getElementById("slntSlider").addEventListener("input", function() {
     slnt2 = document.getElementById("slntSlider").value;
     document.getElementById(
@@ -303,6 +313,8 @@
     ).style.fontVariationSettings = `'wght' ${wght2}, 'CASL' ${casl2}, 'slnt' ${slnt2}, 'MONO' ${mono2}, 'CRSV' ${ital2}`;
     document.getElementById("slntResult").innerHTML = document.getElementById("slntSlider").value;
   });
+
+  // Handle Cursive axis (formerly called "Italic")
 
   italAxis = document.getElementById("tester--CRSV-axis").elements["ital-selection"];
 

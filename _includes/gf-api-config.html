@@ -1,0 +1,243 @@
+<button id="get-rec-1" class="get-rec-button notice-me-plz">
+  Get Recursive
+</button>
+<div id="sidebar--scrim" class="scrim-hidden"></div>
+<div id="api-config-drawer" class="drawer-hidden">
+  <div id="customize-sidebar">
+      <div class="sidebar--header">
+        <h2>Get Recursive</h2>
+        <a href="https://github.com/arrowtype/recursive/releases/download/1.052/Recursive-Beta_1.052.zip">Download ↓</a>
+        <button id="close-sidebar">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z" fill="black" fill-opacity="0.54"/>
+          </svg>            
+        </button>
+      </div>
+
+      <div class="sidebar--main">
+      
+      <div id="sidebar-intro">
+        <h3>Webfonts from Google Fonts</h3>
+        <p>Get the <a class="simple-link" target="_blank" href="https://fonts.google.com/specimen/Recursive">partial family on Google Fonts</a> or the full family via the Google Fonts API, configurable with the controls below.</p>
+      </div>
+
+      <div id="controls">
+
+
+      <h4>Configure</h4>
+
+      <div class="axis-controls">
+
+
+        <!-- MONO AXIS CONTROLS -->
+      <div id="MONO-control" class="axis-control">
+        <div class="axis__header">
+        <h5>Monospace</h5>
+          <div class="subset-type">
+            <input type="radio" id="MONO_subset__pinned"name="MONO-subset-type" value="pinned" checked>
+            <label for="MONO_subset__pinned">Value</label>
+
+            <input type="radio" id="MONO_subset__range" name="MONO-subset-type" value="range">
+            <label for="MONO_subset__range">Range</label>
+
+          </div>
+        </div>
+
+        <div class="subset-controls" data-subset-type="pinned">
+          <div id="MONO__range" class="range-controls basic-range">
+            <div class="range-selector" data-wght-src="0" data-selected="true">0</div>
+            <div class="range-gap" data-active="true">
+              <!-- <p>Range not currently subsettable</p> -->
+            </div>
+            <div class="range-selector" data-wght-src="1" data-selected="true">1</div>
+          </div>
+
+          <div id="MONO--pinned" class="pinned-controls" style="--min: 0; --max: 1; --val: 0; --trackWidth: 318;">
+            <input type="range" id="MONO--pinned__slider" name="MONO-pinned" min="0" max="1" value="0" step="0.25">
+            <output class="slider-label" id="MONO--pinned__label" for="MONO-pinned">0</output>
+          </div>
+        </div>
+      </div>
+      
+      <!-- CASL AXIS CONTROLS -->
+      <div id="CASL-control" class="axis-control">
+        <div class="axis__header">
+        <h5>Casual</h5>
+          <div class="subset-type">
+            <input type="radio" id="CASL_subset__pinned" name="CASL-subset-type" value="pinned" checked>
+            <label for="CASL_subset__pinned">Value</label>
+
+            <input type="radio" id="CASL_subset__range" name="CASL-subset-type" value="range" >
+            <label for="CASL_subset__range">Range</label>
+          </div>
+        </div>
+
+        <div class="subset-controls" data-subset-type="pinned">
+          <div id="CASL__range" class="range-controls basic-range">
+            <div class="range-selector" data-wght-src="0" data-selected="true">0</div>
+            <div class="range-gap" data-active="true">
+              <!-- <p>Range not currently subsettable</p> -->
+            </div>
+            <div class="range-selector" data-wght-src="1" data-selected="true">1</div>
+          </div>
+
+          <div id="CASL--pinned" class="pinned-controls" style="--min: 0; --max: 1; --val: 0; --trackWidth: 318;">
+            <input type="range" id="CASL--pinned__slider" name="CASL-pinned" min="0" max="1" value="0" step="0.25">
+            <output class="slider-label" id="CASL--pinned__label" for="CASL-pinned">0</output>
+          </div>
+        </div>
+      </div>
+
+      <div id="wght-control" class="axis-control">
+        <div class="axis__header">
+          <h5>Weight</h5>
+
+
+          <div class="subset-type">
+            <input type="radio" id="wght_subset__pinned" name="wght-subset-type" value="pinned" checked>
+            <label for="wght_subset__pinned">Value</label>
+
+            <input type="radio" id="wght_subset__range" name="wght-subset-type" value="range">
+            <label for="wght_subset__range">Range</label>
+          </div>
+        </div>
+
+        <div class="subset-controls" data-subset-type="pinned">
+          
+          <!-- split range -->
+          <div id="wght__range" class="range-controls">
+            <div class="range-selector" data-wght-src="300" data-selected="true">300</div>
+            <div class="range-gap" data-active="true" data-wght-range="300-800"></div>
+            <div class="range-selector" data-wght-src="800" data-selected="true">800</div>
+            <div class="range-gap toggleable" data-active="false" data-wght-range="800-1000"></div>
+            <div id="wght-1000" class="range-selector clickable" data-wght-src="1000" data-selected="false">1000</div>
+          </div>
+
+          <!-- full range only -->
+          <!-- <div id="wght__range" class="range-controls basic-range">
+            <div class="range-selector" data-wght-src="300" data-selected="true">300</div>
+            <div class="range-gap" data-active="true">
+            </div>
+            <div class="range-selector" data-wght-src="1000" data-selected="true">1000</div>
+          </div> -->
+
+          <div id="wght--pinned" class="pinned-controls" style="--min: 300; --max: 1000; --val: 400; --trackWidth: 318;">
+            <input type="range" id="wght--pinned__slider" name="wght-pinned" min="300" max="1000" value="400" step="5">
+            <output class="slider-label" id="wght--pinned__label" for="wght-pinned">50</output>
+          </div>
+        </div>
+      </div>
+
+      <!-- slnt AXIS CONTROLS -->
+      <div id="slnt-control" class="axis-control">
+        <div class="axis__header">
+          <h5>Slant</h5>
+          
+          <div class="subset-type">
+            <input type="radio" id="slnt_subset__pinned" name="slnt-subset-type" value="pinned" checked>
+            <label for="slnt_subset__pinned">Value</label>
+
+            <input type="radio" id="slnt_subset__range" name="slnt-subset-type" value="range" >
+            <label for="slnt_subset__range">Range</label>
+          </div>
+        </div>
+
+        <div class="subset-controls" data-subset-type="pinned">
+          <div id="slnt__range" class="range-controls basic-range">
+            <div class="range-selector" data-wght-src="0" data-selected="true">-15</div>
+            <div class="range-gap" data-active="true">
+              <!-- <p>Range not currently subsettable</p> -->
+            </div>
+            <div class="range-selector" data-wght-src="1" data-selected="true">&nbsp;&nbsp;0</div>
+          </div>
+
+          <div id="slnt--pinned" class="pinned-controls" style="--min: -15; --max: 0; --val: 0; --trackWidth: 318;">
+            <input type="range" id="slnt--pinned__slider" name="slnt-pinned" min="-15" max="0" value="0" step="1">
+            <output class="slider-label" id="slnt--pinned__label" for="slnt-pinned">0</output>
+          </div>
+        </div>
+      </div>
+      
+      <!-- CRSV AXIS CONTROLS -->
+      <div id="CRSV-control" class="axis-control">
+        <div class="axis__header">
+        <h5>Cursive</h5>
+          <div class="subset-type">
+            <input type="radio" id="CRSV_subset__pinned" name="CRSV-subset-type" value="pinned" checked>
+            <label for="CRSV_subset__pinned">Value</label>
+
+            <input type="radio" id="CRSV_subset__range" name="CRSV-subset-type" value="range" >
+            <label for="CRSV_subset__range">Range</label>
+          </div>
+        </div>
+
+        <div class="subset-controls" data-subset-type="pinned">
+          <div id="CRSV__range" class="range-controls basic-range">
+            <div class="range-selector" data-wght-src="0" data-selected="true">0</div>
+            <div class="range-gap" data-active="true">
+              <!-- <p>Range not currently subsettable</p> -->
+            </div>
+            <div class="range-selector" data-wght-src="1" data-selected="true">1</div>
+          </div>
+
+          <div id="CRSV--pinned" class="pinned-controls" style="--min: 0; --max: 1; --val: 0.5; --trackWidth: 318;">
+            <input type="range" id="CRSV--pinned__slider" name="CRSV-pinned" min="0" max="1" value="0.5" step="0.5">
+            <output class="slider-label" id="CRSV--pinned__label" for="CRSV-pinned">0</output>
+          </div>
+        </div>
+      </div>
+
+      </div> <!-- END axis controls -->
+
+    </div>
+      
+      <div id="filesize">
+        <h4>Filesize</h4>
+        <div id="filesize-chart">
+          <div class="barchart">
+            <!-- total bar size -->
+            <div id="filesize-possible"></div>
+            <!-- active size within total -->
+            <div id="filesize-filled"></div>
+          </div>
+          <div class="labeling">
+            <output id="approx-filesize">≈<span></span>kb</output>
+            <span id="max-filesize" style="--percent:0; --percentChange:0;"><span></span>kb</span>
+          </div>
+        </div>
+        <p class="caption">Estimated size of woff2 file with a basic Latin character set. Actual results may vary.</p>
+
+      </div>
+
+      <div id="embed">
+
+          <!-- <h4 id="embed-label">Embed <span id="approx-filesize">≈<span></span>kb*</span></h4> -->
+          <h4 id="embed-label">Embed</h4>
+
+        <p id="howto--html-embed">To embed Recursive into a webpage, copy this code into the &lt;head&gt; of your HTML.</p>
+        <div class="embed-type" data-embed-type="html">
+            <input type="radio" id="embed_type__html" name="embed-type-type" value="html" checked>
+            <label for="embed_type__html">HTML Link</label>
+
+            <input type="radio" id="embed_type__css" name="embed-type-type" value="css" >
+            <label for="embed_type__css">CSS Import</label>
+        </div>
+        <div class="code">
+          <code id="api-call" ></code>
+        </div>
+        <p>CSS declaration to specify Recursive:</p>
+        <div class="code">
+          <code id="api-call" >font-family: 'Recursive', monospace;</code>
+        </div>
+      </div>
+      
+      <div id="learn-more">
+        <p>Visit the <a class="simple-link" target="_blank" href="https://developers.google.com/fonts/docs/css2">Google Fonts API Docs</a> to learn more about custom font requests.</p>
+      </div>
+
+    </div>
+
+    </div>
+
+  </div>
+</div> 

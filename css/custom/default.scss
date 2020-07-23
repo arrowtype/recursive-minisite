@@ -8,11 +8,11 @@
      -ms-box-sizing:border-box;
    }
 
-* {
-    overflow:inherit !important;
-}
+// * {
+//     overflow:inherit !important;
+// }
 
-html,body {height:100%;}
+// html,body {min-height:100%;}
 
 body{
     background-color:white;
@@ -69,8 +69,9 @@ h6{
 }
 
 code{
-    color:#7e7e7e;
-    font-family: 'RecVF', 'Courier New', Courier, monospace;
+    color: var(--mainText);
+    font-family: 'RecVF', 'Menlo', monospace;
+    font-size: inherit;
 }
 
 img{
