@@ -18,6 +18,7 @@
     display: grid;
     align-items: center;
     overflow: hidden;
+    padding-top: var(--nav_height);
 }
 
 #THREE {
@@ -31,6 +32,7 @@
 
   canvas {
       outline: none;
+      margin-top: calc(-1 * var(--nav_height));
   }
 }
 
@@ -1143,10 +1145,6 @@ div#pickVariability, #pickFontSize {
 .lines{
     width: 100%;
     height: 100%;
-    position: absolute;
-    // left:20px;
-    top:-1rem;
-    // left: 33px;
     pointer-events: none;
     opacity: 0;
     transition: opacity 500ms ease;
@@ -1157,6 +1155,7 @@ div#pickVariability, #pickFontSize {
         position:absolute;
         line-height: 14px;
         transform: translateY(3.5rem);
+        display: none; // these are too off-positioned right now
     }
     .line1-label{
         color: #0000ff;
