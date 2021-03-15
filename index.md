@@ -6985,20 +6985,6 @@ To meet the needs of global communication, Recursive supports a wide range of La
             </div>
         </span>
         <span class="complete">
-            ﬂ
-            <div class="detail">
-                <div class="letter-lg">
-                    ﬂ          
-                </div>
-                <div class="detail-top-content">
-                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M23 0H0V23L23 0Z" fill="white"/>
-                    </svg>
-                    <small>latin small ligature fl (u+fb02)</small>
-                </div>
-            </div>
-        </span>
-        <span class="complete">
             ﬃ
             <div class="detail">
                 <div class="letter-lg">
@@ -7009,20 +6995,6 @@ To meet the needs of global communication, Recursive supports a wide range of La
                         <path d="M23 0H0V23L23 0Z" fill="white"/>
                     </svg>
                     <small>latin small ligature ffi (u+fb03)</small>
-                </div>
-            </div>
-        </span>
-        <span class="complete">
-            ﬄ
-            <div class="detail">
-                <div class="letter-lg">
-                    ﬄ          
-                </div>
-                <div class="detail-top-content">
-                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M23 0H0V23L23 0Z" fill="white"/>
-                    </svg>
-                    <small>latin small ligature ffl (u+fb04)</small>
                 </div>
             </div>
         </span>
