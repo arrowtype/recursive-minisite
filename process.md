@@ -6,7 +6,7 @@ title: Designing Recursive
 # Designing Recursive
 #### By Stephen Nixon, [@ArrowType](https://instagram.com/arrowtype)
 
-In 2018, I graduated with an MA in Type Design from TypeMedia, a 10-month immersion in type at the Royal Academy of Art (KABK) in The Hague, Netherlands. For my thesis project, I created *Recursive*, a typeface exploring the intersection of sign painting, code, and the emerging technology of variable fonts. In 2019, Google Fonts commissioned me to complete the project for open-source distribution. Recursive is now the first release of my new type foundry, Arrow Type.
+In 2018, I graduated with an MA in Type Design from TypeMedia, a 10-month immersion in type at the Royal Academy of Art (KABK) in The Hague, Netherlands. For my thesis project, I created *Recursive*, a typeface exploring the intersection of sign painting, code, and the emerging technology of variable fonts. In 2019, Google Fonts commissioned me to complete the project for open-source distribution. Recursive is now the first release of my new type foundry, ArrowType.
 
 ## An origin in painted letters
 
