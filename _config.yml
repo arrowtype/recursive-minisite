@@ -10,3 +10,11 @@ permalink: :title/
 sass:
   sass_dir: css
   style: compressed
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
+  - purgecss.config.js
+  - ffmpeg2pass-0.log

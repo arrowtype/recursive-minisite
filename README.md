@@ -32,6 +32,10 @@ Note: sometimes, PurgeCSS doesn't "notice" a font path change. Check that each f
 bundle exec jekyll serve
 ```
 
+## Deployment
+
+The site is deployed with GitHub Pages from the `main` branch (Settings → Pages → "Deploy from a branch", `main` / root). GitHub builds it with Jekyll automatically on every push. The `CNAME` file sets the custom domain, `www.recursive.design`.
+
 ## Updating the site
 
 1. Update the font at the path such as `assets/fonts/Recursive_VF_1.085.woff2`.
